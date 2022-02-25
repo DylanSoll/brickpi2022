@@ -1,0 +1,167 @@
+{%extends 'layout.html'%}
+{%block title%}
+Mission History
+{%endblock%}
+{%block content%} 
+<style>
+    .heading{
+        text-align: center;
+    }
+    .table:hover{
+        cursor: pointer;
+    }
+    .table::-webkit-scrollbar{
+        position: relative;
+    }
+</style>
+{%block scripts%}
+<script src="static\JavaScript\mission_data.js"></script>
+{%endblock%}
+<div id = "mission_history_container">
+    <h3 class="heading">Mission History</h3>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Mission ID <i class="fa fa-arrow-up"></i></th>
+            <th scope="col">Operator <i class="fa fa-arrow-down"></i></th>
+            <th scope="col">Time Started <i class="fa fa-arrow-down"></i></th>
+            <th scope="col">Time Ended <i class="fa fa-arrow-down"></i></th>
+            <th scope="col">Duration <i class="fa fa-arrow-down"></i></th>
+            <th scope="col">Victims <i class="fa fa-arrow-down"></i></th>
+            <th scope="col">Notes <i class="fa fa-arrow-down"></i></th>
+          </tr>
+          <tr>
+            <th scope="col"><input type="text" placeholder="Filter..."></th>
+            <th scope="col"><input type="text" placeholder="Filter..."></i></th>
+            <th scope="col"><input type="text" placeholder="Filter..."></th>
+            <th scope="col"><input type="text" placeholder="Filter..."></th>
+            <th scope="col"><input type="text" placeholder="Filter..."></th>
+            <th scope="col"><input type="text" placeholder="Filter..."></i></th>
+            <th scope="col"><input type="text" placeholder="Filter..."></th>
+          </tr>
+        </thead>
+        <tbody id = 'missions_table_body'>
+
+        </tbody>
+      </table>
+</div>
+
+<div id="mission_history" hidden>
+    <h3 id = 'mission_number' class = "heading"></h3>
+    <button onclick="return_to_missions()"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</button>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#breakdown">Breakdown</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#sensors">Sensors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#movement">Movement</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-ol-has-click-handler="">Custom</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" data-bs-toggle="tab" href="#tables">Tables</a>
+            <a class="dropdown-item" data-bs-toggle="tab" href="#graphs">Graphs</a>
+            {%if 'permissions' in session%}
+                {%if session['permissions'] == 'admin'%}
+                    <a class="dropdown-item" href="#" data-ol-has-click-handler="">Something else here</a>
+                {%endif%}
+            {%endif%}
+          </div>
+        </li>
+      </ul>
+    
+    <div id="mission_history" class="tab-content">
+        <div class="tab-pane fade show active" id="breakdown">
+          <h4 class="heading"><strong>Breakdown</strong></h4>
+          <div id = "mission_breakdown">
+            <h5 class="heading"><strong>Summary</strong></h5>
+            <div id="mission_summary">
+
+            </div>
+            <h5 class="heading"><strong>Map</strong></h5>
+            <div id="mission_map">
+
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="sensors">
+            <h4 class="heading"><strong>Sensor Data</strong></h4>
+            <div id = "mission_sensor_log">
+              <div id="mission_sensor_table" style = "width: 100%; overflow-x: auto; scrollbar-gutter: fixed;">
+                <table class="table table-hover" >
+                    <thead>
+                      <tr>
+                        <th scope="col">Record ID  <i class="fa fa-arrow-up"></i></th>
+                        <th scope="col">Acceleration (m/s/s) <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Orientation (°) <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Direction <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Distance (cm) <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Thermal (°C) <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Colour <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Victim <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Time <i class="fa fa-arrow-down"></i></th>
+                      </tr>
+                      <tr>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></i></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                      </tr>
+                    </thead>
+                    <tbody id = 'sensors_table_body'>
+            
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="movement">
+            <h4 class="heading"><strong>Movement Data</strong></h4>
+            <div id = "mission_sensor_log">
+              <div id="mission_sensor_table" style = "width: 100%; overflow-x: auto; scrollbar-gutter: fixed;">
+                <table class="table table-hover" >
+                    <thead>
+                      <tr>
+                        <th scope="col">Movement ID  <i class="fa fa-arrow-up"></i></th>
+                        <th scope="col">Type <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Start Time <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">End Time <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Duration (s) <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Magnitude <i class="fa fa-arrow-down"></i></th>
+                        <th scope="col">Method <i class="fa fa-arrow-down"></i></th>
+                      </tr>
+                      <tr>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></i></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                        <th scope="col"><input type="text" placeholder="Filter..."></th>
+                      </tr>
+                    </thead>
+                    <tbody id = 'movements_table_body'>
+            
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="tables">
+            <h4>Custom Tables</h4>
+        </div>
+        <div class="tab-pane fade" id="graphs">
+            <h4>Custom Graphs</h4>
+        </div>
+    </div>
+</div>
+<script>jq_ajax('/missions', {}, populate_main_table)</script>
+{%endblock%}

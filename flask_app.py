@@ -93,10 +93,72 @@ def sensors():
     return jsonify(data)
 
 # YOUR FLASK CODE------------------------------------------------------------------------
+@app.route('/missions', methods = ['GET', 'POST'])
+def missions():
+    if request.method == 'POST':
+        missions = DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
+            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
+            WHERE victim = 'True' GROUP BY missions.missionid''')
+        return jsonify(missions)
+    else:
+        return render_template('missions.html')
+
+@app.route('/missions-history')
+def mission_history():
+    return render_template('mission_data.html')
 
 
+@app.route('/mission-data', methods = ['GET', 'POST'])
+def mission_data():
+    if request.method == 'POST':
+        data = request.get_json()
+        sensor_log = DATABASE.ViewQuery(f'SELECT * FROM sensor_log WHERE missionid = {data}')
+        movement_log = DATABASE.ViewQuery(f'SELECT *, (time_final-time_init) AS duration FROM movement_log WHERE missionid = {data}')
+        breakdown = DATABASE.ViewQuery(f'''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
+            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
+            WHERE missions.missionid = {data} AND victim = 'True' GROUP BY missions.missionid''')
+        details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
+                'custom-graph': [{}], 'custom-table': [{}]}
+        return jsonify(details)
+    else:
+        return redirect('/missions')
 
-
+@app.route('/process_movement', methods = ['GET', 'POST'])
+def process_movement():
+    if request.method == 'POST':
+        
+        data = request.form.get('fd')
+        print(data)
+        current_keys = {'a': False,
+            'w': False,
+            's': False,
+            'd': False,
+            'space': False}
+        if current_keys['space']:
+            True
+        elif current_keys['a'] and current_keys['w']:
+            True#move_power(30, deviation=-10)
+        elif current_keys['d'] and current_keys['w']:
+            True#move_power(30, deviation=10)
+        elif current_keys['a'] and current_keys['s']:
+            True#move_power(-30, deviation=-10)
+        elif current_keys['d'] and current_keys['s']:
+            True#move_power(-30, deviation=10)
+        elif current_keys['w']:
+            True#move_power(30, 0)
+        elif current_keys['s']:
+            True#move_power(-30, 0)
+        else:
+            False#stop_all()
+        #current_movements = session['movements']
+        #movementIDs = current_movements.keys()
+        #if movementID not in movementIDs:
+            #new movement code
+        #else:
+            #
+        return jsonify({})
+    else:
+        return redirect('/')
 
 
 

@@ -5,9 +5,7 @@
             <h1>Robot Dashboard</h1>
         </div>
     </div>
-    <div class="row" id="load">
-        <button type="button" class="btn btn-success" onclick="load_robot();">Load Robot</button>
-    </div>   
+    <button type="button" class="btn btn-success" onclick="load_robot();">Load Robot</button> 
     <div id="dashboard">
         <div class="row">
             <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();">Shutdown Robot</button>
@@ -25,7 +23,8 @@
     </div>
 {% endblock %}
 {% block scripts %}
-    <script> robot_enabled = {{robot_enabled}}; </script>
+    <script> robot_enabled = {{robot_enabled}} </script>
     <script src="/static/js/dashboard.js"></script> 
     <script src="/static/js/mapping.js"></script> 
+    <script src="static/js/brick_pi_2022_dashboard.js"></script>
 {% endblock %}
