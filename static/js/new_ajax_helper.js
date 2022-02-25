@@ -7,12 +7,6 @@
   fd.append("testinput", testinput); //to add an individual variable use a key and value
   new_ajax_helper('/test',defaulthandler,fd); //send the formobject to the url, you can define a callback 
 */
-function create_form(data){
-    testform = document.getElementById('testform'); //get the form element
-    var fd = new FormData(testform); //create a form object since one does not exist
-    fd.append("testinput", data); //to add an individual variable use a key and value
-    return fd
-}
 function new_ajax_helper(url, callback=defaulthandler, formobject=null, method='POST')
 {
     

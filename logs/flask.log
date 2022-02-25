@@ -1025,3 +1025,151 @@ INFO:werkzeug:127.0.0.1 - - [23/Feb/2022 14:07:15] "[37mPOST /process_movement 
 INFO:werkzeug:127.0.0.1 - - [23/Feb/2022 14:07:15] "[37mGET /dashboard HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [23/Feb/2022 14:07:15] "[37mPOST /process_movement HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [23/Feb/2022 14:07:15] "[37mPOST /process_movement HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:21:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 13, in <module>
+    DATABASE = Database('databases/U3_SIA2_Rescue_Database-V1.db')
+NameError: name 'Database' is not defined
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:21:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 13, in <module>
+    DATABASE = databaseinterface.Database('databases/U3_SIA2_Rescue_Database-V1.db')
+AttributeError: module 'interfaces.databaseinterface' has no attribute 'Database'
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:01] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
+    execute(self.server.app)
+  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
+    application_iter = app(environ, start_response)
+  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 13, in <module>
+    DATABASE = databaseinterface.Database('databases/U3_SIA2_Rescue_Database-V1.db')
+AttributeError: module 'interfaces.databaseinterface' has no attribute 'Database'
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[36mGET /static/css/theme.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[37mGET /static/js/new_ajax_helper.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:22:14] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:23:04] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:LOADING THE SOUND
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:23:13] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:23:13] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:26:39] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:26:41] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:26:43] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:28:12] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:31:00] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:32:39] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:LOADING THE SOUND
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:32:45] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:32:46] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:32:46] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:33:24] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:LOADING THE SOUND
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:33:31] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:33:31] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:33:56] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:33:58] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:37:41] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:LOADING THE SOUND
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:37:49] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:37:50] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:38:57] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:LOADING THE SOUND
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:39:05] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:39:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:40:46] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:40:48] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:41:32] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:41:34] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:42:47] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:42:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:flask_app:LOADING CAMERA
+INFO:root:CAMERA INTERFACE: Started Camera Thread
+INFO:flask_app:LOADING THE ROBOT
+INFO:flask_app:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:flask_app:LOADING THE SOUND
+INFO:flask_app:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:42:54] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+INFO:flask_app:READING CAMERA
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:42:54] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:43:54] "[33mGET /dashboard/missions HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:44:21] "[37mGET /missions HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:44:26] "[33mGET /missions/history HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:44:33] "[37mGET /missions-history HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:44:33] "[33mGET /static/JavaScript/mission_data.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:44:34] "[33mGET /static/JavaScript/mission_data.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:44:34] "[33mGET /static/JavaScript/mission_data.js HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:46:11] "[37mGET /missions/history HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:46:11] "[33mGET /missions/static/js/ajax_function.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:46:11] "[37mGET /static/js/mission_data.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:46:11] "[33mGET /missions/static/js/ajax_function.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:46:48] "[37mGET /missions/history HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Feb/2022 23:46:48] "[33mGET /missions/static/js/ajax_function.js HTTP/1.1[0m" 404 -

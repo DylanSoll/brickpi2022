@@ -10,7 +10,7 @@ SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessio
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/RobotDatabase.db', app.logger)
-
+DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db')
 #Log messages
 def log(message):
     app.logger.info(message)
@@ -103,7 +103,7 @@ def missions():
     else:
         return render_template('missions.html')
 
-@app.route('/missions-history')
+@app.route('/missions/history')
 def mission_history():
     return render_template('mission_data.html')
 
@@ -112,11 +112,11 @@ def mission_history():
 def mission_data():
     if request.method == 'POST':
         data = request.get_json()
-        sensor_log = DATABASE.ViewQuery(f'SELECT * FROM sensor_log WHERE missionid = {data}')
-        movement_log = DATABASE.ViewQuery(f'SELECT *, (time_final-time_init) AS duration FROM movement_log WHERE missionid = {data}')
-        breakdown = DATABASE.ViewQuery(f'''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
+        sensor_log = DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
+        movement_log = DATABASE.ViewQuery('SELECT *, (time_final-time_init) AS duration FROM movement_log WHERE missionid ?', (data,))
+        breakdown = DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
             INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
-            WHERE missions.missionid = {data} AND victim = 'True' GROUP BY missions.missionid''')
+            WHERE missions.missionid = ? AND victim = 'True' GROUP BY missions.missionid''', (data,))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
                 'custom-graph': [{}], 'custom-table': [{}]}
         return jsonify(details)
@@ -126,14 +126,7 @@ def mission_data():
 @app.route('/process_movement', methods = ['GET', 'POST'])
 def process_movement():
     if request.method == 'POST':
-        
-        data = request.form.get('fd')
-        print(data)
-        current_keys = {'a': False,
-            'w': False,
-            's': False,
-            'd': False,
-            'space': False}
+        current_keys = request.get_json()
         if current_keys['space']:
             True
         elif current_keys['a'] and current_keys['w']:
@@ -156,7 +149,7 @@ def process_movement():
             #new movement code
         #else:
             #
-        return jsonify({})
+        return jsonify({current_keys})
     else:
         return redirect('/')
 

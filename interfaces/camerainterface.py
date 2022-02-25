@@ -46,7 +46,7 @@ class CameraInterface(object):
     def update(self):
         self.camera.start_preview()
         time.sleep(2)
-        self.stream = self.camera.capture_continuous(self.rawCapture, 'jpeg', use_video_port=True)
+        self.stream = self.camera.capture_continuous(self.rawCapture, 'gif', use_video_port=True)
         for f in self.stream:
             self.rawCapture.seek(0)
             self.frame = self.rawCapture.read()

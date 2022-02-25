@@ -143,7 +143,7 @@ document.addEventListener('keydown', function(e){
         }else if (e.keyCode === 32){
             current_keys['space'] = true
         }
-        new_ajax_helper('/process_movement',formobject=create_form(current_keys))
+        jq_ajax('/process_movement', current_keys, console.log)
     }
     
  })
@@ -164,6 +164,6 @@ document.addEventListener('keydown', function(e){
         }else if (e.keyCode === 32){
             current_keys['space'] = false
         }
-        new_ajax_helper('/process_movement',formobject=create_form(current_keys))
+        jq_ajax('/process_movement', current_keys, console.log)
     }
  })
