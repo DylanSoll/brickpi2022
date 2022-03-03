@@ -1,22 +1,12 @@
-{%extends 'layout.html'%}
-{%block title%}
-Mission History
+{% extends "layout.html" %}
+{%block title%}Mission History
+{%endblock%}
+{%block scripts%}
 {%endblock%}
 {%block content%} 
-<style>
-    .heading{
-        text-align: center;
-    }
-    .table:hover{
-        cursor: pointer;
-    }
-    .table::-webkit-scrollbar{
-        position: relative;
-    }
-</style>
-{%block scripts%}
-<script src="\static\js\mission_data.js"></script>
-{%endblock%}
+<script src="/static/js/mission_data.js"></script>
+
+
 <div id = "mission_history_container">
     <h3 class="heading">Mission History</h3>
     <table class="table table-hover">
@@ -64,11 +54,6 @@ Mission History
           <div class="dropdown-menu">
             <a class="dropdown-item" data-bs-toggle="tab" href="#tables">Tables</a>
             <a class="dropdown-item" data-bs-toggle="tab" href="#graphs">Graphs</a>
-            {%if 'permissions' in session%}
-                {%if session['permissions'] == 'admin'%}
-                    <a class="dropdown-item" href="#" data-ol-has-click-handler="">Something else here</a>
-                {%endif%}
-            {%endif%}
           </div>
         </li>
       </ul>
@@ -81,6 +66,26 @@ Mission History
             <div id="mission_summary">
 
             </div>
+            <h5 class="heading"><strong>Graphs</strong></h5>
+            <div id="mission_graphs" class = "row">
+              <div class = "col" style="margin-bottom:1%">
+                <div id = "mission_acceleration_graph">
+
+                </div>
+              </div>
+              <br>
+              <div class = "col" style="margin-bottom:1%">
+                <div id = "mission_orientation_graph">
+
+                </div>
+              </div>
+              <br>
+              <div class = "col" style="margin-bottom:1%">
+                <div id = "mission_thermal_graph">
+
+                </div>
+              </div>
+            </div>
             <h5 class="heading"><strong>Map</strong></h5>
             <div id="mission_map">
 
@@ -91,67 +96,15 @@ Mission History
             <h4 class="heading"><strong>Sensor Data</strong></h4>
             <div id = "mission_sensor_log">
               <div id="mission_sensor_table" style = "width: 100%; overflow-x: auto; scrollbar-gutter: fixed;">
-                <table class="table table-hover" >
-                    <thead>
-                      <tr>
-                        <th scope="col">Record ID  <i class="fa fa-arrow-up"></i></th>
-                        <th scope="col">Acceleration (m/s/s) <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Orientation (°) <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Direction <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Distance (cm) <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Thermal (°C) <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Colour <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Victim <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Time <i class="fa fa-arrow-down"></i></th>
-                      </tr>
-                      <tr>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></i></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                      </tr>
-                    </thead>
-                    <tbody id = 'sensors_table_body'>
-            
-                    </tbody>
-                  </table>
+                
               </div>
             </div>
         </div>
         <div class="tab-pane fade" id="movement">
             <h4 class="heading"><strong>Movement Data</strong></h4>
-            <div id = "mission_sensor_log">
-              <div id="mission_sensor_table" style = "width: 100%; overflow-x: auto; scrollbar-gutter: fixed;">
-                <table class="table table-hover" >
-                    <thead>
-                      <tr>
-                        <th scope="col">Movement ID  <i class="fa fa-arrow-up"></i></th>
-                        <th scope="col">Type <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Start Time <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">End Time <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Duration (s) <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Magnitude <i class="fa fa-arrow-down"></i></th>
-                        <th scope="col">Method <i class="fa fa-arrow-down"></i></th>
-                      </tr>
-                      <tr>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></i></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                        <th scope="col"><input type="text" placeholder="Filter..."></th>
-                      </tr>
-                    </thead>
-                    <tbody id = 'movements_table_body'>
-            
-                    </tbody>
-                  </table>
+            <div id = "mission_movement_log">
+              <div id="mission_movement_table" style = "width: 100%; overflow-x: auto; scrollbar-gutter: fixed;">
+                
               </div>
             </div>
         </div>
@@ -163,5 +116,6 @@ Mission History
         </div>
     </div>
 </div>
-<script>jq_ajax('/missions', {}, populate_main_table)</script>
+<script>jq_ajax('/missions', {}, populate_main_table)
+jq_ajax('/sensor-graph-data', 1,create_graphs)</script>
 {%endblock%}

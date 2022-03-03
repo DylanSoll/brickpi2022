@@ -3,7 +3,7 @@
 Missions
 {%endblock%}
 {%block content%}
-
+<script src="/static/js/mission_data.js"></script>
 
 
 <style>
@@ -29,7 +29,7 @@ Missions
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner" id = "carousel-inner">
       <div class="carousel-item active">
         <div class ="mission_item">
             <div>
@@ -73,4 +73,8 @@ Missions
   <div class="d-flex justify-content-center" >
     <button class="btn btn-primary" onclick = "window.location.href='/missions/history'">View Mission History</button>
 </div>
+<script>
+  jq_ajax('/top_7_missions', {}, create_mission_carosel)
+
+</script>
 {%endblock%}

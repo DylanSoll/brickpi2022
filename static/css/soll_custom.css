@@ -1,0 +1,9 @@
+.heading{
+    text-align: center;
+}
+.table:hover{
+    cursor: pointer;
+}
+.table::-webkit-scrollbar{
+    position: relative;
+}

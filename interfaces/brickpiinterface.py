@@ -406,6 +406,7 @@ class BrickPiInterface():
         self.stop_all()
         return
 
+    
     #Rotate power and time, -power to reverse
     def rotate_power_time(self, power, t):
         self.interrupt_previous_command()

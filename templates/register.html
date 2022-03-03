@@ -1,0 +1,176 @@
+{%extends 'layout.html'%}
+{%block title%}
+    Register
+{%endblock%}
+
+{%block scripts%}
+    
+{%endblock%}
+
+
+{%block content%}
+<script src="\static/js/account_scripts/registerScript.js"></script>
+    <h2 class="heading">Register</h2>
+    <br>
+    <form action="/register", method='POST'>
+    <div class="modal fade" id="error-modal" tabindex="-1" aria-labelledby="error-modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="padding-left: 10%;">
+                <div class="modal-header">
+                    <h5 class="modal-title"><strong>Please Check:</strong></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist" style='text-align:center'>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#email-requirements">Email</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#password-requirements">Password</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#other-requirements">Other</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div id="registerLoginDetails" class="tab-content">
+                        <div class="tab-pane fade show active" id="email-requirements">
+                            <p><i style ="color: red"class="fa fa-times" id = "validEmail"> &ThickSpace;</i>Your email is valid</p>
+                            <p><i style ="color: red"class="fa fa-times" id = "matchEmail"> &ThickSpace;</i>Your emails match</p>
+                            <p><i style ="color: red"class="fa fa-times" id = "uniqueEmail"> &ThickSpace;</i>Your email is unique</p>
+                        </div>
+                        <div class="tab-pane fade show" id="password-requirements">
+                            <p><i style ="color: red"class="fa fa-times" id = "passwordComplexEnough"> &ThickSpace;</i>Your password is complex enough</p>
+                            <p><i style ="color: red"class="fa fa-times" id = "matchPassword"> &ThickSpace;</i>Your passwords match</p>
+                            <p>&ThickSpace;</p>
+                        </div>
+                        <div class="tab-pane fade show" id="other-requirements">
+                            <p><i style ="color: red"class="fa fa-times" id = "validName"> &ThickSpace;</i>You Provided Your Full Name</p>
+                            <p><i style ="color: red"class="fa fa-times" id = "validNumber"> &ThickSpace;</i>Your number is Valid</p>
+                            <p>&ThickSpace;</p>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+
+    
+
+
+
+
+
+
+        <div class="tab-pane fade show active" id="all_details">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" placeholder="Enter email here" required
+                oninput="validateEmail(this)"; oninput="matchValues('email', 'confirmEmail')" name = "email"
+                data-unique-email = "false">
+                <label for="email">Email</label>
+                <div class="invalid-feedback">Invalid Email</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="confirmEmail" placeholder="Re-Enter email here" 
+                oninput="matchValues('email', 'confirmEmail')" name = "confirmEmail" required>
+                <label for="confirmEmail">Confirm Email</label>
+                <div class="invalid-feedback">Emails Do Not Match</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="fullName" placeholder="Full Name"
+                oninput="validateName('fullName')" name = "fullName" required>
+                <label for="fullName">Full Name</label>
+                <div id = "ageValidPara" class="invalid-feedback">Enter full name</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="phoneNumber" placeholder="0444 444 444"
+                oninput = "validateNumber('phoneNumber')" name = "phoneNumber" required>
+                <label for="phoneNumber">Phone Number</label>
+                <div id = "numberValidPara" class="invalid-feedback">Enter valid number</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Enter password here"
+                oninput="validatePassword(this); matchValues('password', 'confirmPassword')" 
+                name = "password" required>
+                <label for="password">Password</label>
+                <div id = "passwordValidityPara" class="invalid-feedback">Invalid Password</div>
+            </div>
+            <details>
+                <summary>
+                    Expand Password Requirements
+                </summary>
+                <ul>
+                    <li class="noDecorationList">
+                        <i class="fa fa-close"  id="lowerCharParaID" aria-hidden="true" style='color:red'></i>
+                        &nbsp;Lowercase letter
+                    </li>
+                    <li class="noDecorationList">
+                        <i class="fa fa-close"  id="upperCharParaID" aria-hidden="true" style='color:red'></i>
+                        &nbsp;Uppercase letter
+                    </li>
+                    <li class="noDecorationList">
+                        <i class="fa fa-close" id="numberCharParaID" aria-hidden="true" style='color:red'></i>
+                        &nbsp;Number
+                    </li>
+                    <li class="noDecorationList">
+                        <i class="fa fa-close" id="specialCharParaID" aria-hidden="true" style='color:red'></i>
+                        &nbsp;Special Character
+                    </li>
+                    <li class="noDecorationList">
+                        <i id="longEnoughPasswordID" class="fa fa-close" aria-hidden="true" style='color:red'></i>
+                        &nbsp;Longer than 8 characters</li>
+                </ul>
+            </details>
+            <div class="form-floating mb-3" id="confirmPasswordDiv">
+                <input type="password"  class="form-control" id="confirmPassword" 
+                placeholder="Re-enter password here" name = "confirmPassword"
+                oninput="matchValues('password', 'confirmPassword')" 
+                required>
+                <label for="confrimPassword">Confirm Password</label>
+                <div id = "passwordMatchPara" class="invalid-feedback">Passwords Do Not Match</div>
+            </div>
+            
+            
+                <fieldset class="form-group">
+                    <legend class="mt-4">By ticking the following boxes, you agree to the following:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="TAC_checkbox"required>
+                        <label class="form-check-label" for="TAC_checkbox">
+                            I have read, understood and agreed to the <a href = '/terms-and-conditions' target="_blank">Terms and Conditions</a>
+                        </label>
+                    </div>
+                </fieldset>
+                <br>
+
+                <div id = "registerButtonParent">
+                    
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary" error-modal
+                    onmouseover = "validateAllDetails('all_details', 'registerButtonParent'); " id="registerButton"
+                    data-toggle="modal" data-target="#error-modal" type="button">Register
+                    </button>
+                        <a href = "/register">Register Instead</a>
+                    </div>
+                </div>
+
+
+            
+        </div>
+        <br>
+      </div>
+    </form>    
+    
+
+    
+{%endblock%}

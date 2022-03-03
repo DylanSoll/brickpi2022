@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Brick Pi</title>
+    <title>Brick Pi | {%block title%}{%endblock%}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/theme.css">
+    <link rel="stylesheet" href="/static/css/dark_mode_css.css">
+    <!--<link rel="stylesheet" href="/static/css/theme.css">-->
     <link rel="stylesheet" href="/static/css/custom.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraph.css" />
-    {% block styles %}{% endblock %} <!-- insert any custom css -->
-    <!-- Javascript Links -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- AJAX -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/soll_custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraph.css">
+    <link rel='stylesheet' href='/static\css\font-awesome-4.7.0\css\font-awesome.min.css'>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {% block styles %}{% endblock %} 
+    <!--JS-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/js/mission_data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
     <script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraphcore.js"></script>
-    <script src='static/js/ajax_function.js'></script>
+    <script src='/static/js/ajax_function.js'></script>
     <style> html, body { height:100vh; } .container { padding-top:20px; } </style>
 </head>
 <body style="font-size:16px;">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="/" data-ol-has-click-handler="">Robot</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,26 +32,64 @@
       
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="/" data-ol-has-click-handler="">Login
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/dashboard" data-ol-has-click-handler="">Dashboard</a>
-              </li>
+              {%if ('userid' in session) and ('permissions' in session) %}
+                {%if session['permissions'] != 'pending' %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="/dashboard" data-ol-has-click-handler="">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/missions" data-ol-has-click-handler="">Missions</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-ol-has-click-handler="">Help</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#" data-ol-has-click-handler="">FAQ</a>
+                      <a class="dropdown-item" href="#" data-ol-has-click-handler="">Tutorials</a>
+                      <a class="dropdown-item" href="#" data-ol-has-click-handler="">Contact Us</a>
+                      <a class="dropdown-item" href="#" data-ol-has-click-handler="">Report Bugs</a>
+                    </div>
+                  </li>
+                {%endif%}
+              {%endif%}
             </ul>
-            <form class="d-flex">
-                  <a style="color: rgba(255, 255, 255, 0.55) !important" class="nav-link" href="/logout" data-ol-has-click-handler="">Log out</a>
-              <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick="shutdown();">Exit</button>
-            </form>
+            <div class="d-flex">
+              <ul class="navbar-nav me-auto">
+              {%if ('userid' in session) and ('permissions' in session) %}
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-ol-has-click-handler="">
+                      <i class = "fa fa-user"></i> {{session['name']}}
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/account" data-ol-has-click-handler="">Account</a>
+                      {%if session['permissions'] == 'admin'%}
+                      <a class="dropdown-item" href="/admin" data-ol-has-click-handler="">Admin</a>
+                      {%endif%}
+                      <a class="dropdown-item" href="/logout" data-ol-has-click-handler="">Log Out</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" onclick="shutdown();">Exit</a>
+                  </li>
+              {%else%}
+              <li class="nav-item">
+                <a class="nav-link" href="/login" data-ol-has-click-handler="">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register" data-ol-has-click-handler="">Register</a>
+              </li>
+              {%endif%}
+            </div>
+          </ul>
           </div>
         </div>
       </nav>
-      <div class="container">
-        {% block content %}{% endblock %} <!-- Container for Content -->
-      </div>
-    <script src="/static/js/new_ajax_helper.js"></script> <!-- JSON HELPER -->
+      <br><br><br>
+      <div class="container" style="justify-content:center">
+        {% block content %}
+    
+        {% endblock %}
+    </div>
+    <script src="/static/js/mr_nielsens_code_not_used/new_ajax_helper.js"></script> <!-- JSON HELPER -->
     <script src="/static/js/custom.js"></script> <!-- JSON HELPER -->
     {% block scripts %}{% endblock %} <!-- Container for Scripts-->
 </body>

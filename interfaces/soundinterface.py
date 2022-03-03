@@ -1,6 +1,7 @@
 #you will need to install speake3
 import speake3
 import pygame
+import time
 
 class SoundInterface():
     
@@ -55,14 +56,12 @@ class SoundInterface():
         pygame.mixer.music.set_volume(v)
         return
 
-
 #---------------------------------------------
 #only execute if this is the main file, good for testing code.   
 if __name__ == "__main__":
     SOUND = SoundInterface()
-    SOUND.load_mp3("static/music/inspectorgadget.mp3")
-    SOUND.say("I am on a mission to hunt aliens.")
-    SOUND.play_music(1)
+    SOUND.load_mp3("static/music/reversing_sx.mp3")
+    SOUND.play_music(-1)
     SOUND.set_volume(0.6)
-    response = input("Press Enter to stop")
+    time.sleep(5)
     SOUND.stop_music()

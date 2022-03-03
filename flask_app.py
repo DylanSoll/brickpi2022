@@ -3,41 +3,106 @@ from interfaces import databaseinterface, camerainterface, soundinterface
 import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import logging, time
-
+import password_management as pm
 #Creates the Flask Server Object
 app = Flask(__name__); app.debug = True
 SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessions
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
-GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/RobotDatabase.db', app.logger)
-DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db')
+GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db', app.logger)
 #Log messages
 def log(message):
     app.logger.info(message)
     return
 
+
+def please_login(current_address):
+    if 'userid' not in session and current_address != 'login':
+        return redirect('/login')
+    elif 'permissions' in session:
+        if 'permissions' == 'pending' and current_address != 'pending':
+            return redirect('/account/pending')
+        elif current_address != 'dashboard':
+            return redirect('/dashboard')
+    return True
+
+def reverse_sound(mode):
+    if GLOBALS.SOUND:
+        if mode:
+            GLOBALS.SOUND.set_volume(.5)
+            GLOBALS.SOUND.load_mp3("static/music/reversing_sx.mp3")
+            GLOBALS.SOUND.play_music(-1)
+        else:
+            GLOBALS.SOUND.stop_music() 
+    return
+def play_song(song, times = 1, volume = 0.5):
+    return_val = False
+    if not GLOBALS.SOUND:
+        GLOBALS.SOUND = soundinterface.SoundInterface()
+    try:
+        GLOBALS.SOUND.load_mp3(song)
+        GLOBALS.SOUND.set_volume(volume)
+        GLOBALS.SOUND.play_music(times)
+        return_val = True
+    except:
+        return_val = False
+    return return_val
+
 #create a login page
 @app.route('/', methods=['GET','POST'])
+def redirect_on_entry():
+    please_login('')
+    return redirect('/login')
+
+
+@app.route('/login', methods=['GET','POST'])
 def login():
-    if 'userid' in session:
-        return redirect('/dashboard')
-    message = ""
-    if request.method == "POST":
-        email = request.form.get("email")
-        userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))
-        log(userdetails)
-        if userdetails:
-            user = userdetails[0] #get first row in results
-            if user['password'] == request.form.get("password"):
-                session['userid'] = user['userid']
-                session['permission'] = user['permission']
-                session['name'] = user['name']
+    please_login('login')
+    if request.method == 'POST':
+        email = str(request.form.get('login_email'))
+        password = str(request.form.get('login_password'))
+        userresults = GLOBALS.DATABASE.ViewQuery('SELECT * FROM users')
+        if userresults != False:
+            userresults = userresults[0]
+            if pm.check_password(userresults['password'], password):
+                session['userid'] = userresults['userid']
+                session['name'] = userresults['name']
+                session['email'] = userresults['email']
+                session['permissions'] = userresults['permissions']
                 return redirect('/dashboard')
-            else:
-                message = "Login Unsuccessful"
-        else:
-            message = "Login Unsuccessful"
-    return render_template('login.html', data = message)    
+    return render_template('login.html')
+
+
+@app.route('/register', methods=["POST","GET"])
+def register():
+    please_login('login')
+    if request.method == 'POST':
+        email = str(request.form.get('email'))
+        password = str(request.form.get('password'))
+        name = str(request.form.get('fullName'))
+        phoneNumber = str(request.form.get('phoneNumber'))
+        hashedPassword = pm.hash_password(password)
+        GLOBALS.DATABASE.ModifyQuery("INSERT INTO users (name,email, password, permissions, phone, pronouns) VALUES(?,?,?,?,?,?)",\
+            (name,email, hashedPassword,'admin',phoneNumber, 'he/him'))
+        userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))[0]
+        session['userid'] = userdetails['userid']
+        session['email'] = userdetails['email']
+        session['permissions'] = userdetails['permissions']
+        session['displayMode'] = userdetails['displayMode']
+        return redirect('/')
+
+    return render_template('register.html')
+
+@app.route('/uniqueEmail', methods = ['POST', 'GET'])
+def uniqueEmail():
+    if request.method == "POST":
+        email = request.get_json()
+        print(email)
+        result = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ? ", (email,))
+        print(result)
+        return jsonify(result)
+    else:
+        return redirect('/register')
 
 # Load the ROBOT
 @app.route('/robotload', methods=['GET','POST'])
@@ -55,7 +120,7 @@ def robotload():
     if not GLOBALS.SOUND:
         log("LOADING THE SOUND")
         GLOBALS.SOUND = soundinterface.SoundInterface()
-        GLOBALS.SOUND.say("I am ready")
+        #GLOBALS.SOUND.say("I am ready")
     sensordict = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(sensordict)
 
@@ -63,8 +128,7 @@ def robotload():
 # Dashboard
 @app.route('/dashboard', methods=['GET','POST'])
 def robotdashboard():
-    if not 'userid' in session:
-        return redirect('/')
+    please_login('dashboard')
     enabled = int(GLOBALS.ROBOT != None)
     return render_template('dashboard.html', robot_enabled = enabled )
 
@@ -93,28 +157,41 @@ def sensors():
     return jsonify(data)
 
 # YOUR FLASK CODE------------------------------------------------------------------------
+
 @app.route('/missions', methods = ['GET', 'POST'])
 def missions():
+    please_login('dashboard')
     if request.method == 'POST':
-        missions = DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
+        missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
             INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
             WHERE victim = 'True' GROUP BY missions.missionid''')
+        top_7_missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
+            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
+            WHERE victim = 'True' GROUP BY missions.missionid ORDER BY time_init DESC LIMIT 7''')    
         return jsonify(missions)
     else:
         return render_template('missions.html')
-
+@app.route('/top_7_missions', methods = ['GET', 'POST'])
+def top_7_missions():
+    if request.method == 'POST':
+        top_7_missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
+            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
+            WHERE victim = 'True' GROUP BY missions.missionid ORDER BY time_init DESC LIMIT 7''')    
+        return jsonify(missions)
+    else:
+        return return_redirect('/missions')
 @app.route('/missions/history')
 def mission_history():
+    please_login('dashboard')
     return render_template('mission_data.html')
-
 
 @app.route('/mission-data', methods = ['GET', 'POST'])
 def mission_data():
     if request.method == 'POST':
         data = request.get_json()
-        sensor_log = DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
-        movement_log = DATABASE.ViewQuery('SELECT *, (time_final-time_init) AS duration FROM movement_log WHERE missionid ?', (data,))
-        breakdown = DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
+        sensor_log = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
+        movement_log = GLOBALS.DATABASE.ViewQuery('SELECT *, time_final-time_init AS duration FROM movement_log WHERE missionid = ?', (data,))
+        breakdown = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
             INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
             WHERE missions.missionid = ? AND victim = 'True' GROUP BY missions.missionid''', (data,))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
@@ -123,41 +200,94 @@ def mission_data():
     else:
         return redirect('/missions')
 
+
+@app.route('/sensor-graph-data', methods = ['GET', 'POST'])
+def sensor_graph_data():
+    if request.method == 'POST':
+        data = request.get_json()
+        sensor_log = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
+        return jsonify(sensor_log)
+    else:
+        return redirect('/missions')
+
 @app.route('/process_movement', methods = ['GET', 'POST'])
 def process_movement():
     if request.method == 'POST':
         current_keys = request.get_json()
-        if current_keys['space']:
-            True
-        elif current_keys['a'] and current_keys['w']:
-            True#move_power(30, deviation=-10)
-        elif current_keys['d'] and current_keys['w']:
-            True#move_power(30, deviation=10)
-        elif current_keys['a'] and current_keys['s']:
-            True#move_power(-30, deviation=-10)
-        elif current_keys['d'] and current_keys['s']:
-            True#move_power(-30, deviation=10)
-        elif current_keys['w']:
-            True#move_power(30, 0)
-        elif current_keys['s']:
-            True#move_power(-30, 0)
-        else:
-            False#stop_all()
-        #current_movements = session['movements']
-        #movementIDs = current_movements.keys()
-        #if movementID not in movementIDs:
-            #new movement code
-        #else:
-            #
-        return jsonify({current_keys})
+        if GLOBALS.ROBOT:
+            GLOBALS.ROBOT.stop_all()
+            reverse_sound(False)
+            if current_keys['stop']:
+                GLOBALS.ROBOT.stop_all()
+            elif current_keys['w'] and not (current_keys['s']):
+                if current_keys['a']:
+                    GLOBALS.ROBOT.move_power(30, 15)
+                elif current_keys['d']:
+                    GLOBALS.ROBOT.move_power(30, -15)
+                else:
+                    GLOBALS.ROBOT.move_power(30, 0)
+            elif current_keys['s'] and not (current_keys['w']):
+                reverse_sound(True)
+                if current_keys['a']:
+                    GLOBALS.ROBOT.move_power(-30, 15)
+                elif current_keys['d']:
+                    GLOBALS.ROBOT.move_power(-30, -15)
+                else:
+                    GLOBALS.ROBOT.move_power(-30, 0)
+            elif current_keys['a'] and not current_keys['d']:
+                GLOBALS.ROBOT.rotate_power(15)
+            elif current_keys['d'] and not current_keys['a']:
+                GLOBALS.ROBOT.rotate_power(-15)
+        return jsonify({})
     else:
         return redirect('/')
 
 
+@app.route('/process_voice_commands', methods = ['GET', 'POST'])
+def process_voice_commands():
+    if request.method == 'POST':
+        instructions = request.get_json()
+        if GLOBALS.ROBOT:
+            vc_type = instructions[0]
+            magnitude = int(instructions[1])
+            if vc_type == 'stop':
+                GLOBALS.ROBOT.stop_all()
+            elif vc_type == 'fire':
+                GLOBALS.ROBOT.spin_medium_motor(1700)
+            elif vc_type == 'left':
+                GLOBALS.ROBOT.rotate_power_degrees_IMU(15, -1 * magnitude)
+            elif vc_type == 'right':
+                GLOBALS.ROBOT.rotate_power_degrees_IMU(15, magnitude)
+            elif vc_type == 'face':
+                GLOBALS.ROBOT.rotate_power_heading_IMU(15, magnitude)
+            elif vc_type == 'forward':
+                GLOBALS.ROBOT.move_power_time(30, magnitude)
+            elif vc_type == 'backward':
+                reverse_sound(True)
+                GLOBALS.ROBOT.move_power_time(-30, magnitude)
+                reverse_sound(False)
+            elif vc_type == 'play':
+                print('play')
+                play_song('static/music/8_9_10_MP3_song.mp3',1,0.5)
+                print('play')
+        return jsonify(instructions)
+    else:
+        return redirect('/')
 
+@app.route('/process_shooting', methods = ['GET', 'POST'])
+def process_shooting():
+    if request.method == 'POST':
+        if GLOBALS.ROBOT:
+            GLOBALS.ROBOT.spin_medium_motor(1700)
+        return jsonify({})
+    else:
+        return redirect('/')
 
-
-
+@app.route('/account/status', methods = ['POST', 'GET'])
+def pending_account():
+    #please_login('pending')
+    return render_template('pending_account.html')
+    
 
 
 
@@ -241,7 +371,7 @@ def shutdown():
 def logout():
     shutdowneverything()
     session.clear()
-    return redirect('/')
+    return redirect('/login')
 
 #---------------------------------------------------------------------------
 #main method called web server application

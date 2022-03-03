@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
+{%block title%}
+    Dashboard
+{%endblock%}
 {% block content %}
+<script src="/static/js/brick_pi_2022_dashboard.js"></script> 
     <div class="page-header" id="banner">
         <div class="row">
             <h1>Robot Dashboard</h1>
@@ -11,9 +15,12 @@
     <div id="dashboard">
         <div class="row">
             <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();">Shutdown Robot</button>
-            <button id="reconfig" type="button" class="btn btn-warning" onclick="new_ajax_helper('/reconfig_IMU');">Reconfigure IMU</button>
-            <button id="compass" type="button" class="btn btn-secondary" onclick="new_ajax_helper('/compass');">Set Compass</button>
-            <button id="sensors" type="button" class="btn btn-info" onclick="new_ajax_helper('/sensors');">Sensors</button>
+            <button id="reconfig" type="button" class="btn btn-warning" onclick="jq_ajax('/reconfig_IMU');">Reconfigure IMU</button>
+            <button id="compass" type="button" class="btn btn-secondary" onclick="jq_ajax('/compass');">Set Compass</button>
+            <button id="sensors" type="button" class="btn btn-info" onclick="jq_ajax('/sensors');">Sensors</button>
+            <button class="btn btn-success" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">
+                Start VC <i class="fa fa-microphone" aria-hidden="true"></i>
+            </button>
         </div>
         <div class="row">
             <div id="videobox" class="col">
@@ -28,5 +35,4 @@
     <script> robot_enabled = {{robot_enabled}}; </script>
     <script src="/static/js/dashboard.js"></script> 
     <script src="/static/js/mapping.js"></script> 
-    <script src="/static/js/brick_pi_2022_dashboard.js"></script> 
 {% endblock %}

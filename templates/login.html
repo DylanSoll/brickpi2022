@@ -1,27 +1,26 @@
-{% extends "layout.html" %}
-{% block content %}
-<div class="page-header" id="banner">
-    <div class="row">
-        <h1>Login</h1>
+{%extends 'layout.html'%}
+{%block title%}
+Login
+{%endblock%}
+{%block content%}
+
+
+<h2 class="heading">Login</h2>
+<form action="/login", method='POST'>
+    <div class="form-floating">
+        <input type="email" class="form-control" id="login_email" placeholder="email@email" name ='login_email'>
+        <label for="login_email">Email</label>
     </div>
-</div>
-<div class="row">
-    <form action="/" method="POST">
-    Email:<br>
-    <input type="text" name="email" value="" required><br>
-    Password:<br>
-    <input type="password" name="password" value="" required><br><br>
-    <input type="submit" value="Submit" class="button">
-    </form>
-</div>
-<div class="row">
-    <p><b>Email:</b> admin@admin  <b>Password:</b> admin <br>
-    If you click the "Submit" button, the form-data will be sent to the URL of the form action.
-    </p>
-</div>
-<div class="row">
-    {{data}}
-</div>
-{% endblock %}
-{% block scripts %}
-{% endblock %}
+    <br>
+    <div class="form-floating">
+        <input type="password" class="form-control" id="login_password" placeholder="********" name ='login_password'>
+        <label for="password">Password</label>
+    </div>
+    <br>
+    <div class="d-flex justify-content-between">
+        <button class = "btn btn-primary" type="submit">Login</button>
+        <a href = "/register">Register Instead</a>
+    </div>
+</form>
+
+{%endblock%}

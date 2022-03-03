@@ -1,4 +1,7 @@
-function jq_ajax(input_url, obj, responsehandler, method = 'POST'){
+function defaulthandle(results){
+    var results = results;
+}
+function jq_ajax(input_url, obj = {}, responsehandler = defaulthandle, method = 'POST'){
     $.ajax({
     type: method,
     url: input_url,
@@ -6,10 +9,10 @@ function jq_ajax(input_url, obj, responsehandler, method = 'POST'){
     contentType: "application/json",
     dataType: 'json',
     success: function(result) {
-        responsehandler(result)
+        responsehandler(result);
     },
     error: function(error){
-        console.log(error)
+        console.log(error);
     }
 });
 }
