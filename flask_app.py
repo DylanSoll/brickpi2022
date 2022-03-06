@@ -1,6 +1,6 @@
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
-from interfaces import databaseinterface, camerainterface, soundinterface
-import robot #robot is class that extends the brickpi class
+from interfaces import databaseinterface#, soundinterface#, #camerainterface, 
+#import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import logging, time
 import password_management as pm
@@ -38,7 +38,7 @@ def reverse_sound(mode):
 def play_song(song, times = 1, volume = 0.5):
     return_val = False
     if not GLOBALS.SOUND:
-        GLOBALS.SOUND = soundinterface.SoundInterface()
+        pass#GLOBALS.SOUND = soundinterface.SoundInterface()
     try:
         GLOBALS.SOUND.load_mp3(song)
         GLOBALS.SOUND.set_volume(volume)
@@ -111,22 +111,22 @@ def robotload():
     if not GLOBALS.CAMERA:
         log("LOADING CAMERA")
         try:
-            GLOBALS.CAMERA = camerainterface.CameraInterface()
+            pass#GLOBALS.CAMERA = camerainterface.CameraInterface()
         except Exception as error:
             log("FLASK APP: CAMERA NOT WORKING")
             GLOBALS.CAMERA = None
         if GLOBALS.CAMERA:
             GLOBALS.CAMERA.start()
-    if not GLOBALS.ROBOT: 
-        log("FLASK APP: LOADING THE ROBOT")
-        GLOBALS.ROBOT = robot.Robot(20, app.logger)
-        GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
-        GLOBALS.ROBOT.reconfig_IMU()
+    #if not GLOBALS.ROBOT: 
+    #    log("FLASK APP: LOADING THE ROBOT")
+    #    GLOBALS.ROBOT = robot.Robot(20, app.logger)
+    #    GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
+    #    GLOBALS.ROBOT.reconfig_IMU()
     if not GLOBALS.SOUND:
         log("FLASK APP: LOADING THE SOUND")
-        GLOBALS.SOUND = soundinterface.SoundInterface()
+        #GLOBALS.SOUND = soundinterface.SoundInterface()
         #GLOBALS.SOUND.say("I am ready")
-    sensordict = GLOBALS.ROBOT.get_all_sensors()
+    #sensordict = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(sensordict)
 
 # ---------------------------------------------------------------------------------------
@@ -157,9 +157,18 @@ def compass():
 @app.route('/sensors', methods=['GET','POST'])
 def sensors():
     data = {}
-    if GLOBALS.ROBOT:
-        data = GLOBALS.ROBOT.get_all_sensors()
-    return jsonify(data)
+    if GLOBALS.DATABASE:
+        recent_sensor_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log ORDER BY sensor_data_id DESC LIMIT 1')
+    #if GLOBALS.ROBOT:
+        #data = GLOBALS.ROBOT.get_all_sensors()
+    return jsonify(recent_sensor_data)
+
+@app.route('/sensor-view', methods=['GET','POST'])
+def sensor_view():
+    data = {}
+    #if GLOBALS.ROBOT:
+        #data = GLOBALS.ROBOT.get_all_sensors()
+    return render_template('sensors.html')
 
 # YOUR FLASK CODE------------------------------------------------------------------------
 
@@ -170,25 +179,11 @@ def missions():
         missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
             INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
             WHERE victim = 'True' GROUP BY missions.missionid''')
-        top_7_missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
-            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
-            WHERE victim = 'True' GROUP BY missions.missionid ORDER BY time_init DESC LIMIT 7''')    
         return jsonify(missions)
     else:
-        return render_template('missions.html')
-@app.route('/top_7_missions', methods = ['GET', 'POST'])
-def top_7_missions():
-    if request.method == 'POST':
-        top_7_missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
-            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
-            WHERE victim = 'True' GROUP BY missions.missionid ORDER BY time_init DESC LIMIT 7''')    
-        return jsonify(missions)
-    else:
-        return return_redirect('/missions')
-@app.route('/missions/history')
-def mission_history():
-    please_login('dashboard')
-    return render_template('mission_data.html')
+        return render_template('mission_data.html')
+
+
 
 @app.route('/mission-data', methods = ['GET', 'POST'])
 def mission_data():
@@ -288,13 +283,19 @@ def process_shooting():
     else:
         return redirect('/')
 
-@app.route('/account/status', methods = ['POST', 'GET'])
-def pending_account():
+@app.route('/account', methods = ['POST', 'GET'])
+def account():
     #please_login('pending')
-    return render_template('pending_account.html')
+    return render_template('account.html')
     
 
-
+@app.route('/create-graphs', methods = ['POST', 'GET'])
+def create_graphs():
+    if request.method == 'POST':
+        details = '[table_id, columns, body_id, data, fields]'
+        return jsonify(details)
+    else:
+        return redirect('/missions')
 
 
 

@@ -1,12 +1,33 @@
 {% extends "layout.html" %}
+{%block title%}
+    Sensors
+{%endblock%}
 {% block content %}
     <div class="page-header" id="banner">
         <div class="row">
-            <h1>Robot Sensor View</h1>
+            <h2 class = "heading">Robot Sensor View</h2>
         </div>
     </div>
-    <div class="row" id="message">
-    </div>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Sensor</i></th>
+            <th scope="col">Reading</th>
+          </tr>
+        </thead>
+        <tbody id = 'missions_table_body'>
+
+        </tbody>
+      </table>
+<script>
+    function live_sensor_view(data){
+
+    }
+    columns = {'sensor_type': 'Sensor', 'sensor_data': 'Data'}
+    data = jq_ajax('/sensors', {}, return_results)
+    console.log(data)
+    //create_table_shell('sensor_live', columns, 'sensor_body', datasets, fields)
+</script>
 {% endblock %}
 {% block scripts %}
     <script src="/static/js/sensor.js"></script> <!-- JSON HELPER -->

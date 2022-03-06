@@ -171,7 +171,10 @@ function populate_specific_mission(details){
         fill_basic_table('movements_table_body', movement, movement_fields);
     }
     return
-        }
+}
+
+
+
 function populate_mission_table(mission_id){
     const mission_cont = document.getElementById('mission_history_container');
     const details_cont = document.getElementById('mission_history');
@@ -183,6 +186,7 @@ function populate_mission_table(mission_id){
     jq_ajax('/mission-data', mission_id, populate_specific_mission);
     return
 }
+
 function return_to_missions(){
     const mission_cont = document.getElementById('mission_history_container');
     const details_cont = document.getElementById('mission_history');
@@ -239,13 +243,24 @@ function search_table(search, tableid){
         }
     }
 }
+
+
+
 function create_mission_carosel(missions){
     var parent = document.getElementById('carousel-inner');
+    var indicator = document.getElementById('carousel-indicators')
     for (var i = 0; i < missions.length; i++){
+        var carousel_indicator = document.createElement('button');
+        carousel_indicator.type = "button";
+        carousel_indicator.setAttribute('data-bs-target', '#carouselExampleCaptions');
+        carousel_indicator.setAttribute('data-bs-slide-to', i);
+        carousel_indicator.setAttribute('aria-label', 'Slide ' + String(i+1));
         var current_mission = missions[i];
         var container = document.createElement('div');
         if (i == 0){
             container.className = 'carousel-item active';
+            carousel_indicator.className = 'Active'
+            carousel_indicator.setAttribute('aria-current', true);
         }else{
             container.className = 'carousel-item';
         }
@@ -263,6 +278,59 @@ function create_mission_carosel(missions){
         carousel_content.appendChild(notes);
         mission_item.appendChild(carousel_content);
         container.appendChild(mission_item);
+        parent.append(container);
+        indicator.appendChild(carousel_indicator)
+/*<div class="carousel-indicators">
+        
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>*/
     }
-    parent.append(container)
+    var generic_button =  document.createElement('button');
+    generic_button.type = 'button';
+    generic_button.setAttribute('data-bs-target', '#carouselExampleCaptions');
+    next_button = generic_button;
+    prev_button = generic_button;
+    prev_button.className = "carousel-control-prev";
+    prev_button.setAttribute('data-bs-slide',"prev");
+    prev_span = document.createElement('span');
+    prev_span_label = document.createElement('span');
+    prev_span.className = "carousel-control-prev-icon";
+    prev_span.setAttribute('aria-hidden',"true");
+    prev_span_label.className = 'visually-hidden';
+    prev_span_label.innerHTML = "Previous";
+    prev_button.appendChild(prev_span)
+    prev_button.appendChild(prev_span_label)
+
+
+    next_button.className = "carousel-control-next";
+    next_button.setAttribute('data-bs-slide',"next");
+    next_span = document.createElement('span');
+    next_span_label = document.createElement('span');
+    next_span.className = "carousel-control-next-icon";
+    next_span.setAttribute('aria-hidden',"true");
+    next_span_label.className = 'visually-hidden';
+    next_span_label.innerHTML = "Next";
+    next_button.appendChild(next_span)
+    next_button.appendChild(next_span_label)
+    console.log(next_button)
+    document.getElementById('carouselExampleCaptions').appendChild(prev_button)
+    document.getElementById('carouselExampleCaptions').appendChild(next_button)
+    
+}
+
+function create_table(details){
+    columns = details['columns']
+    table_id = details['table_id']
+    body_id = details['body_id']
+    fields = details['fields']
+    data = details['data']
+    create_table_shell(table_id, columns, body_id, data, fields);
+    return
 }

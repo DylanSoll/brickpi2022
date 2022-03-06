@@ -1,7 +1,7 @@
-function defaulthandle(results){
-    var results = results;
+function return_results(results){
+    return results
 }
-function jq_ajax(input_url, obj = {}, responsehandler = defaulthandle, method = 'POST'){
+function jq_ajax(input_url, obj = {}, responsehandler = return_results, method = 'POST'){
     $.ajax({
     type: method,
     url: input_url,

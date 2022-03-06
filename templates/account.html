@@ -1,0 +1,14 @@
+{%extends 'layout.html'%}
+{%block title%}
+Account 
+{%endblock%}
+{%block content%}
+{%if 'permissions' in session%}
+    {%if session['permissions'] == 'pending'%}
+        <h4 class="heading">Account Currently Awaiting Approval</h4>
+    {%else%}
+        <h4 class="heading">Account</h4>
+    {%endif%}
+{%endif%}
+
+{%endblock%}
