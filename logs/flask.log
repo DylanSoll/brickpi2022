@@ -1042,3 +1042,257 @@ INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 12:09:11] "POST /sensor-graph-data HTTP
 INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 12:09:11] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 12:09:12] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [04/Mar/2022 12:09:13] "POST /mission-data HTTP/1.1" 200 -
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:01] "[32mGET / HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:01] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "GET /static/js/mission_data.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:02] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "GET /dashboard HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "GET /static/js/brick_pi_2022_dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "GET /static/js/mapping.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:08] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:11] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "POST /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "POST /sensor-graph-data HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:13] "[35m[1mPOST /create-graphs HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\22dyl\OneDrive - Marist College Ashgrove\Year 7-12\Senior 2021-2022\Digital\Unit 3- Digital\U3_SIA2_Automated_rescue\U3_SIA2_Brick_Pi_Code\brickpi2022\flask_app.py", line 299, in create_graphs
+    print(time_frame.type)
+AttributeError: 'list' object has no attribute 'type'
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:47] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:47] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:47] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:41:47] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:15] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:16] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:17] "POST /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:17] "POST /sensor-graph-data HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:17] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:42:17] "[35m[1mPOST /create-graphs HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\22dyl\OneDrive - Marist College Ashgrove\Year 7-12\Senior 2021-2022\Digital\Unit 3- Digital\U3_SIA2_Automated_rescue\U3_SIA2_Brick_Pi_Code\brickpi2022\flask_app.py", line 300, in create_graphs
+    print(time_frame.type)
+AttributeError: 'list' object has no attribute 'type'
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:42] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "POST /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "POST /sensor-graph-data HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:44] "POST /create-graphs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:43:59] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "POST /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "POST /sensor-graph-data HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:01] "POST /create-graphs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:20] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:21] "POST /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:22] "POST /sensor-graph-data HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:22] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:22] "POST /create-graphs HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:44:58] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "POST /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "POST /sensor-graph-data HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:45:00] "[35m[1mPOST /create-graphs HTTP/1.1[0m" 500 -
+ERROR:werkzeug:Error on request:
+Traceback (most recent call last):
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\werkzeug\serving.py", line 319, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\werkzeug\serving.py", line 308, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\22dyl\AppData\Local\Programs\Python\Python39\Lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\22dyl\OneDrive - Marist College Ashgrove\Year 7-12\Senior 2021-2022\Digital\Unit 3- Digital\U3_SIA2_Automated_rescue\U3_SIA2_Brick_Pi_Code\brickpi2022\flask_app.py", line 300, in create_graphs
+    print(isinstance(time_frame, 'list'))
+TypeError: isinstance() arg 2 must be a type or tuple of types
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:02] "GET /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:03] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:03] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:03] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:03] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:03] "[36mGET /static/js/mission_data.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:03] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:04] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:04] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:04] "POST /missions HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:04] "POST /sensor-graph-data HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:04] "POST /create-graphs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Mar/2022 14:46:04] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Detected change in 'C:\\Users\\22dyl\\OneDrive - Marist College Ashgrove\\Year 7-12\\Senior 2021-2022\\Digital\\Unit 3- Digital\\U3_SIA2_Automated_rescue\\U3_SIA2_Brick_Pi_Code\\brickpi2022\\flask_app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

@@ -52,4 +52,7 @@ if __name__ == '__main__':
     email = EmailInterface("verylegitimatebusiness@outlook.com", "Year11DigitalScam#Gen1", "smtp-mail.outlook.com")
     email.load_message('22dylansoll@gmail.com', 'This is another test', '')
     email.attach_file('static\music\8_9_10_MP3_song.mp3')
-    email.send_email()
+    #email.send_email()
+
+
+

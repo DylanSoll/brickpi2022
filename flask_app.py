@@ -292,7 +292,18 @@ def account():
 @app.route('/create-graphs', methods = ['POST', 'GET'])
 def create_graphs():
     if request.method == 'POST':
-        details = '[table_id, columns, body_id, data, fields]'
+        parsed_details = request.get_json()
+        print(parsed_details)
+        time_frame = parsed_details['time']
+        #SQL_query = "SELECT * FROM sensor_log INNER JOIN missions on missions.missionid = sensor_log.missionid INNER JOIN users on missions.userid = users.userid"
+        '''if time_frame != False:
+            start_time = time_frame['start']
+            end_time = time_frame['end']
+            if start_time != False:
+                ""'''
+
+        details = "{'table_id', 'columns', 'body_id', 'data', 'fields'}"
+        details = {}
         return jsonify(details)
     else:
         return redirect('/missions')
