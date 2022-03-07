@@ -15,18 +15,15 @@
             <th scope="col">Reading</th>
           </tr>
         </thead>
-        <tbody id = 'missions_table_body'>
+        <tbody id = 'live_sensor_bodyid'>
 
         </tbody>
       </table>
 <script>
     function live_sensor_view(data){
-
+        fill_basic_table('live_sensor_bodyid', data['datasets'], data['fields'])
     }
-    columns = {'sensor_type': 'Sensor', 'sensor_data': 'Data'}
-    data = jq_ajax('/sensors', {}, return_results)
-    console.log(data)
-    //create_table_shell('sensor_live', columns, 'sensor_body', datasets, fields)
+    jq_ajax('/sensor-live-data', 1, live_sensor_view)
 </script>
 {% endblock %}
 {% block scripts %}

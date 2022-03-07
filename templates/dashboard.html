@@ -4,6 +4,29 @@
 {%endblock%}
 {% block content %}
 <script src="/static/js/brick_pi_2022_dashboard.js"></script> 
+
+<div class="modal fade" id="end_mission_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">End Mission</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="form-floating">
+                <textarea type="text" class="form-control" id="mission_notes" placeholder="Notes" name ='mission_notes'></textarea>
+                <label for="mission_notes">Mission Notes</label>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" onclick="jq_ajax('/cancel-mission');location.replace('/missions')" 
+          data-bs-dismiss="modal">Cancel Mission</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="jq_ajax('/save-mission', 
+          document.getElementById('mission_notes').value); location.replace('/missions')">Save Mission</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="page-header" id="banner">
         <div class="row">
             <h1>Robot Dashboard</h1>
@@ -18,9 +41,22 @@
             <button id="reconfig" type="button" class="btn btn-warning" onclick="jq_ajax('/reconfig_IMU');">Reconfigure IMU</button>
             <button id="compass" type="button" class="btn btn-secondary" onclick="jq_ajax('/compass');">Set Compass</button>
             <button id="sensors" type="button" class="btn btn-info" onclick="jq_ajax('/sensors');">Sensors</button>
+            <button id="missions-button" type="button" class="btn btn-success" onclick="jq_ajax('/initiate-mission');stop_start_mission()">Start Mission</button>
+            <button id="missions-modal-button" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#end_mission_modal"
+            onclick="jq_ajax('/initiate-mission');stop_start_mission()">End Mission</button>
             <button class="btn btn-success" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">
                 Start VC <i class="fa fa-microphone" aria-hidden="true"></i>
             </button>
+        </div>
+        <div class="row">
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward');">Forward</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/back');">Backward</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left');">Left</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right');">Right</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/process_shooting');">Shoot</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/stop');">Stop</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/play');">Play</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/reverse-movement');">Reverse</button>
         </div>
         <div class="row">
             <div id="videobox" class="col">

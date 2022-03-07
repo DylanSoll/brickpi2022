@@ -1,5 +1,6 @@
+from ast import Return
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
-from interfaces import databaseinterface#, soundinterface#, #camerainterface, 
+from interfaces import databaseinterface, movement#, soundinterface#, #camerainterface, 
 #import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import logging, time
@@ -8,7 +9,7 @@ import password_management as pm
 app = Flask(__name__); app.debug = True
 SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessions
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
-logging.basicConfig(filename='logs/flask.log', level=logging.INFO)
+logging.basicConfig(filename='logs/flask.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db', app.logger)
 #Log messages
 def log(message):
@@ -183,6 +184,34 @@ def missions():
     else:
         return render_template('mission_data.html')
 
+@app.route('/initiate-mission', methods = ['GET', 'POST'])
+def initiate_mission():
+    if request.method == 'POST':
+        #if GLOBALS.DATABASE:
+        #    GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (userid, time_init) VALUES (?, ?)', (session['userid'], time.time()))
+        #    GLOBALS.missionid = GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1')
+        return jsonify({})
+    return
+
+@app.route('/save-mission', methods = ['GET', 'POST'])
+def save_mission():
+    if request.method == 'POST':
+        notes = request.get_json()
+        #if GLOBALS.DATABASE:
+        #    GLOBALS.DATABASE.ModifyQuery('''UPDATE missions SET time_final = ?, notes = ? WHERE missionid = (SELECT 
+        #    missionid FROM missions ORDER BY time_init DESC LIMIT 1)''', (time.time(), notes))
+        #    GLOBALS.MISSIONID = None
+        return jsonify({})
+    return
+
+@app.route('/cancel-mission', methods = ['GET', 'POST'])
+def cancel_mission():
+    if request.method == 'POST':
+        #if GLOBALS.DATABASE:
+        #    GLOBALS.DATABASE.ModifyQuery('''DELETE FROM missions WHERE missionid = ?''', (GLOBALS.MISSIONID,))
+        #    GLOBALS.MISSIONID = None
+        return jsonify({})
+    return
 
 
 @app.route('/mission-data', methods = ['GET', 'POST'])
@@ -210,6 +239,25 @@ def sensor_graph_data():
     else:
         return redirect('/missions')
 
+
+
+@app.route('/sensor-live-data', methods = ['GET', 'POST'])
+def sensor_live_data():
+    if request.method == 'POST':
+        data = request.get_json()
+        sensor_log = GLOBALS.DATABASE.ViewQuery('''SELECT acceleration, orientation, direction, distance, thermal, colour, 
+        victim FROM sensor_log WHERE missionid = ?''', (data,))[0]
+        keys = sensor_log.keys()
+        fields = ['sensor', 'data']
+        data = []
+        for key in keys:
+            data.append({'sensor':key, 'data':sensor_log[key]})
+        return_val = {'datasets': data, 'fields': fields}
+        return jsonify(return_val)
+    else:
+        return redirect('/missions')
+
+
 @app.route('/process_movement', methods = ['GET', 'POST'])
 def process_movement():
     if request.method == 'POST':
@@ -221,17 +269,17 @@ def process_movement():
                 GLOBALS.ROBOT.stop_all()
             elif current_keys['w'] and not (current_keys['s']):
                 if current_keys['a']:
-                    GLOBALS.ROBOT.move_power(30, 15)
+                    GLOBALS.ROBOT.move_power(30, 15 + GLOBALS.DEVIATION)
                 elif current_keys['d']:
-                    GLOBALS.ROBOT.move_power(30, -15)
+                    GLOBALS.ROBOT.move_power(30, -15 +GLOBALS.DEVIATION)
                 else:
-                    GLOBALS.ROBOT.move_power(30, 0)
+                    GLOBALS.ROBOT.move_power(30, GLOBALS.DEVIATION)
             elif current_keys['s'] and not (current_keys['w']):
                 reverse_sound(True)
                 if current_keys['a']:
-                    GLOBALS.ROBOT.move_power(-30, 15)
+                    GLOBALS.ROBOT.move_power(-30, 15 +GLOBALS.DEVIATION)
                 elif current_keys['d']:
-                    GLOBALS.ROBOT.move_power(-30, -15)
+                    GLOBALS.ROBOT.move_power(-30, -15 +GLOBALS.DEVIATION)
                 else:
                     GLOBALS.ROBOT.move_power(-30, 0)
             elif current_keys['a'] and not current_keys['d']:
@@ -261,10 +309,10 @@ def process_voice_commands():
             elif vc_type == 'face':
                 GLOBALS.ROBOT.rotate_power_heading_IMU(15, magnitude)
             elif vc_type == 'forward':
-                GLOBALS.ROBOT.move_power_time(30, magnitude)
+                GLOBALS.ROBOT.move_power_time(30, magnitude, GLOBALS.DEVIATION)
             elif vc_type == 'backward':
                 reverse_sound(True)
-                GLOBALS.ROBOT.move_power_time(-30, magnitude)
+                GLOBALS.ROBOT.move_power_time(-30, magnitude, GLOBALS.DEVIATION)
                 reverse_sound(False)
             elif vc_type == 'play':
                 print('play')
@@ -283,11 +331,45 @@ def process_shooting():
     else:
         return redirect('/')
 
+@app.route('/btn-mov/<type>', methods = ['GET', 'POST'])
+def btn_movements(type):
+    if request.method == 'POST':
+        if GLOBALS.ROBOT:
+            if type == 'stop':
+                GLOBALS.ROBOT.stop_all()
+            elif type == 'left':
+                GLOBALS.ROBOT.rotate_power(15)
+            elif type == 'right':
+                GLOBALS.ROBOT.rotate_power(15)
+            elif type == 'forward':
+                GLOBALS.ROBOT.move_power(30)
+            elif type == 'backward':
+                reverse_sound(True)
+                GLOBALS.ROBOT.move_power(-30)
+                reverse_sound(False)
+            elif type == 'play':
+                play_song('static/music/8_9_10_MP3_song.mp3',1,0.5)
+            else:
+                pass#log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False)
+        return jsonify(type)
+    else:
+        return redirect('/')
+
+
 @app.route('/account', methods = ['POST', 'GET'])
 def account():
     #please_login('pending')
     return render_template('account.html')
     
+
+@app.route('/reverse')
+def reverse():
+    if request.method == 'POST':
+        if GLOBALS.ROBOT and GLOBALS.DATABASE:
+            movement.reverse_path(GLOBALS.MISSIONID)
+        return jsonify({})
+    return redirect('/dashboard')
+
 
 @app.route('/create-graphs', methods = ['POST', 'GET'])
 def create_graphs():

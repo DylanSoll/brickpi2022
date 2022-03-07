@@ -9,7 +9,6 @@ function fill_basic_table(table_id, datasets, fields){
     for (var row = 0; row < datasets.length; row++){
         const row_obj = datasets[row];
         const new_row = document.createElement('tr');
-        new_row.className = 'table';
         new_row.setAttribute('data-hidden-by', JSON.stringify({}));
         for (var field_num = 0; field_num < fields.length; field_num++){
             var field = fields[field_num]
@@ -37,7 +36,6 @@ function fill_basic_table(table_id, datasets, fields){
 function create_table_shell(parentid, columns, bodyid, datasets, fields){
     parent = document.getElementById(parentid);
     var table = document.createElement('table');
-    table.className = 'table table-hover';
     var thead = document.createElement('thead');
     var header_row = document.createElement('tr');
     var filter_row = document.createElement('tr');

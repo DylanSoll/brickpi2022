@@ -51,10 +51,10 @@ function process_transcript(transcript, confidence){
             lower_transcript = transcript.toLowerCase();
             instructions = [];
             if (lower_transcript.includes('shoot') || lower_transcript.includes('fire')) {
-                instructions = ['fire', true]
+                instructions = ['fire', true];
                 tts('Firing');
             }else if (lower_transcript.includes('stop')){
-                instructions = ['stop', true]
+                instructions = ['stop', true];
                 tts('stopping');
             }else if (lower_transcript.includes('turn')){
                 direction = 'left';
@@ -63,85 +63,85 @@ function process_transcript(transcript, confidence){
                 }else if (lower_transcript.includes('right')){
                     direction = 'right';
                 }if (lower_transcript.includes('degrees')){
-                    degrees =lower_transcript.match(/(\d+)/)[0]
+                    degrees =lower_transcript.match(/(\d+)/)[0];
                 }else{
                     degrees = 0;
-                    tts('No degrees were given')
+                    tts('No degrees were given');
                 }
-                response = "Turning "+ direction + " " + degrees + " degrees."
-                tts(response)
-                instructions = [direction, degrees, 'degrees']
+                response = "Turning "+ direction + " " + degrees + " degrees.";
+                tts(response);
+                instructions = [direction, degrees, 'degrees'];
             }else if (lower_transcript.includes('face')){
                 if (lower_transcript.includes('degrees')){
-                    target_direction =lower_transcript.match(/(\d+)/)[0]
+                    target_direction =lower_transcript.match(/(\d+)/)[0];
                     if (isNaN(target_direction)){
-                        target_direction = 0
+                        target_direction = 0;
                     }
                 }else{
-                    transcript_array = lower_transcript.split(" ")
-                    compass_degrees = Object.keys(compass_directions)
-                    converted_degrees = 0
-                    divisor = 1
+                    transcript_array = lower_transcript.split(" ");
+                    compass_degrees = Object.keys(compass_directions);
+                    converted_degrees = 0;
+                    divisor = 1;
                     for (var i =0; i < transcript_array.length; i++){
-                        word = transcript_array[i]
+                        word = transcript_array[i];
                         if (compass_degrees.includes(word)){
-                            converted_degrees += compass_directions[word]
-                            divisor +=1
+                            converted_degrees += compass_directions[word];
+                            divisor +=1;
                         }
                     }
-                    target_direction = converted_degrees/(divisor-1)
+                    target_direction = converted_degrees/(divisor-1);
                 }
-                instructions = ['face', target_direction, 'degrees']
-                response = "Turning to face " + target_direction + " degrees"
-                tts(response)
+                instructions = ['face', target_direction, 'degrees'];
+                response = "Turning to face " + target_direction + " degrees";
+                tts(response);
             }else if (lower_transcript.includes('forward')){
-                numeric = lower_transcript.match(/(\d+)/)
+                numeric = lower_transcript.match(/(\d+)/);
                 if (numeric == null){
-                    numeric = 0
+                    numeric = 0;
                 }else{
-                    numeric = numeric[0]
+                    numeric = numeric[0];
                 }
                 if (lower_transcript.includes('seconds')){
-                    type = 'seconds'
+                    type = 'seconds';
                 }else if (lower_transcript.includes('centimetre')){
-                    type = 'centimetres'
+                    type = 'centimetres';
                 }else if(lower_transcript.includes('metre')){
-                    type = 'metres'
+                    type = 'metres';
                 }else{
-                    type = 'seconds'
+                    type = 'seconds';
                 }
-                instructions = ['forward', numeric, type]
-                response = "Moving forward for " +numeric + type
-                tts(response)
+                instructions = ['forward', numeric, type];
+                response = "Moving forward for " +numeric + type;
+                tts(response);
             }else if (lower_transcript.includes('backward') || lower_transcript.includes('reverse')){
                 numeric =lower_transcript.match(/(\d+)/);
                 if (numeric == null){
-                    numeric = 0
+                    numeric = 0;
                 }else{
-                    numeric = numeric[0]
+                    numeric = numeric[0];
                 }
                 if (lower_transcript.includes('seconds')){
-                    type = 'seconds'
+                    type = 'seconds';
                 }else if (lower_transcript.includes('centimetre')){
-                    type = 'centimetre'
+                    type = 'centimetre';
                 }else if(lower_transcript.includes('metre')){
-                    type = 'metre'
+                    type = 'metre';
                 }else{
-                    type = 'seconds'
+                    type = 'seconds';
                 }
-                instructions = ['backward',numeric, type]
-                response = "Moving backward for " +numeric + type
-                tts(response)
+                instructions = ['backward',numeric, type];
+                response = "Moving backward for " +numeric + type;
+                tts(response);
             }else if (lower_transcript.includes('play')){
-                response = "Playing loaded song"
-                instructions = ['play', true]
-                tts(response)
+                response = "Playing loaded song";
+                instructions = ['play', true];
+                tts(response);
             }else{
                 tts('Command not understood')
-                instructions = ['null']
+                instructions = ['null'];
             }
             if (instructions != 'null'){
-                jq_ajax('/process_voice_commands', instructions, defaulthandle)
+                jq_ajax('/process_voice_commands', instructions, defaulthandle);
             }
             
             
@@ -167,45 +167,45 @@ document.addEventListener('keydown', function(e){
         valid_keys = ['w', 'a', 's', 'd', 'p'];
         firing_key = [' '];
         if(e.key === 'w'){
-            current_keys['w'] = true
+            current_keys['w'] = true;
         }else if (e.key === 'a'){
-            current_keys['a'] = true
+            current_keys['a'] = true;
         }else if(e.key === 's'){
-            current_keys['s'] = true
+            current_keys['s'] = true;
         }else if (e.key === 'd'){
-            current_keys['d'] = true
+            current_keys['d'] = true;
         }else if (e.key === 'p'){
-            current_keys['stop'] = true
+            current_keys['stop'] = true;
         }
         if (valid_keys.includes(e.key)){
-            jq_ajax('/process_movement', current_keys, defaulthandle)
+            jq_ajax('/process_movement', current_keys, defaulthandle);
         }else if (firing_key.includes(e.key)){
-            jq_ajax('/process_shooting', {}, defaulthandle)
+            jq_ajax('/process_shooting', {}, defaulthandle);
         }
     }
     
  })
  document.addEventListener('keyup', function(e){
     if (!e.repeat){
-        time_released = time.getTime()
-        message = "released at: " + time_released
-        valid_keys = ['w', 'a', 's', 'd', 'p']
+        time_released = time.getTime();
+        message = "released at: " + time_released;
+        valid_keys = ['w', 'a', 's', 'd', 'p'];
         if(e.key === 'w'){
-            current_keys['w'] = false
+            current_keys['w'] = false;
         }else if (e.key === 'a'){
-            current_keys['a'] = false
+            current_keys['a'] = false;
         }else if(e.key === 's'){
-            current_keys['s'] = false
+            current_keys['s'] = false;
         }else if (e.key === 'd'){
-            current_keys['d'] = false
+            current_keys['d'] = false;
         }else if (e.key === ' '){
-            current_keys['space'] = false
+            current_keys['space'] = false;
         }
         else if (e.key === 'p'){
-            current_keys['stop'] = false
+            current_keys['stop'] = false;
         }
         if (valid_keys.includes(e.key)){
-            jq_ajax('/process_movement', current_keys, defaulthandle)
+            jq_ajax('/process_movement', current_keys, defaulthandle);
         }
     }
  })
@@ -219,7 +219,21 @@ recognition.addEventListener('result', e => {
         .map(result => result[0])
         .map(result => result.confidence)
         //.join('')
-    temp_transcript = String(transcript.pop()).trim()
-    temp_confidence = String(confidence.pop()).trim()
-    process_transcript(temp_transcript, temp_confidence)
+    temp_transcript = String(transcript.pop()).trim();
+    temp_confidence = String(confidence.pop()).trim();
+    process_transcript(temp_transcript, temp_confidence);
 });
+
+function stop_start_mission(){
+    const button = document.getElementById('missions-button');
+    if (button.className == 'btn btn-success'){
+        button.className = "btn btn-danger"
+        button.setAttribute('onclick',"jq_ajax('/end-mission');stop_start_mission()")
+        button.innerHTML = "End Mission"
+    }else if (button.className == 'btn btn-danger'){
+        button.className = "btn btn-success"
+        button.setAttribute('onclick',"jq_ajax('/initiate-mission');stop_start_mission()")
+        button.innerHTML = "Start Mission"
+    }
+    
+}
