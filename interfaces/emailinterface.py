@@ -32,7 +32,7 @@ class EmailInterface():
         encoders.encode_base64(payload)
         if not file_title:
             file_title = filename
-        payload.add_header('Content-Disposition', f'attachment; filename={file_title}')
+        payload.add_header('Content-Disposition', 'attachment; filename='+file_title)
         self.msg.attach(payload)
         return 
 

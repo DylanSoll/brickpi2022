@@ -1,5 +1,5 @@
 from interfaces import databaseinterface
-#import robot #robot is class that extends the brickpi class
+import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import time
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db')
@@ -30,32 +30,32 @@ def db_movement(movement):
         ###FORWARD BACKWARDS COMMANDS
         if mov_type == 'forward':
             if movement_type != 'distance':
-                print('''GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION)''')
+                GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION)
         elif mov_type == 'forward-left':
             if movement_type != 'distance':
-                print('''GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION + -1 * 15)''')
+                GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION + -1 * 15)
         elif mov_type == 'forward-right':
             if movement_type != 'distance':
-                print('''GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION + 15)''')
+                GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION + 15)
         elif mov_type == 'backward-left':
             if movement_type != 'distance':
-                print('''GLOBALS.ROBOT.move_power_time(-1*power, duration, GLOBALS.DEVIATION + -1 * 15)''')
+                GLOBALS.ROBOT.move_power_time(-1*power, duration, GLOBALS.DEVIATION + -1 * 15)
         elif mov_type == 'backward-right':
             if movement_type != 'distance':
-                print('''GLOBALS.ROBOT.move_power_time(-1*power, duration, GLOBALS.DEVIATION + 15)''')
+                GLOBALS.ROBOT.move_power_time(-1*power, duration, GLOBALS.DEVIATION + 15)
         
 
         ### TURNING COMMANDS
         elif mov_type == 'right':
             if movement_type != 'degrees':
-                print('''GLOBALS.ROBOT.rotate_power_time(power, duration)''')
+                GLOBALS.ROBOT.rotate_power_time(power, duration)
             elif movement_type == 'degrees':
-                print('''GLOBALS.ROBOT.rotate_power_degrees_IMU(power, magnitude)''')
+                GLOBALS.ROBOT.rotate_power_degrees_IMU(power, magnitude)
         elif mov_type == 'left':
             if movement_type != 'degrees':
-                print('''GLOBALS.ROBOT.rotate_power_time(-power, duration)''')
+                GLOBALS.ROBOT.rotate_power_time(-power, duration)
             elif movement_type == 'degrees':
-                print('''GLOBALS.ROBOT.rotate_power_degrees_IMU(power, -magnitude)''')
+                GLOBALS.ROBOT.rotate_power_degrees_IMU(power, -magnitude)
     return
 
 def reverse_path(missionid):

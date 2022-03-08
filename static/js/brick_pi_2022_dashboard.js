@@ -203,7 +203,7 @@ document.addEventListener('keydown', function(e){
             current_keys['stop'] = false;
         }
         if (valid_keys.includes(e.key)){
-            jq_ajax('/process_movement', current_keys, defaulthandle);
+            jq_ajax('/process_movement/0', current_keys, defaulthandle);
         }
     }
  })
@@ -226,14 +226,13 @@ recognition.addEventListener('result', e => {
 
 function stop_start_mission(){
     const button = document.getElementById('missions-button');
-    if (button.className == 'btn btn-success'){
-        button.className = "btn btn-danger"
-        button.setAttribute('onclick',"jq_ajax('/end-mission');stop_start_mission()")
-        button.innerHTML = "End Mission"
-    }else if (button.className == 'btn btn-danger'){
-        button.className = "btn btn-success"
-        button.setAttribute('onclick',"jq_ajax('/initiate-mission');stop_start_mission()")
-        button.innerHTML = "Start Mission"
+    const modal_button = document.getElementById('missions-modal-button');
+    if (button.hasAttribute('hidden')){
+        button.removeAttribute('hidden')
+        modal_button.setAttribute('hidden', true)
+    }else if (modal_button.hasAttribute('hidden')){
+        modal_button.removeAttribute('hidden')
+        button.setAttribute('hidden', true)
     }
     
 }

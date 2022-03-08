@@ -285,6 +285,7 @@ def sensor_live_data():
 @app.route('/process_movement/<power>', methods = ['GET', 'POST'])
 def process_movement(power):
     if request.method == 'POST':
+        power = int(power)
         current_keys = request.get_json()
         if GLOBALS.ROBOT:
             GLOBALS.ROBOT.stop_all()
@@ -298,10 +299,10 @@ def process_movement(power):
                 log_move = False
             elif current_keys['w'] and not (current_keys['s']):
                 if current_keys['a']:
-                    GLOBALS.ROBOT.move_power(power, int(power/2) + GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(power, -1*int(power/2) + GLOBALS.DEVIATION)
                     mov_type = "forward-left"
                 elif current_keys['d']:
-                    GLOBALS.ROBOT.move_power(power, -1*int(power/2) +GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(power, int(power/2) +GLOBALS.DEVIATION)
                     mov_type = "forward-right"
                 else:
                     GLOBALS.ROBOT.move_power(power, GLOBALS.DEVIATION)
@@ -309,19 +310,19 @@ def process_movement(power):
             elif current_keys['s'] and not (current_keys['w']):
                 reverse_sound(True)
                 if current_keys['a']:
-                    GLOBALS.ROBOT.move_power(-power, int(power/2) +GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(-power, -1*int(power/2) +GLOBALS.DEVIATION)
                     mov_type = "backward-left"
                 elif current_keys['d']:
-                    GLOBALS.ROBOT.move_power(-power, -1*int(power/2) +GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(-power, int(power/2) +GLOBALS.DEVIATION)
                     mov_type = "backward-right"
                 else:
                     GLOBALS.ROBOT.move_power(-power, 0)
                     mov_type = "backward"
             elif current_keys['a'] and not current_keys['d']:
-                GLOBALS.ROBOT.rotate_power(power)
+                GLOBALS.ROBOT.rotate_power(-1*power)
                 mov_type = "left"
             elif current_keys['d'] and not current_keys['a']:
-                GLOBALS.ROBOT.rotate_power(-1*power)
+                GLOBALS.ROBOT.rotate_power(power)
                 mov_type = "right"
             if log_move and (GLOBALS.MISSIONID != None):
                 movement.log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
@@ -373,6 +374,7 @@ def process_shooting():
 def btn_movements(mov_type, power):
     if request.method == 'POST':
         if GLOBALS.ROBOT: 
+            power = int(power)
             log_move = True
             if GLOBALS.MISSIONID != None:
                 movement.end_time_movement()
@@ -395,7 +397,7 @@ def btn_movements(mov_type, power):
                 log_move = False
             if log_move and (GLOBALS.MISSIONID != None):
                 movement.log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'button', False)
-        return jsonify(type)
+        return jsonify(mov_type)
     else:
         return redirect('/')
 
