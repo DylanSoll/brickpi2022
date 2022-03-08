@@ -1,6 +1,6 @@
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
-from interfaces import databaseinterface, movement#, soundinterface#, #camerainterface, 
-#import robot #robot is class that extends the brickpi class
+from interfaces import databaseinterface, movement, soundinterface, camerainterface, emailinterface
+import robot #robot is class that extends the brickpi class
 import global_vars as GLOBALS #load global variables
 import logging, time
 import password_management as pm
@@ -40,7 +40,7 @@ def reverse_sound(mode):
 def play_song(song, times = 1, volume = 0.5):
     return_val = False
     if not GLOBALS.SOUND:
-        pass#GLOBALS.SOUND = soundinterface.SoundInterface()
+        GLOBALS.SOUND = soundinterface.SoundInterface()
     try:
         GLOBALS.SOUND.load_mp3(song)
         GLOBALS.SOUND.set_volume(volume)
@@ -134,22 +134,22 @@ def robotload():
     if not GLOBALS.CAMERA:
         log("LOADING CAMERA")
         try:
-            pass#GLOBALS.CAMERA = camerainterface.CameraInterface()
+            GLOBALS.CAMERA = camerainterface.CameraInterface()
         except Exception as error:
             log("FLASK APP: CAMERA NOT WORKING")
             GLOBALS.CAMERA = None
         if GLOBALS.CAMERA:
             GLOBALS.CAMERA.start()
-    #if not GLOBALS.ROBOT: 
-    #    log("FLASK APP: LOADING THE ROBOT")
-    #    GLOBALS.ROBOT = robot.Robot(20, app.logger)
-    #    GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
-    #    GLOBALS.ROBOT.reconfig_IMU()
+    if not GLOBALS.ROBOT: 
+        log("FLASK APP: LOADING THE ROBOT")
+        GLOBALS.ROBOT = robot.Robot(20, app.logger)
+        GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
+        GLOBALS.ROBOT.reconfig_IMU()
     if not GLOBALS.SOUND:
         log("FLASK APP: LOADING THE SOUND")
-        #GLOBALS.SOUND = soundinterface.SoundInterface()
-        #GLOBALS.SOUND.say("I am ready")
-    #sensordict = GLOBALS.ROBOT.get_all_sensors()
+        GLOBALS.SOUND = soundinterface.SoundInterface()
+        GLOBALS.SOUND.say("I am ready")
+    sensordict = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(sensordict)
 
 # ---------------------------------------------------------------------------------------
@@ -209,9 +209,9 @@ def missions():
 @app.route('/initiate-mission', methods = ['GET', 'POST'])
 def initiate_mission():
     if request.method == 'POST':
-        #if GLOBALS.DATABASE:
-        #    GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (userid, time_init) VALUES (?, ?)', (session['userid'], time.time()))
-        #    GLOBALS.missionid = GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1')
+        if GLOBALS.DATABASE:
+            GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (userid, time_init) VALUES (?, ?)', (session['userid'], time.time()))
+            GLOBALS.missionid = GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1')
         return jsonify({})
     return
 
@@ -219,19 +219,19 @@ def initiate_mission():
 def save_mission():
     if request.method == 'POST':
         notes = request.get_json()
-        #if GLOBALS.DATABASE:
-        #    GLOBALS.DATABASE.ModifyQuery('''UPDATE missions SET time_final = ?, notes = ? WHERE missionid = (SELECT 
-        #    missionid FROM missions ORDER BY time_init DESC LIMIT 1)''', (time.time(), notes))
-        #    GLOBALS.MISSIONID = None
+        if GLOBALS.DATABASE:
+            GLOBALS.DATABASE.ModifyQuery('''UPDATE missions SET time_final = ?, notes = ? WHERE missionid = (SELECT 
+            missionid FROM missions ORDER BY time_init DESC LIMIT 1)''', (time.time(), notes))
+            GLOBALS.MISSIONID = None
         return jsonify({})
     return
 
 @app.route('/cancel-mission', methods = ['GET', 'POST'])
 def cancel_mission():
     if request.method == 'POST':
-        #if GLOBALS.DATABASE:
-        #    GLOBALS.DATABASE.ModifyQuery('''DELETE FROM missions WHERE missionid = ?''', (GLOBALS.MISSIONID,))
-        #    GLOBALS.MISSIONID = None
+        if GLOBALS.DATABASE:
+            GLOBALS.DATABASE.ModifyQuery('''DELETE FROM missions WHERE missionid = ?''', (GLOBALS.MISSIONID,))
+            GLOBALS.MISSIONID = None
         return jsonify({})
     return
 
