@@ -22,8 +22,10 @@
 <script>
     function live_sensor_view(data){
         fill_basic_table('live_sensor_bodyid', data['datasets'], data['fields'])
+        console.log(data)
     }
-    jq_ajax('/sensor-live-data', 1, live_sensor_view)
+    jq_ajax('/sensor-live-data', {}, live_sensor_view)
+    collect_data = setInterval(function(){jq_ajax('/sensor-live-data', {}, live_sensor_view)},2000)
 </script>
 {% endblock %}
 {% block scripts %}

@@ -4,7 +4,6 @@
 {%block scripts%}
 {%endblock%}
 {%block content%} 
-<script src="/static/js/mission_data.js"></script>
 
 
 <div id = "mission_history_container">
@@ -21,13 +20,13 @@
             <th scope="col">Notes <i class="fa fa-arrow-down"></i></th>
           </tr>
           <tr>
-            <th scope="col"><input type="text" placeholder="Filter..."></th>
-            <th scope="col"><input type="text" placeholder="Filter..."></i></th>
-            <th scope="col"><input type="text" placeholder="Filter..."></th>
-            <th scope="col"><input type="text" placeholder="Filter..."></th>
-            <th scope="col"><input type="text" placeholder="Filter..."></th>
-            <th scope="col"><input type="text" placeholder="Filter..."></i></th>
-            <th scope="col"><input type="text" placeholder="Filter..."></th>
+            <th scope="col"><input type="text" placeholder="Filter..." oninput="search_table(this, 'missions_table_body')"></th>
+            <th scope="col"><input type="text" placeholder="Filter..." oninput="search_table(this, 'missions_table_body')"></i></th>
+            <th scope="col"><input type="text" placeholder="Filter..." oninput="search_table(this, 'missions_table_body')"></th>
+            <th scope="col"><input type="text" placeholder="Filter..." oninput="search_table(this, 'missions_table_body')"></th>
+            <th scope="col"><input type="text" placeholder="Filter..." oninput="search_table(this, 'missions_table_body')"></th>
+            <th scope="col"><input type="text" placeholder="Filter..." oninput="search_table(this, 'missions_table_body')"></th>
+            <th scope="col"><input type="text" placeholder="Filter..." oninput="search_table(this, 'missions_table_body')"></th>
           </tr>
         </thead>
         <tbody id = 'missions_table_body'>

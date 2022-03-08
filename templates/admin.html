@@ -1,0 +1,15 @@
+{%extends 'layout.html'%}
+{%block title%}
+Admin
+{%endblock%}
+{%block content%}
+<h4 class="heading">Admin</h4>
+<div id="user_table"></div>
+<script>
+    data = {'id':'user_table', 'columns': {'select': 'Select','userid': 'User ID','email': 'Email','name': 'Name',
+    'permissions': 'Permissions','phone': 'Phone','pronouns': 'Pronouns'}, 'body_id': 'user_table_body'}
+    
+    create_table_shell('user_table', columns, 'user_table_body', {}, {})
+    jQ_ajax('/get-users', data, create_table)
+</script>
+{%endblock%}

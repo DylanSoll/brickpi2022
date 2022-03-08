@@ -1,4 +1,3 @@
-from ast import Return
 from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
 from interfaces import databaseinterface, movement#, soundinterface#, #camerainterface, 
 #import robot #robot is class that extends the brickpi class
@@ -21,8 +20,10 @@ def please_login(current_address):
     if 'userid' not in session and current_address != 'login':
         return redirect('/login')
     elif 'permissions' in session:
-        if 'permissions' == 'pending' and current_address != 'pending':
+        if session['permissions'] == 'pending' and current_address != 'pending':
             return redirect('/account/pending')
+        elif session['permissions'] != 'admin' and current_address == 'admin':
+            return redirect('/dashboard')
         elif current_address != 'dashboard':
             return redirect('/dashboard')
     return True
@@ -105,6 +106,27 @@ def uniqueEmail():
     else:
         return redirect('/register')
 
+
+@app.route('/admin')
+def admin():
+    please_login('admin')
+    return render_template('admin.html')
+
+@app.route('/get-users')
+def get_users():
+    if request.method == 'POST':
+        info = request.get_json()
+        users = GLOBALS.DATABASE.ViewQuery('''SELECT * FROM sensor_log WHERE missionid = ?''', (GLOBALS.MISSIONID,))[0]
+        keys = users.keys()
+        fields = ['select', 'useird', 'email', 'name', 'permissions', 'phone', 'pronouns']
+        datasets = []
+        for key in keys:
+            datasets.append({'sensor':key, 'data':users[key]})
+        return_val = {'datasets': datasets, 'fields': fields}
+        return_val =  {'table_id':'users_table', 'columns':'info["columns"]', 'body_id': 'users_body_id','datasets': datasets, 'fields': fields}
+        return jsonify(return_val)
+    else:
+        return redirect('/dashboard')
 # Load the ROBOT
 @app.route('/robotload', methods=['GET','POST'])
 def robotload():
@@ -158,18 +180,18 @@ def compass():
 @app.route('/sensors', methods=['GET','POST'])
 def sensors():
     recent_sensor_data = {}
-    if GLOBALS.DATABASE:
+    if GLOBALS.ROBOT:
+        recent_sensor_data = GLOBALS.ROBOT.get_all_sensors()
+    elif GLOBALS.DATABASE:
         recent_sensor_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log ORDER BY sensor_data_id DESC LIMIT 1')
-    #if GLOBALS.ROBOT:
-        #data = GLOBALS.ROBOT.get_all_sensors()
     return jsonify(recent_sensor_data)
 
 @app.route('/sensor-view', methods=['GET','POST'])
 def sensor_view():
-    data = {}
-    #if GLOBALS.ROBOT:
-        #data = GLOBALS.ROBOT.get_all_sensors()
-    return render_template('sensors.html')
+    if not GLOBALS.ROBOT:
+        return render_template('sensors.html')
+    else:
+        return redirect('/dashboard')
 
 # YOUR FLASK CODE------------------------------------------------------------------------
 
@@ -244,16 +266,18 @@ def sensor_graph_data():
 @app.route('/sensor-live-data', methods = ['GET', 'POST'])
 def sensor_live_data():
     if request.method == 'POST':
-        data = request.get_json()
-        sensor_log = GLOBALS.DATABASE.ViewQuery('''SELECT acceleration, orientation, direction, distance, thermal, colour, 
-        victim FROM sensor_log WHERE missionid = ?''', (data,))[0]
-        keys = sensor_log.keys()
-        fields = ['sensor', 'data']
-        datasets = []
-        for key in keys:
-            data.append({'sensor':key, 'data':sensor_log[key]})
-        return_val = {'datasets': datasets, 'fields': fields}
-        return jsonify(return_val)
+        if GLOBALS.MISSIONID != None:
+            sensor_log = GLOBALS.DATABASE.ViewQuery('''SELECT acceleration, orientation, direction, distance, thermal, colour, 
+            victim FROM sensor_log WHERE missionid = ?''', (GLOBALS.MISSIONID,))[0]
+            keys = sensor_log.keys()
+            fields = ['sensor', 'data']
+            datasets = []
+            for key in keys:
+                datasets.append({'sensor':key, 'data':sensor_log[key]})
+            return_val = {'datasets': datasets, 'fields': fields}
+            return jsonify(return_val)
+        else:
+            return redirect('/dashboard')
     else:
         return redirect('/missions')
 
