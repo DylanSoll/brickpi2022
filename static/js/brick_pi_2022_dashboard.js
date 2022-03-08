@@ -48,14 +48,16 @@ function process_transcript(transcript, confidence){
             recognition.stop();
             tts('Disabling Voice Commands');
         }else{
+            power = document.getElementById('power').value
             lower_transcript = transcript.toLowerCase();
             instructions = [];
+            respons = ""
             if (lower_transcript.includes('shoot') || lower_transcript.includes('fire')) {
                 instructions = ['fire', true];
-                tts('Firing');
+                response = "Delivering Packing"
             }else if (lower_transcript.includes('stop')){
                 instructions = ['stop', true];
-                tts('stopping');
+                respone = 'Stopping'
             }else if (lower_transcript.includes('turn')){
                 direction = 'left';
                 if (lower_transcript.includes('left')){
@@ -69,8 +71,7 @@ function process_transcript(transcript, confidence){
                     tts('No degrees were given');
                 }
                 response = "Turning "+ direction + " " + degrees + " degrees.";
-                tts(response);
-                instructions = [direction, degrees, 'degrees'];
+                instructions = [direction, degrees, 'degrees', power];
             }else if (lower_transcript.includes('face')){
                 if (lower_transcript.includes('degrees')){
                     target_direction =lower_transcript.match(/(\d+)/)[0];
@@ -91,9 +92,8 @@ function process_transcript(transcript, confidence){
                     }
                     target_direction = converted_degrees/(divisor-1);
                 }
-                instructions = ['face', target_direction, 'degrees'];
+                instructions = ['face', target_direction, 'degrees', power];
                 response = "Turning to face " + target_direction + " degrees";
-                tts(response);
             }else if (lower_transcript.includes('forward')){
                 numeric = lower_transcript.match(/(\d+)/);
                 if (numeric == null){
@@ -110,9 +110,8 @@ function process_transcript(transcript, confidence){
                 }else{
                     type = 'seconds';
                 }
-                instructions = ['forward', numeric, type];
+                instructions = ['forward', numeric, type, power];
                 response = "Moving forward for " +numeric + type;
-                tts(response);
             }else if (lower_transcript.includes('backward') || lower_transcript.includes('reverse')){
                 numeric =lower_transcript.match(/(\d+)/);
                 if (numeric == null){
@@ -129,19 +128,18 @@ function process_transcript(transcript, confidence){
                 }else{
                     type = 'seconds';
                 }
-                instructions = ['backward',numeric, type];
+                instructions = ['backward',numeric, type, power];
                 response = "Moving backward for " +numeric + type;
-                tts(response);
             }else if (lower_transcript.includes('play')){
                 response = "Playing loaded song";
                 instructions = ['play', true];
-                tts(response);
             }else{
                 tts('Command not understood')
-                instructions = ['null'];
+                instructions = 'null';
             }
             if (instructions != 'null'){
                 jq_ajax('/process_voice_commands', instructions, defaulthandle);
+                tts(response);
             }
             
             
@@ -178,7 +176,7 @@ document.addEventListener('keydown', function(e){
             current_keys['stop'] = true;
         }
         if (valid_keys.includes(e.key)){
-            jq_ajax('/process_movement', current_keys, defaulthandle);
+            jq_ajax('/process_movement/'+document.getElementById('power').value, current_keys, defaulthandle);
         }else if (firing_key.includes(e.key)){
             jq_ajax('/process_shooting', {}, defaulthandle);
         }
@@ -222,6 +220,8 @@ recognition.addEventListener('result', e => {
     temp_transcript = String(transcript.pop()).trim();
     temp_confidence = String(confidence.pop()).trim();
     process_transcript(temp_transcript, temp_confidence);
+    recognition.stop()
+    recognition.start()
 });
 
 function stop_start_mission(){

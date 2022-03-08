@@ -9,7 +9,7 @@ import password_management as pm
 app = Flask(__name__); app.debug = True
 SECRET_KEY = 'my random key can be anything' #this is used for encrypting sessions
 app.config.from_object(__name__) #Set app configuration using above SETTINGS
-logging.basicConfig(filename='logs/flask.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='logs/flask.log', level=logging.INFO, format='Time: %(asctime)s Message: %(message)s')
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db', app.logger)
 #Log messages
 def log(message):
@@ -157,7 +157,7 @@ def compass():
 
 @app.route('/sensors', methods=['GET','POST'])
 def sensors():
-    data = {}
+    recent_sensor_data = {}
     if GLOBALS.DATABASE:
         recent_sensor_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log ORDER BY sensor_data_id DESC LIMIT 1')
     #if GLOBALS.ROBOT:
@@ -249,43 +249,58 @@ def sensor_live_data():
         victim FROM sensor_log WHERE missionid = ?''', (data,))[0]
         keys = sensor_log.keys()
         fields = ['sensor', 'data']
-        data = []
+        datasets = []
         for key in keys:
             data.append({'sensor':key, 'data':sensor_log[key]})
-        return_val = {'datasets': data, 'fields': fields}
+        return_val = {'datasets': datasets, 'fields': fields}
         return jsonify(return_val)
     else:
         return redirect('/missions')
 
 
-@app.route('/process_movement', methods = ['GET', 'POST'])
-def process_movement():
+@app.route('/process_movement/<power>', methods = ['GET', 'POST'])
+def process_movement(power):
     if request.method == 'POST':
         current_keys = request.get_json()
         if GLOBALS.ROBOT:
             GLOBALS.ROBOT.stop_all()
+            if GLOBALS.MISSIONID != None:
+                movement.end_time_movement()
             reverse_sound(False)
+            log_move = True
+            mov_type = ""
             if current_keys['stop']:
                 GLOBALS.ROBOT.stop_all()
+                log_move = False
             elif current_keys['w'] and not (current_keys['s']):
                 if current_keys['a']:
-                    GLOBALS.ROBOT.move_power(30, 15 + GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(power, int(power/2) + GLOBALS.DEVIATION)
+                    mov_type = "forward-left"
                 elif current_keys['d']:
-                    GLOBALS.ROBOT.move_power(30, -15 +GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(power, -1*int(power/2) +GLOBALS.DEVIATION)
+                    mov_type = "forward-right"
                 else:
-                    GLOBALS.ROBOT.move_power(30, GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(power, GLOBALS.DEVIATION)
+                    mov_type = "forward"
             elif current_keys['s'] and not (current_keys['w']):
                 reverse_sound(True)
                 if current_keys['a']:
-                    GLOBALS.ROBOT.move_power(-30, 15 +GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(-power, int(power/2) +GLOBALS.DEVIATION)
+                    mov_type = "backward-left"
                 elif current_keys['d']:
-                    GLOBALS.ROBOT.move_power(-30, -15 +GLOBALS.DEVIATION)
+                    GLOBALS.ROBOT.move_power(-power, -1*int(power/2) +GLOBALS.DEVIATION)
+                    mov_type = "backward-right"
                 else:
-                    GLOBALS.ROBOT.move_power(-30, 0)
+                    GLOBALS.ROBOT.move_power(-power, 0)
+                    mov_type = "backward"
             elif current_keys['a'] and not current_keys['d']:
-                GLOBALS.ROBOT.rotate_power(15)
+                GLOBALS.ROBOT.rotate_power(power)
+                mov_type = "left"
             elif current_keys['d'] and not current_keys['a']:
-                GLOBALS.ROBOT.rotate_power(-15)
+                GLOBALS.ROBOT.rotate_power(-1*power)
+                mov_type = "right"
+            if log_move and (GLOBALS.MISSIONID != None):
+                movement.log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
         return jsonify({})
     else:
         return redirect('/')
@@ -303,21 +318,20 @@ def process_voice_commands():
             elif vc_type == 'fire':
                 GLOBALS.ROBOT.spin_medium_motor(1700)
             elif vc_type == 'left':
-                GLOBALS.ROBOT.rotate_power_degrees_IMU(15, -1 * magnitude)
+                power = instructions[3]
+                GLOBALS.ROBOT.rotate_power_degrees_IMU(int(power/2), -1 * magnitude)
             elif vc_type == 'right':
-                GLOBALS.ROBOT.rotate_power_degrees_IMU(15, magnitude)
+                GLOBALS.ROBOT.rotate_power_degrees_IMU(int(power/2), magnitude)
             elif vc_type == 'face':
-                GLOBALS.ROBOT.rotate_power_heading_IMU(15, magnitude)
+                GLOBALS.ROBOT.rotate_power_heading_IMU(int(power/2), magnitude)
             elif vc_type == 'forward':
-                GLOBALS.ROBOT.move_power_time(30, magnitude, GLOBALS.DEVIATION)
+                GLOBALS.ROBOT.move_power_time(power, magnitude, GLOBALS.DEVIATION)
             elif vc_type == 'backward':
                 reverse_sound(True)
-                GLOBALS.ROBOT.move_power_time(-30, magnitude, GLOBALS.DEVIATION)
+                GLOBALS.ROBOT.move_power_time(-1*power, magnitude, GLOBALS.DEVIATION)
                 reverse_sound(False)
             elif vc_type == 'play':
-                print('play')
                 play_song('static/music/8_9_10_MP3_song.mp3',1,0.5)
-                print('play')
         return jsonify(instructions)
     else:
         return redirect('/')
@@ -331,26 +345,32 @@ def process_shooting():
     else:
         return redirect('/')
 
-@app.route('/btn-mov/<type>', methods = ['GET', 'POST'])
-def btn_movements(type):
+@app.route('/btn-mov/<mov_type>/<power>', methods = ['GET', 'POST'])
+def btn_movements(mov_type, power):
     if request.method == 'POST':
-        if GLOBALS.ROBOT:
-            if type == 'stop':
+        if GLOBALS.ROBOT: 
+            log_move = True
+            if GLOBALS.MISSIONID != None:
+                movement.end_time_movement()
+            if mov_type == 'stop':
                 GLOBALS.ROBOT.stop_all()
-            elif type == 'left':
-                GLOBALS.ROBOT.rotate_power(15)
-            elif type == 'right':
-                GLOBALS.ROBOT.rotate_power(15)
-            elif type == 'forward':
-                GLOBALS.ROBOT.move_power(30)
-            elif type == 'backward':
+            elif mov_type == 'left':
+                GLOBALS.ROBOT.rotate_power(int(power/2))
+            elif mov_type == 'right':
+                GLOBALS.ROBOT.rotate_power(-1*int(power/2))
+            elif mov_type == 'forward':
+                GLOBALS.ROBOT.move_power(power)
+            elif mov_type == 'backward':
                 reverse_sound(True)
-                GLOBALS.ROBOT.move_power(-30)
+                GLOBALS.ROBOT.move_power(-1*power)
                 reverse_sound(False)
-            elif type == 'play':
+            elif mov_type == 'play':
+                log_move = False
                 play_song('static/music/8_9_10_MP3_song.mp3',1,0.5)
             else:
-                pass#log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False)
+                log_move = False
+            if log_move and (GLOBALS.MISSIONID != None):
+                movement.log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'button', False)
         return jsonify(type)
     else:
         return redirect('/')

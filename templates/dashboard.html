@@ -4,7 +4,11 @@
 {%endblock%}
 {% block content %}
 <script src="/static/js/brick_pi_2022_dashboard.js"></script> 
-
+<script>
+    jQuery(document).ready(function () {
+  jQuery('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 <div class="modal fade" id="end_mission_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -49,14 +53,20 @@
             </button>
         </div>
         <div class="row">
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward');">Forward</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/back');">Backward</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left');">Left</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right');">Right</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value);">Forward</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/back/'+document.getElementById('power').value);">Backward</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left/'+document.getElementById('power').value);">Left</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right/'+document.getElementById('power').value);">Right</button>
             <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/process_shooting');">Shoot</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/stop');">Stop</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/play');">Play</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/reverse-movement');">Reverse</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/stop/ False');">Stop</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/play/False');">Play</button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/reverse-movement');">Return</button>
+        </div>
+        <div class="row">
+            <label for="customRange1" class="form-label heading">Robot Power: <span id = "power_range">30</span>%</label>
+            <input type="range" class="form-range" id="power" min = "0" max = "100" step = "1" value =30
+            oninput="document.getElementById('power_range').innerHTML = this.value">
+
         </div>
         <div class="row">
             <div id="videobox" class="col">
