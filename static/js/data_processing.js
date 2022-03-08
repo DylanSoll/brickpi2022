@@ -3,6 +3,23 @@ function shorten_time(epoch_time){
     return time
 }
 
+function create_checkbox(id, text){
+    var form_check = document.createElement('div');
+    form_check.className = 'form-check';   
+    var input_element = document.createElement('input');
+    input_element.className = "form-check-input";
+    input_element.type = 'checkbox';
+    input_element.value = "";
+    input_element.id = id;
+    var input_label = document.createElement('label');
+    input_label.className = "form-check-label";
+    input_label.setAttribute('for', id);
+    input_label.innerHTML = text
+    form_check.appendChild(input_element);
+    form_check.appendChild(input_label);
+    return form_check
+}
+
 function fill_basic_table(table_id, datasets, fields){
     table = document.getElementById(table_id)
     table.innerHTML = ""
@@ -14,11 +31,18 @@ function fill_basic_table(table_id, datasets, fields){
             var field = fields[field_num]
             if (field.includes('time')) {
                 data = shorten_time(row_obj[field])
+            }else if (field == 'select'){
+                data = create_checkbox('select_all_'+table_id, '')
             }else{
                 data = row_obj[field]
             }
             new_td = document.createElement('td');
-            new_td.innerHTML = data;
+            if (typeof(data) == "object"){
+                new_td.appendChild(data)
+            }else{
+                new_td.innerHTML = data;
+            }
+            
             data_label = 'data-'+field
             string_obj = new_row.getAttribute('data-hidden-by')
             temp_obj = JSON.parse(string_obj) 
@@ -51,12 +75,17 @@ function create_table_shell(parentid, columns, bodyid, datasets, fields){
         //
         var filter_th = document.createElement('th');
         filter_th.setAttribute('scope', 'col');
-        var filter_input = document.createElement('input');
-        filter_input.type = 'text';
-        filter_input.placeholder = "Filter...";
-        filter_input.setAttribute('data-search', current_column);
-        filter_input.setAttribute('oninput', "search_table(this,"+ "'" +bodyid+"')");
-        filter_th.appendChild(filter_input);
+        if (current_column == 'select'){
+            filter_th.appendChild(create_checkbox('select_all_'+parentid, 'Select '))
+
+        }else{
+            var filter_input = document.createElement('input');
+            filter_input.type = 'text';
+            filter_input.placeholder = "Filter...";
+            filter_input.setAttribute('data-search', current_column);
+            filter_input.setAttribute('oninput', "search_table(this,"+ "'" +bodyid+"')");
+            filter_th.appendChild(filter_input);
+        }
         filter_row.appendChild(filter_th);
     }
     thead.appendChild(header_row);
@@ -84,7 +113,8 @@ function populate_main_table(results){
             var field = fields[field_num]
             if (field == 'time_init' || field == 'time_final') {
                 data = shorten_time(row_obj[field])
-            }else{
+            }
+            else{
                 data = row_obj[field]
             }
             new_td = document.createElement('td');
@@ -278,17 +308,7 @@ function create_mission_carosel(missions){
         container.appendChild(mission_item);
         parent.append(container);
         indicator.appendChild(carousel_indicator)
-/*<div class="carousel-indicators">
-        
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    </div>*/
+
     }
     var generic_button =  document.createElement('button');
     generic_button.type = 'button';
@@ -317,7 +337,6 @@ function create_mission_carosel(missions){
     next_span_label.innerHTML = "Next";
     next_button.appendChild(next_span)
     next_button.appendChild(next_span_label)
-    console.log(next_button)
     document.getElementById('carouselExampleCaptions').appendChild(prev_button)
     document.getElementById('carouselExampleCaptions').appendChild(next_button)
     
@@ -328,7 +347,7 @@ function create_table(details){
     table_id = details['table_id']
     body_id = details['body_id']
     fields = details['fields']
-    data = details['data']
+    data = details['datasets']
     create_table_shell(table_id, columns, body_id, data, fields);
     return
 }

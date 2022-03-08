@@ -64,7 +64,43 @@ def reverse_path(missionid):
             WHERE missionid = ? ORDER BY time_init DESC', (missionid,))
         for i in range(len(movements)):
             movement = movements[i]
-            db_movement(movement)
+            if GLOBALS.ROBOT:
+                mov_type = movement['type']
+                power = movement['power']
+                duration = movement['duration']
+                magnitude = movement['magnitude']
+                movement_type = ['movement_type']
+                #command_type = ['command_type']
+
+                ###FORWARD BACKWARDS COMMANDS
+                if mov_type == 'forward':
+                    if movement_type != 'distance':
+                        GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION)
+                elif mov_type == 'forward-left':
+                    if movement_type != 'distance':
+                        GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION + 15)
+                elif mov_type == 'forward-right':
+                    if movement_type != 'distance':
+                        GLOBALS.ROBOT.move_power_time(power, duration, GLOBALS.DEVIATION + -1*15)
+                elif mov_type == 'backward-left':
+                    if movement_type != 'distance':
+                        GLOBALS.ROBOT.move_power_time(-1*power, duration, GLOBALS.DEVIATION + 15)
+                elif mov_type == 'backward-right':
+                    if movement_type != 'distance':
+                        GLOBALS.ROBOT.move_power_time(-1*power, duration, GLOBALS.DEVIATION + -1 * 15)
+                
+
+                ### TURNING COMMANDS
+                elif mov_type == 'right':
+                    if movement_type != 'degrees':
+                        GLOBALS.ROBOT.rotate_power_time(-1*power, duration)
+                    elif movement_type == 'degrees':
+                        GLOBALS.ROBOT.rotate_power_degrees_IMU(-1*power, -1*magnitude)
+                elif mov_type == 'left':
+                    if movement_type != 'degrees':
+                        GLOBALS.ROBOT.rotate_power_time(power, duration)
+                    elif movement_type == 'degrees':
+                        GLOBALS.ROBOT.rotate_power_degrees_IMU(power, magnitude)
     return
 
 if __name__ == '__main__':

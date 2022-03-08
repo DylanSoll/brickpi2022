@@ -1,959 +1,343 @@
-Time: 2022-03-08 14:43:36,697 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 14:43:37,642 Message:  * Restarting with stat
-Time: 2022-03-08 14:43:39,301 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 14:44:24,786 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 14:44:25,689 Message:  * Restarting with stat
-Time: 2022-03-08 14:44:27,276 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 14:46:50,126 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 14:46:50,911 Message:  * Restarting with stat
-Time: 2022-03-08 14:46:52,714 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 14:51:27,024 Message:  * Restarting with stat
-Time: 2022-03-08 14:51:29,013 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 14:51:29,189 Message: 127.0.0.1 - - [08/Mar/2022 14:51:29] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 14:51:29,253 Message: 127.0.0.1 - - [08/Mar/2022 14:51:29] "GET /login HTTP/1.1" 200 -
-Time: 2022-03-08 14:51:30,784 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,800 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,808 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,808 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,816 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,824 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,832 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,840 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:30,992 Message: 127.0.0.1 - - [08/Mar/2022 14:51:30] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,443 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[32mPOST /login HTTP/1.1[0m" 302 -
-Time: 2022-03-08 14:51:40,475 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "GET /dashboard HTTP/1.1" 200 -
-Time: 2022-03-08 14:51:40,555 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,555 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,571 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,571 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,579 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,587 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,603 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,603 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,619 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,619 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,627 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:40,667 Message: 127.0.0.1 - - [08/Mar/2022 14:51:40] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 14:51:43,761 Message: LOADING CAMERA
-Time: 2022-03-08 14:51:43,761 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 14:51:43,761 Message: 127.0.0.1 - - [08/Mar/2022 14:51:43] "POST /robotload HTTP/1.1" 200 -
-Time: 2022-03-08 14:51:43,777 Message: 127.0.0.1 - - [08/Mar/2022 14:51:43] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
-Time: 2022-03-08 15:44:45,372 Message: 127.0.0.1 - - [08/Mar/2022 15:44:45] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 15:44:45,885 Message: 127.0.0.1 - - [08/Mar/2022 15:44:45] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:44:46,212 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:44:46,247 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:46,261 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:44:46,266 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:44:46,362 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:46,383 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:44:46,435 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:46,457 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:46,710 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:46,817 Message: 127.0.0.1 - - [08/Mar/2022 15:44:46] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:51,502 Message: 127.0.0.1 - - [08/Mar/2022 15:44:51] "[32mPOST /login HTTP/1.1[0m" 302 -
-Time: 2022-03-08 15:44:51,623 Message: 127.0.0.1 - - [08/Mar/2022 15:44:51] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:44:51,862 Message: 127.0.0.1 - - [08/Mar/2022 15:44:51] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:44:51,885 Message: 127.0.0.1 - - [08/Mar/2022 15:44:51] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:51,906 Message: 127.0.0.1 - - [08/Mar/2022 15:44:51] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 15:44:58,117 Message: LOADING CAMERA
-Time: 2022-03-08 15:44:58,581 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 15:44:58,584 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 15:45:03,081 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 15:45:03,190 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 15:45:04,404 Message: 127.0.0.1 - - [08/Mar/2022 15:45:04] "[35m[1mPOST /process_movement/30 HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:45:04,464 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 307, in process_movement
-    GLOBALS.ROBOT.move_power(power, GLOBALS.DEVIATION)
-  File "/home/pi/Desktop/brickpi2022/interfaces/brickpiinterface.py", line 389, in move_power
-    bp.set_motor_power(self.leftmotor, power + deviation)
-TypeError: Can't convert 'int' object to str implicitly
-Time: 2022-03-08 15:45:04,680 Message: 127.0.0.1 - - [08/Mar/2022 15:45:04] "[33mPOST /process_movement HTTP/1.1[0m" 404 -
-Time: 2022-03-08 15:45:04,946 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 15:45:05,169 Message: 127.0.0.1 - - [08/Mar/2022 15:45:05] "[33mPOST /process_movement HTTP/1.1[0m" 404 -
-Time: 2022-03-08 15:45:05,193 Message: 127.0.0.1 - - [08/Mar/2022 15:45:05] "[35m[1mPOST /process_movement/30 HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:45:05,240 Message: 127.0.0.1 - - [08/Mar/2022 15:45:05] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:45:05,274 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 307, in process_movement
-    GLOBALS.ROBOT.move_power(power, GLOBALS.DEVIATION)
-  File "/home/pi/Desktop/brickpi2022/interfaces/brickpiinterface.py", line 389, in move_power
-    bp.set_motor_power(self.leftmotor, power + deviation)
-TypeError: Can't convert 'int' object to str implicitly
-Time: 2022-03-08 15:45:05,327 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 15:45:05,335 Message: 127.0.0.1 - - [08/Mar/2022 15:45:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:45:18,139 Message: 127.0.0.1 - - [08/Mar/2022 15:45:18] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:45:18,195 Message: 127.0.0.1 - - [08/Mar/2022 15:45:18] "[33mPOST /process_movement HTTP/1.1[0m" 404 -
-Time: 2022-03-08 15:45:31,572 Message: 127.0.0.1 - - [08/Mar/2022 15:45:31] "[35m[1mPOST /btn-mov/back/68 HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:45:31,652 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 398, in btn_movements
-    return jsonify(type)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/json/__init__.py", line 370, in jsonify
-    dumps(data, indent=indent, separators=separators) + "\n",
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/json/__init__.py", line 211, in dumps
-    rv = _json.dumps(obj, **kwargs)
-  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 397, in dumps
-    **kw).encode(obj)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 293, in encode
-    chunks = list(chunks)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 697, in _iterencode
-    o = _default(o)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/json/__init__.py", line 100, in default
-    return _json.JSONEncoder.default(self, o)
-  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 268, in default
-    raise TypeError(repr(o) + " is not JSON serializable")
-TypeError: <class 'type'> is not JSON serializable
-Time: 2022-03-08 15:45:36,056 Message: 127.0.0.1 - - [08/Mar/2022 15:45:36] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:45:40,538 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 15:45:40,544 Message: 127.0.0.1 - - [08/Mar/2022 15:45:40] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:46:15,199 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/movement.py', reloading
-Time: 2022-03-08 15:46:16,649 Message:  * Restarting with stat
-Time: 2022-03-08 15:50:56,918 Message:  * Restarting with stat
-Time: 2022-03-08 15:51:08,227 Message: 127.0.0.1 - - [08/Mar/2022 15:51:08] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:51:10,695 Message: LOADING CAMERA
-Time: 2022-03-08 15:51:11,081 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 15:51:11,084 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 15:51:14,932 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 15:51:15,064 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 15:51:16,799 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 15:51:16,928 Message: 127.0.0.1 - - [08/Mar/2022 15:51:16] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:51:17,100 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 15:51:17,108 Message: 127.0.0.1 - - [08/Mar/2022 15:51:17] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:51:21,922 Message: 127.0.0.1 - - [08/Mar/2022 15:51:21] "[35m[1mPOST /btn-mov/left/30 HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:51:21,972 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 382, in btn_movements
-    GLOBALS.ROBOT.rotate_power(int(power/2))
-TypeError: unsupported operand type(s) for /: 'str' and 'int'
-Time: 2022-03-08 15:53:13,278 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-08 15:53:14,749 Message:  * Restarting with stat
-Time: 2022-03-08 15:53:36,082 Message: 127.0.0.1 - - [08/Mar/2022 15:53:36] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:53:40,443 Message: LOADING CAMERA
-Time: 2022-03-08 15:53:40,864 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 15:53:40,867 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 15:53:44,688 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 15:53:44,801 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 15:53:46,563 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 15:53:46,685 Message: 127.0.0.1 - - [08/Mar/2022 15:53:46] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:53:46,962 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 15:53:46,969 Message: 127.0.0.1 - - [08/Mar/2022 15:53:46] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:53:50,644 Message: 127.0.0.1 - - [08/Mar/2022 15:53:50] "[33mPOST /process_movement HTTP/1.1[0m" 404 -
-Time: 2022-03-08 15:53:51,679 Message: 127.0.0.1 - - [08/Mar/2022 15:53:51] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:53:52,735 Message: 127.0.0.1 - - [08/Mar/2022 15:53:52] "[37mPOST /btn-mov/left/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:53:58,397 Message: 127.0.0.1 - - [08/Mar/2022 15:53:58] "[37mPOST /btn-mov/left/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:54:12,403 Message: 127.0.0.1 - - [08/Mar/2022 15:54:12] "[35m[1mPOST /btn-mov/stop/%20False HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:54:12,786 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 377, in btn_movements
-    power = int(power)
-ValueError: invalid literal for int() with base 10: ' False'
-Time: 2022-03-08 15:54:19,391 Message: 127.0.0.1 - - [08/Mar/2022 15:54:19] "[37mPOST /btn-mov/left/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:55:02,800 Message: 127.0.0.1 - - [08/Mar/2022 15:55:02] "[37mPOST /btn-mov/right/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:55:07,141 Message: 127.0.0.1 - - [08/Mar/2022 15:55:07] "[35m[1mPOST /btn-mov/stop/%20False HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:55:07,180 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 377, in btn_movements
-    power = int(power)
-ValueError: invalid literal for int() with base 10: ' False'
-Time: 2022-03-08 15:55:16,491 Message: 127.0.0.1 - - [08/Mar/2022 15:55:16] "[35m[1mPOST /btn-mov/stop/%20False HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:55:16,898 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 377, in btn_movements
-    power = int(power)
-ValueError: invalid literal for int() with base 10: ' False'
-Time: 2022-03-08 15:55:21,315 Message: 127.0.0.1 - - [08/Mar/2022 15:55:21] "[35m[1mPOST /btn-mov/stop/%20False HTTP/1.1[0m" 500 -
-Time: 2022-03-08 15:55:21,578 Message: Error on request:
-Traceback (most recent call last):
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 323, in run_wsgi
-    execute(self.server.app)
-  File "/home/pi/.local/lib/python3.5/site-packages/werkzeug/serving.py", line 312, in execute
-    application_iter = app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2464, in __call__
-    return self.wsgi_app(environ, start_response)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2450, in wsgi_app
-    response = self.handle_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1867, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/pi/.local/lib/python3.5/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/pi/Desktop/brickpi2022/flask_app.py", line 377, in btn_movements
-    power = int(power)
-ValueError: invalid literal for int() with base 10: ' False'
-Time: 2022-03-08 15:55:30,567 Message: 127.0.0.1 - - [08/Mar/2022 15:55:30] "[37mPOST /btn-mov/left/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:56:22,907 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-08 15:56:24,278 Message:  * Restarting with stat
-Time: 2022-03-08 15:57:38,517 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-08 15:57:39,478 Message:  * Restarting with stat
-Time: 2022-03-08 15:58:17,849 Message: 127.0.0.1 - - [08/Mar/2022 15:58:17] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:58:19,349 Message: LOADING CAMERA
-Time: 2022-03-08 15:58:19,742 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 15:58:19,743 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 15:58:23,564 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 15:58:23,681 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 15:58:25,441 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 15:58:25,613 Message: 127.0.0.1 - - [08/Mar/2022 15:58:25] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:58:25,693 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 15:58:25,701 Message: 127.0.0.1 - - [08/Mar/2022 15:58:25] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:58:34,507 Message: 127.0.0.1 - - [08/Mar/2022 15:58:34] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 15:58:34,524 Message: 127.0.0.1 - - [08/Mar/2022 15:58:34] "[37mPOST /btn-mov/forward/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:00:21,442 Message: 127.0.0.1 - - [08/Mar/2022 16:00:21] "[37mPOST /btn-mov/play/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:13,922 Message: 127.0.0.1 - - [08/Mar/2022 16:01:13] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:13,925 Message: 127.0.0.1 - - [08/Mar/2022 16:01:13] "[37mPOST /btn-mov/forward/50 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:18,130 Message: 127.0.0.1 - - [08/Mar/2022 16:01:18] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:18,138 Message: 127.0.0.1 - - [08/Mar/2022 16:01:18] "[37mPOST /btn-mov/forward/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:22,789 Message: 127.0.0.1 - - [08/Mar/2022 16:01:22] "[37mPOST /btn-mov/back/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:36,798 Message: 127.0.0.1 - - [08/Mar/2022 16:01:36] "[37mPOST /btn-mov/right/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:38,168 Message: 127.0.0.1 - - [08/Mar/2022 16:01:38] "[37mPOST /btn-mov/right/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:38,186 Message: 127.0.0.1 - - [08/Mar/2022 16:01:38] "[37mPOST /btn-mov/right/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:42,563 Message: 127.0.0.1 - - [08/Mar/2022 16:01:42] "[37mPOST /btn-mov/right/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:42,579 Message: 127.0.0.1 - - [08/Mar/2022 16:01:42] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:51,733 Message: 127.0.0.1 - - [08/Mar/2022 16:01:51] "[37mPOST /btn-mov/left/17 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:57,876 Message: 127.0.0.1 - - [08/Mar/2022 16:01:57] "[37mPOST /btn-mov/right/17 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:01:58,036 Message: 127.0.0.1 - - [08/Mar/2022 16:01:58] "[33mPOST /process_movement HTTP/1.1[0m" 404 -
-Time: 2022-03-08 16:02:17,832 Message: 127.0.0.1 - - [08/Mar/2022 16:02:17] "[37mPOST /process_movement/17 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:02:35,062 Message: 127.0.0.1 - - [08/Mar/2022 16:02:35] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:02:35,426 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:02:35,440 Message: 127.0.0.1 - - [08/Mar/2022 16:02:35] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:02:46,140 Message: 127.0.0.1 - - [08/Mar/2022 16:02:46] "[37mPOST /btn-mov/left/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:02:46,153 Message: 127.0.0.1 - - [08/Mar/2022 16:02:46] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:02:51,145 Message: 127.0.0.1 - - [08/Mar/2022 16:02:51] "[37mPOST /btn-mov/right/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:02:51,148 Message: 127.0.0.1 - - [08/Mar/2022 16:02:51] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:03:31,008 Message: 127.0.0.1 - - [08/Mar/2022 16:03:31] "[32mGET /sensor-view HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:03:31,963 Message: 127.0.0.1 - - [08/Mar/2022 16:03:31] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:03:33,109 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:03:33,116 Message: 127.0.0.1 - - [08/Mar/2022 16:03:33] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:03:50,389 Message: 127.0.0.1 - - [08/Mar/2022 16:03:50] "[37mPOST /btn-mov/play/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:01,379 Message: 127.0.0.1 - - [08/Mar/2022 16:04:01] "[33mPOST /process_movement HTTP/1.1[0m" 404 -
-Time: 2022-03-08 16:04:06,950 Message: 127.0.0.1 - - [08/Mar/2022 16:04:06] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:06,962 Message: 127.0.0.1 - - [08/Mar/2022 16:04:06] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:14,516 Message: 127.0.0.1 - - [08/Mar/2022 16:04:14] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:16,803 Message: 127.0.0.1 - - [08/Mar/2022 16:04:16] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:16,812 Message: 127.0.0.1 - - [08/Mar/2022 16:04:16] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:16,831 Message: 127.0.0.1 - - [08/Mar/2022 16:04:16] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:16,834 Message: 127.0.0.1 - - [08/Mar/2022 16:04:16] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:16,923 Message: 127.0.0.1 - - [08/Mar/2022 16:04:16] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:16,983 Message: 127.0.0.1 - - [08/Mar/2022 16:04:16] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:17,832 Message: 127.0.0.1 - - [08/Mar/2022 16:04:17] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:17,898 Message: 127.0.0.1 - - [08/Mar/2022 16:04:17] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:17,904 Message: 127.0.0.1 - - [08/Mar/2022 16:04:17] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:17,973 Message: 127.0.0.1 - - [08/Mar/2022 16:04:17] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:17,999 Message: 127.0.0.1 - - [08/Mar/2022 16:04:17] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:18,056 Message: 127.0.0.1 - - [08/Mar/2022 16:04:18] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:18,121 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:04:18,130 Message: 127.0.0.1 - - [08/Mar/2022 16:04:18] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:19,267 Message: 127.0.0.1 - - [08/Mar/2022 16:04:19] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:24,555 Message: 127.0.0.1 - - [08/Mar/2022 16:04:24] "[37mPOST /process_shooting HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:32,549 Message: 127.0.0.1 - - [08/Mar/2022 16:04:32] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:32,556 Message: 127.0.0.1 - - [08/Mar/2022 16:04:32] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:34,440 Message: 127.0.0.1 - - [08/Mar/2022 16:04:34] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:34,458 Message: 127.0.0.1 - - [08/Mar/2022 16:04:34] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:36,481 Message: 127.0.0.1 - - [08/Mar/2022 16:04:36] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:04:36,501 Message: 127.0.0.1 - - [08/Mar/2022 16:04:36] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:05:38,505 Message: 127.0.0.1 - - [08/Mar/2022 16:05:38] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:05:38,516 Message: 127.0.0.1 - - [08/Mar/2022 16:05:38] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:05,445 Message: 127.0.0.1 - - [08/Mar/2022 16:06:05] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:05,458 Message: 127.0.0.1 - - [08/Mar/2022 16:06:05] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:39,120 Message: 127.0.0.1 - - [08/Mar/2022 16:06:39] "[37mPOST /process_movement/19 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:39,141 Message: 127.0.0.1 - - [08/Mar/2022 16:06:39] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:39,152 Message: 127.0.0.1 - - [08/Mar/2022 16:06:39] "[37mPOST /process_movement/19 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:39,261 Message: 127.0.0.1 - - [08/Mar/2022 16:06:39] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:49,005 Message: 127.0.0.1 - - [08/Mar/2022 16:06:49] "[37mPOST /process_movement/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:49,010 Message: 127.0.0.1 - - [08/Mar/2022 16:06:49] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:51,050 Message: 127.0.0.1 - - [08/Mar/2022 16:06:51] "[37mPOST /process_movement/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:51,054 Message: 127.0.0.1 - - [08/Mar/2022 16:06:51] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:53,028 Message: 127.0.0.1 - - [08/Mar/2022 16:06:53] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:06:53,048 Message: 127.0.0.1 - - [08/Mar/2022 16:06:53] "[37mPOST /process_movement/100 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:07:20,961 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-08 16:07:22,394 Message:  * Restarting with stat
-Time: 2022-03-08 16:07:34,408 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-08 16:07:35,371 Message:  * Restarting with stat
-Time: 2022-03-08 16:07:46,785 Message: 127.0.0.1 - - [08/Mar/2022 16:07:46] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:07:49,194 Message: LOADING CAMERA
-Time: 2022-03-08 16:07:49,584 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 16:07:49,587 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 16:07:53,412 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 16:07:53,541 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 16:07:55,304 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 16:07:55,426 Message: 127.0.0.1 - - [08/Mar/2022 16:07:55] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:07:55,517 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:07:55,526 Message: 127.0.0.1 - - [08/Mar/2022 16:07:55] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:07:56,668 Message: FLASK APP: SHUTDOWN EVERYTHING
-Time: 2022-03-08 16:07:56,674 Message: BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
-Time: 2022-03-08 16:07:57,674 Message: Exiting
-Time: 2022-03-08 16:07:58,752 Message: CAMERA INTERFACE: Exiting Camera Thread
-Time: 2022-03-08 16:07:59,344 Message: 127.0.0.1 - - [08/Mar/2022 16:07:59] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:07:59,688 Message: 127.0.0.1 - - [08/Mar/2022 16:07:59] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:00,538 Message: 127.0.0.1 - - [08/Mar/2022 16:08:00] "[37mGET /videofeed HTTP/1.1[0m" 204 -
-Time: 2022-03-08 16:08:04,822 Message: 127.0.0.1 - - [08/Mar/2022 16:08:04] "[37mPOST /btn-mov/left/21 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:09,099 Message: 127.0.0.1 - - [08/Mar/2022 16:08:09] "[37mPOST /btn-mov/left/21 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:11,708 Message: 127.0.0.1 - - [08/Mar/2022 16:08:11] "[37mPOST /btn-mov/forward/21 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:14,192 Message: 127.0.0.1 - - [08/Mar/2022 16:08:14] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:29,955 Message: 127.0.0.1 - - [08/Mar/2022 16:08:29] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,089 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,210 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,269 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,327 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,362 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,399 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,448 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,523 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,531 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,583 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,635 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,685 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:30,819 Message: 127.0.0.1 - - [08/Mar/2022 16:08:30] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:32,373 Message: LOADING CAMERA
-Time: 2022-03-08 16:08:32,778 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 16:08:32,785 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 16:08:36,333 Message: 127.0.0.1 - - [08/Mar/2022 16:08:36] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:36,336 Message: 127.0.0.1 - - [08/Mar/2022 16:08:36] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:36,626 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 16:08:36,734 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 16:08:38,104 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 16:08:38,566 Message: IMU GYRO: [Errno 5] Input/output error
-Time: 2022-03-08 16:08:38,830 Message: 127.0.0.1 - - [08/Mar/2022 16:08:38] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:39,043 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:08:39,072 Message: 127.0.0.1 - - [08/Mar/2022 16:08:39] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:40,137 Message: 127.0.0.1 - - [08/Mar/2022 16:08:40] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:40,149 Message: 127.0.0.1 - - [08/Mar/2022 16:08:40] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:42,361 Message: 127.0.0.1 - - [08/Mar/2022 16:08:42] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:42,385 Message: 127.0.0.1 - - [08/Mar/2022 16:08:42] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:45,298 Message: 127.0.0.1 - - [08/Mar/2022 16:08:45] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:45,320 Message: 127.0.0.1 - - [08/Mar/2022 16:08:45] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:47,283 Message: 127.0.0.1 - - [08/Mar/2022 16:08:47] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:47,295 Message: 127.0.0.1 - - [08/Mar/2022 16:08:47] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:52,687 Message: 127.0.0.1 - - [08/Mar/2022 16:08:52] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:08:52,690 Message: 127.0.0.1 - - [08/Mar/2022 16:08:52] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:09:48,863 Message: 127.0.0.1 - - [08/Mar/2022 16:09:48] "[37mPOST /btn-mov/left/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:10:05,474 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-08 16:10:06,918 Message:  * Restarting with stat
-Time: 2022-03-08 16:10:36,636 Message: 127.0.0.1 - - [08/Mar/2022 16:10:36] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:10:58,100 Message: LOADING CAMERA
-Time: 2022-03-08 16:10:58,492 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 16:10:58,494 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 16:11:02,321 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 16:11:02,453 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 16:11:04,211 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 16:11:04,344 Message: 127.0.0.1 - - [08/Mar/2022 16:11:04] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:11:04,598 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:11:04,615 Message: 127.0.0.1 - - [08/Mar/2022 16:11:04] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:22:33,797 Message: 127.0.0.1 - - [08/Mar/2022 16:22:33] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:22:34,254 Message: 127.0.0.1 - - [08/Mar/2022 16:22:34] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:23:56,088 Message: 127.0.0.1 - - [08/Mar/2022 16:23:56] "[32mPOST /login HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:23:56,319 Message: 127.0.0.1 - - [08/Mar/2022 16:23:56] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:23:57,509 Message: LOADING CAMERA
-Time: 2022-03-08 16:23:57,987 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 16:23:57,988 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 16:24:01,857 Message: 127.0.0.1 - - [08/Mar/2022 16:24:01] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:01,874 Message: 127.0.0.1 - - [08/Mar/2022 16:24:01] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:02,650 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 16:24:02,759 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 16:24:04,560 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 16:24:05,290 Message: 127.0.0.1 - - [08/Mar/2022 16:24:05] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:05,309 Message: 127.0.0.1 - - [08/Mar/2022 16:24:05] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:05,353 Message: 127.0.0.1 - - [08/Mar/2022 16:24:05] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:05,571 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:24:05,579 Message: 127.0.0.1 - - [08/Mar/2022 16:24:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:08,408 Message: 127.0.0.1 - - [08/Mar/2022 16:24:08] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:08,419 Message: 127.0.0.1 - - [08/Mar/2022 16:24:08] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:10,489 Message: 127.0.0.1 - - [08/Mar/2022 16:24:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:10,495 Message: 127.0.0.1 - - [08/Mar/2022 16:24:10] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:14,837 Message: 127.0.0.1 - - [08/Mar/2022 16:24:14] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:24:14,851 Message: 127.0.0.1 - - [08/Mar/2022 16:24:14] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:25:58,364 Message: 127.0.0.1 - - [08/Mar/2022 16:25:58] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:25:58,698 Message: 127.0.0.1 - - [08/Mar/2022 16:25:58] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:26:36,221 Message: 127.0.0.1 - - [08/Mar/2022 16:26:36] "[32mPOST /login HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:27:15,368 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 16:27:15,374 Message:  * Restarting with stat
-Time: 2022-03-08 16:27:18,435 Message:  * Debugger is active!
-Time: 2022-03-08 16:27:18,437 Message:  * Debugger PIN: 287-863-292
-Time: 2022-03-08 16:27:20,297 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:27:20,473 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,642 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,644 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,654 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,667 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,668 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,680 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,787 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:20,788 Message: 10.10.45.6 - - [08/Mar/2022 16:27:20] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:21,474 Message: 10.10.45.6 - - [08/Mar/2022 16:27:21] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:44,917 Message: 10.10.45.6 - - [08/Mar/2022 16:27:44] "[32mPOST /login HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:27:44,973 Message: 10.10.45.6 - - [08/Mar/2022 16:27:44] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:45,155 Message: 10.10.45.6 - - [08/Mar/2022 16:27:45] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:45,160 Message: 10.10.45.6 - - [08/Mar/2022 16:27:45] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:45,168 Message: 10.10.45.6 - - [08/Mar/2022 16:27:45] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:45,169 Message: 10.10.45.6 - - [08/Mar/2022 16:27:45] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:49,415 Message: LOADING CAMERA
-Time: 2022-03-08 16:27:49,796 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 16:27:49,796 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 16:27:53,602 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 16:27:53,707 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 16:27:55,455 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 16:27:55,536 Message: 10.10.45.6 - - [08/Mar/2022 16:27:55] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:27:55,599 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:27:55,602 Message: 10.10.45.6 - - [08/Mar/2022 16:27:55] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:04,410 Message: 10.10.45.6 - - [08/Mar/2022 16:28:04] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:04,414 Message: 10.10.45.6 - - [08/Mar/2022 16:28:04] "[37mPOST /btn-mov/forward/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:09,392 Message: 10.10.45.6 - - [08/Mar/2022 16:28:09] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:09,395 Message: 10.10.45.6 - - [08/Mar/2022 16:28:09] "[37mPOST /btn-mov/left/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:13,735 Message: 10.10.45.6 - - [08/Mar/2022 16:28:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:13,737 Message: 10.10.45.6 - - [08/Mar/2022 16:28:13] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:14,803 Message: 10.10.45.6 - - [08/Mar/2022 16:28:14] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:14,806 Message: 10.10.45.6 - - [08/Mar/2022 16:28:14] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:15,520 Message: 10.10.45.6 - - [08/Mar/2022 16:28:15] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:15,524 Message: 10.10.45.6 - - [08/Mar/2022 16:28:15] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:16,506 Message: 10.10.45.6 - - [08/Mar/2022 16:28:16] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:16,511 Message: 10.10.45.6 - - [08/Mar/2022 16:28:16] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:16,905 Message: 10.10.45.6 - - [08/Mar/2022 16:28:16] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:16,915 Message: 10.10.45.6 - - [08/Mar/2022 16:28:16] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:17,092 Message: 10.10.45.6 - - [08/Mar/2022 16:28:17] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:18,149 Message: 10.10.45.6 - - [08/Mar/2022 16:28:18] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:20,236 Message: 10.10.45.6 - - [08/Mar/2022 16:28:20] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:20,240 Message: 10.10.45.6 - - [08/Mar/2022 16:28:20] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,244 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:28:51,362 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,553 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,566 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,568 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,589 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,596 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,600 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,699 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:51,751 Message: 10.10.72.124 - - [08/Mar/2022 16:28:51] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:28:52,542 Message: 10.10.72.124 - - [08/Mar/2022 16:28:52] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:29:59,322 Message: 10.10.72.124 - - [08/Mar/2022 16:29:59] "[32mPOST /login HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:29:59,401 Message: 10.10.72.124 - - [08/Mar/2022 16:29:59] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:29:59,548 Message: 10.10.72.124 - - [08/Mar/2022 16:29:59] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:29:59,553 Message: 10.10.72.124 - - [08/Mar/2022 16:29:59] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:29:59,557 Message: 10.10.72.124 - - [08/Mar/2022 16:29:59] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:29:59,731 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:29:59,734 Message: 10.10.72.124 - - [08/Mar/2022 16:29:59] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:29:59,739 Message: 10.10.72.124 - - [08/Mar/2022 16:29:59] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:24,332 Message: 10.10.72.124 - - [08/Mar/2022 16:31:24] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:24,335 Message: 10.10.72.124 - - [08/Mar/2022 16:31:24] "[37mPOST /process_movement/75 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:26,270 Message: 10.10.72.124 - - [08/Mar/2022 16:31:26] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:26,273 Message: 10.10.72.124 - - [08/Mar/2022 16:31:26] "[37mPOST /process_movement/75 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:29,321 Message: 10.10.72.124 - - [08/Mar/2022 16:31:29] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:29,326 Message: 10.10.72.124 - - [08/Mar/2022 16:31:29] "[37mPOST /process_movement/75 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:50,173 Message: 10.10.72.124 - - [08/Mar/2022 16:31:50] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:31:50,183 Message: 10.10.72.124 - - [08/Mar/2022 16:31:50] "[37mPOST /process_movement/75 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:39,558 Message: 10.10.72.124 - - [08/Mar/2022 16:32:39] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:39,875 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:32:39,877 Message: 10.10.72.124 - - [08/Mar/2022 16:32:39] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:43,225 Message: 10.10.72.124 - - [08/Mar/2022 16:32:43] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:43,229 Message: 10.10.72.124 - - [08/Mar/2022 16:32:43] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:44,905 Message: 10.10.72.124 - - [08/Mar/2022 16:32:44] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:44,912 Message: 10.10.72.124 - - [08/Mar/2022 16:32:44] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:46,361 Message: 10.10.72.124 - - [08/Mar/2022 16:32:46] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:46,364 Message: 10.10.72.124 - - [08/Mar/2022 16:32:46] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:47,347 Message: 10.10.72.124 - - [08/Mar/2022 16:32:47] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:47,350 Message: 10.10.72.124 - - [08/Mar/2022 16:32:47] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:47,607 Message: 10.10.72.124 - - [08/Mar/2022 16:32:47] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:47,611 Message: 10.10.72.124 - - [08/Mar/2022 16:32:47] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:51,670 Message: 10.10.72.124 - - [08/Mar/2022 16:32:51] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:51,673 Message: 10.10.72.124 - - [08/Mar/2022 16:32:51] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:53,928 Message: 10.10.72.124 - - [08/Mar/2022 16:32:53] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:54,857 Message: 10.10.72.124 - - [08/Mar/2022 16:32:54] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:55,140 Message: 10.10.72.124 - - [08/Mar/2022 16:32:55] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:55,143 Message: 10.10.72.124 - - [08/Mar/2022 16:32:55] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:57,233 Message: 10.10.72.124 - - [08/Mar/2022 16:32:57] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:57,236 Message: 10.10.72.124 - - [08/Mar/2022 16:32:57] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:57,240 Message: 10.10.72.124 - - [08/Mar/2022 16:32:57] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:58,455 Message: 10.10.72.124 - - [08/Mar/2022 16:32:58] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:32:59,120 Message: 10.10.72.124 - - [08/Mar/2022 16:32:59] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:07,522 Message: 10.10.72.124 - - [08/Mar/2022 16:33:07] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:07,578 Message: 10.10.72.124 - - [08/Mar/2022 16:33:07] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:07,582 Message: 10.10.72.124 - - [08/Mar/2022 16:33:07] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:08,219 Message: 10.10.72.124 - - [08/Mar/2022 16:33:08] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:08,292 Message: 10.10.72.124 - - [08/Mar/2022 16:33:08] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:08,295 Message: 10.10.72.124 - - [08/Mar/2022 16:33:08] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:08,331 Message: 10.10.72.124 - - [08/Mar/2022 16:33:08] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:09,548 Message: 10.10.72.124 - - [08/Mar/2022 16:33:09] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:09,552 Message: 10.10.72.124 - - [08/Mar/2022 16:33:09] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:10,857 Message: 10.10.72.124 - - [08/Mar/2022 16:33:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:11,412 Message: 10.10.72.124 - - [08/Mar/2022 16:33:11] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:11,417 Message: 10.10.72.124 - - [08/Mar/2022 16:33:11] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:11,420 Message: 10.10.72.124 - - [08/Mar/2022 16:33:11] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:13,029 Message: 10.10.72.124 - - [08/Mar/2022 16:33:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:13,032 Message: 10.10.72.124 - - [08/Mar/2022 16:33:13] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:13,765 Message: 10.10.72.124 - - [08/Mar/2022 16:33:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:13,768 Message: 10.10.72.124 - - [08/Mar/2022 16:33:13] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:19,422 Message: 10.10.72.124 - - [08/Mar/2022 16:33:19] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:19,426 Message: 10.10.72.124 - - [08/Mar/2022 16:33:19] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:56,725 Message: 10.10.72.124 - - [08/Mar/2022 16:33:56] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:33:57,002 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:33:57,004 Message: 10.10.72.124 - - [08/Mar/2022 16:33:57] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:10,118 Message: 10.10.72.124 - - [08/Mar/2022 16:36:10] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:10,125 Message: 10.10.72.124 - - [08/Mar/2022 16:36:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:11,695 Message: 10.10.72.124 - - [08/Mar/2022 16:36:11] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:11,700 Message: 10.10.72.124 - - [08/Mar/2022 16:36:11] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:12,805 Message: 10.10.72.124 - - [08/Mar/2022 16:36:12] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:12,809 Message: 10.10.72.124 - - [08/Mar/2022 16:36:12] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:13,752 Message: 10.10.72.124 - - [08/Mar/2022 16:36:13] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:13,763 Message: 10.10.72.124 - - [08/Mar/2022 16:36:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:14,675 Message: 10.10.72.124 - - [08/Mar/2022 16:36:14] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:14,680 Message: 10.10.72.124 - - [08/Mar/2022 16:36:14] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:16,418 Message: 10.10.72.124 - - [08/Mar/2022 16:36:16] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:16,421 Message: 10.10.72.124 - - [08/Mar/2022 16:36:16] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:18,407 Message: 10.10.72.124 - - [08/Mar/2022 16:36:18] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:18,410 Message: 10.10.72.124 - - [08/Mar/2022 16:36:18] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:19,495 Message: 10.10.72.124 - - [08/Mar/2022 16:36:19] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:36:19,500 Message: 10.10.72.124 - - [08/Mar/2022 16:36:19] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-                                                                                                                        Time: 2022-03-08 16:44:59,269 Message: 127.0.0.1 - - [08/Mar/2022 16:44:59] "[32mGET /?vscodeBrowserReqId=1646721898745 HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:44:59,778 Message: 127.0.0.1 - - [08/Mar/2022 16:44:59] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,091 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,106 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,179 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,199 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,250 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,274 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,385 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:45:00,560 Message: 127.0.0.1 - - [08/Mar/2022 16:45:00] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:46:29,536 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 16:46:29,541 Message:  * Restarting with stat
-Time: 2022-03-08 16:46:32,539 Message:  * Debugger is active!
-Time: 2022-03-08 16:46:32,541 Message:  * Debugger PIN: 300-199-093
-Time: 2022-03-08 16:47:00,246 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-08 16:47:00,705 Message:  * Restarting with stat
-Time: 2022-03-08 16:47:03,764 Message:  * Debugger is active!
-Time: 2022-03-08 16:47:03,766 Message:  * Debugger PIN: 300-199-093
-Time: 2022-03-08 16:47:18,698 Message: 10.10.72.124 - - [08/Mar/2022 16:47:18] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:47:18,848 Message: 10.10.72.124 - - [08/Mar/2022 16:47:18] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:28,348 Message: 10.10.72.124 - - [08/Mar/2022 16:47:28] "[32mPOST /login HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:47:28,432 Message: 10.10.72.124 - - [08/Mar/2022 16:47:28] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:30,230 Message: LOADING CAMERA
-Time: 2022-03-08 16:47:30,682 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-08 16:47:30,683 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-08 16:47:35,148 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-08 16:47:35,252 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-08 16:47:37,011 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-08 16:47:37,107 Message: 10.10.72.124 - - [08/Mar/2022 16:47:37] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:37,182 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:47:37,187 Message: 10.10.72.124 - - [08/Mar/2022 16:47:37] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:41,878 Message: 10.10.72.124 - - [08/Mar/2022 16:47:41] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:41,882 Message: 10.10.72.124 - - [08/Mar/2022 16:47:41] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:42,845 Message: 10.10.72.124 - - [08/Mar/2022 16:47:42] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:42,849 Message: 10.10.72.124 - - [08/Mar/2022 16:47:42] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:47,407 Message: 10.10.72.124 - - [08/Mar/2022 16:47:47] "[37mPOST /process_movement/40 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:47,410 Message: 10.10.72.124 - - [08/Mar/2022 16:47:47] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:48,723 Message: 10.10.72.124 - - [08/Mar/2022 16:47:48] "[37mPOST /process_movement/54 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:48,729 Message: 10.10.72.124 - - [08/Mar/2022 16:47:48] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:50,153 Message: 10.10.72.124 - - [08/Mar/2022 16:47:50] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:50,157 Message: 10.10.72.124 - - [08/Mar/2022 16:47:50] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:51,646 Message: 10.10.72.124 - - [08/Mar/2022 16:47:51] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:51,649 Message: 10.10.72.124 - - [08/Mar/2022 16:47:51] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:52,237 Message: 10.10.72.124 - - [08/Mar/2022 16:47:52] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:52,241 Message: 10.10.72.124 - - [08/Mar/2022 16:47:52] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:53,273 Message: 10.10.72.124 - - [08/Mar/2022 16:47:53] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:53,278 Message: 10.10.72.124 - - [08/Mar/2022 16:47:53] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:53,921 Message: 10.10.72.124 - - [08/Mar/2022 16:47:53] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:53,926 Message: 10.10.72.124 - - [08/Mar/2022 16:47:53] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:54,883 Message: 10.10.72.124 - - [08/Mar/2022 16:47:54] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:54,886 Message: 10.10.72.124 - - [08/Mar/2022 16:47:54] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:55,468 Message: 10.10.72.124 - - [08/Mar/2022 16:47:55] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:55,474 Message: 10.10.72.124 - - [08/Mar/2022 16:47:55] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:55,816 Message: 10.10.72.124 - - [08/Mar/2022 16:47:55] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:55,821 Message: 10.10.72.124 - - [08/Mar/2022 16:47:55] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:56,213 Message: 10.10.72.124 - - [08/Mar/2022 16:47:56] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:56,227 Message: 10.10.72.124 - - [08/Mar/2022 16:47:56] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:56,306 Message: 10.10.72.124 - - [08/Mar/2022 16:47:56] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:56,310 Message: 10.10.72.124 - - [08/Mar/2022 16:47:56] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:57,590 Message: 10.10.72.124 - - [08/Mar/2022 16:47:57] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:57,639 Message: 10.10.72.124 - - [08/Mar/2022 16:47:57] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:57,956 Message: 10.10.72.124 - - [08/Mar/2022 16:47:57] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:58,530 Message: 10.10.72.124 - - [08/Mar/2022 16:47:58] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:59,708 Message: 10.10.72.124 - - [08/Mar/2022 16:47:59] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:47:59,712 Message: 10.10.72.124 - - [08/Mar/2022 16:47:59] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:03,148 Message: 10.10.72.124 - - [08/Mar/2022 16:48:03] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:03,152 Message: 10.10.72.124 - - [08/Mar/2022 16:48:03] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:04,901 Message: 10.10.72.124 - - [08/Mar/2022 16:48:04] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:04,905 Message: 10.10.72.124 - - [08/Mar/2022 16:48:04] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:05,910 Message: 10.10.72.124 - - [08/Mar/2022 16:48:05] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:05,913 Message: 10.10.72.124 - - [08/Mar/2022 16:48:05] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:10,126 Message: 10.10.72.124 - - [08/Mar/2022 16:48:10] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:10,129 Message: 10.10.72.124 - - [08/Mar/2022 16:48:10] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:11,562 Message: 10.10.72.124 - - [08/Mar/2022 16:48:11] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:11,566 Message: 10.10.72.124 - - [08/Mar/2022 16:48:11] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:18,979 Message: 10.10.72.124 - - [08/Mar/2022 16:48:18] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:18,983 Message: 10.10.72.124 - - [08/Mar/2022 16:48:18] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:19,481 Message: 10.10.72.124 - - [08/Mar/2022 16:48:19] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:19,484 Message: 10.10.72.124 - - [08/Mar/2022 16:48:19] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:19,508 Message: 10.10.72.124 - - [08/Mar/2022 16:48:19] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:19,775 Message: 10.10.72.124 - - [08/Mar/2022 16:48:19] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:19,778 Message: 10.10.72.124 - - [08/Mar/2022 16:48:19] "[37mPOST /process_movement/62 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:48:19,783 Message: 10.10.72.124 - - [08/Mar/2022 16:48:19] "[37mPOST /process_movement/21 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:49:57,338 Message: 10.10.72.124 - - [08/Mar/2022 16:49:57] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:49:57,532 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:49:57,534 Message: 10.10.72.124 - - [08/Mar/2022 16:49:57] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:49:59,339 Message: 10.10.72.124 - - [08/Mar/2022 16:49:59] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:01,940 Message: 10.10.72.124 - - [08/Mar/2022 16:50:01] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:27,329 Message: 10.10.72.124 - - [08/Mar/2022 16:50:27] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:27,554 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:50:27,557 Message: 10.10.72.124 - - [08/Mar/2022 16:50:27] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:31,767 Message: 10.10.72.124 - - [08/Mar/2022 16:50:31] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:37,061 Message: 10.10.72.124 - - [08/Mar/2022 16:50:37] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:37,311 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:50:37,313 Message: 10.10.72.124 - - [08/Mar/2022 16:50:37] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:43,790 Message: 10.10.72.124 - - [08/Mar/2022 16:50:43] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:46,348 Message: 10.10.72.124 - - [08/Mar/2022 16:50:46] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:46,566 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:50:46,570 Message: 10.10.72.124 - - [08/Mar/2022 16:50:46] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,728 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,876 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,908 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,930 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,945 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,956 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,965 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:47,977 Message: 10.10.72.124 - - [08/Mar/2022 16:50:47] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:48,005 Message: 10.10.72.124 - - [08/Mar/2022 16:50:48] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:48,092 Message: 10.10.72.124 - - [08/Mar/2022 16:50:48] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:48,119 Message: 10.10.72.124 - - [08/Mar/2022 16:50:48] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:48,121 Message: 10.10.72.124 - - [08/Mar/2022 16:50:48] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:48,432 Message: 10.10.72.124 - - [08/Mar/2022 16:50:48] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:48,476 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:50:48,480 Message: 10.10.72.124 - - [08/Mar/2022 16:50:48] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:50:48,561 Message: 10.10.72.124 - - [08/Mar/2022 16:50:48] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:04,695 Message: 10.10.72.124 - - [08/Mar/2022 16:52:04] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:04,698 Message: 10.10.72.124 - - [08/Mar/2022 16:52:04] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:05,396 Message: 10.10.72.124 - - [08/Mar/2022 16:52:05] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:05,399 Message: 10.10.72.124 - - [08/Mar/2022 16:52:05] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:07,739 Message: 10.10.72.124 - - [08/Mar/2022 16:52:07] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:07,743 Message: 10.10.72.124 - - [08/Mar/2022 16:52:07] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:07,992 Message: 10.10.72.124 - - [08/Mar/2022 16:52:07] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:08,149 Message: 10.10.72.124 - - [08/Mar/2022 16:52:08] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:08,605 Message: 10.10.72.124 - - [08/Mar/2022 16:52:08] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:08,608 Message: 10.10.72.124 - - [08/Mar/2022 16:52:08] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:09,304 Message: 10.10.72.124 - - [08/Mar/2022 16:52:09] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:09,307 Message: 10.10.72.124 - - [08/Mar/2022 16:52:09] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:09,894 Message: 10.10.72.124 - - [08/Mar/2022 16:52:09] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:09,897 Message: 10.10.72.124 - - [08/Mar/2022 16:52:09] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:10,324 Message: 10.10.72.124 - - [08/Mar/2022 16:52:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:10,359 Message: 10.10.72.124 - - [08/Mar/2022 16:52:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:12,853 Message: 10.10.72.124 - - [08/Mar/2022 16:52:12] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:12,858 Message: 10.10.72.124 - - [08/Mar/2022 16:52:12] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:12,862 Message: 10.10.72.124 - - [08/Mar/2022 16:52:12] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:13,868 Message: 10.10.72.124 - - [08/Mar/2022 16:52:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:13,882 Message: 10.10.72.124 - - [08/Mar/2022 16:52:13] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:14,609 Message: 10.10.72.124 - - [08/Mar/2022 16:52:14] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:14,651 Message: 10.10.72.124 - - [08/Mar/2022 16:52:14] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:14,655 Message: 10.10.72.124 - - [08/Mar/2022 16:52:14] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:20,526 Message: 10.10.72.124 - - [08/Mar/2022 16:52:20] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:20,532 Message: 10.10.72.124 - - [08/Mar/2022 16:52:20] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:23,530 Message: 10.10.72.124 - - [08/Mar/2022 16:52:23] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:23,533 Message: 10.10.72.124 - - [08/Mar/2022 16:52:23] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:24,347 Message: 10.10.72.124 - - [08/Mar/2022 16:52:24] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:24,352 Message: 10.10.72.124 - - [08/Mar/2022 16:52:24] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:24,955 Message: 10.10.72.124 - - [08/Mar/2022 16:52:24] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:24,958 Message: 10.10.72.124 - - [08/Mar/2022 16:52:24] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:25,517 Message: 10.10.72.124 - - [08/Mar/2022 16:52:25] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:25,521 Message: 10.10.72.124 - - [08/Mar/2022 16:52:25] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:25,919 Message: 10.10.72.124 - - [08/Mar/2022 16:52:25] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:25,922 Message: 10.10.72.124 - - [08/Mar/2022 16:52:25] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:26,653 Message: 10.10.72.124 - - [08/Mar/2022 16:52:26] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:26,656 Message: 10.10.72.124 - - [08/Mar/2022 16:52:26] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:27,727 Message: 10.10.72.124 - - [08/Mar/2022 16:52:27] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:27,742 Message: 10.10.72.124 - - [08/Mar/2022 16:52:27] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:32,469 Message: 10.10.72.124 - - [08/Mar/2022 16:52:32] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:52:32,472 Message: 10.10.72.124 - - [08/Mar/2022 16:52:32] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:49,274 Message: 10.10.72.124 - - [08/Mar/2022 16:53:49] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:49,277 Message: 10.10.72.124 - - [08/Mar/2022 16:53:49] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:49,988 Message: 10.10.72.124 - - [08/Mar/2022 16:53:49] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:49,991 Message: 10.10.72.124 - - [08/Mar/2022 16:53:49] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:50,674 Message: 10.10.72.124 - - [08/Mar/2022 16:53:50] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:50,682 Message: 10.10.72.124 - - [08/Mar/2022 16:53:50] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:52,386 Message: 10.10.72.124 - - [08/Mar/2022 16:53:52] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:56,301 Message: 10.10.72.124 - - [08/Mar/2022 16:53:56] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:56,464 Message: 10.10.72.124 - - [08/Mar/2022 16:53:56] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:56,467 Message: 10.10.72.124 - - [08/Mar/2022 16:53:56] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:57,127 Message: 10.10.72.124 - - [08/Mar/2022 16:53:57] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:53:57,133 Message: 10.10.72.124 - - [08/Mar/2022 16:53:57] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:01,089 Message: 10.10.72.124 - - [08/Mar/2022 16:54:01] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:01,092 Message: 10.10.72.124 - - [08/Mar/2022 16:54:01] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:02,234 Message: 10.10.72.124 - - [08/Mar/2022 16:54:02] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:02,237 Message: 10.10.72.124 - - [08/Mar/2022 16:54:02] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:03,451 Message: 10.10.72.124 - - [08/Mar/2022 16:54:03] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:03,456 Message: 10.10.72.124 - - [08/Mar/2022 16:54:03] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:03,928 Message: 10.10.72.124 - - [08/Mar/2022 16:54:03] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:03,931 Message: 10.10.72.124 - - [08/Mar/2022 16:54:03] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:04,032 Message: 10.10.72.124 - - [08/Mar/2022 16:54:04] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:04,034 Message: 10.10.72.124 - - [08/Mar/2022 16:54:04] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:05,891 Message: 10.10.72.124 - - [08/Mar/2022 16:54:05] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:05,894 Message: 10.10.72.124 - - [08/Mar/2022 16:54:05] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:06,414 Message: 10.10.72.124 - - [08/Mar/2022 16:54:06] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:06,417 Message: 10.10.72.124 - - [08/Mar/2022 16:54:06] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:07,731 Message: 10.10.72.124 - - [08/Mar/2022 16:54:07] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:07,907 Message: 10.10.72.124 - - [08/Mar/2022 16:54:07] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:07,910 Message: 10.10.72.124 - - [08/Mar/2022 16:54:07] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:07,912 Message: 10.10.72.124 - - [08/Mar/2022 16:54:07] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:09,664 Message: 10.10.72.124 - - [08/Mar/2022 16:54:09] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:09,668 Message: 10.10.72.124 - - [08/Mar/2022 16:54:09] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:10,250 Message: 10.10.72.124 - - [08/Mar/2022 16:54:10] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:10,258 Message: 10.10.72.124 - - [08/Mar/2022 16:54:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:10,863 Message: 10.10.72.124 - - [08/Mar/2022 16:54:10] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:10,866 Message: 10.10.72.124 - - [08/Mar/2022 16:54:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:14,940 Message: 10.10.72.124 - - [08/Mar/2022 16:54:14] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:14,947 Message: 10.10.72.124 - - [08/Mar/2022 16:54:14] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:15,774 Message: 10.10.72.124 - - [08/Mar/2022 16:54:15] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:15,777 Message: 10.10.72.124 - - [08/Mar/2022 16:54:15] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:16,924 Message: 10.10.72.124 - - [08/Mar/2022 16:54:16] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:16,927 Message: 10.10.72.124 - - [08/Mar/2022 16:54:16] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:36,927 Message: 10.10.72.124 - - [08/Mar/2022 16:54:36] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:38,412 Message: 10.10.72.124 - - [08/Mar/2022 16:54:38] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:56,897 Message: 10.10.72.124 - - [08/Mar/2022 16:54:56] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:57,673 Message: 10.10.72.124 - - [08/Mar/2022 16:54:57] "[37mPOST /cancel-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:57,723 Message: 10.10.72.124 - - [08/Mar/2022 16:54:57] "[37mGET /missions HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:58,136 Message: 10.10.72.124 - - [08/Mar/2022 16:54:58] "[37mPOST /sensor-graph-data HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:54:58,139 Message: 10.10.72.124 - - [08/Mar/2022 16:54:58] "[37mPOST /missions HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:00,251 Message: 10.10.72.124 - - [08/Mar/2022 16:55:00] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 16:55:00,286 Message: 10.10.72.124 - - [08/Mar/2022 16:55:00] "[37mGET /login HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:03,609 Message: 10.10.72.124 - - [08/Mar/2022 16:55:03] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:05,392 Message: FLASK APP: READING CAMERA
-Time: 2022-03-08 16:55:05,396 Message: 10.10.72.124 - - [08/Mar/2022 16:55:05] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:09,120 Message: 10.10.72.124 - - [08/Mar/2022 16:55:09] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:12,521 Message: 10.10.72.124 - - [08/Mar/2022 16:55:12] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:12,525 Message: 10.10.72.124 - - [08/Mar/2022 16:55:12] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:19,581 Message: 10.10.72.124 - - [08/Mar/2022 16:55:19] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:19,593 Message: 10.10.72.124 - - [08/Mar/2022 16:55:19] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:20,953 Message: 10.10.72.124 - - [08/Mar/2022 16:55:20] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:20,956 Message: 10.10.72.124 - - [08/Mar/2022 16:55:20] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:22,513 Message: 10.10.72.124 - - [08/Mar/2022 16:55:22] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:22,523 Message: 10.10.72.124 - - [08/Mar/2022 16:55:22] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:23,704 Message: 10.10.72.124 - - [08/Mar/2022 16:55:23] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:27,007 Message: 10.10.72.124 - - [08/Mar/2022 16:55:27] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:27,073 Message: 10.10.72.124 - - [08/Mar/2022 16:55:27] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:27,077 Message: 10.10.72.124 - - [08/Mar/2022 16:55:27] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:27,899 Message: 10.10.72.124 - - [08/Mar/2022 16:55:27] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:27,902 Message: 10.10.72.124 - - [08/Mar/2022 16:55:27] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:28,489 Message: 10.10.72.124 - - [08/Mar/2022 16:55:28] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:28,492 Message: 10.10.72.124 - - [08/Mar/2022 16:55:28] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:29,308 Message: 10.10.72.124 - - [08/Mar/2022 16:55:29] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:29,312 Message: 10.10.72.124 - - [08/Mar/2022 16:55:29] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:30,015 Message: 10.10.72.124 - - [08/Mar/2022 16:55:30] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:30,018 Message: 10.10.72.124 - - [08/Mar/2022 16:55:30] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:31,916 Message: 10.10.72.124 - - [08/Mar/2022 16:55:31] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:31,922 Message: 10.10.72.124 - - [08/Mar/2022 16:55:31] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:34,268 Message: 10.10.72.124 - - [08/Mar/2022 16:55:34] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:34,272 Message: 10.10.72.124 - - [08/Mar/2022 16:55:34] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:35,158 Message: 10.10.72.124 - - [08/Mar/2022 16:55:35] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:37,132 Message: 10.10.72.124 - - [08/Mar/2022 16:55:37] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:39,692 Message: 10.10.72.124 - - [08/Mar/2022 16:55:39] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:39,696 Message: 10.10.72.124 - - [08/Mar/2022 16:55:39] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:40,025 Message: 10.10.72.124 - - [08/Mar/2022 16:55:40] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:41,942 Message: 10.10.72.124 - - [08/Mar/2022 16:55:41] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:41,980 Message: 10.10.72.124 - - [08/Mar/2022 16:55:41] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:41,995 Message: 10.10.72.124 - - [08/Mar/2022 16:55:41] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:42,141 Message: 10.10.72.124 - - [08/Mar/2022 16:55:42] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:42,153 Message: 10.10.72.124 - - [08/Mar/2022 16:55:42] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:42,158 Message: 10.10.72.124 - - [08/Mar/2022 16:55:42] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:43,071 Message: 10.10.72.124 - - [08/Mar/2022 16:55:43] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:43,074 Message: 10.10.72.124 - - [08/Mar/2022 16:55:43] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:43,079 Message: 10.10.72.124 - - [08/Mar/2022 16:55:43] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:43,907 Message: 10.10.72.124 - - [08/Mar/2022 16:55:43] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:44,019 Message: 10.10.72.124 - - [08/Mar/2022 16:55:44] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:44,545 Message: 10.10.72.124 - - [08/Mar/2022 16:55:44] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:45,127 Message: 10.10.72.124 - - [08/Mar/2022 16:55:45] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:45,131 Message: 10.10.72.124 - - [08/Mar/2022 16:55:45] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:45,135 Message: 10.10.72.124 - - [08/Mar/2022 16:55:45] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:50,302 Message: 10.10.72.124 - - [08/Mar/2022 16:55:50] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:50,310 Message: 10.10.72.124 - - [08/Mar/2022 16:55:50] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:51,785 Message: 10.10.72.124 - - [08/Mar/2022 16:55:51] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:51,788 Message: 10.10.72.124 - - [08/Mar/2022 16:55:51] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:52,718 Message: 10.10.72.124 - - [08/Mar/2022 16:55:52] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:52,723 Message: 10.10.72.124 - - [08/Mar/2022 16:55:52] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:54,152 Message: 10.10.72.124 - - [08/Mar/2022 16:55:54] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:55,849 Message: 10.10.72.124 - - [08/Mar/2022 16:55:55] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:55,852 Message: 10.10.72.124 - - [08/Mar/2022 16:55:55] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:57,707 Message: 10.10.72.124 - - [08/Mar/2022 16:55:57] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:57,710 Message: 10.10.72.124 - - [08/Mar/2022 16:55:57] "[37mPOST /process_shooting HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:55:57,847 Message: 10.10.72.124 - - [08/Mar/2022 16:55:57] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:01,268 Message: 10.10.72.124 - - [08/Mar/2022 16:56:01] "[37mPOST /process_shooting HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:03,048 Message: 10.10.72.124 - - [08/Mar/2022 16:56:03] "[37mGET /missions HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:03,078 Message: 10.10.72.124 - - [08/Mar/2022 16:56:03] "[37mPOST /save-mission HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:03,308 Message: 10.10.72.124 - - [08/Mar/2022 16:56:03] "[37mPOST /sensor-graph-data HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:03,314 Message: 10.10.72.124 - - [08/Mar/2022 16:56:03] "[37mPOST /missions HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:05,215 Message: 10.10.72.124 - - [08/Mar/2022 16:56:05] "[37mGET /missions HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:05,530 Message: 10.10.72.124 - - [08/Mar/2022 16:56:05] "[37mPOST /missions HTTP/1.1[0m" 200 -
-Time: 2022-03-08 16:56:05,535 Message: 10.10.72.124 - - [08/Mar/2022 16:56:05] "[37mPOST /sensor-graph-data HTTP/1.1[0m" 200 -
+Time: 2022-03-08 21:50:27,660 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 21:50:28,385 Message:  * Restarting with stat
+Time: 2022-03-08 21:50:29,273 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 21:50:42,091 Message:  * Restarting with stat
+Time: 2022-03-08 21:50:42,997 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 21:56:13,779 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 21:56:14,432 Message:  * Restarting with stat
+Time: 2022-03-08 21:56:15,379 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 21:56:15,519 Message: 127.0.0.1 - - [08/Mar/2022 21:56:15] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:16,220 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,220 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,224 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,229 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,237 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,240 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,290 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,292 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,362 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:16,412 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:16,435 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:28,047 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 21:56:28,737 Message:  * Restarting with stat
+Time: 2022-03-08 21:56:29,618 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 21:56:30,890 Message: 127.0.0.1 - - [08/Mar/2022 21:56:30] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:31,570 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,575 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,582 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,592 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,594 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,597 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,597 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,600 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,689 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:31,711 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:31,735 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,132 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:44,162 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,167 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,179 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,183 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,193 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,196 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,203 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,206 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,264 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:44,286 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,310 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:44,333 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 21:56:45,208 Message:  * Restarting with stat
+Time: 2022-03-08 21:56:46,072 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 21:56:47,465 Message: 127.0.0.1 - - [08/Mar/2022 21:56:47] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:48,176 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,177 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,178 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,178 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,183 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,187 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,193 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,198 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,242 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 21:56:48,257 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:56:48,287 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,068 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 21:59:41,102 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,109 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,114 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,122 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,130 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 21:59:41,136 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,146 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,148 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,229 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 21:59:41,271 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:41,293 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,059 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 21:59:55,083 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,092 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,098 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,107 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,112 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 21:59:55,115 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,122 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,124 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,187 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 21:59:55,209 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 21:59:55,239 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,543 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:00:23,571 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,579 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,583 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,596 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,600 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:00:23,610 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,613 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,619 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,676 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:00:23,703 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:00:23,734 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:04:30,847 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 22:04:31,749 Message:  * Restarting with stat
+Time: 2022-03-08 22:04:32,652 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:04:35,850 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 22:04:36,639 Message:  * Restarting with stat
+Time: 2022-03-08 22:04:37,629 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:09:46,223 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:09:46,931 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:09:46,931 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:46,932 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:46,934 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:46,940 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:46,945 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:46,948 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:46,949 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:47,035 Message: 127.0.0.1 - - [08/Mar/2022 22:09:47] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:09:47,058 Message: 127.0.0.1 - - [08/Mar/2022 22:09:47] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:09:47,094 Message: 127.0.0.1 - - [08/Mar/2022 22:09:47] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:10:59,004 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 22:10:59,818 Message:  * Restarting with stat
+Time: 2022-03-08 22:11:00,707 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:11:12,732 Message: 127.0.0.1 - - [08/Mar/2022 22:11:12] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:11:13,429 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,430 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,431 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,432 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,435 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,440 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,444 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,446 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,532 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:11:13,554 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:13,579 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,081 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:11:53,104 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,110 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,116 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,126 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,128 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:11:53,133 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,137 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,141 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,183 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:11:53,204 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:11:53,227 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,007 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:12:15,046 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,052 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,057 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,065 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,073 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:12:15,077 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,080 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,087 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,142 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:12:15,178 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:12:15,233 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:13:44,497 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:13:45,206 Message:  * Restarting with stat
+Time: 2022-03-08 22:14:00,359 Message:  * Restarting with stat
+Time: 2022-03-08 22:14:01,245 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:14:09,675 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:14:10,587 Message:  * Restarting with stat
+Time: 2022-03-08 22:14:11,414 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:14:15,624 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:14:16,301 Message:  * Restarting with stat
+Time: 2022-03-08 22:14:17,202 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:14:26,730 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:14:27,481 Message:  * Restarting with stat
+Time: 2022-03-08 22:14:28,362 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:14:49,307 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:14:50,131 Message:  * Restarting with stat
+Time: 2022-03-08 22:14:51,070 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:15:04,731 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:15:05,645 Message:  * Restarting with stat
+Time: 2022-03-08 22:15:06,506 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:15:15,979 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:15:16,775 Message:  * Restarting with stat
+Time: 2022-03-08 22:15:17,667 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:15:19,816 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
+Time: 2022-03-08 22:15:20,695 Message:  * Restarting with stat
+Time: 2022-03-08 22:15:21,534 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:15:30,835 Message: 127.0.0.1 - - [08/Mar/2022 22:15:30] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:15:31,556 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,574 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,583 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,606 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,610 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,614 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,616 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,623 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,697 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:15:31,717 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:31,740 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:15:55,252 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-08 22:15:55,938 Message:  * Restarting with stat
+Time: 2022-03-08 22:16:35,309 Message:  * Restarting with stat
+Time: 2022-03-08 22:16:43,262 Message:  * Restarting with stat
+Time: 2022-03-08 22:17:06,840 Message:  * Restarting with stat
+Time: 2022-03-08 22:17:26,398 Message:  * Restarting with stat
+Time: 2022-03-08 22:17:35,263 Message:  * Restarting with stat
+Time: 2022-03-08 22:17:36,178 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+Time: 2022-03-08 22:17:38,898 Message: 127.0.0.1 - - [08/Mar/2022 22:17:38] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:17:39,666 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,667 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,674 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,679 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,681 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,686 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,689 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,690 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,768 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:17:39,789 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:17:39,817 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,138 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:37:44,162 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,167 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,173 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,180 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,191 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:37:44,192 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,198 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,203 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,309 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:37:44,333 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:37:44,353 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:03,819 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:03,857 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:03,897 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:03,899 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:03,909 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:03,910 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:03,918 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:03,924 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:03,929 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:04,021 Message: 127.0.0.1 - - [08/Mar/2022 22:38:04] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:04,046 Message: 127.0.0.1 - - [08/Mar/2022 22:38:04] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:04,075 Message: 127.0.0.1 - - [08/Mar/2022 22:38:04] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,072 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:22,100 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,110 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,122 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,126 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,131 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:22,135 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,140 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,144 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,200 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:22,231 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:22,259 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,473 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:37,521 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,548 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,550 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,563 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:37,565 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,571 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,578 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,581 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,631 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:37,655 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:37,690 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,808 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:40,833 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,842 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,850 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,858 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,864 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,870 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,875 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,878 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,930 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:38:40,951 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:38:40,972 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,373 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:40:28,407 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,415 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,423 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,433 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,438 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,448 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:40:28,452 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,454 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,505 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:40:28,535 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:28,562 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:42,887 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:40:42,932 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:42,942 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:42,950 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:42,963 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:40:42,975 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:42,978 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:42,990 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:42,997 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:43,086 Message: 127.0.0.1 - - [08/Mar/2022 22:40:43] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:40:43,113 Message: 127.0.0.1 - - [08/Mar/2022 22:40:43] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:40:43,141 Message: 127.0.0.1 - - [08/Mar/2022 22:40:43] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,211 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[32mGET / HTTP/1.1[0m" 302 -
+Time: 2022-03-08 22:43:34,229 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "GET /login HTTP/1.1" 200 -
+Time: 2022-03-08 22:43:34,287 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,295 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,303 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,306 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,315 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:43:34,317 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,323 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,327 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:43:34,420 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,469 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:45:38,514 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,567 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,573 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,582 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:45:38,593 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,603 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,613 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,620 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,731 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:45:38,755 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:45:38,787 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,599 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:46:20,632 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,644 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,652 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,657 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,666 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:46:20,672 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,678 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,684 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,774 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:46:20,798 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:20,818 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,435 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-08 22:46:51,467 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,470 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,478 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,485 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,493 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-08 22:46:51,496 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,501 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,505 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,554 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-08 22:46:51,582 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-08 22:46:51,613 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -

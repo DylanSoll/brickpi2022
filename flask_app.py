@@ -1,6 +1,11 @@
-from flask import Flask, render_template, session, request, redirect, flash, url_for, jsonify, Response, logging
-from interfaces import databaseinterface, movement, soundinterface, camerainterface, emailinterface
-import robot #robot is class that extends the brickpi class
+from flask import Flask, render_template, session, request, redirect, jsonify, flash, url_for, Response, logging
+from json import dumps
+from interfaces import databaseinterface, movement, emailinterface
+try:
+    from interfaces import soundinterface, camerainterface
+    import robot #robot is class that extends the brickpi class
+except:
+    pass
 import global_vars as GLOBALS #load global variables
 import logging, time
 import password_management as pm
@@ -99,9 +104,7 @@ def register():
 def uniqueEmail():
     if request.method == "POST":
         email = request.get_json()
-        print(email)
         result = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ? ", (email,))
-        print(result)
         return jsonify(result)
     else:
         return redirect('/register')
@@ -112,19 +115,26 @@ def admin():
     please_login('admin')
     return render_template('admin.html')
 
-@app.route('/get-users')
+@app.route('/get-users', methods = ['GET', 'POST'])
 def get_users():
     if request.method == 'POST':
         info = request.get_json()
-        users = GLOBALS.DATABASE.ViewQuery('''SELECT * FROM sensor_log WHERE missionid = ?''', (GLOBALS.MISSIONID,))[0]
-        keys = users.keys()
-        fields = ['select', 'useird', 'email', 'name', 'permissions', 'phone', 'pronouns']
-        datasets = []
-        for key in keys:
-            datasets.append({'sensor':key, 'data':users[key]})
-        return_val = {'datasets': datasets, 'fields': fields}
-        return_val =  {'table_id':'users_table', 'columns':'info["columns"]', 'body_id': 'users_body_id','datasets': datasets, 'fields': fields}
-        return jsonify(return_val)
+        users = GLOBALS.DATABASE.ViewQuery('''SELECT * FROM users''')
+        if users:
+            datasets = []
+            for user in users:
+                row = {}
+                fields = ['select', 'userid', 'email', 'name', 'permissions', 'phone', 'pronouns']
+                for field in fields:
+                    if field == 'select':
+                        row[field] = 'select'
+                    else:
+                        row[field] = user[field]
+                datasets.append(row)
+                
+            return_val =  {'table_id':'users_table', 'columns':info["columns"], 'body_id': 'users_body_id','datasets': datasets, 'fields': fields}
+
+        return dumps(return_val)
     else:
         return redirect('/dashboard')
 # Load the ROBOT
@@ -141,15 +151,24 @@ def robotload():
         if GLOBALS.CAMERA:
             GLOBALS.CAMERA.start()
     if not GLOBALS.ROBOT: 
-        log("FLASK APP: LOADING THE ROBOT")
-        GLOBALS.ROBOT = robot.Robot(20, app.logger)
-        GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
-        GLOBALS.ROBOT.reconfig_IMU()
+        try:
+            log("FLASK APP: LOADING THE ROBOT")
+            GLOBALS.ROBOT = robot.Robot(20, app.logger)
+            GLOBALS.ROBOT.configure_sensors() #defaults have been provided but you can 
+            GLOBALS.ROBOT.reconfig_IMU()
+        except:
+            pass
     if not GLOBALS.SOUND:
-        log("FLASK APP: LOADING THE SOUND")
-        GLOBALS.SOUND = soundinterface.SoundInterface()
-        GLOBALS.SOUND.say("I am ready")
-    sensordict = GLOBALS.ROBOT.get_all_sensors()
+        try:
+            log("FLASK APP: LOADING THE SOUND")
+            GLOBALS.SOUND = soundinterface.SoundInterface()
+            GLOBALS.SOUND.say("I am ready")
+        except:
+            pass
+    if GLOBALS.ROBOT:
+        sensordict = GLOBALS.ROBOT.get_all_sensors()
+    else:
+        sensordict = {}
     return jsonify(sensordict)
 
 # ---------------------------------------------------------------------------------------
@@ -421,7 +440,6 @@ def reverse():
 def create_graphs():
     if request.method == 'POST':
         parsed_details = request.get_json()
-        print(parsed_details)
         time_frame = parsed_details['time']
         #SQL_query = "SELECT * FROM sensor_log INNER JOIN missions on missions.missionid = sensor_log.missionid INNER JOIN users on missions.userid = users.userid"
         '''if time_frame != False:
