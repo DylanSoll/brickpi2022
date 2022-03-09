@@ -237,7 +237,7 @@ def initiate_mission():
             ##########
             ##########
             GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (userid, time_init) VALUES (?, ?)', (session['userid'], time.time()))
-            GLOBALS.missionid = GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1')
+            GLOBALS.MISSIONID = GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1')
         return jsonify({})
     return
 
@@ -317,6 +317,7 @@ def process_movement(power):
             GLOBALS.ROBOT.stop_all()
             if GLOBALS.MISSIONID != None:
                 movement.end_time_movement()
+            print(GLOBALS.MISSIONID)
             reverse_sound(False)
             log_move = True
             mov_type = ""
@@ -352,6 +353,7 @@ def process_movement(power):
                 mov_type = "right"
             if log_move and (GLOBALS.MISSIONID != None):
                 movement.log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
+                print(GLOBALS.MISSIONID)
         return jsonify({})
     else:
         return redirect('/')
