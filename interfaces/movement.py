@@ -5,7 +5,7 @@ except:
     pass
 import global_vars as GLOBALS #load global variables
 import time
-#GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db')
+GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db')
 
 
 def log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False):
