@@ -22,13 +22,9 @@ def log(message):
 
 
 def please_login(current_address):
-    if 'userid' not in session and current_address != 'login':
-        return redirect('/login')
-    elif 'permissions' in session:
+    if 'permissions' in session:
         if session['permissions'] == 'pending' and current_address != 'pending':
             return redirect('/account/pending')
-        elif session['permissions'] != 'admin' and current_address == 'admin':
-            return redirect('/dashboard')
         elif current_address != 'dashboard':
             return redirect('/dashboard')
     return True
@@ -64,7 +60,8 @@ def redirect_on_entry():
 
 @app.route('/login', methods=['GET','POST'])
 def login():
-    please_login('login')
+    if 'userid' in session:
+        return redirect('/dashboard')
     if request.method == 'POST':
         email = str(request.form.get('login_email'))
         password = str(request.form.get('login_password'))
@@ -82,7 +79,8 @@ def login():
 
 @app.route('/register', methods=["POST","GET"])
 def register():
-    please_login('login')
+    if 'userid' in session:
+        return redirect('/dashboard')
     if request.method == 'POST':
         email = str(request.form.get('email'))
         password = str(request.form.get('password'))
@@ -112,7 +110,8 @@ def uniqueEmail():
 
 @app.route('/admin')
 def admin():
-    please_login('admin')
+    if session['permissions'] != 'admin':
+        return redirect('/dashboad')
     return render_template('admin.html')
 
 @app.route('/get-users', methods = ['GET', 'POST'])
@@ -229,6 +228,14 @@ def missions():
 def initiate_mission():
     if request.method == 'POST':
         if GLOBALS.DATABASE:
+            ######
+                #Delete Broken Missions
+            ######
+            GLOBALS.DATABASE.ModifyQuery('DELETE FROM missions WHERE time_final IS NULL')
+            GLOBALS.DATABASE.ModifyQuery('DELETE FROM sensor_log WHERE missionid NOT IN (SELECT missionid  FROM missions)')
+            GLOBALS.DATABASE.ModifyQuery('DELETE FROM movement_log WHERE missionid NOT IN (SELECT missionid  FROM missions)')
+            ##########
+            ##########
             GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (userid, time_init) VALUES (?, ?)', (session['userid'], time.time()))
             GLOBALS.missionid = GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1')
         return jsonify({})

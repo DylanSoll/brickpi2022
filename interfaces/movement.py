@@ -1,9 +1,19 @@
 from interfaces import databaseinterface
-import robot #robot is class that extends the brickpi class
+try:
+    import robot #robot is class that extends the brickpi class
+except:
+    pass
 import global_vars as GLOBALS #load global variables
 import time
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db')
 
+
+def log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False):
+    if GLOBALS.DATABASE:
+        GLOBALS.DATABASE.ModifyQuery('''INSERT INTO movement_log (missionid, type, time_init, magnitude, power,
+         movement_type, command_type) VALUES (?, ?, ?, ?, ?, ?, ?)''', \
+             (missionid, mov_type, time_init, magnitude, power, movement_type, command_type))
+    return
 
 def log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False):
     if GLOBALS.DATABASE:

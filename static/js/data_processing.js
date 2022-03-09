@@ -168,6 +168,60 @@ function lineGraph(user_title, locationid, row_array, column_obj,legend_pos = 'b
             chart.draw(data, options);}
           }
 
+google.charts.load('current', {'packages':['gauge']});
+google.charts.setOnLoadCallback(drawChart);
+      
+function drawGuage() {
+var data = google.visualization.arrayToDataTable([
+    ['Label', 'Value'],
+    ['Battery', 80],
+]);
+
+var options = {
+    width: 400, height: 120,
+    redFrom: 0, redTo: 20,
+    yellowFrom:20, yellowTo: 60,
+    greenFrom: 60, greenTo:100,
+    minorTicks: 5
+};
+
+var chart = new google.visualization.Gauge(document.getElementById('battery_graph'));
+
+chart.draw(data, options);
+
+setInterval(function() {
+    data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+    chart.draw(data, options);
+}, 1300);
+}
+function drawGuage(target, info, colour_banding, size, minor_ticks = 5) {
+    google.charts.load('current', {'packages':['gauge']});
+    google.charts.setOnLoadCallback(drawchart());
+    function drawchart(){
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Label');
+        data.addColumn('number', 'Value');
+        data.addRow([
+          ['Battery', 80]
+        ]);
+        
+    
+        var options = {
+            width: size['width'], height: size['height'],
+            redFrom: colour_banding['redFrom'], redTo: colour_banding['redTo'],
+            yellowFrom:colour_banding['yellowFrom'], yellowTo: colour_banding['yellowTo'],
+            greenFrom: colour_banding['greenFrom'], greenTo:colour_banding['greenTo'],
+            minorTicks: minor_ticks
+        };
+        
+        var chart = new google.visualization.Gauge(document.getElementById(target));
+        console.log(chart)
+        chart.draw(data, options);
+    }
+        
+}
+    
+
 
 function populate_specific_mission(details){
     const breakdown = details['breakdown'][0];

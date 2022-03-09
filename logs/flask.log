@@ -1,343 +1,290 @@
-Time: 2022-03-08 21:50:27,660 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 21:50:28,385 Message:  * Restarting with stat
-Time: 2022-03-08 21:50:29,273 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 21:50:42,091 Message:  * Restarting with stat
-Time: 2022-03-08 21:50:42,997 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 21:56:13,779 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 21:56:14,432 Message:  * Restarting with stat
-Time: 2022-03-08 21:56:15,379 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 21:56:15,519 Message: 127.0.0.1 - - [08/Mar/2022 21:56:15] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:16,220 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,220 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,224 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,229 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,237 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,240 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,290 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,292 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,362 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:16,412 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:16,435 Message: 127.0.0.1 - - [08/Mar/2022 21:56:16] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:28,047 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 21:56:28,737 Message:  * Restarting with stat
-Time: 2022-03-08 21:56:29,618 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 21:56:30,890 Message: 127.0.0.1 - - [08/Mar/2022 21:56:30] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:31,570 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,575 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,582 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,592 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,594 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,597 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,597 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,600 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,689 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:31,711 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:31,735 Message: 127.0.0.1 - - [08/Mar/2022 21:56:31] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,132 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:44,162 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,167 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,179 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,183 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,193 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,196 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,203 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,206 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,264 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:44,286 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,310 Message: 127.0.0.1 - - [08/Mar/2022 21:56:44] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:44,333 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 21:56:45,208 Message:  * Restarting with stat
-Time: 2022-03-08 21:56:46,072 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 21:56:47,465 Message: 127.0.0.1 - - [08/Mar/2022 21:56:47] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:48,176 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,177 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,178 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,178 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,183 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,187 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,193 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,198 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,242 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 21:56:48,257 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:56:48,287 Message: 127.0.0.1 - - [08/Mar/2022 21:56:48] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,068 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 21:59:41,102 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,109 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,114 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,122 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,130 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 21:59:41,136 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,146 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,148 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,229 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 21:59:41,271 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:41,293 Message: 127.0.0.1 - - [08/Mar/2022 21:59:41] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,059 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 21:59:55,083 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,092 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,098 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,107 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,112 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 21:59:55,115 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,122 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,124 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,187 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 21:59:55,209 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 21:59:55,239 Message: 127.0.0.1 - - [08/Mar/2022 21:59:55] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,543 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:00:23,571 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,579 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,583 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,596 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,600 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:00:23,610 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,613 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,619 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,676 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:00:23,703 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:00:23,734 Message: 127.0.0.1 - - [08/Mar/2022 22:00:23] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:04:30,847 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 22:04:31,749 Message:  * Restarting with stat
-Time: 2022-03-08 22:04:32,652 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:04:35,850 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 22:04:36,639 Message:  * Restarting with stat
-Time: 2022-03-08 22:04:37,629 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:09:46,223 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:09:46,931 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:09:46,931 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:46,932 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:46,934 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:46,940 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:46,945 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:46,948 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:46,949 Message: 127.0.0.1 - - [08/Mar/2022 22:09:46] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:47,035 Message: 127.0.0.1 - - [08/Mar/2022 22:09:47] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:09:47,058 Message: 127.0.0.1 - - [08/Mar/2022 22:09:47] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:09:47,094 Message: 127.0.0.1 - - [08/Mar/2022 22:09:47] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:10:59,004 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 22:10:59,818 Message:  * Restarting with stat
-Time: 2022-03-08 22:11:00,707 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:11:12,732 Message: 127.0.0.1 - - [08/Mar/2022 22:11:12] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:11:13,429 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,430 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,431 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,432 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,435 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,440 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,444 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,446 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,532 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:11:13,554 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:13,579 Message: 127.0.0.1 - - [08/Mar/2022 22:11:13] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,081 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:11:53,104 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,110 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,116 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,126 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,128 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:11:53,133 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,137 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,141 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,183 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:11:53,204 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:11:53,227 Message: 127.0.0.1 - - [08/Mar/2022 22:11:53] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,007 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:12:15,046 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,052 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,057 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,065 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,073 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:12:15,077 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,080 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,087 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,142 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:12:15,178 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:12:15,233 Message: 127.0.0.1 - - [08/Mar/2022 22:12:15] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:13:44,497 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:13:45,206 Message:  * Restarting with stat
-Time: 2022-03-08 22:14:00,359 Message:  * Restarting with stat
-Time: 2022-03-08 22:14:01,245 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:14:09,675 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:14:10,587 Message:  * Restarting with stat
-Time: 2022-03-08 22:14:11,414 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:14:15,624 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:14:16,301 Message:  * Restarting with stat
-Time: 2022-03-08 22:14:17,202 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:14:26,730 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:14:27,481 Message:  * Restarting with stat
-Time: 2022-03-08 22:14:28,362 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:14:49,307 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:14:50,131 Message:  * Restarting with stat
-Time: 2022-03-08 22:14:51,070 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:15:04,731 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:15:05,645 Message:  * Restarting with stat
-Time: 2022-03-08 22:15:06,506 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:15:15,979 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:15:16,775 Message:  * Restarting with stat
-Time: 2022-03-08 22:15:17,667 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:15:19,816 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\interfaces\\movement.py', reloading
-Time: 2022-03-08 22:15:20,695 Message:  * Restarting with stat
-Time: 2022-03-08 22:15:21,534 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:15:30,835 Message: 127.0.0.1 - - [08/Mar/2022 22:15:30] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:15:31,556 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,574 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,583 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,606 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,610 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,614 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,616 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,623 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,697 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:15:31,717 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:31,740 Message: 127.0.0.1 - - [08/Mar/2022 22:15:31] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:15:55,252 Message:  * Detected change in 'C:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-08 22:15:55,938 Message:  * Restarting with stat
-Time: 2022-03-08 22:16:35,309 Message:  * Restarting with stat
-Time: 2022-03-08 22:16:43,262 Message:  * Restarting with stat
-Time: 2022-03-08 22:17:06,840 Message:  * Restarting with stat
-Time: 2022-03-08 22:17:26,398 Message:  * Restarting with stat
-Time: 2022-03-08 22:17:35,263 Message:  * Restarting with stat
-Time: 2022-03-08 22:17:36,178 Message:  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-Time: 2022-03-08 22:17:38,898 Message: 127.0.0.1 - - [08/Mar/2022 22:17:38] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:17:39,666 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,667 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,674 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,679 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,681 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,686 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,689 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,690 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,768 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:17:39,789 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:17:39,817 Message: 127.0.0.1 - - [08/Mar/2022 22:17:39] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,138 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:37:44,162 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,167 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,173 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,180 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,191 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:37:44,192 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,198 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,203 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,309 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:37:44,333 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:37:44,353 Message: 127.0.0.1 - - [08/Mar/2022 22:37:44] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:03,819 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:03,857 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:03,897 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:03,899 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:03,909 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:03,910 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:03,918 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:03,924 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:03,929 Message: 127.0.0.1 - - [08/Mar/2022 22:38:03] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:04,021 Message: 127.0.0.1 - - [08/Mar/2022 22:38:04] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:04,046 Message: 127.0.0.1 - - [08/Mar/2022 22:38:04] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:04,075 Message: 127.0.0.1 - - [08/Mar/2022 22:38:04] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,072 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:22,100 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,110 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,122 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,126 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,131 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:22,135 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,140 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,144 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,200 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:22,231 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:22,259 Message: 127.0.0.1 - - [08/Mar/2022 22:38:22] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,473 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:37,521 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,548 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,550 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,563 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:37,565 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,571 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,578 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,581 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,631 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:37,655 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:37,690 Message: 127.0.0.1 - - [08/Mar/2022 22:38:37] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,808 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:40,833 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,842 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,850 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,858 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,864 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,870 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,875 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,878 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,930 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:38:40,951 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:38:40,972 Message: 127.0.0.1 - - [08/Mar/2022 22:38:40] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,373 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:40:28,407 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,415 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,423 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,433 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,438 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,448 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:40:28,452 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,454 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,505 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:40:28,535 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:28,562 Message: 127.0.0.1 - - [08/Mar/2022 22:40:28] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:42,887 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:40:42,932 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:42,942 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:42,950 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:42,963 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:40:42,975 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:42,978 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:42,990 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:42,997 Message: 127.0.0.1 - - [08/Mar/2022 22:40:42] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:43,086 Message: 127.0.0.1 - - [08/Mar/2022 22:40:43] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:40:43,113 Message: 127.0.0.1 - - [08/Mar/2022 22:40:43] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:40:43,141 Message: 127.0.0.1 - - [08/Mar/2022 22:40:43] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,211 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-08 22:43:34,229 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "GET /login HTTP/1.1" 200 -
-Time: 2022-03-08 22:43:34,287 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,295 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,303 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,306 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,315 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:43:34,317 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,323 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,327 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:43:34,420 Message: 127.0.0.1 - - [08/Mar/2022 22:43:34] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,469 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:45:38,514 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,567 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,573 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,582 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:45:38,593 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,603 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,613 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,620 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,731 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:45:38,755 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:45:38,787 Message: 127.0.0.1 - - [08/Mar/2022 22:45:38] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,599 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:46:20,632 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,644 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,652 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,657 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,666 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:46:20,672 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,678 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,684 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,774 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:46:20,798 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:20,818 Message: 127.0.0.1 - - [08/Mar/2022 22:46:20] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,435 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-08 22:46:51,467 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,470 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,478 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,485 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,493 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-08 22:46:51,496 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,501 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,505 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,554 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-08 22:46:51,582 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
-Time: 2022-03-08 22:46:51,613 Message: 127.0.0.1 - - [08/Mar/2022 22:46:51] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,128 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:18:03,167 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,195 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,216 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,217 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,225 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,240 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,246 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,254 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,262 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,269 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,269 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:03,513 Message: 127.0.0.1 - - [09/Mar/2022 09:18:03] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:18:04,821 Message: LOADING CAMERA
+Time: 2022-03-09 09:18:04,821 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:18:04,821 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:18:04,821 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:18:04,821 Message: 127.0.0.1 - - [09/Mar/2022 09:18:04] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:18:04,856 Message: 127.0.0.1 - - [09/Mar/2022 09:18:04] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:18:04,878 Message: 127.0.0.1 - - [09/Mar/2022 09:18:04] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,111 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:19:54,168 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,177 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,188 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,198 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,210 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:19:54,218 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,228 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,236 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,245 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,253 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,256 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:19:54,501 Message: 127.0.0.1 - - [09/Mar/2022 09:19:54] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:20,973 Message: 127.0.0.1 - - [09/Mar/2022 09:20:20] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:20:21,054 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,067 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,084 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,094 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,104 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:20:21,106 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,114 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,132 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,132 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,146 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,146 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:21,417 Message: 127.0.0.1 - - [09/Mar/2022 09:20:21] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,124 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:20:34,164 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,180 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,188 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,212 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,212 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:20:34,228 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,234 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,250 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,250 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,258 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,266 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:20:34,532 Message: 127.0.0.1 - - [09/Mar/2022 09:20:34] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:08,243 Message: LOADING CAMERA
+Time: 2022-03-09 09:22:08,243 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:22:08,243 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:22:08,243 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:22:08,243 Message: 127.0.0.1 - - [09/Mar/2022 09:22:08] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:22:08,261 Message: 127.0.0.1 - - [09/Mar/2022 09:22:08] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:22:08,292 Message: 127.0.0.1 - - [09/Mar/2022 09:22:08] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,263 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:22:21,319 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,335 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,335 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,351 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,351 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:22:21,367 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,367 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,383 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,383 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,391 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,399 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:21,655 Message: 127.0.0.1 - - [09/Mar/2022 09:22:21] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:22:23,108 Message: LOADING CAMERA
+Time: 2022-03-09 09:22:23,108 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:22:23,116 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:22:23,116 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:22:23,116 Message: 127.0.0.1 - - [09/Mar/2022 09:22:23] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:22:23,148 Message: 127.0.0.1 - - [09/Mar/2022 09:22:23] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:22:23,156 Message: 127.0.0.1 - - [09/Mar/2022 09:22:23] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,477 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:24:05,517 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,529 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,537 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,545 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,553 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,561 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,569 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,577 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,585 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,593 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,601 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:05,851 Message: 127.0.0.1 - - [09/Mar/2022 09:24:05] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:24:07,599 Message: LOADING CAMERA
+Time: 2022-03-09 09:24:07,599 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:24:07,599 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:24:07,599 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:24:07,599 Message: 127.0.0.1 - - [09/Mar/2022 09:24:07] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:24:07,633 Message: 127.0.0.1 - - [09/Mar/2022 09:24:07] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:24:07,649 Message: 127.0.0.1 - - [09/Mar/2022 09:24:07] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,711 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:25:24,754 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,771 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,782 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,790 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,802 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:25:24,810 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,818 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,821 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,835 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,845 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:24,855 Message: 127.0.0.1 - - [09/Mar/2022 09:25:24] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:25,108 Message: 127.0.0.1 - - [09/Mar/2022 09:25:25] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:25:25,891 Message: LOADING CAMERA
+Time: 2022-03-09 09:25:25,891 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:25:25,891 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:25:25,891 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:25:25,891 Message: 127.0.0.1 - - [09/Mar/2022 09:25:25] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:25:25,922 Message: 127.0.0.1 - - [09/Mar/2022 09:25:25] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:25:25,946 Message: 127.0.0.1 - - [09/Mar/2022 09:25:25] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:19,918 Message: 127.0.0.1 - - [09/Mar/2022 09:27:19] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:27:19,958 Message: 127.0.0.1 - - [09/Mar/2022 09:27:19] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:19,966 Message: 127.0.0.1 - - [09/Mar/2022 09:27:19] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:19,974 Message: 127.0.0.1 - - [09/Mar/2022 09:27:19] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:19,990 Message: 127.0.0.1 - - [09/Mar/2022 09:27:19] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:19,990 Message: 127.0.0.1 - - [09/Mar/2022 09:27:19] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:20,006 Message: 127.0.0.1 - - [09/Mar/2022 09:27:20] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:20,014 Message: 127.0.0.1 - - [09/Mar/2022 09:27:20] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:20,014 Message: 127.0.0.1 - - [09/Mar/2022 09:27:20] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:20,022 Message: 127.0.0.1 - - [09/Mar/2022 09:27:20] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:20,038 Message: 127.0.0.1 - - [09/Mar/2022 09:27:20] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:20,038 Message: 127.0.0.1 - - [09/Mar/2022 09:27:20] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:20,293 Message: 127.0.0.1 - - [09/Mar/2022 09:27:20] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:27:21,510 Message: LOADING CAMERA
+Time: 2022-03-09 09:27:21,510 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:27:21,510 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:27:21,510 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:27:21,510 Message: 127.0.0.1 - - [09/Mar/2022 09:27:21] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:27:21,518 Message: 127.0.0.1 - - [09/Mar/2022 09:27:21] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:27:21,534 Message: 127.0.0.1 - - [09/Mar/2022 09:27:21] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,240 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:29:21,280 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,307 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,307 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,319 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,327 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:29:21,335 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,344 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,344 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,354 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,363 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,372 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:29:21,627 Message: 127.0.0.1 - - [09/Mar/2022 09:29:21] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,630 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:30:45,707 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,730 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,740 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,749 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,758 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:30:45,766 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,774 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,776 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,784 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,794 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:45,803 Message: 127.0.0.1 - - [09/Mar/2022 09:30:45] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:30:46,137 Message: 127.0.0.1 - - [09/Mar/2022 09:30:46] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,438 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:35:05,484 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,513 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,521 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,530 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,546 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:35:05,546 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,561 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,569 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,578 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,586 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,594 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,795 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:05,939 Message: 127.0.0.1 - - [09/Mar/2022 09:35:05] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,587 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:35:56,647 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,657 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,666 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,677 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,687 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:35:56,695 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,705 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,713 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,713 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,722 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:56,730 Message: 127.0.0.1 - - [09/Mar/2022 09:35:56] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:35:57,023 Message: 127.0.0.1 - - [09/Mar/2022 09:35:57] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,630 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:36:57,683 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,698 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,708 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,724 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,735 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:36:57,735 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,744 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,754 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,764 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,775 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:57,784 Message: 127.0.0.1 - - [09/Mar/2022 09:36:57] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:36:58,044 Message: 127.0.0.1 - - [09/Mar/2022 09:36:58] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:39,979 Message: 127.0.0.1 - - [09/Mar/2022 09:37:39] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:37:40,055 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,079 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,081 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,090 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,099 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:37:40,109 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,117 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,126 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,126 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,136 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,146 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:40,384 Message: 127.0.0.1 - - [09/Mar/2022 09:37:40] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,294 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:37:41,377 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,405 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,417 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,417 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,437 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,437 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,446 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,456 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,456 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,465 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,475 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:37:41,714 Message: 127.0.0.1 - - [09/Mar/2022 09:37:41] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:49,879 Message: 127.0.0.1 - - [09/Mar/2022 09:38:49] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:38:49,959 Message: 127.0.0.1 - - [09/Mar/2022 09:38:49] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,006 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,033 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,043 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,052 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:38:50,069 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,089 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,097 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,119 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,137 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,137 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:50,436 Message: 127.0.0.1 - - [09/Mar/2022 09:38:50] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:38:52,610 Message: LOADING CAMERA
+Time: 2022-03-09 09:38:52,610 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:38:52,610 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:38:52,610 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:38:52,610 Message: 127.0.0.1 - - [09/Mar/2022 09:38:52] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:38:52,633 Message: 127.0.0.1 - - [09/Mar/2022 09:38:52] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:38:52,645 Message: 127.0.0.1 - - [09/Mar/2022 09:38:52] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,283 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 09:39:55,366 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,393 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,410 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,437 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,453 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-09 09:39:55,463 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,478 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,498 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,517 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,536 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,536 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:55,837 Message: 127.0.0.1 - - [09/Mar/2022 09:39:55] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-09 09:39:58,915 Message: LOADING CAMERA
+Time: 2022-03-09 09:39:58,915 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-09 09:39:58,915 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 09:39:58,915 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 09:39:58,915 Message: 127.0.0.1 - - [09/Mar/2022 09:39:58] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-09 09:39:58,952 Message: 127.0.0.1 - - [09/Mar/2022 09:39:58] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-09 09:39:58,971 Message: 127.0.0.1 - - [09/Mar/2022 09:39:58] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,577 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-09 12:01:22,640 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,656 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,672 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,688 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,696 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,704 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,720 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,720 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,728 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,736 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-09 12:01:22,744 Message: 127.0.0.1 - - [09/Mar/2022 12:01:22] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
