@@ -19,7 +19,20 @@ GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue
 def log(message):
     app.logger.info(message)
     return
+def log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False):
+    if GLOBALS.DATABASE:
+        GLOBALS.DATABASE.ModifyQuery('''INSERT INTO movement_log (missionid, type, time_init, magnitude, power,
+         movement_type, command_type) VALUES (?, ?, ?, ?, ?, ?, ?)''', \
+             (missionid, mov_type, time_init, magnitude, power, movement_type, command_type))
+        print('hit')
+    return
 
+
+def end_time_movement():
+    if GLOBALS.DATABASE:
+        GLOBALS.DATABASE.ModifyQuert('''UPDATE movement_log SET time_final = ? WHERE movementid = (SELECT movementid FROM movement_log 
+        ORDER BY time_init DESC LIMIT 1)''', (time.time(),))
+    return
 
 def please_login(current_address):
     if 'permissions' in session:
@@ -316,7 +329,7 @@ def process_movement(power):
         if GLOBALS.ROBOT:
             GLOBALS.ROBOT.stop_all()
             if GLOBALS.MISSIONID != None:
-                movement.end_time_movement()
+                end_time_movement()
             print(GLOBALS.MISSIONID)
             reverse_sound(False)
             log_move = True
@@ -352,7 +365,7 @@ def process_movement(power):
                 GLOBALS.ROBOT.rotate_power(power)
                 mov_type = "right"
             if log_move and (GLOBALS.MISSIONID != None):
-                movement.log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
+                log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
                 print(GLOBALS.MISSIONID)
         return jsonify({})
     else:
@@ -405,7 +418,7 @@ def btn_movements(mov_type, power):
             power = int(power)
             log_move = True
             if GLOBALS.MISSIONID != None:
-                movement.end_time_movement()
+                end_time_movement()
             if mov_type == 'stop':
                 GLOBALS.ROBOT.stop_all()
             elif mov_type == 'left':
@@ -424,7 +437,7 @@ def btn_movements(mov_type, power):
             else:
                 log_move = False
             if log_move and (GLOBALS.MISSIONID != None):
-                movement.log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'button', False)
+                log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'button', False)
         return jsonify(mov_type)
     else:
         return redirect('/')

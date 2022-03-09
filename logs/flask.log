@@ -240,3 +240,101 @@ Time: 2022-03-09 13:59:52,499 Message: 10.10.72.124 - - [09/Mar/2022 13:59:52] "
 Time: 2022-03-09 13:59:55,094 Message: 10.10.72.124 - - [09/Mar/2022 13:59:55] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
 Time: 2022-03-09 13:59:56,858 Message: 10.10.72.124 - - [09/Mar/2022 13:59:56] "[35m[1mPOST /process_movement/30 HTTP/1.1[0m" 500 -
 Time: 2022-03-09 13:59:57,640 Message: 10.10.72.124 - - [09/Mar/2022 13:59:57] "[35m[1mPOST /process_movement/0 HTTP/1.1[0m" 500 -
+Time: 2022-03-09 14:01:23,420 Message: 10.10.72.124 - - [09/Mar/2022 14:01:23] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:01:23,749 Message: FLASK APP: READING CAMERA
+Time: 2022-03-09 14:01:23,752 Message: 10.10.72.124 - - [09/Mar/2022 14:01:23] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:01:25,327 Message: 10.10.72.124 - - [09/Mar/2022 14:01:25] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:01:25,605 Message: FLASK APP: READING CAMERA
+Time: 2022-03-09 14:01:25,608 Message: 10.10.72.124 - - [09/Mar/2022 14:01:25] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:01:26,644 Message: 10.10.72.124 - - [09/Mar/2022 14:01:26] "[35m[1mPOST /process_movement/30 HTTP/1.1[0m" 500 -
+Time: 2022-03-09 14:01:27,500 Message: 10.10.72.124 - - [09/Mar/2022 14:01:27] "[35m[1mPOST /process_movement/0 HTTP/1.1[0m" 500 -
+Time: 2022-03-09 14:03:59,661 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-09 14:03:59,666 Message:  * Restarting with stat
+Time: 2022-03-09 14:04:02,688 Message:  * Debugger is active!
+Time: 2022-03-09 14:04:02,690 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-09 14:04:02,829 Message: 10.10.72.124 - - [09/Mar/2022 14:04:02] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:04,229 Message: LOADING CAMERA
+Time: 2022-03-09 14:04:04,615 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-09 14:04:04,616 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 14:04:08,433 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-09 14:04:08,539 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 14:04:09,176 Message: 10.10.72.124 - - [09/Mar/2022 14:04:09] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:09,184 Message: 10.10.72.124 - - [09/Mar/2022 14:04:09] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:10,322 Message: ULTRASONIC: get_sensor error: Invalid sensor data
+Time: 2022-03-09 14:04:11,216 Message: 10.10.72.124 - - [09/Mar/2022 14:04:11] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:11,226 Message: 10.10.72.124 - - [09/Mar/2022 14:04:11] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:11,449 Message: IMU Orientation: [Errno 5] Input/output error
+Time: 2022-03-09 14:04:11,512 Message: 10.10.72.124 - - [09/Mar/2022 14:04:11] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:11,618 Message: 10.10.72.124 - - [09/Mar/2022 14:04:11] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:11,624 Message: 10.10.72.124 - - [09/Mar/2022 14:04:11] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:12,372 Message: 10.10.72.124 - - [09/Mar/2022 14:04:12] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:12,376 Message: 10.10.72.124 - - [09/Mar/2022 14:04:12] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:12,873 Message: FLASK APP: READING CAMERA
+Time: 2022-03-09 14:04:12,888 Message: 10.10.72.124 - - [09/Mar/2022 14:04:12] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:13,551 Message: 10.10.72.124 - - [09/Mar/2022 14:04:13] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:13,557 Message: 10.10.72.124 - - [09/Mar/2022 14:04:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:18,892 Message: 10.10.72.124 - - [09/Mar/2022 14:04:18] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:18,896 Message: 10.10.72.124 - - [09/Mar/2022 14:04:18] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:19,258 Message: 10.10.72.124 - - [09/Mar/2022 14:04:19] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:19,261 Message: 10.10.72.124 - - [09/Mar/2022 14:04:19] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:20,301 Message: 10.10.72.124 - - [09/Mar/2022 14:04:20] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:20,311 Message: 10.10.72.124 - - [09/Mar/2022 14:04:20] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:21,089 Message: 10.10.72.124 - - [09/Mar/2022 14:04:21] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:21,095 Message: 10.10.72.124 - - [09/Mar/2022 14:04:21] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:23,295 Message: 10.10.72.124 - - [09/Mar/2022 14:04:23] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:23,304 Message: 10.10.72.124 - - [09/Mar/2022 14:04:23] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:23,809 Message: 10.10.72.124 - - [09/Mar/2022 14:04:23] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:23,815 Message: 10.10.72.124 - - [09/Mar/2022 14:04:23] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:27,147 Message: 10.10.72.124 - - [09/Mar/2022 14:04:27] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:27,152 Message: 10.10.72.124 - - [09/Mar/2022 14:04:27] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:27,977 Message: 10.10.72.124 - - [09/Mar/2022 14:04:27] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:27,981 Message: 10.10.72.124 - - [09/Mar/2022 14:04:27] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:29,765 Message: 10.10.72.124 - - [09/Mar/2022 14:04:29] "[37mPOST /initiate-mission HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:04:30,283 Message: 10.10.72.124 - - [09/Mar/2022 14:04:30] "[35m[1mPOST /process_movement/30 HTTP/1.1[0m" 500 -
+Time: 2022-03-09 14:04:31,468 Message: 10.10.72.124 - - [09/Mar/2022 14:04:31] "[35m[1mPOST /process_movement/0 HTTP/1.1[0m" 500 -
+Time: 2022-03-09 14:08:22,759 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-09 14:08:23,587 Message:  * Restarting with stat
+Time: 2022-03-09 14:08:26,774 Message:  * Debugger is active!
+Time: 2022-03-09 14:08:26,777 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-09 14:08:55,775 Message: 10.10.72.124 - - [09/Mar/2022 14:08:55] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:00,888 Message: LOADING CAMERA
+Time: 2022-03-09 14:09:01,306 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-09 14:09:01,308 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-09 14:09:03,739 Message: 10.10.72.124 - - [09/Mar/2022 14:09:03] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:03,742 Message: 10.10.72.124 - - [09/Mar/2022 14:09:03] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:05,303 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-09 14:09:05,406 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-09 14:09:07,189 Message: ULTRASONIC: get_sensor error: Invalid sensor data
+Time: 2022-03-09 14:09:07,240 Message: IMU Acceleration: [Errno 5] Input/output error
+Time: 2022-03-09 14:09:07,354 Message: 10.10.72.124 - - [09/Mar/2022 14:09:07] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:07,364 Message: 10.10.72.124 - - [09/Mar/2022 14:09:07] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:07,426 Message: 10.10.72.124 - - [09/Mar/2022 14:09:07] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:07,461 Message: FLASK APP: READING CAMERA
+Time: 2022-03-09 14:09:07,463 Message: 10.10.72.124 - - [09/Mar/2022 14:09:07] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:09,253 Message: 10.10.72.124 - - [09/Mar/2022 14:09:09] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:09,255 Message: 10.10.72.124 - - [09/Mar/2022 14:09:09] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:10,803 Message: 10.10.72.124 - - [09/Mar/2022 14:09:10] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:10,809 Message: 10.10.72.124 - - [09/Mar/2022 14:09:10] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:13,496 Message: 10.10.72.124 - - [09/Mar/2022 14:09:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:13,499 Message: 10.10.72.124 - - [09/Mar/2022 14:09:13] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:15,285 Message: 10.10.72.124 - - [09/Mar/2022 14:09:15] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:15,292 Message: 10.10.72.124 - - [09/Mar/2022 14:09:15] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:15,841 Message: 10.10.72.124 - - [09/Mar/2022 14:09:15] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:15,853 Message: 10.10.72.124 - - [09/Mar/2022 14:09:15] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:16,295 Message: 10.10.72.124 - - [09/Mar/2022 14:09:16] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:16,295 Message: 10.10.72.124 - - [09/Mar/2022 14:09:16] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:17,181 Message: 10.10.72.124 - - [09/Mar/2022 14:09:17] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:17,186 Message: 10.10.72.124 - - [09/Mar/2022 14:09:17] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:17,715 Message: 10.10.72.124 - - [09/Mar/2022 14:09:17] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:17,722 Message: 10.10.72.124 - - [09/Mar/2022 14:09:17] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:25,070 Message: 10.10.72.124 - - [09/Mar/2022 14:09:25] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:25,088 Message: 10.10.72.124 - - [09/Mar/2022 14:09:25] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:27,396 Message: 10.10.72.124 - - [09/Mar/2022 14:09:27] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:27,402 Message: 10.10.72.124 - - [09/Mar/2022 14:09:27] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:45,323 Message: 10.10.72.124 - - [09/Mar/2022 14:09:45] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:45,328 Message: 10.10.72.124 - - [09/Mar/2022 14:09:45] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:09:49,880 Message: 10.10.72.124 - - [09/Mar/2022 14:09:49] "[37mPOST /btn-mov/stop/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:10:05,410 Message: 10.10.72.124 - - [09/Mar/2022 14:10:05] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:10:05,414 Message: 10.10.72.124 - - [09/Mar/2022 14:10:05] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:10:20,993 Message: 10.10.72.124 - - [09/Mar/2022 14:10:20] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-09 14:10:21,002 Message: 10.10.72.124 - - [09/Mar/2022 14:10:21] "[37mPOST /process_movement/57 HTTP/1.1[0m" 200 -

@@ -16,12 +16,6 @@ def log_movement(missionid, mov_type, time_init, power, movement_type, command_t
         print('hit')
     return
 
-def log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False):
-    if GLOBALS.DATABASE:
-        GLOBALS.DATABASE.ModifyQuery('''INSERT INTO movement_log (missionid, type, time_init, magnitude, power,
-         movement_type, command_type) VALUES (?, ?, ?, ?, ?, ?, ?)''', \
-             (missionid, mov_type, time_init, magnitude, power, movement_type, command_type))
-    return
 
 def end_time_movement():
     if GLOBALS.DATABASE:
