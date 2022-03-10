@@ -107,7 +107,7 @@ def register():
         phoneNumber = str(request.form.get('phoneNumber'))
         hashedPassword = pm.hash_password(password)
         GLOBALS.DATABASE.ModifyQuery("INSERT INTO users (name,email, password, permissions, phone, pronouns) VALUES(?,?,?,?,?,?)",\
-            (name,email, hashedPassword,'admin',phoneNumber, 'he/him'))
+            (name,email, hashedPassword,'pending',phoneNumber, 'he/him'))
         userdetails = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ?", (email,))[0]
         session['userid'] = userdetails['userid']
         session['email'] = userdetails['email']
@@ -129,9 +129,9 @@ def uniqueEmail():
 
 @app.route('/admin')
 def admin():
-    '''GLOBALS.DATABASE.ModifyQuery('DELETE FROM movement_log')
+    GLOBALS.DATABASE.ModifyQuery('DELETE FROM movement_log')
     GLOBALS.DATABASE.ModifyQuery('DELETE FROM sensor_log')
-    GLOBALS.DATABASE.ModifyQuery('DELETE FROM missions')'''
+    GLOBALS.DATABASE.ModifyQuery('DELETE FROM missions')
     if session['permissions'] != 'admin':
         return redirect('/dashboad')
     return render_template('admin.html')
@@ -429,6 +429,8 @@ def process_shooting():
 def btn_movements(mov_type, power):
     if request.method == 'POST':
         if GLOBALS.ROBOT: 
+            if GLOBALS.MISSIONID != None:
+                end_time_movement()
             power = int(power)
             log_move = True
             if GLOBALS.MISSIONID != None:
