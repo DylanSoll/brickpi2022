@@ -8,6 +8,7 @@ const time = new Date
 function defaulthandle(results){
     temp_var = results
 }
+var allow_sensors = false;
 var allow_keypress = true
 commands = {'turn':['left','right', 'degrees'],
             'face':{'north': 0,'east': 90, 'south':180, 'west':270},
@@ -240,10 +241,12 @@ function stop_start_mission(){
 function suspend_mission(interval){
     clearInterval(interval);
     allow_keypress = false;
+    allow_sensors = false;
 }
 
 function resume_mission(){
     interval = setInterval(function(){jq_ajax('/sensors', {}, defaulthandle)},2000)
     allow_keypress = true;
+    allow_sensors = true;
     return interval
 }

@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 class CVInterface():
     def __init__(self):
-        self.h_cascade = cv2.CascadeClassifier("C:/Users/22dyl/OneDrive/Desktop/h_training_data_cropped/classifier/cascade.xml")
-        self.u_cascade = cv2.CascadeClassifier("C:/Users/22dyl/OneDrive/Desktop/U_training_data_cropped/classifier/cascade.xml")
+        self.h_cascade = cv2.CascadeClassifier("haarcascade_custom/h_cascade.xml")
+        self.u_cascade = cv2.CascadeClassifier("haarcascade_custom/u_cascade.xml")
         return
     def find_h(self, frame):
         return self.h_cascade.detectMultiScale(frame, 1.3, 5)

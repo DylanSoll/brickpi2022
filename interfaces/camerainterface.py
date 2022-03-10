@@ -8,7 +8,7 @@ import picamera.array
 import cv2
 import numpy
 import logging
-
+import PIL
 class CameraInterface(object):
 
     def __init__(self, logger=logging.getLogger(), resolution = (320,240), framerate=32):
@@ -65,21 +65,25 @@ class CameraInterface(object):
                 self.log("CAMERA INTERFACE: Exiting Camera Thread")
                 return
         return
-    def convert_for_cv2(self):
+    def convert_for_cv2(self): 
         self.frame = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
-        return 
+        return self.frame
 
     def convert_for_jpg(self):
         success, self.frame = cv2.imencode('.JPEG', self.frame)
-        return
+        return self.frame
 
     def find_h(self, frame):
-        return self.h_cascade.detectMultiScale(frame, 1.3, 5)
+        self.convert_for_cv2()
+        return self.h_cascade.detectMultiScale(self.frame, 1.3, 5)
 
     def find_u(self, frame):
-        return self.u_cascade.detectMultiScale(frame, 1.3, 5)
+        self.convert_for_cv2()
+        print('h',self.u_cascade.detectMultiScale(self.frame, 1.3, 5))
+        return self.u_cascade.detectMultiScale(self.frame, 1.3, 5)
 
     def apply_colour_filter(self, frame1, frame2, colour_lower, colour_upper):
+        self.convert_for_cv2()
         hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV)
         lower_col = np.array(colour_lower)
         upper_col = np.array(colour_upper)
@@ -90,17 +94,22 @@ class CameraInterface(object):
         return result
 
     def draw_box_label(self, val,frame, colour, label):
-        for (x, y, width, height) in val:
-            cv2.rectangle(frame, (x, y), (x + width, y + height), colour, 3)
-            cv2.putText(frame, label, (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, colour)
-        return frame
+        self.convert_for_cv2()
+        if val == '()':
+            for (x, y, width, height) in val:
+                cv2.rectangle(frame, (x, y), (x + width, y + height), colour, 3)
+                cv2.putText(frame, label, (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, colour)
+            return frame
+        else:
+            return False
 
     def collect_live_frame(self):
         self.get_frame()
         h = self.find_h(self.frame)
         u = self.find_u(self.frame)
-        draw_box_label(self.frame, h, (255,0,0), 'Harmed')
-        draw_box_label(self.frame, u, (255,0,0), 'Harmed')
+        self.draw_box_label(self.frame, h, (255,0,0), 'Harmed')
+        self.draw_box_label(self.frame, u, (255,0,0), 'Harmed')
+        self.convert_for_jpg()
         return frame
 
 

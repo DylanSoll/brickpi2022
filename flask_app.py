@@ -247,8 +247,8 @@ def missions():
     please_login('dashboard')
     if request.method == 'POST':
         missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
-            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
-            WHERE victim = 'True' GROUP BY missions.missionid''')
+            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid 
+            WHERE time_final NOT NULL GROUP BY missions.missionid''')
         return jsonify(missions)
     else:
         return render_template('mission_data.html')
@@ -261,8 +261,8 @@ def initiate_mission():
                 #Delete Broken Missions
             ######
             GLOBALS.DATABASE.ModifyQuery('DELETE FROM missions WHERE time_final IS NULL')
-            GLOBALS.DATABASE.ModifyQuery('DELETE FROM sensor_log WHERE missionid NOT IN (SELECT missionid  FROM missions)')
-            GLOBALS.DATABASE.ModifyQuery('DELETE FROM movement_log WHERE missionid NOT IN (SELECT missionid  FROM missions)')
+            GLOBALS.DATABASE.ModifyQuery('DELETE FROM sensor_log WHERE missionid NOT IN (SELECT missionid FROM missions)')
+            GLOBALS.DATABASE.ModifyQuery('DELETE FROM movement_log WHERE missionid NOT IN (SELECT missionid FROM missions)')
             ##########
             ##########
             GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (userid, time_init) VALUES (?, ?)', (session['userid'], time.time()))
@@ -298,10 +298,11 @@ def mission_data():
         sensor_log = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
         movement_log = GLOBALS.DATABASE.ViewQuery('SELECT *, time_final-time_init AS duration FROM movement_log WHERE missionid = ?', (data,))
         breakdown = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
-            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid
-            WHERE missions.missionid = ? AND victim = 'True' GROUP BY missions.missionid''', (data,))
+            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid 
+            WHERE missions.missionid = ? AND time_final NOT NULL GROUP BY missions.missionid''', (data,))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
                 'custom-graph': [{}], 'custom-table': [{}]}
+        print(details)
         return jsonify(details)
     else:
         return redirect('/missions')
