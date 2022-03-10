@@ -9,7 +9,7 @@ def create_im_from_cam(iterations):
             cv2.imshow('Test', image)
             if cv2.waitKey(1) == 32:
                 run = False
-        cv2.imwrite("images/-frame%d.jpg" % i, image) # save frame as JPEG file.
+        cv2.imwrite("p/frame%d.jpg" % i, image) # save frame as JPEG file.
     cap.release()
     return
 
@@ -27,4 +27,4 @@ def create_video():
             out.release()
     cap.release()
 
-create_im_from_cam(20)
+create_im_from_cam(30)
