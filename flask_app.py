@@ -250,7 +250,7 @@ def initiate_mission():
             ##########
             ##########
             GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (userid, time_init) VALUES (?, ?)', (session['userid'], time.time()))
-            GLOBALS.MISSIONID = (GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1'))[0]
+            GLOBALS.MISSIONID = (GLOBALS.DATABASE.ViewQuery('SELECT missionid FROM missions ORDER BY time_init DESC LIMIT 1'))[0]['missionid']
         return jsonify({})
     return
 
