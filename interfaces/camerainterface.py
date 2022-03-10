@@ -8,7 +8,7 @@ import picamera.array
 import cv2
 import numpy
 import logging
-import PIL
+from PIL import Image
 class CameraInterface(object):
 
     def __init__(self, logger=logging.getLogger(), resolution = (320,240), framerate=32):
@@ -52,6 +52,8 @@ class CameraInterface(object):
         for f in self.stream:
             self.rawCapture.seek(0)
             self.frame = self.rawCapture.read()
+            self.data = numpy.fromstring(self.frame, dtype=numpy.uint8)
+            cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
             self.rawCapture.truncate(0)
             self.rawCapture.seek(0)
 
@@ -65,25 +67,25 @@ class CameraInterface(object):
                 self.log("CAMERA INTERFACE: Exiting Camera Thread")
                 return
         return
-    def convert_for_cv2(self): 
-        self.frame = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
-        return self.frame
+    
 
     def convert_for_jpg(self):
-        success, self.frame = cv2.imencode('.JPEG', self.frame)
+        #cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
+        #print(self.JPEG)
+        #f = open("demofile2.txt", "x")
+        #print(self.JPEG[0][0].nbytes*8)
+        #f.write
+        #f.close()
+        #self.frame = io.BytesIO(self.JPEG)
         return self.frame
 
     def find_h(self, frame):
-        self.convert_for_cv2()
-        return self.h_cascade.detectMultiScale(self.frame, 1.3, 5)
+        return self.h_cascade.detectMultiScale(self.data, 1.3, 5)
 
     def find_u(self, frame):
-        self.convert_for_cv2()
-        print('h',self.u_cascade.detectMultiScale(self.frame, 1.3, 5))
-        return self.u_cascade.detectMultiScale(self.frame, 1.3, 5)
+        return self.u_cascade.detectMultiScale(self.data, 1.3, 5)
 
     def apply_colour_filter(self, frame1, frame2, colour_lower, colour_upper):
-        self.convert_for_cv2()
         hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV)
         lower_col = np.array(colour_lower)
         upper_col = np.array(colour_upper)
@@ -94,23 +96,23 @@ class CameraInterface(object):
         return result
 
     def draw_box_label(self, val,frame, colour, label):
-        self.convert_for_cv2()
-        if val == '()':
-            for (x, y, width, height) in val:
-                cv2.rectangle(frame, (x, y), (x + width, y + height), colour, 3)
-                cv2.putText(frame, label, (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, colour)
-            return frame
-        else:
-            return False
+        #print(val)
+        for (x, y, width, height) in val:
+            print(x,y)
+            cv2.rectangle(frame, (x, y), (x + width, y + height), colour, 3)
+            cv2.putText(frame, label, (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, colour)
+        return frame
 
     def collect_live_frame(self):
         self.get_frame()
-        h = self.find_h(self.frame)
-        u = self.find_u(self.frame)
-        self.draw_box_label(self.frame, h, (255,0,0), 'Harmed')
-        self.draw_box_label(self.frame, u, (255,0,0), 'Harmed')
-        self.convert_for_jpg()
-        return frame
+        #print(self.data.nbytes*8)
+        h = self.find_h(self.data)
+        u = self.find_u(self.data)
+        self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
+        self.draw_box_label(u, self.data, (255,0,0), 'Harmed')
+        #print(self.data.nbytes*8)
+        self.frame = self.convert_for_jpg()
+        return self.frame
 
 
     #detect if there is a colour in the image

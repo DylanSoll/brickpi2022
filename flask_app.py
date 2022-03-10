@@ -302,7 +302,6 @@ def mission_data():
             WHERE missions.missionid = ? AND time_final NOT NULL GROUP BY missions.missionid''', (data,))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
                 'custom-graph': [{}], 'custom-table': [{}]}
-        print(details)
         return jsonify(details)
     else:
         return redirect('/missions')
@@ -525,7 +524,7 @@ def videostream():
     """Video streaming generator function."""
     while True:
         if GLOBALS.CAMERA:
-            frame = GLOBALS.CAMERA.get_frame()
+            frame = GLOBALS.CAMERA.collect_live_frame()#get_frame()#
             if frame:
                 yield (b'--frame\r\n'
                         b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 

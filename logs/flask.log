@@ -604,3 +604,1548 @@ Time: 2022-03-10 20:51:50,569 Message:  * Detected change in '/home/pi/Desktop/b
 Time: 2022-03-10 20:51:51,293 Message:  * Restarting with stat
 Time: 2022-03-10 20:51:54,341 Message:  * Debugger is active!
 Time: 2022-03-10 20:51:54,343 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:10:27,835 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:10:27,841 Message:  * Restarting with stat
+Time: 2022-03-10 21:10:33,160 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:10:33,166 Message:  * Restarting with stat
+Time: 2022-03-10 21:10:36,266 Message:  * Debugger is active!
+Time: 2022-03-10 21:10:36,268 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:10:36,507 Message: 192.168.20.12 - - [10/Mar/2022 21:10:36] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:10:36,576 Message: 192.168.20.12 - - [10/Mar/2022 21:10:36] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:10:36,820 Message: 192.168.20.12 - - [10/Mar/2022 21:10:36] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:10:37,936 Message: LOADING CAMERA
+Time: 2022-03-10 21:10:38,298 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:10:38,298 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:10:42,104 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:10:42,208 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:10:44,362 Message: 192.168.20.12 - - [10/Mar/2022 21:10:44] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:10:44,387 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:10:44,391 Message: 192.168.20.12 - - [10/Mar/2022 21:10:44] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:10:56,966 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:10:57,743 Message:  * Restarting with stat
+Time: 2022-03-10 21:11:00,858 Message:  * Debugger is active!
+Time: 2022-03-10 21:11:00,860 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:11:03,576 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,626 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,640 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,653 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,762 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,771 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,773 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,776 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,909 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,932 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,942 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:03,975 Message: 192.168.20.12 - - [10/Mar/2022 21:11:03] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:04,254 Message: 192.168.20.12 - - [10/Mar/2022 21:11:04] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:05,346 Message: LOADING CAMERA
+Time: 2022-03-10 21:11:05,707 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:11:05,707 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:11:09,507 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:11:09,611 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:11:11,768 Message: 192.168.20.12 - - [10/Mar/2022 21:11:11] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:11,925 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:11:11,928 Message: 192.168.20.12 - - [10/Mar/2022 21:11:11] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:11,932 Message: 192.168.20.12 - - [10/Mar/2022 21:11:11] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:22,296 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:11:22,991 Message:  * Restarting with stat
+Time: 2022-03-10 21:11:26,116 Message:  * Debugger is active!
+Time: 2022-03-10 21:11:26,118 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:11:31,612 Message: 192.168.20.12 - - [10/Mar/2022 21:11:31] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:31,682 Message: 192.168.20.12 - - [10/Mar/2022 21:11:31] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:31,696 Message: 192.168.20.12 - - [10/Mar/2022 21:11:31] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:31,790 Message: 192.168.20.12 - - [10/Mar/2022 21:11:31] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:31,801 Message: 192.168.20.12 - - [10/Mar/2022 21:11:31] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:31,804 Message: 192.168.20.12 - - [10/Mar/2022 21:11:31] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:31,808 Message: 192.168.20.12 - - [10/Mar/2022 21:11:31] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:32,018 Message: 192.168.20.12 - - [10/Mar/2022 21:11:32] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:32,029 Message: 192.168.20.12 - - [10/Mar/2022 21:11:32] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:32,057 Message: 192.168.20.12 - - [10/Mar/2022 21:11:32] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:32,068 Message: 192.168.20.12 - - [10/Mar/2022 21:11:32] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:32,222 Message: 192.168.20.12 - - [10/Mar/2022 21:11:32] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:32,582 Message: 192.168.20.12 - - [10/Mar/2022 21:11:32] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:33,915 Message: LOADING CAMERA
+Time: 2022-03-10 21:11:34,276 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:11:34,277 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:11:38,078 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:11:38,181 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:11:40,320 Message: 192.168.20.12 - - [10/Mar/2022 21:11:40] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:40,350 Message: 192.168.20.12 - - [10/Mar/2022 21:11:40] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:40,358 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:11:40,361 Message: 192.168.20.12 - - [10/Mar/2022 21:11:40] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:49,838 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:11:50,581 Message:  * Restarting with stat
+Time: 2022-03-10 21:11:53,682 Message:  * Debugger is active!
+Time: 2022-03-10 21:11:53,684 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:11:54,433 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,592 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,737 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,749 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,756 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,772 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,775 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,857 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,922 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,926 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,991 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:54,998 Message: 192.168.20.12 - - [10/Mar/2022 21:11:54] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:55,368 Message: 192.168.20.12 - - [10/Mar/2022 21:11:55] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:11:56,299 Message: LOADING CAMERA
+Time: 2022-03-10 21:11:56,674 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:11:56,675 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:12:00,486 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:12:00,589 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:12:02,707 Message: 192.168.20.12 - - [10/Mar/2022 21:12:02] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:02,755 Message: 192.168.20.12 - - [10/Mar/2022 21:12:02] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:02,760 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:12:02,764 Message: 192.168.20.12 - - [10/Mar/2022 21:12:02] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:08,753 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:12:09,551 Message:  * Restarting with stat
+Time: 2022-03-10 21:12:12,673 Message:  * Debugger is active!
+Time: 2022-03-10 21:12:12,675 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:12:12,805 Message: 192.168.20.12 - - [10/Mar/2022 21:12:12] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:12,908 Message: 192.168.20.12 - - [10/Mar/2022 21:12:12] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,004 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,103 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,107 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,110 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,116 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,478 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,486 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,499 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,602 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:13,664 Message: 192.168.20.12 - - [10/Mar/2022 21:12:13] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:14,371 Message: 192.168.20.12 - - [10/Mar/2022 21:12:14] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:18,882 Message: LOADING CAMERA
+Time: 2022-03-10 21:12:19,276 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:12:19,277 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:12:23,080 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:12:23,184 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:12:25,323 Message: 192.168.20.12 - - [10/Mar/2022 21:12:25] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:25,552 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:12:25,558 Message: 192.168.20.12 - - [10/Mar/2022 21:12:25] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:12:25,573 Message: 192.168.20.12 - - [10/Mar/2022 21:12:25] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:47,245 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:13:47,251 Message:  * Restarting with stat
+Time: 2022-03-10 21:13:50,292 Message:  * Debugger is active!
+Time: 2022-03-10 21:13:50,294 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:13:50,423 Message: 192.168.20.12 - - [10/Mar/2022 21:13:50] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:50,650 Message: 192.168.20.12 - - [10/Mar/2022 21:13:50] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:50,653 Message: 192.168.20.12 - - [10/Mar/2022 21:13:50] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:50,905 Message: 192.168.20.12 - - [10/Mar/2022 21:13:50] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:50,910 Message: 192.168.20.12 - - [10/Mar/2022 21:13:50] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:50,921 Message: 192.168.20.12 - - [10/Mar/2022 21:13:50] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:51,876 Message: 192.168.20.12 - - [10/Mar/2022 21:13:51] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:51,948 Message: 192.168.20.12 - - [10/Mar/2022 21:13:51] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:52,149 Message: 192.168.20.12 - - [10/Mar/2022 21:13:52] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:52,376 Message: 192.168.20.12 - - [10/Mar/2022 21:13:52] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:52,547 Message: 192.168.20.12 - - [10/Mar/2022 21:13:52] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:52,743 Message: 192.168.20.12 - - [10/Mar/2022 21:13:52] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:54,024 Message: 192.168.20.12 - - [10/Mar/2022 21:13:54] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:13:57,057 Message: LOADING CAMERA
+Time: 2022-03-10 21:13:57,420 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:13:57,420 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:14:01,233 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:14:01,337 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:14:03,491 Message: 192.168.20.12 - - [10/Mar/2022 21:14:03] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:03,534 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:14:03,547 Message: 192.168.20.12 - - [10/Mar/2022 21:14:03] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:03,572 Message: 192.168.20.12 - - [10/Mar/2022 21:14:03] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:18,751 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:14:19,479 Message:  * Restarting with stat
+Time: 2022-03-10 21:14:22,521 Message:  * Debugger is active!
+Time: 2022-03-10 21:14:22,523 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:14:22,667 Message: 192.168.20.12 - - [10/Mar/2022 21:14:22] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:22,719 Message: 192.168.20.12 - - [10/Mar/2022 21:14:22] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:22,756 Message: 192.168.20.12 - - [10/Mar/2022 21:14:22] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:22,855 Message: 192.168.20.12 - - [10/Mar/2022 21:14:22] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:22,860 Message: 192.168.20.12 - - [10/Mar/2022 21:14:22] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:22,861 Message: 192.168.20.12 - - [10/Mar/2022 21:14:22] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:22,874 Message: 192.168.20.12 - - [10/Mar/2022 21:14:22] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:23,333 Message: 192.168.20.12 - - [10/Mar/2022 21:14:23] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:23,337 Message: 192.168.20.12 - - [10/Mar/2022 21:14:23] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:23,402 Message: 192.168.20.12 - - [10/Mar/2022 21:14:23] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:23,435 Message: 192.168.20.12 - - [10/Mar/2022 21:14:23] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:23,451 Message: 192.168.20.12 - - [10/Mar/2022 21:14:23] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:23,864 Message: 192.168.20.12 - - [10/Mar/2022 21:14:23] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:27,430 Message: LOADING CAMERA
+Time: 2022-03-10 21:14:27,830 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:14:27,831 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:14:31,642 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:14:31,747 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:14:33,898 Message: 192.168.20.12 - - [10/Mar/2022 21:14:33] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:33,931 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:14:33,935 Message: 192.168.20.12 - - [10/Mar/2022 21:14:33] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:33,958 Message: 192.168.20.12 - - [10/Mar/2022 21:14:33] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:45,358 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:14:46,157 Message:  * Restarting with stat
+Time: 2022-03-10 21:14:49,277 Message:  * Debugger is active!
+Time: 2022-03-10 21:14:49,279 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:14:49,414 Message: 192.168.20.12 - - [10/Mar/2022 21:14:49] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:49,492 Message: 192.168.20.12 - - [10/Mar/2022 21:14:49] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:49,779 Message: 192.168.20.12 - - [10/Mar/2022 21:14:49] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:49,781 Message: 192.168.20.12 - - [10/Mar/2022 21:14:49] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:49,794 Message: 192.168.20.12 - - [10/Mar/2022 21:14:49] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:49,798 Message: 192.168.20.12 - - [10/Mar/2022 21:14:49] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:49,803 Message: 192.168.20.12 - - [10/Mar/2022 21:14:49] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:50,039 Message: 192.168.20.12 - - [10/Mar/2022 21:14:50] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:50,046 Message: 192.168.20.12 - - [10/Mar/2022 21:14:50] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:50,050 Message: 192.168.20.12 - - [10/Mar/2022 21:14:50] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:50,093 Message: 192.168.20.12 - - [10/Mar/2022 21:14:50] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:50,098 Message: 192.168.20.12 - - [10/Mar/2022 21:14:50] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:50,380 Message: 192.168.20.12 - - [10/Mar/2022 21:14:50] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:53,036 Message: LOADING CAMERA
+Time: 2022-03-10 21:14:53,408 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:14:53,409 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:14:57,217 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:14:57,320 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:14:59,468 Message: 192.168.20.12 - - [10/Mar/2022 21:14:59] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:59,762 Message: 192.168.20.12 - - [10/Mar/2022 21:14:59] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:14:59,799 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:14:59,854 Message: 192.168.20.12 - - [10/Mar/2022 21:14:59] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:15:31,941 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:15:32,525 Message:  * Restarting with stat
+Time: 2022-03-10 21:15:35,640 Message:  * Debugger is active!
+Time: 2022-03-10 21:15:35,642 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:15:44,156 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:15:44,473 Message:  * Restarting with stat
+Time: 2022-03-10 21:15:47,610 Message:  * Debugger is active!
+Time: 2022-03-10 21:15:47,612 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:15:55,102 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:15:55,441 Message:  * Restarting with stat
+Time: 2022-03-10 21:15:58,487 Message:  * Debugger is active!
+Time: 2022-03-10 21:15:58,489 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:16:03,832 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:16:04,180 Message:  * Restarting with stat
+Time: 2022-03-10 21:16:07,177 Message:  * Debugger is active!
+Time: 2022-03-10 21:16:07,179 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:16:07,305 Message: 192.168.20.12 - - [10/Mar/2022 21:16:07] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:07,438 Message: 192.168.20.12 - - [10/Mar/2022 21:16:07] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:07,882 Message: 192.168.20.12 - - [10/Mar/2022 21:16:07] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:07,974 Message: 192.168.20.12 - - [10/Mar/2022 21:16:07] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:07,980 Message: 192.168.20.12 - - [10/Mar/2022 21:16:07] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:07,983 Message: 192.168.20.12 - - [10/Mar/2022 21:16:07] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:07,989 Message: 192.168.20.12 - - [10/Mar/2022 21:16:07] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:08,166 Message: 192.168.20.12 - - [10/Mar/2022 21:16:08] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:08,186 Message: 192.168.20.12 - - [10/Mar/2022 21:16:08] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:08,193 Message: 192.168.20.12 - - [10/Mar/2022 21:16:08] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:08,276 Message: 192.168.20.12 - - [10/Mar/2022 21:16:08] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:08,313 Message: 192.168.20.12 - - [10/Mar/2022 21:16:08] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:08,854 Message: 192.168.20.12 - - [10/Mar/2022 21:16:08] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:09,845 Message: LOADING CAMERA
+Time: 2022-03-10 21:16:10,209 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:16:10,210 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:16:14,023 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:16:14,127 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:16:16,270 Message: 192.168.20.12 - - [10/Mar/2022 21:16:16] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:16,305 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:16:16,313 Message: 192.168.20.12 - - [10/Mar/2022 21:16:16] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:16,351 Message: 192.168.20.12 - - [10/Mar/2022 21:16:16] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:36,794 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:16:37,438 Message:  * Restarting with stat
+Time: 2022-03-10 21:16:40,505 Message:  * Debugger is active!
+Time: 2022-03-10 21:16:40,507 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:16:40,636 Message: 192.168.20.12 - - [10/Mar/2022 21:16:40] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:40,757 Message: 192.168.20.12 - - [10/Mar/2022 21:16:40] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:40,771 Message: 192.168.20.12 - - [10/Mar/2022 21:16:40] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:40,857 Message: 192.168.20.12 - - [10/Mar/2022 21:16:40] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:40,887 Message: 192.168.20.12 - - [10/Mar/2022 21:16:40] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:40,900 Message: 192.168.20.12 - - [10/Mar/2022 21:16:40] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:40,904 Message: 192.168.20.12 - - [10/Mar/2022 21:16:40] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:41,182 Message: 192.168.20.12 - - [10/Mar/2022 21:16:41] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:41,216 Message: 192.168.20.12 - - [10/Mar/2022 21:16:41] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:41,337 Message: 192.168.20.12 - - [10/Mar/2022 21:16:41] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:41,383 Message: 192.168.20.12 - - [10/Mar/2022 21:16:41] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:41,486 Message: 192.168.20.12 - - [10/Mar/2022 21:16:41] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:41,960 Message: 192.168.20.12 - - [10/Mar/2022 21:16:41] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:43,771 Message: LOADING CAMERA
+Time: 2022-03-10 21:16:44,171 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:16:44,172 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:16:47,975 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:16:48,081 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:16:50,196 Message: 192.168.20.12 - - [10/Mar/2022 21:16:50] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:50,241 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:16:50,253 Message: 192.168.20.12 - - [10/Mar/2022 21:16:50] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:16:50,310 Message: 192.168.20.12 - - [10/Mar/2022 21:16:50] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:18:00,873 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:18:01,525 Message:  * Restarting with stat
+Time: 2022-03-10 21:18:04,733 Message:  * Debugger is active!
+Time: 2022-03-10 21:18:04,735 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:18:32,613 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:18:32,929 Message:  * Restarting with stat
+Time: 2022-03-10 21:18:36,077 Message:  * Debugger is active!
+Time: 2022-03-10 21:18:36,079 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:18:44,653 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:18:45,004 Message:  * Restarting with stat
+Time: 2022-03-10 21:18:48,173 Message:  * Debugger is active!
+Time: 2022-03-10 21:18:48,175 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:18:57,877 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:18:58,210 Message:  * Restarting with stat
+Time: 2022-03-10 21:19:01,436 Message:  * Debugger is active!
+Time: 2022-03-10 21:19:01,438 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:19:10,020 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:19:10,356 Message:  * Restarting with stat
+Time: 2022-03-10 21:19:13,455 Message:  * Debugger is active!
+Time: 2022-03-10 21:19:13,456 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:19:13,593 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,660 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,681 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,689 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,694 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,705 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,710 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,902 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,922 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,927 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,929 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:13,932 Message: 192.168.20.12 - - [10/Mar/2022 21:19:13] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:14,375 Message: 192.168.20.12 - - [10/Mar/2022 21:19:14] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:15,079 Message: LOADING CAMERA
+Time: 2022-03-10 21:19:15,440 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:19:15,441 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:19:19,254 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:19:19,357 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:19:21,492 Message: 192.168.20.12 - - [10/Mar/2022 21:19:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:21,549 Message: 192.168.20.12 - - [10/Mar/2022 21:19:21] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:19:21,549 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:19:21,570 Message: 192.168.20.12 - - [10/Mar/2022 21:19:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:21:36,315 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:21:36,992 Message:  * Restarting with stat
+Time: 2022-03-10 21:21:40,206 Message:  * Debugger is active!
+Time: 2022-03-10 21:21:40,208 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:21:59,346 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:21:59,695 Message:  * Restarting with stat
+Time: 2022-03-10 21:22:02,860 Message:  * Debugger is active!
+Time: 2022-03-10 21:22:02,862 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:22:08,251 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:22:08,585 Message:  * Restarting with stat
+Time: 2022-03-10 21:22:11,690 Message:  * Debugger is active!
+Time: 2022-03-10 21:22:11,692 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:22:11,821 Message: 192.168.20.12 - - [10/Mar/2022 21:22:11] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:11,992 Message: 192.168.20.12 - - [10/Mar/2022 21:22:11] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:12,395 Message: 192.168.20.12 - - [10/Mar/2022 21:22:12] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:12,396 Message: 192.168.20.12 - - [10/Mar/2022 21:22:12] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:12,422 Message: 192.168.20.12 - - [10/Mar/2022 21:22:12] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:12,429 Message: 192.168.20.12 - - [10/Mar/2022 21:22:12] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:12,431 Message: 192.168.20.12 - - [10/Mar/2022 21:22:12] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:12,825 Message: 192.168.20.12 - - [10/Mar/2022 21:22:12] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:13,079 Message: 192.168.20.12 - - [10/Mar/2022 21:22:13] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:13,083 Message: 192.168.20.12 - - [10/Mar/2022 21:22:13] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:13,124 Message: 192.168.20.12 - - [10/Mar/2022 21:22:13] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:13,160 Message: 192.168.20.12 - - [10/Mar/2022 21:22:13] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:13,681 Message: 192.168.20.12 - - [10/Mar/2022 21:22:13] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:14,297 Message: LOADING CAMERA
+Time: 2022-03-10 21:22:14,661 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:22:14,662 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:22:18,477 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:22:18,582 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:22:20,746 Message: 192.168.20.12 - - [10/Mar/2022 21:22:20] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:20,795 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:22:20,813 Message: 192.168.20.12 - - [10/Mar/2022 21:22:20] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:20,824 Message: 192.168.20.12 - - [10/Mar/2022 21:22:20] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:33,615 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:22:34,401 Message:  * Restarting with stat
+Time: 2022-03-10 21:22:37,515 Message:  * Debugger is active!
+Time: 2022-03-10 21:22:37,517 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:22:37,664 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,733 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,748 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,764 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,777 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,784 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,788 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,951 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,972 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,975 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,981 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:37,992 Message: 192.168.20.12 - - [10/Mar/2022 21:22:37] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:38,353 Message: 192.168.20.12 - - [10/Mar/2022 21:22:38] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:39,752 Message: LOADING CAMERA
+Time: 2022-03-10 21:22:40,152 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:22:40,153 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:22:43,955 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:22:44,066 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:22:46,180 Message: 192.168.20.12 - - [10/Mar/2022 21:22:46] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:46,230 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:22:46,258 Message: 192.168.20.12 - - [10/Mar/2022 21:22:46] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:22:46,290 Message: 192.168.20.12 - - [10/Mar/2022 21:22:46] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:23:36,191 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:23:36,196 Message:  * Restarting with stat
+Time: 2022-03-10 21:23:39,333 Message:  * Debugger is active!
+Time: 2022-03-10 21:23:39,335 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:23:39,464 Message: 192.168.20.12 - - [10/Mar/2022 21:23:39] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:23:44,258 Message: LOADING CAMERA
+Time: 2022-03-10 21:23:44,630 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:23:44,630 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:23:48,442 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:23:48,546 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:23:50,699 Message: 192.168.20.12 - - [10/Mar/2022 21:23:50] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:23:50,917 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:23:50,946 Message: 192.168.20.12 - - [10/Mar/2022 21:23:50] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:21,608 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:25:21,614 Message:  * Restarting with stat
+Time: 2022-03-10 21:25:24,772 Message:  * Debugger is active!
+Time: 2022-03-10 21:25:24,774 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:25:24,900 Message: 192.168.20.12 - - [10/Mar/2022 21:25:24] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,018 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,033 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,098 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,105 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,106 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,165 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,361 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,363 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,409 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,442 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,465 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:25,839 Message: 192.168.20.12 - - [10/Mar/2022 21:25:25] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:27,057 Message: LOADING CAMERA
+Time: 2022-03-10 21:25:27,440 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:25:27,440 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:25:31,244 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:25:31,354 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:25:33,518 Message: 192.168.20.12 - - [10/Mar/2022 21:25:33] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:33,562 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:25:33,587 Message: 192.168.20.12 - - [10/Mar/2022 21:25:33] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:25:33,617 Message: 192.168.20.12 - - [10/Mar/2022 21:25:33] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:40,320 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:26:41,112 Message:  * Restarting with stat
+Time: 2022-03-10 21:26:44,314 Message:  * Debugger is active!
+Time: 2022-03-10 21:26:44,316 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:26:45,401 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:26:45,745 Message:  * Restarting with stat
+Time: 2022-03-10 21:26:48,882 Message:  * Debugger is active!
+Time: 2022-03-10 21:26:48,884 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:26:53,765 Message: 192.168.20.12 - - [10/Mar/2022 21:26:53] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:53,899 Message: 192.168.20.12 - - [10/Mar/2022 21:26:53] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:53,944 Message: 192.168.20.12 - - [10/Mar/2022 21:26:53] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:53,948 Message: 192.168.20.12 - - [10/Mar/2022 21:26:53] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:53,954 Message: 192.168.20.12 - - [10/Mar/2022 21:26:53] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:53,958 Message: 192.168.20.12 - - [10/Mar/2022 21:26:53] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:53,965 Message: 192.168.20.12 - - [10/Mar/2022 21:26:53] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:54,289 Message: 192.168.20.12 - - [10/Mar/2022 21:26:54] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:54,301 Message: 192.168.20.12 - - [10/Mar/2022 21:26:54] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:54,311 Message: 192.168.20.12 - - [10/Mar/2022 21:26:54] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:54,317 Message: 192.168.20.12 - - [10/Mar/2022 21:26:54] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:54,319 Message: 192.168.20.12 - - [10/Mar/2022 21:26:54] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:54,750 Message: 192.168.20.12 - - [10/Mar/2022 21:26:54] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:26:55,596 Message: LOADING CAMERA
+Time: 2022-03-10 21:26:55,958 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:26:55,960 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:26:59,784 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:26:59,888 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:27:02,045 Message: 192.168.20.12 - - [10/Mar/2022 21:27:02] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:02,408 Message: 192.168.20.12 - - [10/Mar/2022 21:27:02] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:02,418 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:27:02,451 Message: 192.168.20.12 - - [10/Mar/2022 21:27:02] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:11,787 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:27:12,102 Message: 192.168.20.12 - - [10/Mar/2022 21:27:12] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:12,552 Message:  * Restarting with stat
+Time: 2022-03-10 21:27:15,735 Message:  * Debugger is active!
+Time: 2022-03-10 21:27:15,737 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:27:15,779 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,790 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,819 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,823 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,824 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,846 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,852 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,853 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,915 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,954 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:15,957 Message: 192.168.20.12 - - [10/Mar/2022 21:27:15] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:16,286 Message: 192.168.20.12 - - [10/Mar/2022 21:27:16] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-10 21:27:16,292 Message: 192.168.20.12 - - [10/Mar/2022 21:27:16] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:16,371 Message: 192.168.20.12 - - [10/Mar/2022 21:27:16] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:24,459 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:27:24,780 Message:  * Restarting with stat
+Time: 2022-03-10 21:27:27,942 Message:  * Debugger is active!
+Time: 2022-03-10 21:27:27,944 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:27:31,171 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:27:31,490 Message:  * Restarting with stat
+Time: 2022-03-10 21:27:34,667 Message:  * Debugger is active!
+Time: 2022-03-10 21:27:34,669 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:27:34,803 Message: 192.168.20.12 - - [10/Mar/2022 21:27:34] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:34,877 Message: 192.168.20.12 - - [10/Mar/2022 21:27:34] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:34,880 Message: 192.168.20.12 - - [10/Mar/2022 21:27:34] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:34,893 Message: 192.168.20.12 - - [10/Mar/2022 21:27:34] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:34,930 Message: 192.168.20.12 - - [10/Mar/2022 21:27:34] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:34,933 Message: 192.168.20.12 - - [10/Mar/2022 21:27:34] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:34,943 Message: 192.168.20.12 - - [10/Mar/2022 21:27:34] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:35,208 Message: 192.168.20.12 - - [10/Mar/2022 21:27:35] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:35,212 Message: 192.168.20.12 - - [10/Mar/2022 21:27:35] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:35,266 Message: 192.168.20.12 - - [10/Mar/2022 21:27:35] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:35,284 Message: 192.168.20.12 - - [10/Mar/2022 21:27:35] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:35,288 Message: 192.168.20.12 - - [10/Mar/2022 21:27:35] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:35,681 Message: 192.168.20.12 - - [10/Mar/2022 21:27:35] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:36,712 Message: LOADING CAMERA
+Time: 2022-03-10 21:27:37,095 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:27:37,095 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:27:40,898 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:27:41,007 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:27:43,173 Message: 192.168.20.12 - - [10/Mar/2022 21:27:43] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:43,229 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:27:43,244 Message: 192.168.20.12 - - [10/Mar/2022 21:27:43] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:43,304 Message: 192.168.20.12 - - [10/Mar/2022 21:27:43] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:27:53,306 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:27:54,138 Message:  * Restarting with stat
+Time: 2022-03-10 21:27:57,346 Message:  * Debugger is active!
+Time: 2022-03-10 21:27:57,348 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:28:18,659 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:28:19,010 Message:  * Restarting with stat
+Time: 2022-03-10 21:28:22,143 Message:  * Debugger is active!
+Time: 2022-03-10 21:28:22,145 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:29:01,245 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,307 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,356 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,366 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,373 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,396 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,400 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,585 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,589 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,611 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,638 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:01,704 Message: 192.168.20.12 - - [10/Mar/2022 21:29:01] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:02,020 Message: 192.168.20.12 - - [10/Mar/2022 21:29:02] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:03,670 Message: LOADING CAMERA
+Time: 2022-03-10 21:29:04,053 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:29:04,053 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:29:07,865 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:29:07,970 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:29:10,131 Message: 192.168.20.12 - - [10/Mar/2022 21:29:10] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:10,193 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:29:10,209 Message: 192.168.20.12 - - [10/Mar/2022 21:29:10] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:10,256 Message: 192.168.20.12 - - [10/Mar/2022 21:29:10] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:25,775 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:29:26,452 Message:  * Restarting with stat
+Time: 2022-03-10 21:29:29,582 Message:  * Debugger is active!
+Time: 2022-03-10 21:29:29,584 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:29:29,716 Message: 192.168.20.12 - - [10/Mar/2022 21:29:29] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:29,773 Message: 192.168.20.12 - - [10/Mar/2022 21:29:29] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:29,792 Message: 192.168.20.12 - - [10/Mar/2022 21:29:29] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:29,799 Message: 192.168.20.12 - - [10/Mar/2022 21:29:29] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:29,803 Message: 192.168.20.12 - - [10/Mar/2022 21:29:29] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:29,821 Message: 192.168.20.12 - - [10/Mar/2022 21:29:29] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:29,825 Message: 192.168.20.12 - - [10/Mar/2022 21:29:29] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:30,000 Message: 192.168.20.12 - - [10/Mar/2022 21:29:30] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:30,015 Message: 192.168.20.12 - - [10/Mar/2022 21:29:30] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:30,048 Message: 192.168.20.12 - - [10/Mar/2022 21:29:30] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:30,121 Message: 192.168.20.12 - - [10/Mar/2022 21:29:30] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:30,123 Message: 192.168.20.12 - - [10/Mar/2022 21:29:30] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:30,602 Message: 192.168.20.12 - - [10/Mar/2022 21:29:30] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:35,081 Message: LOADING CAMERA
+Time: 2022-03-10 21:29:35,454 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:29:35,455 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:29:39,260 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:29:39,368 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:29:41,538 Message: 192.168.20.12 - - [10/Mar/2022 21:29:41] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:41,598 Message: 192.168.20.12 - - [10/Mar/2022 21:29:41] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:29:41,613 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:29:41,669 Message: 192.168.20.12 - - [10/Mar/2022 21:29:41] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:31:49,811 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:31:50,523 Message:  * Restarting with stat
+Time: 2022-03-10 21:31:53,780 Message:  * Debugger is active!
+Time: 2022-03-10 21:31:53,782 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:32:25,823 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:32:26,168 Message:  * Restarting with stat
+Time: 2022-03-10 21:32:29,384 Message:  * Debugger is active!
+Time: 2022-03-10 21:32:29,386 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:33:08,065 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:33:08,390 Message:  * Restarting with stat
+Time: 2022-03-10 21:33:11,616 Message:  * Debugger is active!
+Time: 2022-03-10 21:33:11,618 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:33:14,846 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:33:15,180 Message:  * Restarting with stat
+Time: 2022-03-10 21:33:18,386 Message:  * Debugger is active!
+Time: 2022-03-10 21:33:18,388 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:33:26,998 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:33:27,348 Message:  * Restarting with stat
+Time: 2022-03-10 21:33:30,616 Message:  * Debugger is active!
+Time: 2022-03-10 21:33:30,618 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:33:33,835 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:33:34,162 Message:  * Restarting with stat
+Time: 2022-03-10 21:33:37,364 Message:  * Debugger is active!
+Time: 2022-03-10 21:33:37,365 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:33:42,759 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:33:43,094 Message:  * Restarting with stat
+Time: 2022-03-10 21:33:46,334 Message:  * Debugger is active!
+Time: 2022-03-10 21:33:46,336 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:33:49,804 Message: 192.168.20.12 - - [10/Mar/2022 21:33:49] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:49,881 Message: 192.168.20.12 - - [10/Mar/2022 21:33:49] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,040 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,042 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,050 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,053 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,086 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,272 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,284 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,296 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,301 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,332 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:50,799 Message: 192.168.20.12 - - [10/Mar/2022 21:33:50] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:51,570 Message: LOADING CAMERA
+Time: 2022-03-10 21:33:51,954 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:33:51,955 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:33:55,763 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:33:55,867 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:33:58,037 Message: 192.168.20.12 - - [10/Mar/2022 21:33:58] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:58,262 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:33:58,288 Message: 192.168.20.12 - - [10/Mar/2022 21:33:58] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:33:58,327 Message: 192.168.20.12 - - [10/Mar/2022 21:33:58] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:34:08,239 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:34:08,980 Message:  * Restarting with stat
+Time: 2022-03-10 21:34:12,157 Message:  * Debugger is active!
+Time: 2022-03-10 21:34:12,159 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:34:13,113 Message: 192.168.20.12 - - [10/Mar/2022 21:34:13] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:34:13,532 Message: 192.168.20.12 - - [10/Mar/2022 21:34:13] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:34:14,092 Message: 192.168.20.12 - - [10/Mar/2022 21:34:14] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:34:15,384 Message: LOADING CAMERA
+Time: 2022-03-10 21:34:15,750 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:34:15,751 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:34:19,555 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:34:19,661 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:34:21,799 Message: 192.168.20.12 - - [10/Mar/2022 21:34:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:34:21,848 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:34:21,910 Message: 192.168.20.12 - - [10/Mar/2022 21:34:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:35:07,857 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:35:07,863 Message:  * Restarting with stat
+Time: 2022-03-10 21:35:11,061 Message:  * Debugger is active!
+Time: 2022-03-10 21:35:11,063 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:35:11,192 Message: 192.168.20.12 - - [10/Mar/2022 21:35:11] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:35:11,424 Message: 192.168.20.12 - - [10/Mar/2022 21:35:11] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:35:15,157 Message: LOADING CAMERA
+Time: 2022-03-10 21:35:15,550 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:35:15,551 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:35:19,362 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:35:19,465 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:35:21,581 Message: 192.168.20.12 - - [10/Mar/2022 21:35:21] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:35:21,612 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:35:21,666 Message: 192.168.20.12 - - [10/Mar/2022 21:35:21] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:37,545 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:36:37,551 Message:  * Restarting with stat
+Time: 2022-03-10 21:36:40,779 Message:  * Debugger is active!
+Time: 2022-03-10 21:36:40,781 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:36:40,909 Message: 192.168.20.12 - - [10/Mar/2022 21:36:40] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,051 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,052 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,076 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,078 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,088 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,095 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,181 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,188 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,210 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,223 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,225 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:41,695 Message: 192.168.20.12 - - [10/Mar/2022 21:36:41] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:42,561 Message: LOADING CAMERA
+Time: 2022-03-10 21:36:42,961 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:36:42,962 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:36:46,798 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:36:46,903 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:36:48,989 Message: 192.168.20.12 - - [10/Mar/2022 21:36:48] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:49,024 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:36:49,029 Message: 192.168.20.12 - - [10/Mar/2022 21:36:49] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:36:49,063 Message: 192.168.20.12 - - [10/Mar/2022 21:36:49] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:03,977 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:37:04,299 Message: 192.168.20.12 - - [10/Mar/2022 21:37:04] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:04,378 Message: 192.168.20.12 - - [10/Mar/2022 21:37:04] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:04,770 Message:  * Restarting with stat
+Time: 2022-03-10 21:37:07,925 Message:  * Debugger is active!
+Time: 2022-03-10 21:37:07,927 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:37:07,983 Message: 192.168.20.12 - - [10/Mar/2022 21:37:07] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:07,992 Message: 192.168.20.12 - - [10/Mar/2022 21:37:07] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:07,999 Message: 192.168.20.12 - - [10/Mar/2022 21:37:07] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,014 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,015 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,022 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,158 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,162 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,209 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,270 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:08,301 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-10 21:37:08,529 Message: 192.168.20.12 - - [10/Mar/2022 21:37:08] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,754 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,829 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,843 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,880 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,884 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,909 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,913 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:09,965 Message: 192.168.20.12 - - [10/Mar/2022 21:37:09] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:10,043 Message: 192.168.20.12 - - [10/Mar/2022 21:37:10] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:10,096 Message: 192.168.20.12 - - [10/Mar/2022 21:37:10] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:10,106 Message: 192.168.20.12 - - [10/Mar/2022 21:37:10] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:10,112 Message: 192.168.20.12 - - [10/Mar/2022 21:37:10] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:10,404 Message: 192.168.20.12 - - [10/Mar/2022 21:37:10] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:11,060 Message: LOADING CAMERA
+Time: 2022-03-10 21:37:11,446 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:37:11,446 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:37:15,250 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:37:15,356 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:37:17,512 Message: 192.168.20.12 - - [10/Mar/2022 21:37:17] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:17,551 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:37:17,573 Message: 192.168.20.12 - - [10/Mar/2022 21:37:17] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:37:17,643 Message: 192.168.20.12 - - [10/Mar/2022 21:37:17] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:09,492 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:38:10,258 Message:  * Restarting with stat
+Time: 2022-03-10 21:38:13,508 Message:  * Debugger is active!
+Time: 2022-03-10 21:38:13,510 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:38:23,139 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:38:23,481 Message:  * Restarting with stat
+Time: 2022-03-10 21:38:26,705 Message:  * Debugger is active!
+Time: 2022-03-10 21:38:26,707 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:38:35,261 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:38:35,609 Message:  * Restarting with stat
+Time: 2022-03-10 21:38:38,766 Message:  * Debugger is active!
+Time: 2022-03-10 21:38:38,768 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:38:38,892 Message: 192.168.20.12 - - [10/Mar/2022 21:38:38] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:38,970 Message: 192.168.20.12 - - [10/Mar/2022 21:38:38] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:38,979 Message: 192.168.20.12 - - [10/Mar/2022 21:38:38] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:38,989 Message: 192.168.20.12 - - [10/Mar/2022 21:38:38] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,002 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,004 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,010 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,150 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,156 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,160 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,192 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,196 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:39,615 Message: 192.168.20.12 - - [10/Mar/2022 21:38:39] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:41,970 Message: LOADING CAMERA
+Time: 2022-03-10 21:38:42,374 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:38:42,375 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:38:46,178 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:38:46,283 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:38:48,455 Message: 192.168.20.12 - - [10/Mar/2022 21:38:48] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:48,614 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:38:48,620 Message: 192.168.20.12 - - [10/Mar/2022 21:38:48] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:38:48,663 Message: 192.168.20.12 - - [10/Mar/2022 21:38:48] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:06,101 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:39:06,942 Message:  * Restarting with stat
+Time: 2022-03-10 21:39:10,182 Message:  * Debugger is active!
+Time: 2022-03-10 21:39:10,184 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:39:10,314 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,382 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,422 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,426 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,432 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,435 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,442 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,600 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,644 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,649 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,689 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:10,698 Message: 192.168.20.12 - - [10/Mar/2022 21:39:10] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:11,063 Message: 192.168.20.12 - - [10/Mar/2022 21:39:11] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:12,645 Message: LOADING CAMERA
+Time: 2022-03-10 21:39:13,008 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:39:13,009 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:39:16,821 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:39:16,928 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:39:19,060 Message: 192.168.20.12 - - [10/Mar/2022 21:39:19] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:19,201 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:39:19,213 Message: 192.168.20.12 - - [10/Mar/2022 21:39:19] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:39:19,246 Message: 192.168.20.12 - - [10/Mar/2022 21:39:19] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:01,930 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:40:02,640 Message:  * Restarting with stat
+Time: 2022-03-10 21:40:05,814 Message:  * Debugger is active!
+Time: 2022-03-10 21:40:05,817 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:40:06,149 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,255 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,280 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,287 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,288 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,298 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,303 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,502 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,521 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,524 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,553 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,588 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:06,983 Message: 192.168.20.12 - - [10/Mar/2022 21:40:06] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:10,386 Message: LOADING CAMERA
+Time: 2022-03-10 21:40:10,748 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:40:10,749 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:40:14,552 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:40:14,655 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:40:16,807 Message: 192.168.20.12 - - [10/Mar/2022 21:40:16] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:16,900 Message: 192.168.20.12 - - [10/Mar/2022 21:40:16] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:40:16,898 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:40:16,974 Message: 192.168.20.12 - - [10/Mar/2022 21:40:16] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:45,261 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 21:41:45,267 Message:  * Restarting with stat
+Time: 2022-03-10 21:41:48,410 Message:  * Debugger is active!
+Time: 2022-03-10 21:41:48,412 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:41:48,546 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,631 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,635 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,659 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,668 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,676 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,680 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,781 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,785 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,796 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,828 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:48,832 Message: 192.168.20.12 - - [10/Mar/2022 21:41:48] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:49,206 Message: 192.168.20.12 - - [10/Mar/2022 21:41:49] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:50,185 Message: LOADING CAMERA
+Time: 2022-03-10 21:41:50,562 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:41:50,563 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:41:54,388 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:41:54,492 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:41:56,478 Message: 192.168.20.12 - - [10/Mar/2022 21:41:56] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:56,644 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:41:56,646 Message: 192.168.20.12 - - [10/Mar/2022 21:41:56] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:41:56,662 Message: 192.168.20.12 - - [10/Mar/2022 21:41:56] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:32,571 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:44:33,396 Message:  * Restarting with stat
+Time: 2022-03-10 21:44:36,742 Message:  * Debugger is active!
+Time: 2022-03-10 21:44:36,744 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:44:41,023 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-10 21:44:41,417 Message:  * Restarting with stat
+Time: 2022-03-10 21:44:44,562 Message:  * Debugger is active!
+Time: 2022-03-10 21:44:44,564 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:44:44,687 Message: 192.168.20.12 - - [10/Mar/2022 21:44:44] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:44,812 Message: 192.168.20.12 - - [10/Mar/2022 21:44:44] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,069 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,094 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,096 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,102 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,104 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,282 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,286 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,339 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,376 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,415 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:45,829 Message: 192.168.20.12 - - [10/Mar/2022 21:44:45] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:46,747 Message: LOADING CAMERA
+Time: 2022-03-10 21:44:47,150 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:44:47,151 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:44:50,954 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:44:51,059 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:44:53,218 Message: 192.168.20.12 - - [10/Mar/2022 21:44:53] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:53,439 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:44:53,531 Message: 192.168.20.12 - - [10/Mar/2022 21:44:53] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:44:53,543 Message: 192.168.20.12 - - [10/Mar/2022 21:44:53] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:22,189 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:45:22,932 Message:  * Restarting with stat
+Time: 2022-03-10 21:45:26,101 Message:  * Debugger is active!
+Time: 2022-03-10 21:45:26,103 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:45:26,232 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,304 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,329 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,332 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,339 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,356 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,357 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,507 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,530 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,552 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,575 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,594 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:26,987 Message: 192.168.20.12 - - [10/Mar/2022 21:45:26] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:28,051 Message: LOADING CAMERA
+Time: 2022-03-10 21:45:28,431 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:45:28,432 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:45:32,236 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:45:32,343 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:45:34,513 Message: 192.168.20.12 - - [10/Mar/2022 21:45:34] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:34,651 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:45:34,676 Message: 192.168.20.12 - - [10/Mar/2022 21:45:34] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:34,724 Message: 192.168.20.12 - - [10/Mar/2022 21:45:34] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:45:45,619 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:45:46,403 Message:  * Restarting with stat
+Time: 2022-03-10 21:45:49,611 Message:  * Debugger is active!
+Time: 2022-03-10 21:45:49,612 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:46:00,369 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:46:00,698 Message:  * Restarting with stat
+Time: 2022-03-10 21:46:03,878 Message:  * Debugger is active!
+Time: 2022-03-10 21:46:03,880 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:46:04,018 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,072 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,094 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,108 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,112 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,126 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,131 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,271 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,275 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,288 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,307 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,310 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:04,689 Message: 192.168.20.12 - - [10/Mar/2022 21:46:04] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:06,166 Message: LOADING CAMERA
+Time: 2022-03-10 21:46:06,552 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:46:06,553 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:46:10,362 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:46:10,465 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:46:12,610 Message: 192.168.20.12 - - [10/Mar/2022 21:46:12] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:12,663 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:46:12,689 Message: 192.168.20.12 - - [10/Mar/2022 21:46:12] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:12,730 Message: 192.168.20.12 - - [10/Mar/2022 21:46:12] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:42,453 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:46:42,799 Message: 192.168.20.12 - - [10/Mar/2022 21:46:42] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:43,254 Message:  * Restarting with stat
+Time: 2022-03-10 21:46:46,473 Message:  * Debugger is active!
+Time: 2022-03-10 21:46:46,475 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:46:46,525 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,526 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,545 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,559 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,580 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,583 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,590 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,600 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,615 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,639 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,656 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:46,997 Message: 192.168.20.12 - - [10/Mar/2022 21:46:46] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:46:47,000 Message: 192.168.20.12 - - [10/Mar/2022 21:46:47] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-10 21:46:47,117 Message: 192.168.20.12 - - [10/Mar/2022 21:46:47] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:14,508 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:47:14,865 Message:  * Restarting with stat
+Time: 2022-03-10 21:47:18,123 Message:  * Debugger is active!
+Time: 2022-03-10 21:47:18,124 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:47:18,250 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,327 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,342 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,355 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,368 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,373 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,380 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,494 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,497 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,504 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,563 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,580 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,815 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:18,943 Message: 192.168.20.12 - - [10/Mar/2022 21:47:18] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:20,108 Message: LOADING CAMERA
+Time: 2022-03-10 21:47:20,508 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:47:20,509 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:47:24,311 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:47:24,417 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:47:26,511 Message: 192.168.20.12 - - [10/Mar/2022 21:47:26] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:47:26,672 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:47:26,742 Message: 192.168.20.12 - - [10/Mar/2022 21:47:26] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:22,143 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:48:22,926 Message:  * Restarting with stat
+Time: 2022-03-10 21:48:26,181 Message:  * Debugger is active!
+Time: 2022-03-10 21:48:26,182 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:48:29,371 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:48:29,705 Message:  * Restarting with stat
+Time: 2022-03-10 21:48:32,887 Message:  * Debugger is active!
+Time: 2022-03-10 21:48:32,889 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:48:35,084 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:48:35,429 Message:  * Restarting with stat
+Time: 2022-03-10 21:48:38,595 Message:  * Debugger is active!
+Time: 2022-03-10 21:48:38,597 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:48:44,297 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,357 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,363 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,390 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,399 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,406 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,407 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,736 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,809 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:44,911 Message: 192.168.20.12 - - [10/Mar/2022 21:48:44] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:45,009 Message: 192.168.20.12 - - [10/Mar/2022 21:48:45] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:45,028 Message: 192.168.20.12 - - [10/Mar/2022 21:48:45] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:45,461 Message: 192.168.20.12 - - [10/Mar/2022 21:48:45] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:46,008 Message: 192.168.20.12 - - [10/Mar/2022 21:48:46] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:46,184 Message: LOADING CAMERA
+Time: 2022-03-10 21:48:46,571 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:48:46,572 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:48:50,375 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:48:50,484 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:48:52,656 Message: 192.168.20.12 - - [10/Mar/2022 21:48:52] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:48:52,689 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:48:52,782 Message: 192.168.20.12 - - [10/Mar/2022 21:48:52] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:04,860 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:49:05,553 Message:  * Restarting with stat
+Time: 2022-03-10 21:49:08,698 Message:  * Debugger is active!
+Time: 2022-03-10 21:49:08,700 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:49:08,841 Message: 192.168.20.12 - - [10/Mar/2022 21:49:08] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:08,892 Message: 192.168.20.12 - - [10/Mar/2022 21:49:08] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:08,912 Message: 192.168.20.12 - - [10/Mar/2022 21:49:08] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:08,914 Message: 192.168.20.12 - - [10/Mar/2022 21:49:08] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:08,988 Message: 192.168.20.12 - - [10/Mar/2022 21:49:08] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,094 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,165 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,205 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,313 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,317 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,330 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,356 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,406 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:09,497 Message: 192.168.20.12 - - [10/Mar/2022 21:49:09] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:47,502 Message: LOADING CAMERA
+Time: 2022-03-10 21:49:47,864 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:49:47,865 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:49:51,669 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:49:51,779 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:49:53,964 Message: 192.168.20.12 - - [10/Mar/2022 21:49:53] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:49:54,086 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:49:54,125 Message: 192.168.20.12 - - [10/Mar/2022 21:49:54] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,274 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,394 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,529 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,546 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,559 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,569 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,573 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,680 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,737 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,762 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,783 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,785 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,930 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:50:07,935 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:07,973 Message: 192.168.20.12 - - [10/Mar/2022 21:50:07] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:08,076 Message: 192.168.20.12 - - [10/Mar/2022 21:50:08] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:46,559 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:50:47,269 Message:  * Restarting with stat
+Time: 2022-03-10 21:50:50,491 Message:  * Debugger is active!
+Time: 2022-03-10 21:50:50,493 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:50:50,620 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,680 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,705 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,726 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,732 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,733 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,736 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,851 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,862 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,881 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,907 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:50,919 Message: 192.168.20.12 - - [10/Mar/2022 21:50:50] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:51,152 Message: 192.168.20.12 - - [10/Mar/2022 21:50:51] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:51,264 Message: 192.168.20.12 - - [10/Mar/2022 21:50:51] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:52,182 Message: LOADING CAMERA
+Time: 2022-03-10 21:50:52,555 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:50:52,556 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:50:56,365 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:50:56,469 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:50:58,622 Message: 192.168.20.12 - - [10/Mar/2022 21:50:58] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:50:58,645 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:50:58,688 Message: 192.168.20.12 - - [10/Mar/2022 21:50:58] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,153 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,224 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,231 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,237 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,266 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,270 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,279 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,513 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,528 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,541 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,565 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,571 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,782 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,787 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:51:03,841 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:03,902 Message: 192.168.20.12 - - [10/Mar/2022 21:51:03] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,140 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,189 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,195 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,225 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,236 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,239 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,250 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,470 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,525 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,553 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,564 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,569 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,800 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:51:14,809 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,838 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:14,928 Message: 192.168.20.12 - - [10/Mar/2022 21:51:14] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:23,831 Message: 192.168.20.12 - - [10/Mar/2022 21:51:23] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:23,881 Message: 192.168.20.12 - - [10/Mar/2022 21:51:23] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:23,905 Message: 192.168.20.12 - - [10/Mar/2022 21:51:23] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:23,918 Message: 192.168.20.12 - - [10/Mar/2022 21:51:23] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:23,921 Message: 192.168.20.12 - - [10/Mar/2022 21:51:23] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:23,937 Message: 192.168.20.12 - - [10/Mar/2022 21:51:23] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:23,941 Message: 192.168.20.12 - - [10/Mar/2022 21:51:23] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,105 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,207 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,226 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,231 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,234 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,391 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:51:24,396 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,448 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:51:24,506 Message: 192.168.20.12 - - [10/Mar/2022 21:51:24] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:06,584 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:52:07,378 Message:  * Restarting with stat
+Time: 2022-03-10 21:52:10,522 Message:  * Debugger is active!
+Time: 2022-03-10 21:52:10,524 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:52:10,655 Message: 192.168.20.12 - - [10/Mar/2022 21:52:10] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:10,758 Message: 192.168.20.12 - - [10/Mar/2022 21:52:10] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:10,865 Message: 192.168.20.12 - - [10/Mar/2022 21:52:10] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:10,883 Message: 192.168.20.12 - - [10/Mar/2022 21:52:10] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:10,889 Message: 192.168.20.12 - - [10/Mar/2022 21:52:10] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:10,893 Message: 192.168.20.12 - - [10/Mar/2022 21:52:10] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:10,903 Message: 192.168.20.12 - - [10/Mar/2022 21:52:10] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:11,253 Message: 192.168.20.12 - - [10/Mar/2022 21:52:11] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:11,269 Message: 192.168.20.12 - - [10/Mar/2022 21:52:11] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:11,270 Message: 192.168.20.12 - - [10/Mar/2022 21:52:11] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:11,367 Message: 192.168.20.12 - - [10/Mar/2022 21:52:11] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:11,380 Message: 192.168.20.12 - - [10/Mar/2022 21:52:11] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:11,818 Message: 192.168.20.12 - - [10/Mar/2022 21:52:11] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:12,151 Message: 192.168.20.12 - - [10/Mar/2022 21:52:12] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:14,009 Message: LOADING CAMERA
+Time: 2022-03-10 21:52:14,407 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:52:14,408 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:52:18,219 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:52:18,328 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:52:20,413 Message: IMU Acceleration: 'int' object is not iterable
+Time: 2022-03-10 21:52:20,420 Message: IMU: [Errno 5] Input/output error
+Time: 2022-03-10 21:52:20,499 Message: 192.168.20.12 - - [10/Mar/2022 21:52:20] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:20,674 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:52:20,721 Message: 192.168.20.12 - - [10/Mar/2022 21:52:20] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:33,687 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:52:34,397 Message:  * Restarting with stat
+Time: 2022-03-10 21:52:37,636 Message:  * Debugger is active!
+Time: 2022-03-10 21:52:37,638 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:52:43,256 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,418 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,521 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,525 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,527 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,538 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,546 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,945 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,958 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:43,966 Message: 192.168.20.12 - - [10/Mar/2022 21:52:43] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:44,067 Message: 192.168.20.12 - - [10/Mar/2022 21:52:44] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:44,069 Message: 192.168.20.12 - - [10/Mar/2022 21:52:44] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:44,337 Message: 192.168.20.12 - - [10/Mar/2022 21:52:44] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:44,438 Message: 192.168.20.12 - - [10/Mar/2022 21:52:44] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:46,273 Message: LOADING CAMERA
+Time: 2022-03-10 21:52:46,651 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:52:46,652 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:52:50,469 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:52:50,578 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:52:52,744 Message: 192.168.20.12 - - [10/Mar/2022 21:52:52] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:52:52,779 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:52:52,858 Message: 192.168.20.12 - - [10/Mar/2022 21:52:52] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:50,154 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:53:50,808 Message:  * Restarting with stat
+Time: 2022-03-10 21:53:54,019 Message:  * Debugger is active!
+Time: 2022-03-10 21:53:54,021 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:53:54,169 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,229 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,252 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,257 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,282 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,286 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,292 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,436 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,454 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,500 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,540 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,556 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,759 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:54,877 Message: 192.168.20.12 - - [10/Mar/2022 21:53:54] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:53:56,779 Message: LOADING CAMERA
+Time: 2022-03-10 21:53:57,175 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:53:57,176 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:54:00,986 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:54:01,093 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:54:03,213 Message: 192.168.20.12 - - [10/Mar/2022 21:54:03] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:03,234 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:54:03,276 Message: 192.168.20.12 - - [10/Mar/2022 21:54:03] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:14,837 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:54:15,669 Message:  * Restarting with stat
+Time: 2022-03-10 21:54:18,919 Message:  * Debugger is active!
+Time: 2022-03-10 21:54:18,921 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:54:19,048 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,305 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,328 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,464 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,467 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,472 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,550 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,722 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,822 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,865 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,925 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:19,930 Message: 192.168.20.12 - - [10/Mar/2022 21:54:19] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:20,212 Message: 192.168.20.12 - - [10/Mar/2022 21:54:20] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:20,305 Message: 192.168.20.12 - - [10/Mar/2022 21:54:20] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:21,333 Message: LOADING CAMERA
+Time: 2022-03-10 21:54:21,695 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:54:21,695 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:54:25,507 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:54:25,612 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:54:27,780 Message: 192.168.20.12 - - [10/Mar/2022 21:54:27] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:54:27,800 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:54:27,849 Message: 192.168.20.12 - - [10/Mar/2022 21:54:27] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:48,546 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:55:49,292 Message:  * Restarting with stat
+Time: 2022-03-10 21:55:52,533 Message:  * Debugger is active!
+Time: 2022-03-10 21:55:52,535 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:55:53,335 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,529 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,679 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,683 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,706 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,716 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,719 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,942 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,947 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:53,966 Message: 192.168.20.12 - - [10/Mar/2022 21:55:53] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:54,094 Message: 192.168.20.12 - - [10/Mar/2022 21:55:54] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:54,098 Message: 192.168.20.12 - - [10/Mar/2022 21:55:54] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:54,452 Message: 192.168.20.12 - - [10/Mar/2022 21:55:54] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:54,864 Message: 192.168.20.12 - - [10/Mar/2022 21:55:54] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:55:55,486 Message: LOADING CAMERA
+Time: 2022-03-10 21:55:55,900 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:55:55,901 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:55:59,702 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:55:59,807 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:56:01,950 Message: 192.168.20.12 - - [10/Mar/2022 21:56:01] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:01,980 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:56:02,075 Message: 192.168.20.12 - - [10/Mar/2022 21:56:02] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:18,664 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 21:56:19,059 Message: 192.168.20.12 - - [10/Mar/2022 21:56:19] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:19,438 Message:  * Restarting with stat
+Time: 2022-03-10 21:56:22,640 Message:  * Debugger is active!
+Time: 2022-03-10 21:56:22,642 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 21:56:22,693 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,702 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,706 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,731 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,742 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,746 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,760 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,832 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,839 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,861 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:22,865 Message: 192.168.20.12 - - [10/Mar/2022 21:56:22] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:23,161 Message: 192.168.20.12 - - [10/Mar/2022 21:56:23] "[37mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-10 21:56:23,164 Message: 192.168.20.12 - - [10/Mar/2022 21:56:23] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:23,257 Message: 192.168.20.12 - - [10/Mar/2022 21:56:23] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,711 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,773 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,784 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,832 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,849 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,855 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,861 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:29,912 Message: 192.168.20.12 - - [10/Mar/2022 21:56:29] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:30,032 Message: 192.168.20.12 - - [10/Mar/2022 21:56:30] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:30,058 Message: 192.168.20.12 - - [10/Mar/2022 21:56:30] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:30,078 Message: 192.168.20.12 - - [10/Mar/2022 21:56:30] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:30,081 Message: 192.168.20.12 - - [10/Mar/2022 21:56:30] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:30,246 Message: 192.168.20.12 - - [10/Mar/2022 21:56:30] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:30,340 Message: 192.168.20.12 - - [10/Mar/2022 21:56:30] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:31,124 Message: LOADING CAMERA
+Time: 2022-03-10 21:56:31,512 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 21:56:31,513 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 21:56:35,315 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 21:56:35,420 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 21:56:37,491 Message: 192.168.20.12 - - [10/Mar/2022 21:56:37] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 21:56:37,521 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 21:56:37,608 Message: 192.168.20.12 - - [10/Mar/2022 21:56:37] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:07,240 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:27:07,986 Message:  * Restarting with stat
+Time: 2022-03-10 22:27:11,227 Message:  * Debugger is active!
+Time: 2022-03-10 22:27:11,229 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:27:11,365 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,423 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,440 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,463 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,471 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,475 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,479 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,584 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,612 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,615 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,653 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:11,663 Message: 192.168.20.12 - - [10/Mar/2022 22:27:11] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:12,154 Message: 192.168.20.12 - - [10/Mar/2022 22:27:12] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:12,321 Message: 192.168.20.12 - - [10/Mar/2022 22:27:12] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:13,782 Message: LOADING CAMERA
+Time: 2022-03-10 22:27:14,181 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:27:14,182 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:27:17,988 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:27:18,091 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:27:20,234 Message: 192.168.20.12 - - [10/Mar/2022 22:27:20] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:20,257 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:27:20,301 Message: 192.168.20.12 - - [10/Mar/2022 22:27:20] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:27:58,669 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:27:59,369 Message:  * Restarting with stat
+Time: 2022-03-10 22:28:02,550 Message:  * Debugger is active!
+Time: 2022-03-10 22:28:02,552 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:28:02,691 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,755 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,774 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,779 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,796 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,810 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,828 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,902 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:02,906 Message: 192.168.20.12 - - [10/Mar/2022 22:28:02] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:03,218 Message: 192.168.20.12 - - [10/Mar/2022 22:28:03] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:03,249 Message: 192.168.20.12 - - [10/Mar/2022 22:28:03] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:03,254 Message: 192.168.20.12 - - [10/Mar/2022 22:28:03] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:03,433 Message: 192.168.20.12 - - [10/Mar/2022 22:28:03] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:03,554 Message: 192.168.20.12 - - [10/Mar/2022 22:28:03] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:05,126 Message: LOADING CAMERA
+Time: 2022-03-10 22:28:05,489 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:28:05,490 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:28:09,300 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:28:09,404 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:28:11,537 Message: 192.168.20.12 - - [10/Mar/2022 22:28:11] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:28:11,567 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:28:11,640 Message: 192.168.20.12 - - [10/Mar/2022 22:28:11] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:17,842 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:30:18,576 Message:  * Restarting with stat
+Time: 2022-03-10 22:30:21,767 Message:  * Debugger is active!
+Time: 2022-03-10 22:30:21,769 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:30:22,039 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,178 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,208 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,210 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,221 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,222 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,230 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,831 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,871 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,879 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,929 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:22,931 Message: 192.168.20.12 - - [10/Mar/2022 22:30:22] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:23,674 Message: 192.168.20.12 - - [10/Mar/2022 22:30:23] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:23,806 Message: 192.168.20.12 - - [10/Mar/2022 22:30:23] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:28,225 Message: LOADING CAMERA
+Time: 2022-03-10 22:30:28,603 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:30:28,603 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:30:32,406 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:30:32,514 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:30:34,696 Message: 192.168.20.12 - - [10/Mar/2022 22:30:34] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:34,732 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:30:34,746 Message: 192.168.20.12 - - [10/Mar/2022 22:30:34] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:45,804 Message: 192.168.20.12 - - [10/Mar/2022 22:30:45] "[37mGET /missions HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:46,013 Message: 192.168.20.12 - - [10/Mar/2022 22:30:46] "[37mPOST /missions HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:46,019 Message: 192.168.20.12 - - [10/Mar/2022 22:30:46] "[37mPOST /sensor-graph-data HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:30:47,002 Message: 192.168.20.12 - - [10/Mar/2022 22:30:47] "[37mPOST /mission-data HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:31:20,501 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 22:31:20,506 Message:  * Restarting with stat
+Time: 2022-03-10 22:31:23,696 Message:  * Debugger is active!
+Time: 2022-03-10 22:31:23,698 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:32:39,696 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:32:40,052 Message:  * Restarting with stat
+Time: 2022-03-10 22:32:43,160 Message:  * Debugger is active!
+Time: 2022-03-10 22:32:43,162 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:32:48,489 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:32:48,847 Message:  * Restarting with stat
+Time: 2022-03-10 22:32:51,996 Message:  * Debugger is active!
+Time: 2022-03-10 22:32:51,998 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:32:52,706 Message: 192.168.20.12 - - [10/Mar/2022 22:32:52] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:32:53,472 Message: LOADING CAMERA
+Time: 2022-03-10 22:32:53,834 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:32:53,835 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:32:57,649 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:32:57,754 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:32:59,901 Message: 192.168.20.12 - - [10/Mar/2022 22:32:59] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:32:59,932 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:32:59,940 Message: 192.168.20.12 - - [10/Mar/2022 22:32:59] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:00,487 Message: 192.168.20.12 - - [10/Mar/2022 22:33:00] "[37mGET /missions HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:00,680 Message: 192.168.20.12 - - [10/Mar/2022 22:33:00] "[37mPOST /missions HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:00,684 Message: 192.168.20.12 - - [10/Mar/2022 22:33:00] "[37mPOST /sensor-graph-data HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:13,739 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:33:14,478 Message:  * Restarting with stat
+Time: 2022-03-10 22:33:17,678 Message:  * Debugger is active!
+Time: 2022-03-10 22:33:17,680 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:33:17,708 Message: LOADING CAMERA
+Time: 2022-03-10 22:33:18,082 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:33:18,083 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:33:21,887 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:33:21,993 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:33:24,166 Message: 192.168.20.12 - - [10/Mar/2022 22:33:24] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:24,193 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:33:24,222 Message: 192.168.20.12 - - [10/Mar/2022 22:33:24] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:42,943 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:33:43,529 Message:  * Restarting with stat
+Time: 2022-03-10 22:33:46,766 Message:  * Debugger is active!
+Time: 2022-03-10 22:33:46,768 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:33:46,920 Message: 192.168.20.12 - - [10/Mar/2022 22:33:46] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:46,993 Message: 192.168.20.12 - - [10/Mar/2022 22:33:46] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:46,997 Message: 192.168.20.12 - - [10/Mar/2022 22:33:46] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,011 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,013 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,037 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,044 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,131 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,144 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,181 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,185 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,203 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,540 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:47,642 Message: 192.168.20.12 - - [10/Mar/2022 22:33:47] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:49,101 Message: LOADING CAMERA
+Time: 2022-03-10 22:33:49,499 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:33:49,500 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:33:53,310 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:33:53,416 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:33:55,575 Message: 192.168.20.12 - - [10/Mar/2022 22:33:55] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:33:55,615 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:33:55,649 Message: 192.168.20.12 - - [10/Mar/2022 22:33:55] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:25,472 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:35:26,196 Message:  * Restarting with stat
+Time: 2022-03-10 22:35:29,445 Message:  * Debugger is active!
+Time: 2022-03-10 22:35:29,447 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:35:36,957 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:35:37,283 Message:  * Restarting with stat
+Time: 2022-03-10 22:35:40,476 Message:  * Debugger is active!
+Time: 2022-03-10 22:35:40,478 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:35:45,805 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:35:46,142 Message:  * Restarting with stat
+Time: 2022-03-10 22:35:49,256 Message:  * Debugger is active!
+Time: 2022-03-10 22:35:49,258 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:35:49,389 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,431 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,452 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,468 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,477 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,482 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,498 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,575 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,592 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,623 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,639 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,653 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:49,916 Message: 192.168.20.12 - - [10/Mar/2022 22:35:49] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:50,021 Message: 192.168.20.12 - - [10/Mar/2022 22:35:50] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:50,865 Message: LOADING CAMERA
+Time: 2022-03-10 22:35:51,227 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:35:51,228 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:35:55,040 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:35:55,143 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:35:57,286 Message: 192.168.20.12 - - [10/Mar/2022 22:35:57] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:35:57,313 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:35:57,316 Message: 192.168.20.12 - - [10/Mar/2022 22:35:57] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:20,148 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:36:20,894 Message:  * Restarting with stat
+Time: 2022-03-10 22:36:24,007 Message:  * Debugger is active!
+Time: 2022-03-10 22:36:24,009 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:36:29,051 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,132 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,145 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,176 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,215 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,221 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,228 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,245 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,312 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,399 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,422 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,427 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,595 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:29,683 Message: 192.168.20.12 - - [10/Mar/2022 22:36:29] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:33,385 Message: LOADING CAMERA
+Time: 2022-03-10 22:36:33,779 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:36:33,780 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:36:37,583 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:36:37,690 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:36:39,857 Message: 192.168.20.12 - - [10/Mar/2022 22:36:39] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:36:39,886 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:36:39,893 Message: 192.168.20.12 - - [10/Mar/2022 22:36:39] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:37:55,108 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 22:37:55,114 Message:  * Restarting with stat
+Time: 2022-03-10 22:37:58,252 Message:  * Debugger is active!
+Time: 2022-03-10 22:37:58,254 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:37:58,381 Message: 192.168.20.12 - - [10/Mar/2022 22:37:58] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:37:58,584 Message: 192.168.20.12 - - [10/Mar/2022 22:37:58] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:38:00,167 Message: LOADING CAMERA
+Time: 2022-03-10 22:38:00,552 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:38:00,552 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:38:04,353 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:38:04,457 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:38:06,580 Message: 192.168.20.12 - - [10/Mar/2022 22:38:06] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:38:06,607 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:38:06,621 Message: 192.168.20.12 - - [10/Mar/2022 22:38:06] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:40:52,914 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:40:53,590 Message:  * Restarting with stat
+Time: 2022-03-10 22:40:56,812 Message:  * Debugger is active!
+Time: 2022-03-10 22:40:56,814 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:41:22,512 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:41:22,850 Message:  * Restarting with stat
+Time: 2022-03-10 22:41:26,002 Message:  * Debugger is active!
+Time: 2022-03-10 22:41:26,004 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:41:28,175 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:41:28,527 Message:  * Restarting with stat
+Time: 2022-03-10 22:41:31,722 Message:  * Debugger is active!
+Time: 2022-03-10 22:41:31,724 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:41:35,012 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,060 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,086 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,101 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,104 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,109 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,114 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,209 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,274 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,281 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,316 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,320 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,502 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:35,598 Message: 192.168.20.12 - - [10/Mar/2022 22:41:35] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:36,390 Message: LOADING CAMERA
+Time: 2022-03-10 22:41:36,791 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:41:36,792 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:41:40,601 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:41:40,704 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:41:42,825 Message: 192.168.20.12 - - [10/Mar/2022 22:41:42] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:41:42,847 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:41:42,883 Message: 192.168.20.12 - - [10/Mar/2022 22:41:42] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:01,475 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-10 22:42:02,201 Message:  * Restarting with stat
+Time: 2022-03-10 22:42:05,397 Message:  * Debugger is active!
+Time: 2022-03-10 22:42:05,399 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:42:05,529 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,606 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,616 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,620 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,633 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,649 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,654 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,794 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,912 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,931 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,954 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:05,975 Message: 192.168.20.12 - - [10/Mar/2022 22:42:05] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:06,273 Message: 192.168.20.12 - - [10/Mar/2022 22:42:06] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:06,364 Message: 192.168.20.12 - - [10/Mar/2022 22:42:06] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:07,913 Message: LOADING CAMERA
+Time: 2022-03-10 22:42:08,275 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:42:08,276 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:42:12,082 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:42:12,187 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:42:14,328 Message: 192.168.20.12 - - [10/Mar/2022 22:42:14] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:42:14,349 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:42:14,381 Message: 192.168.20.12 - - [10/Mar/2022 22:42:14] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:43:36,192 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-10 22:43:36,198 Message:  * Restarting with stat
+Time: 2022-03-10 22:43:39,318 Message:  * Debugger is active!
+Time: 2022-03-10 22:43:39,320 Message:  * Debugger PIN: 300-199-093
+Time: 2022-03-10 22:43:39,449 Message: 192.168.20.12 - - [10/Mar/2022 22:43:39] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:43:39,661 Message: 192.168.20.12 - - [10/Mar/2022 22:43:39] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:43:44,846 Message: LOADING CAMERA
+Time: 2022-03-10 22:43:45,225 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-10 22:43:45,226 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-10 22:43:49,028 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-10 22:43:49,132 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-10 22:43:51,258 Message: 192.168.20.12 - - [10/Mar/2022 22:43:51] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:43:51,281 Message: FLASK APP: READING CAMERA
+Time: 2022-03-10 22:43:51,284 Message: 192.168.20.12 - - [10/Mar/2022 22:43:51] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:44:07,878 Message: 192.168.20.12 - - [10/Mar/2022 22:44:07] "[37mGET /missions HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:44:08,060 Message: 192.168.20.12 - - [10/Mar/2022 22:44:08] "[37mPOST /missions HTTP/1.1[0m" 200 -
+Time: 2022-03-10 22:44:08,070 Message: 192.168.20.12 - - [10/Mar/2022 22:44:08] "[37mPOST /sensor-graph-data HTTP/1.1[0m" 200 -
