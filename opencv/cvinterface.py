@@ -20,21 +20,21 @@ class CVInterface():
 
         result = cv2.bitwise_and(frame1, frame2, mask=mask)
         return result
-
-cap = cv2.VideoCapture(0)
-while True:
-    var, frame = cap.read()
-    cv_helper = CVInterface()
-    #frame = apply_colour_mask(frame, frame, [90, 50, 50], [130, 255, 255])
-    #frame = apply_colour_filter(frame, frame, [0, 0, 0], [255, 255, 255])
-    for (x, y, width, height) in cv_helper.find_h(frame):
-        cv2.rectangle(frame, (x, y), (x + width, y + height), (255, 0, 0), 3)
-        cv2.putText(frame,'Harmed Victim', (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, (255,0,0))
-        #break
-    for (x, y, width, height) in cv_helper.find_u(frame):
-        cv2.rectangle(frame, (x, y), (x + width, y + height), (0, 255, 0), 3)
-        cv2.putText(frame,'Unharmed Victim', (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, (0,255,0))
-        #break
-    cv2.imshow('img', frame)
-    if cv2.waitKey(1) == ord('q'):
-        break 
+if __name__ == '__main__':
+    cap = cv2.VideoCapture(0)
+    while True:
+        var, frame = cap.read()
+        cv_helper = CVInterface()
+        #frame = apply_colour_mask(frame, frame, [90, 50, 50], [130, 255, 255])
+        #frame = apply_colour_filter(frame, frame, [0, 0, 0], [255, 255, 255])
+        for (x, y, width, height) in cv_helper.find_h(frame):
+            cv2.rectangle(frame, (x, y), (x + width, y + height), (255, 0, 0), 3)
+            cv2.putText(frame,'Harmed Victim', (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, (255,0,0))
+            #break
+        for (x, y, width, height) in cv_helper.find_u(frame):
+            cv2.rectangle(frame, (x, y), (x + width, y + height), (0, 255, 0), 3)
+            cv2.putText(frame,'Unharmed Victim', (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, (0,255,0))
+            #break
+        cv2.imshow('img', frame)
+        if cv2.waitKey(1) == ord('q'):
+            break 

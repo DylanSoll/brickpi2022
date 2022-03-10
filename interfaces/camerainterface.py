@@ -22,6 +22,8 @@ class CameraInterface(object):
         self.stream = None
         self.thread = None
         self.stopped = False
+        self.h_cascade = cv2.CascadeClassifier("haarcascade_custom/h_cascade.xml")
+        self.u_cascade = cv2.CascadeClassifier("haarcascade_custom/u_cascade.xml")
         return
 
     def start(self):
@@ -63,7 +65,45 @@ class CameraInterface(object):
                 self.log("CAMERA INTERFACE: Exiting Camera Thread")
                 return
         return
-    
+    def convert_for_cv2(self):
+        self.frame = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
+        return 
+
+    def convert_for_jpg(self):
+        success, self.frame = cv2.imencode('.JPEG', self.frame)
+        return
+
+    def find_h(self, frame):
+        return self.h_cascade.detectMultiScale(frame, 1.3, 5)
+
+    def find_u(self, frame):
+        return self.u_cascade.detectMultiScale(frame, 1.3, 5)
+
+    def apply_colour_filter(self, frame1, frame2, colour_lower, colour_upper):
+        hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV)
+        lower_col = np.array(colour_lower)
+        upper_col = np.array(colour_upper)
+
+        mask = cv2.inRange(hsv, lower_col, upper_col)
+
+        result = cv2.bitwise_and(frame1, frame2, mask=mask)
+        return result
+
+    def draw_box_label(self, val,frame, colour, label):
+        for (x, y, width, height) in val:
+            cv2.rectangle(frame, (x, y), (x + width, y + height), colour, 3)
+            cv2.putText(frame, label, (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, colour)
+        return frame
+
+    def collect_live_frame(self):
+        self.get_frame()
+        h = self.find_h(self.frame)
+        u = self.find_u(self.frame)
+        draw_box_label(self.frame, h, (255,0,0), 'Harmed')
+        draw_box_label(self.frame, u, (255,0,0), 'Harmed')
+        return frame
+
+
     #detect if there is a colour in the image
     def get_camera_colour(self):
         if not self.frame: #hasnt read a frame from camera

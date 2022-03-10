@@ -2,10 +2,11 @@ from flask import Flask, render_template, session, request, redirect, jsonify, f
 from json import dumps
 from interfaces import databaseinterface, movement, emailinterface
 try:
+    import robot#robot is class that extends the brickpi class
     from interfaces import soundinterface, camerainterface
-    import robot #robot is class that extends the brickpi class
+     
 except:
-    pass
+    print('failed')
 import global_vars as GLOBALS #load global variables
 import logging, time
 import password_management as pm
@@ -24,13 +25,12 @@ def log_movement(missionid, mov_type, time_init, power, movement_type, command_t
         GLOBALS.DATABASE.ModifyQuery('''INSERT INTO movement_log (missionid, type, time_init, magnitude, power,
          movement_type, command_type) VALUES (?, ?, ?, ?, ?, ?, ?)''', \
              (missionid, mov_type, time_init, magnitude, power, movement_type, command_type))
-        print('hit')
     return
 
 
 def end_time_movement():
     if GLOBALS.DATABASE:
-        GLOBALS.DATABASE.ModifyQuert('''UPDATE movement_log SET time_final = ? WHERE movementid = (SELECT movementid FROM movement_log 
+        GLOBALS.DATABASE.ModifyQuery('''UPDATE movement_log SET time_final = ? WHERE movementid = (SELECT movementid FROM movement_log 
         ORDER BY time_init DESC LIMIT 1)''', (time.time(),))
     return
 
@@ -330,7 +330,6 @@ def process_movement(power):
             GLOBALS.ROBOT.stop_all()
             if GLOBALS.MISSIONID != None:
                 end_time_movement()
-            print(GLOBALS.MISSIONID)
             reverse_sound(False)
             log_move = True
             mov_type = ""

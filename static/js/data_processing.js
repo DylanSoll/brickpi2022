@@ -168,8 +168,8 @@ function lineGraph(user_title, locationid, row_array, column_obj,legend_pos = 'b
             chart.draw(data, options);}
           }
 
-google.charts.load('current', {'packages':['gauge']});
-google.charts.setOnLoadCallback(drawChart);
+//google.charts.load('current', {'packages':['gauge']});
+//google.charts.setOnLoadCallback(drawGuage);
       
 function drawGuage() {
 var data = google.visualization.arrayToDataTable([

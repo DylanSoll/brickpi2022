@@ -19,7 +19,7 @@ def log_movement(missionid, mov_type, time_init, power, movement_type, command_t
 
 def end_time_movement():
     if GLOBALS.DATABASE:
-        GLOBALS.DATABASE('''UPDATE movement_log SET time_final = ? WHERE movementid = (SELECT movementid FROM movement_log 
+        GLOBALS.DATABASE.ModifyQuery('''UPDATE movement_log SET time_final = ? WHERE movementid = (SELECT movementid FROM movement_log 
         ORDER BY time_init DESC LIMIT 1)''', (time.time(),))
     return
 
