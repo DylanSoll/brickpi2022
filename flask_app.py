@@ -365,7 +365,6 @@ def process_movement(power):
                 mov_type = "right"
             if log_move and (GLOBALS.MISSIONID != None):
                 log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
-                print(GLOBALS.MISSIONID)
         return jsonify({})
     else:
         return redirect('/')

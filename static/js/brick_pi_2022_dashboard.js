@@ -8,7 +8,7 @@ const time = new Date
 function defaulthandle(results){
     temp_var = results
 }
-
+var allow_keypress = true
 commands = {'turn':['left','right', 'degrees'],
             'face':{'north': 0,'east': 90, 'south':180, 'west':270},
             'shoot':'shoot',
@@ -159,7 +159,7 @@ current_keys = {'a': false,
             'stop': false};
 
 document.addEventListener('keydown', function(e){
-    if (!e.repeat){
+    if ((!e.repeat) && (allow_keypress)){
         time_pressed = time.getTime();
         message = "pressed at: " + time_pressed;
         valid_keys = ['w', 'a', 's', 'd', 'p'];
@@ -184,7 +184,7 @@ document.addEventListener('keydown', function(e){
     
  })
  document.addEventListener('keyup', function(e){
-    if (!e.repeat){
+    if ((!e.repeat) && (allow_keypress)){
         time_released = time.getTime();
         message = "released at: " + time_released;
         valid_keys = ['w', 'a', 's', 'd', 'p'];
