@@ -27,6 +27,12 @@ def log_movement(missionid, mov_type, time_init, power, movement_type, command_t
              (missionid, mov_type, time_init, magnitude, power, movement_type, command_type))
     return
 
+def log_sensors(missionid, acceleration, orientation, direction, distance, thermal, colour, victim, time):
+    if GLOBALS.DATABASE:
+        GLOBALS.DATABASE.ModifyQuery('''INSERT INTO sensor_log (missionid, acceleration, orientation, direction, distance, 
+        thermal, colour, victim, time) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)''', \
+             (missionid, acceleration, orientation, direction, distance, thermal, colour, victim, time))
+    return
 
 def end_time_movement():
     if GLOBALS.DATABASE:
@@ -123,6 +129,9 @@ def uniqueEmail():
 
 @app.route('/admin')
 def admin():
+    '''GLOBALS.DATABASE.ModifyQuery('DELETE FROM movement_log')
+    GLOBALS.DATABASE.ModifyQuery('DELETE FROM sensor_log')
+    GLOBALS.DATABASE.ModifyQuery('DELETE FROM missions')'''
     if session['permissions'] != 'admin':
         return redirect('/dashboad')
     return render_template('admin.html')
@@ -213,6 +222,13 @@ def sensors():
     recent_sensor_data = {}
     if GLOBALS.ROBOT:
         recent_sensor_data = GLOBALS.ROBOT.get_all_sensors()
+        if GLOBALS.MISSIONID:
+            victim = False
+            distance = recent_sensor_data['ultrasonic']
+            distance = 0
+            log_sensors(str(GLOBALS.MISSIONID), str(recent_sensor_data['acceleration']), str(recent_sensor_data['orientation']), str(recent_sensor_data['gyro']), 
+            str(distance),str(recent_sensor_data['thermal']), str(recent_sensor_data['colour']),str(victim), 
+            str(time.time()))
     elif GLOBALS.DATABASE:
         recent_sensor_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log ORDER BY sensor_data_id DESC LIMIT 1')
     return jsonify(recent_sensor_data)

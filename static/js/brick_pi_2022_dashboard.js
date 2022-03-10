@@ -236,3 +236,14 @@ function stop_start_mission(){
     }
     
 }
+
+function suspend_mission(interval){
+    clearInterval(interval);
+    allow_keypress = false;
+}
+
+function resume_mission(){
+    interval = setInterval(function(){jq_ajax('/sensors', {}, defaulthandle)},2000)
+    allow_keypress = true;
+    return interval
+}
