@@ -27,4 +27,4 @@ def create_video():
             out.release()
     cap.release()
 
-create_im_from_cam(30)
+#create_im_from_cam(30)

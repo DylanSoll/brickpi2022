@@ -47,7 +47,7 @@
             <button id="reconfig" type="button" class="btn btn-warning" onclick="jq_ajax('/reconfig_IMU');">Reconfigure IMU</button>
             <button id="compass" type="button" class="btn btn-secondary" onclick="jq_ajax('/compass');">Set Compass</button>
             <button id="sensors" type="button" class="btn btn-info" onclick="jq_ajax('/sensors');">Sensors</button>
-            <button id="missions-button" type="button" class="btn btn-success" onclick="jq_ajax('/initiate-mission');stop_start_mission();">Start Mission</button>
+            <button id="missions-button" type="button" class="btn btn-success" onclick="jq_ajax('/initiate-mission');stop_start_mission();allow_sensors = true;">Start Mission</button>
             <button id="missions-modal-button" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#end_mission_modal"
             onclick="jq_ajax('/initiate-mission'); suspend_mission()" hidden>End Mission</button>
             <button class="btn btn-success" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">

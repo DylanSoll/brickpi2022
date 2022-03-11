@@ -25,6 +25,7 @@ def log_movement(missionid, mov_type, time_init, power, movement_type, command_t
         GLOBALS.DATABASE.ModifyQuery('''INSERT INTO movement_log (missionid, type, time_init, magnitude, power,
          movement_type, command_type) VALUES (?, ?, ?, ?, ?, ?, ?)''', \
              (missionid, mov_type, time_init, magnitude, power, movement_type, command_type))
+        print(GLOBALS.DATABASE.ViewQuery('SELECT * FROM movement_log WHERE missionid = (SELECT missionid FROM missions ORDER BY missionid DESC LIMIT 1)'))
     return
 
 def log_sensors(missionid, acceleration, orientation, direction, distance, thermal, colour, victim, time):
@@ -32,12 +33,15 @@ def log_sensors(missionid, acceleration, orientation, direction, distance, therm
         GLOBALS.DATABASE.ModifyQuery('''INSERT INTO sensor_log (missionid, acceleration, orientation, direction, distance, 
         thermal, colour, victim, time) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)''', \
              (missionid, acceleration, orientation, direction, distance, thermal, colour, victim, time))
+        
     return
 
 def end_time_movement():
     if GLOBALS.DATABASE:
-        GLOBALS.DATABASE.ModifyQuery('''UPDATE movement_log SET time_final = ? WHERE movementid = (SELECT movementid FROM movement_log 
-        ORDER BY time_init DESC LIMIT 1)''', (time.time(),))
+        print('hit')
+        GLOBALS.DATABASE.ModifyQuery('''UPDATE movement_log SET time_final = ? WHERE movementid = 
+        (SELECT movementid FROM movement_log WHERE time_final IS NULL ORDER BY time_init DESC LIMIT 1)''', (time.time(),))
+
     return
 
 def please_login(current_address):
@@ -246,9 +250,8 @@ def sensor_view():
 def missions():
     please_login('dashboard')
     if request.method == 'POST':
-        missions = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
-            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid 
-            WHERE time_final NOT NULL GROUP BY missions.missionid''')
+        missions = GLOBALS.DATABASE.ViewQuery('''SELECT missionid, name, time_init, time_final, notes, (time_final-time_init) AS duration, name FROM missions
+            INNER JOIN users ON missions.userid = users.userid WHERE time_final NOT NULL GROUP BY missions.missionid''')
         return jsonify(missions)
     else:
         return render_template('mission_data.html')
@@ -297,9 +300,8 @@ def mission_data():
         data = request.get_json()
         sensor_log = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
         movement_log = GLOBALS.DATABASE.ViewQuery('SELECT *, time_final-time_init AS duration FROM movement_log WHERE missionid = ?', (data,))
-        breakdown = GLOBALS.DATABASE.ViewQuery('''SELECT missions.missionid, missions.userid, name, time_init, time_final, (time_final-time_init) AS duration, notes, count(*) AS victims FROM missions
-            INNER JOIN users ON missions.userid = users.userid INNER JOIN sensor_log ON missions.missionid = sensor_log.missionid 
-            WHERE missions.missionid = ? AND time_final NOT NULL GROUP BY missions.missionid''', (data,))
+        breakdown = GLOBALS.DATABASE.ViewQuery('''SELECT missionid, name, time_init, time_final, notes, (time_final-time_init) AS duration, name FROM missions
+            INNER JOIN users ON missions.userid = users.userid WHERE missionid = ?''', (data,))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
                 'custom-graph': [{}], 'custom-table': [{}]}
         return jsonify(details)
@@ -379,7 +381,6 @@ def process_movement(power):
             elif current_keys['d'] and not current_keys['a']:
                 GLOBALS.ROBOT.rotate_power(power)
                 mov_type = "right"
-            print(log_movement, GLOBALS.MISSIONID)
             if log_move and (GLOBALS.MISSIONID != None):
                 log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
         return jsonify({})
@@ -434,17 +435,15 @@ def btn_movements(mov_type, power):
                 end_time_movement()
             power = int(power)
             log_move = True
-            if GLOBALS.MISSIONID != None:
-                end_time_movement()
             if mov_type == 'stop':
                 GLOBALS.ROBOT.stop_all()
             elif mov_type == 'left':
-                GLOBALS.ROBOT.rotate_power(int(power/2))
-            elif mov_type == 'right':
                 GLOBALS.ROBOT.rotate_power(-1*int(power/2))
+            elif mov_type == 'right':
+                GLOBALS.ROBOT.rotate_power(int(power/2))
             elif mov_type == 'forward':
                 GLOBALS.ROBOT.move_power(power)
-            elif mov_type == 'backward':
+            elif mov_type == 'back':
                 reverse_sound(True)
                 GLOBALS.ROBOT.move_power(-1*power)
                 reverse_sound(False)

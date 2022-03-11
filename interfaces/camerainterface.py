@@ -106,12 +106,12 @@ class CameraInterface(object):
     def collect_live_frame(self):
         self.get_frame()
         #print(self.data.nbytes*8)
-        h = self.find_h(self.data)
-        u = self.find_u(self.data)
-        self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
-        self.draw_box_label(u, self.data, (255,0,0), 'Harmed')
+        #h = self.find_h(self.data)
+        #u = self.find_u(self.data)
+        #self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
+        #self.draw_box_label(u, self.data, (255,0,0), 'Harmed')
         #print(self.data.nbytes*8)
-        self.frame = self.convert_for_jpg()
+        #self.frame = self.convert_for_jpg()
         return self.frame
 
 

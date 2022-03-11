@@ -33,6 +33,10 @@ function fill_basic_table(table_id, datasets, fields){
                 data = shorten_time(row_obj[field])
             }else if (field == 'select'){
                 data = create_checkbox('select_all_'+table_id, '')
+            }else if (field == 'time_init' || field == 'time_final') {
+                data = shorten_time(row_obj[field])
+            }else if (field == 'duration'){
+                data = String(Number.parseFloat(row_obj[field]).toFixed(3))+"s"
             }else{
                 data = row_obj[field]
             }
@@ -113,6 +117,9 @@ function populate_main_table(results){
             var field = fields[field_num]
             if (field == 'time_init' || field == 'time_final') {
                 data = shorten_time(row_obj[field])
+            }
+            else if (field == 'duration'){
+                data = String(Number.parseFloat(row_obj[field]).toFixed(3))+"s"
             }
             else{
                 data = row_obj[field]

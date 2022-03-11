@@ -567,7 +567,7 @@ class BrickPiInterface():
     def interrupt_previous_command(self):
         if self.CurrentCommand != "stop": #wait for current command to exit
             self.CurrentCommand = "stop"
-            time.sleep(1)
+            time.sleep(0.01)
         return
 
     #returns a dictionary of all current sensors
