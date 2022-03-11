@@ -12,7 +12,39 @@ class Robot(BrickPiInterface):
         self.CurrentRoutine = "stop" #use this stop or start routines
         return
         
+    def move_power_distance(self, power, distance):
+        self.interrupt_previous_command()
+        bp = self.BP
+        if (self.config['imu'] >= SensorStatus.DISABLED):
+            return
+        self.interrupt_previous_command()
+        self.CurrentCommand = "move_power_distance"
+        self.reconfig_IMU()
+        data = {'rotated':0,'elapsed':0}
+
+        if distance < 0:
+            distance = -1*distance
+            if power > 0:
+                power = power * -1
         
+        starttime = time.time(); timelimit = starttime + self.timelimit
+        #start motors 
+        bp.set_motor_power(self.rightmotor, power)
+        bp.set_motor_power(self.leftmotor, -power)
+        total_cm = 0
+        while (total_cm < distance) and (self.CurrentCommand == "move_power_distance") and (time.time() < timelimit) and (self.config['imu'] < SensorStatus.DISABLED):
+            lastrun = time.time()
+            accel = self.get_linear_acceleration_IMU()
+            t = time.time() - lastrun
+            distance_tra =  accel*t**2 + 1/2*accel*t**2
+            total_cm += distance_tra
+            self.log(total_cm)
+        self.stop_all()
+
+        data['action'] = self.CurrentCommand
+        data['elapsed'] = time.time() - starttime
+        data['dinstance'] = total_cm
+        return data
     #Create a function to move time and power which will stop if colour is detected or wall has been found
     
     
