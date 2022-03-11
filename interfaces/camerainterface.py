@@ -24,6 +24,8 @@ class CameraInterface(object):
         self.stopped = False
         self.h_cascade = cv2.CascadeClassifier("haarcascade_custom/h_cascade.xml")
         self.u_cascade = cv2.CascadeClassifier("haarcascade_custom/u_cascade.xml")
+        self.self_cascade = cv2.CascadeClassifier("haarcascade_custom/self_cascade.xml")
+        
         return
 
     def start(self):
@@ -78,6 +80,9 @@ class CameraInterface(object):
     def find_u(self, frame):
         return self.u_cascade.detectMultiScale(self.data, 1.3, 5)
 
+    def find_self(self, frame):
+        return self.self_cascade.detectMultiScale(self.data, 1.3, 5)
+
     def apply_colour_filter(self, frame1, frame2, colour_lower, colour_upper):
         hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV)
         lower_col = np.array(colour_lower)
@@ -102,8 +107,10 @@ class CameraInterface(object):
     def collect_live_frame(self):
         h = self.find_h(self.data)
         u = self.find_u(self.data)
+        self_c = self.find_self(self.data)
         self.data = self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
         self.data = self.draw_box_label(u, self.data, (0,255,0), 'Unharmed')
+        self.data = self.draw_box_label(self_c, self.data, (0,0,255), 'Self')
         cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
         return self.convert_to_bytes(self.data)
 
