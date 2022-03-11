@@ -52,7 +52,7 @@ class CameraInterface(object):
         for f in self.stream:
             self.rawCapture.seek(0)
             self.frame = self.rawCapture.read()
-            self.data = numpy.fromstring(self.frame, dtype=numpy.uint8)
+            self.data = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
             cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
             self.rawCapture.truncate(0)
             self.rawCapture.seek(0)
