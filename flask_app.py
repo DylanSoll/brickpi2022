@@ -379,6 +379,7 @@ def process_movement(power):
             elif current_keys['d'] and not current_keys['a']:
                 GLOBALS.ROBOT.rotate_power(power)
                 mov_type = "right"
+            print(log_movement, GLOBALS.MISSIONID)
             if log_move and (GLOBALS.MISSIONID != None):
                 log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'keyboard', False)
         return jsonify({})
