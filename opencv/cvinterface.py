@@ -4,9 +4,14 @@ class CVInterface():
     def __init__(self):
         self.h_cascade = cv2.CascadeClassifier("haarcascade_custom/h_cascade.xml")
         self.u_cascade = cv2.CascadeClassifier("haarcascade_custom/u_cascade.xml")
+        self.eye_cascade = cv2.CascadeClassifier("haarcascade_custom/eye_cascade.xml")
+
         return
     def find_h(self, frame):
         return self.h_cascade.detectMultiScale(frame, 1.3, 5)
+    
+    def find_eye(self, frame):
+        return self.eye_cascade.detectMultiScale(frame, 1.3, 5)
 
     def find_u(self, frame):
         return self.u_cascade.detectMultiScale(frame, 1.3, 5)
@@ -34,6 +39,10 @@ if __name__ == '__main__':
         for (x, y, width, height) in cv_helper.find_u(frame):
             cv2.rectangle(frame, (x, y), (x + width, y + height), (0, 255, 0), 3)
             cv2.putText(frame,'Unharmed Victim', (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, (0,255,0))
+            #break
+        for (x, y, width, height) in cv_helper.find_eye(frame):
+            cv2.rectangle(frame, (x, y), (x + width, y + height), (0, 255, 0), 3)
+            #cv2.putText(frame,'Unharmed Victim', (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, (0,255,0))
             #break
         cv2.imshow('img', frame)
         if cv2.waitKey(1) == ord('q'):
