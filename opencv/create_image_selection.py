@@ -9,7 +9,7 @@ def create_im_from_cam(iterations):
             cv2.imshow('Test', image)
             if cv2.waitKey(1) == 32:
                 run = False
-        cv2.imwrite("p/frame%d.jpg" % i, image) # save frame as JPEG file.
+        cv2.imwrite("n/no_eye_frame%d.jpg" % time.time(), image) # save frame as JPEG file.
     cap.release()
     return
 
