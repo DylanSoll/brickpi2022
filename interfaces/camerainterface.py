@@ -53,7 +53,6 @@ class CameraInterface(object):
             self.rawCapture.seek(0)
             self.frame = self.rawCapture.read()
             self.data = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
-            cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
             self.rawCapture.truncate(0)
             self.rawCapture.seek(0)
 
@@ -69,15 +68,9 @@ class CameraInterface(object):
         return
     
 
-    def convert_for_jpg(self):
-        #cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
-        #print(self.JPEG)
-        #f = open("demofile2.txt", "x")
-        #print(self.JPEG[0][0].nbytes*8)
-        #f.write
-        #f.close()
-        #self.frame = io.BytesIO(self.JPEG)
-        return self.frame
+    def convert_to_bytes(self, frame):
+        in_bytes = cv2.imencode('.jpg', frame)[1].tobytes()
+        return in_bytes
 
     def find_h(self, frame):
         return self.h_cascade.detectMultiScale(self.data, 1.3, 5)
@@ -98,21 +91,21 @@ class CameraInterface(object):
     def draw_box_label(self, val,frame, colour, label):
         #print(val)
         for (x, y, width, height) in val:
-            print(x,y)
             cv2.rectangle(frame, (x, y), (x + width, y + height), colour, 3)
-            cv2.putText(frame, label, (x,y), cv2.FONT_HERSHEY_COMPLEX, 2, colour)
+            cv2.putText(frame, label, (x-width,y), cv2.FONT_HERSHEY_COMPLEX, 1, colour)
+            break
         return frame
+    def take_photo(self):
+        cv2.imwrite('robot_cam_photos/'+str(int(time.time()))+".jpg", self.data)
+        return
 
     def collect_live_frame(self):
-        self.get_frame()
-        #print(self.data.nbytes*8)
-        #h = self.find_h(self.data)
-        #u = self.find_u(self.data)
-        #self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
-        #self.draw_box_label(u, self.data, (255,0,0), 'Harmed')
-        #print(self.data.nbytes*8)
-        #self.frame = self.convert_for_jpg()
-        return self.frame
+        h = self.find_h(self.data)
+        u = self.find_u(self.data)
+        self.data = self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
+        self.data = self.draw_box_label(u, self.data, (0,255,0), 'Unharmed')
+        cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
+        return self.convert_to_bytes(self.data)
 
 
     #detect if there is a colour in the image

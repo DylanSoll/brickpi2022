@@ -53,6 +53,8 @@
             <button class="btn btn-success" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">
                 Start VC <i class="fa fa-microphone" aria-hidden="true"></i>
             </button>
+            
+            <button id="take_photo" type="button" class="btn btn-primary" onclick="jq_ajax('/take-photo');"><i class="fa fa-camera" aria-hidden="true"></i></button>
         </div>
         <div class="row">
             <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value);">Forward</button>

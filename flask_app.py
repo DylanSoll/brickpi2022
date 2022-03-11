@@ -542,7 +542,15 @@ def videofeed():
         return Response(videostream(), mimetype='multipart/x-mixed-replace; boundary=frame') 
     else:
         return '', 204
-        
+
+
+@app.route('/take-photo', methods = ['GET', 'POST'])
+def take_photo():
+    if GLOBALS.CAMERA and request.method=='POST':
+        GLOBALS.CAMERA.take_photo()
+        return jsonify({})
+    else:
+        return redirect('/dashboard')
 #----------------------------------------------------------------------------
 #Shutdown the robot, camera and database
 def shutdowneverything():
