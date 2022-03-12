@@ -107,7 +107,7 @@ class CameraInterface(object):
             list: Returns a list of 'H' found, tuple of ( x,y, width, height)
         """        
         #Uses custom trained haar cascade to detect H position
-        return self.h_cascade.detectMultiScale(self.data, 1.3, 5)
+        return self.h_cascade.detectMultiScale(frame, 1.3, 5)
 
     def find_u(self, frame):
         """Finds position of any U in frame
@@ -119,7 +119,7 @@ class CameraInterface(object):
             list: Returns a list of 'U' found, tuple of ( x,y, width, height)
         """        
         #Uses custom trained haar cascade to detect U position
-        return self.u_cascade.detectMultiScale(self.data, 1.3, 5)
+        return self.u_cascade.detectMultiScale(frame, 1.3, 5)
 
     def apply_colour_mask(self, frame1, frame2, colour_lower, colour_upper):
         """Applies a colour mask to a CV2 object
@@ -162,10 +162,11 @@ class CameraInterface(object):
             break
         return frame
     def take_photo(self):
-        target_dir = 'robot_cam_photos/'
-
-        cv2.imwrite('robot_cam_photos/'+str(int(time.time()))+".jpg", self.data)
-        return
+        image = self.convert_to_bytes(self.data)
+        time_taken = time.time()
+        #cv2.imwrite('robot_cam_photos/'+str(int(time.time()))+".jpg", self.data)
+        data = {'image': image, 'time_taken':time_taken}
+        return data
 
     def collect_live_frame(self):
         """Collects and alters current frame of camera 

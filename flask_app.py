@@ -571,7 +571,14 @@ def videofeed():
 @app.route('/take-photo', methods = ['GET', 'POST'])
 def take_photo():
     if GLOBALS.CAMERA and request.method=='POST':
-        GLOBALS.CAMERA.take_photo()
+        data = GLOBALS.CAMERA.take_photo()
+        if GLOBALS.DATABASE:
+            if GLOBALS.MISSIONID:
+                GLOBALS.DATABASE.ModifyQuery('INSERT INTO photos (image, userid, time, missionid) VALUES (?,?,?,?)',\
+                    (data['image'], session['userid'], data['time_taken'], GLOBALS.MISSIONID))
+            else:
+                GLOBALS.DATABASE.ModifyQuery('INSERT INTO photos (image, userid, time) VALUES (?,?,?)',\
+                    (data['image'], session['userid'], data['time_taken']))
         return jsonify({})
     else:
         return redirect('/dashboard')
