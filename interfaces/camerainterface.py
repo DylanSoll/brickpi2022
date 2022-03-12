@@ -46,6 +46,33 @@ class CameraInterface(object):
         self.stopped = True
         return
 
+    def convert_to_CV2(self, frame):
+        """Converts IOBytes stream to CV2 object
+
+        Args:
+            frame (str): Frame from IOBytes stream
+
+        Returns:
+            UMat: cv2 object of image
+        """        
+        numpy_array = numpy.fromstring(frame, dtype=numpy.uint8) #converts image to numpy array
+        cv2_object = cv2.imdecode(numpy_array, 1) #decodes numpy array into cv2 object
+        return cv2_object #retuns altered object
+
+    def convert_to_bytes(self, frame, image_type = '.jpg'):
+        """Converts cv2 object to bytes
+
+        Args:
+            frame (UMat): Converts 
+            image_type (str, optional): _description_. Defaults to '.jpg'.
+
+        Returns:
+            _type_: _description_
+        """           
+        in_bytes = cv2.imencode(image_type, frame)[1].tobytes() #encodes frame object in bytes, typically in jpg format
+        return in_bytes #retuns bytes form
+
+
     # Thread reads frames from the stream
     def update(self):
         self.camera.start_preview()
@@ -54,7 +81,7 @@ class CameraInterface(object):
         for f in self.stream:
             self.rawCapture.seek(0)
             self.frame = self.rawCapture.read()
-            self.data = cv2.imdecode(numpy.fromstring(self.frame, dtype=numpy.uint8), 1)
+            self.data = convert_to_CV2(self.frame)
             self.rawCapture.truncate(0)
             self.rawCapture.seek(0)
 
@@ -70,21 +97,43 @@ class CameraInterface(object):
         return
     
 
-    def convert_to_bytes(self, frame):
-        in_bytes = cv2.imencode('.jpg', frame)[1].tobytes()
-        return in_bytes
-
     def find_h(self, frame):
+        """Finds position of any H in frame
+
+        Args:
+            frame (UMat): Current frame, as a cv2 object
+
+        Returns:
+            list: Returns a list of 'H' found, tuple of ( x,y, width, height)
+        """        
+        #Uses custom trained haar cascade to detect H position
         return self.h_cascade.detectMultiScale(self.data, 1.3, 5)
 
     def find_u(self, frame):
+        """Finds position of any U in frame
+
+        Args:
+            frame (UMat): Current frame, as a cv2 object
+
+        Returns:
+            list: Returns a list of 'U' found, tuple of ( x,y, width, height)
+        """        
+        #Uses custom trained haar cascade to detect U position
         return self.u_cascade.detectMultiScale(self.data, 1.3, 5)
 
-    def find_self(self, frame):
-        return self.self_cascade.detectMultiScale(self.data, 1.3, 5)
+    def apply_colour_mask(self, frame1, frame2, colour_lower, colour_upper):
+        """Applies a colour mask to a CV2 object
 
-    def apply_colour_filter(self, frame1, frame2, colour_lower, colour_upper):
-        hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV)
+        Args:
+            frame1 (UMat): Frame to match
+            frame2 (Umat): _description_
+            colour_lower (tuple): BGR value for lowest acceptable colour
+            colour_upper (tuple): BGR value for highest acceptable colour 
+
+        Returns:
+            UMAT: CV2 object with colour mask applied
+        """        
+        hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV) #converts to HSV
         lower_col = np.array(colour_lower)
         upper_col = np.array(colour_upper)
 
@@ -94,25 +143,45 @@ class CameraInterface(object):
         return result
 
     def draw_box_label(self, val,frame, colour, label):
-        #print(val)
-        for (x, y, width, height) in val:
+        """Draws a box on the screen
+
+        Args:
+            val (list): List of tuples of (x, y, width, height)
+            frame (UMat): CV2 object 
+            colour (tuple): colour of label and box (BGR)
+            label (str): Label to be displayed across the box
+
+        Returns:
+            UMat: frame with box and label
+        """        
+        for (x, y, width, height) in val: #runs through all values provided
+            #retreives coordinates and dimensions
             cv2.rectangle(frame, (x, y), (x + width, y + height), colour, 3)
+            #draws rectangle and label in same colour, in same position
             cv2.putText(frame, label, (x-width,y), cv2.FONT_HERSHEY_COMPLEX, 1, colour)
             break
         return frame
     def take_photo(self):
+        target_dir = 'robot_cam_photos/'
+
         cv2.imwrite('robot_cam_photos/'+str(int(time.time()))+".jpg", self.data)
         return
 
     def collect_live_frame(self):
-        h = self.find_h(self.data)
-        u = self.find_u(self.data)
-        self_c = self.find_self(self.data)
-        self.data = self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
-        self.data = self.draw_box_label(u, self.data, (0,255,0), 'Unharmed')
-        self.data = self.draw_box_label(self_c, self.data, (0,0,255), 'Self')
-        cv2.imwrite('interfaces/image_target/frame.jpg', self.data)
-        return self.convert_to_bytes(self.data)
+        """Collects and alters current frame of camera 
+
+        Returns:
+            str: Returns image from camera (with overlays)
+        """        
+        try:
+            h = self.find_h(self.data)
+            u = self.find_u(self.data)
+            self.data = self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
+            self.data = self.draw_box_label(u, self.data, (0,255,0), 'Unharmed')
+            return self.convert_to_bytes(self.data)
+        except:
+            self.log('Error with frame manipulation in collect_live_frame')
+            return self.frame
 
 
     #detect if there is a colour in the image

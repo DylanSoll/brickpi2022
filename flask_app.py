@@ -17,7 +17,7 @@ app.config.from_object(__name__) #Set app configuration using above SETTINGS
 logging.basicConfig(filename='logs/flask.log', level=logging.INFO, format='Time: %(asctime)s Message: %(message)s')
 GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db', app.logger)
 #Log messages
-def log(message):
+def log(message): 
     app.logger.info(message)
     return
 def log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False):
@@ -45,40 +45,64 @@ def end_time_movement():
     return
 
 def please_login(current_address):
+    """Redirects user based on permissions, login status and current location
+
+    Args:
+        current_address (str): Users current location
+
+    """    
+    if 'userid' not in session and current_address != 'login':
+        return redirect('/login')
     if 'permissions' in session:
         if session['permissions'] == 'pending' and current_address != 'pending':
             return redirect('/account/pending')
         elif current_address != 'dashboard':
             return redirect('/dashboard')
-    return True
+    return
 
 def reverse_sound(mode):
-    if GLOBALS.SOUND:
-        if mode:
-            GLOBALS.SOUND.set_volume(.5)
-            GLOBALS.SOUND.load_mp3("static/music/reversing_sx.mp3")
-            GLOBALS.SOUND.play_music(-1)
+    """Stops or plays reverse sound effect
+
+    Args:
+        mode (bool): Start of stop reversing sound
+    """    
+    if GLOBALS.SOUND: #checks to see if GLOBALS.SOUND works
+        if mode: #if True
+            GLOBALS.SOUND.set_volume(.5) #sets volume
+            GLOBALS.SOUND.load_mp3("static/music/reversing_sx.mp3") #loads sound
+            GLOBALS.SOUND.play_music(-1) #plays reverse beep infinitely
         else:
-            GLOBALS.SOUND.stop_music() 
+            GLOBALS.SOUND.stop_music() #otherwise stop playing
     return
+
+
 def play_song(song, times = 1, volume = 0.5):
-    return_val = False
-    if not GLOBALS.SOUND:
-        GLOBALS.SOUND = soundinterface.SoundInterface()
-    try:
-        GLOBALS.SOUND.load_mp3(song)
-        GLOBALS.SOUND.set_volume(volume)
-        GLOBALS.SOUND.play_music(times)
-        return_val = True
-    except:
-        return_val = False
+    """Plays song x number of times and volume
+
+    Args:
+        song (str): Filename and directory of song
+        times (int, optional): How many times the song is played. -1 is on repeat. Defaults to 1.
+        volume (float, optional): Volume of the speaker. Defaults to 0.5.
+
+    Returns:
+        bool: Whether or not song is played
+    """    
+    try: #tries to play music
+        if not GLOBALS.SOUND: #if sound not defined
+            GLOBALS.SOUND = soundinterface.SoundInterface() #create new instance
+        GLOBALS.SOUND.load_mp3(song) #loads specified song
+        GLOBALS.SOUND.set_volume(volume) #sets volume of speaker
+        GLOBALS.SOUND.play_music(times) #plays song specified number of times
+        return_val = True #if no errors, music played successfully
+    except:#if failed
+        return_val = False #song not played successfully
     return return_val
 
 #create a login page
 @app.route('/', methods=['GET','POST'])
 def redirect_on_entry():
     please_login('')
-    return redirect('/login')
+    return redirect('/dashboard')
 
 
 @app.route('/login', methods=['GET','POST'])
@@ -581,6 +605,18 @@ def logout():
     shutdowneverything()
     session.clear()
     return redirect('/login')
+
+
+#AJAX request functions
+@app.route('/uniqueEmail', methods = ['POST', 'GET'])
+def uniqueEmail():
+    if request.method == "POST":
+        email = request.get_json()
+        result = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ? ", (email,))
+        return jsonify(result)
+    else:
+        return redirect('/register')
+
 
 #---------------------------------------------------------------------------
 #main method called web server application
