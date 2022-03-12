@@ -240,7 +240,7 @@ function populate_specific_mission(details){
     //const mission_sensor_log = document.getElementById('mission_sensor_log');
     var start_time = shorten_time(breakdown['time_init'])
     var finish_time = shorten_time(breakdown['time_final'])
-    const summary = "A mission starting on "+ start_time + " and went to " + finish_time + ", lasting " + breakdown['duration']
+    const summary = "A mission starting on "+ start_time + " and went to " + finish_time + ", lasting " + Number.parseFloat(breakdown['duration']).toFixed(3)
     +" seconds. A total of " + breakdown['victims'] + " people were saved. The operator " + breakdown['name']
         + " left \"" + breakdown['notes'] + "\" as a comment on the mission.";
     document.getElementById('mission_summary').innerHTML = summary;
@@ -408,7 +408,8 @@ function create_table(details){
     table_id = details['table_id']
     body_id = details['body_id']
     fields = details['fields']
-    data = details['datasets']
-    create_table_shell(table_id, columns, body_id, data, fields);
+    datasets = details['datasets']
+    create_table_shell(table_id, columns, body_id, datasets, fields);
     return
 }
+

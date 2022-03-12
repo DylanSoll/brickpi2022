@@ -145,14 +145,7 @@ def register():
 
     return render_template('register.html')
 
-@app.route('/uniqueEmail', methods = ['POST', 'GET'])
-def uniqueEmail():
-    if request.method == "POST":
-        email = request.get_json()
-        result = GLOBALS.DATABASE.ViewQuery("SELECT * FROM users WHERE email = ? ", (email,))
-        return jsonify(result)
-    else:
-        return redirect('/register')
+
 
 
 @app.route('/admin')
@@ -218,7 +211,7 @@ def robotload():
         sensordict = GLOBALS.ROBOT.get_all_sensors()
     else:
         sensordict = {}
-    return jsonify(sensordict)
+    return JSON.dumps(sensordict)
 
 # ---------------------------------------------------------------------------------------
 # Dashboard
@@ -276,7 +269,7 @@ def missions():
     if request.method == 'POST':
         missions = GLOBALS.DATABASE.ViewQuery('''SELECT missionid, name, time_init, time_final, notes, (time_final-time_init) AS duration, name FROM missions
             INNER JOIN users ON missions.userid = users.userid WHERE time_final NOT NULL GROUP BY missions.missionid''')
-        return jsonify(missions)
+        return JSON.dumps(missions)
     else:
         return render_template('mission_data.html')
 
@@ -328,9 +321,15 @@ def mission_data():
             INNER JOIN users ON missions.userid = users.userid WHERE missionid = ?''', (data,))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
                 'custom-graph': [{}], 'custom-table': [{}]}
-        return jsonify(details)
+        return JSON.dumps(details)
     else:
         return redirect('/missions')
+
+@app.route('/images')
+def images():
+    please_login('dashboard')
+    return render_template('images.html')
+
 
 
 @app.route('/sensor-graph-data', methods = ['GET', 'POST'])
@@ -338,7 +337,7 @@ def sensor_graph_data():
     if request.method == 'POST':
         data = request.get_json()
         sensor_log = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
-        return jsonify(sensor_log)
+        return JSON.dumps(sensor_log)
     else:
         return redirect('/missions')
 
@@ -356,7 +355,7 @@ def sensor_live_data():
             for key in keys:
                 datasets.append({'sensor':key, 'data':sensor_log[key]})
             return_val = {'datasets': datasets, 'fields': fields}
-            return jsonify(return_val)
+            return JSON.dumps(return_val)
         else:
             return redirect('/dashboard')
     else:
@@ -574,14 +573,28 @@ def take_photo():
         data = GLOBALS.CAMERA.take_photo()
         if GLOBALS.DATABASE:
             if GLOBALS.MISSIONID:
-                GLOBALS.DATABASE.ModifyQuery('INSERT INTO photos (image, userid, time, missionid) VALUES (?,?,?,?)',\
+                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time, missionid) VALUES (?,?,?,?)',\
                     (data['image'], session['userid'], data['time_taken'], GLOBALS.MISSIONID))
             else:
-                GLOBALS.DATABASE.ModifyQuery('INSERT INTO photos (image, userid, time) VALUES (?,?,?)',\
+                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time) VALUES (?,?,?)',\
                     (data['image'], session['userid'], data['time_taken']))
         return jsonify({})
     else:
         return redirect('/dashboard')
+@app.route('/display_image/<imageid>')
+def display_image(imageid):
+    if GLOBALS.DATABASE:
+        image_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM images WHERE imageid = ?', (imageid,))
+        if image_data:
+            image = image_data[0]['image']
+            return Response((b'--frame\r\n'
+                    b'Content-Type: image/jpeg\r\n\r\n' + image + b'\r\n'),mimetype='multipart/x-mixed-replace; boundary=frame') 
+        else:
+            return '', 204
+    else:
+        return '', 204 
+
+
 #----------------------------------------------------------------------------
 #Shutdown the robot, camera and database
 def shutdowneverything():
@@ -624,7 +637,15 @@ def uniqueEmail():
     else:
         return redirect('/register')
 
-
+@app.route('/image-details', methods = ['GET', 'POST'])
+def get_image_details():
+    if request.method == 'POST':
+        data = request.get_json()
+        image_data = GLOBALS.DATABASE.ViewQuery('SELECT imageid, image, name, time FROM images INNER JOIN \
+            users on image.userid = users.userid')
+        data['datasets'] = image_data
+        return JSON.dumps(data)
+    return
 #---------------------------------------------------------------------------
 #main method called web server application
 if __name__ == '__main__':

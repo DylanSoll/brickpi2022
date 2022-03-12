@@ -81,7 +81,7 @@ class CameraInterface(object):
         for f in self.stream:
             self.rawCapture.seek(0)
             self.frame = self.rawCapture.read()
-            self.data = convert_to_CV2(self.frame)
+            self.data = self.convert_to_CV2(self.frame)
             self.rawCapture.truncate(0)
             self.rawCapture.seek(0)
 

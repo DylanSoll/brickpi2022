@@ -114,6 +114,9 @@
             <h4>Custom Graphs</h4>
         </div>
     </div>
+    <div id="image_display"></div>
+    <button onclick = "document.getElementById('image_display').innerHTML = '<img src=/display_image/1 />'">Display</button>
+    
 </div>
 <script>jq_ajax('/missions', {}, populate_main_table)
 jq_ajax('/sensor-graph-data', 1,create_graphs)
