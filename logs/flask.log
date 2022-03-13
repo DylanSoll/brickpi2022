@@ -119,3 +119,223 @@ Time: 2022-03-13 16:11:17,536 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] 
 Time: 2022-03-13 16:11:17,542 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/5/True HTTP/1.1[0m" 200 -
 Time: 2022-03-13 16:11:17,784 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/5/False HTTP/1.1[0m" 200 -
 Time: 2022-03-13 16:11:17,789 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/4/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:51,209 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 16:13:51,214 Message:  * Restarting with stat
+Time: 2022-03-13 16:13:54,453 Message:  * Debugger is active!
+Time: 2022-03-13 16:13:54,454 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:13:56,116 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,173 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,176 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,202 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,212 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,217 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,219 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,368 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,373 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,730 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:56,743 Message: 192.168.20.12 - - [13/Mar/2022 16:13:56] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:13:57,015 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/5/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,053 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/3/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,061 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/4/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,081 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/4/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,086 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/5/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,319 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/1/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,334 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/1/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,393 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/2/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,456 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/2/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,495 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[35m[1mGET /display_image/3/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:13:57,538 Message: 192.168.20.12 - - [13/Mar/2022 16:13:57] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:24,251 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:14:24,697 Message:  * Restarting with stat
+Time: 2022-03-13 16:14:27,805 Message:  * Debugger is active!
+Time: 2022-03-13 16:14:27,807 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:14:27,926 Message: 192.168.20.12 - - [13/Mar/2022 16:14:27] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,025 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,048 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,051 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,066 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,073 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,077 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,326 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:28,329 Message: 192.168.20.12 - - [13/Mar/2022 16:14:28] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:29,194 Message: 192.168.20.12 - - [13/Mar/2022 16:14:29] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:29,228 Message: 192.168.20.12 - - [13/Mar/2022 16:14:29] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:14:29,993 Message: 192.168.20.12 - - [13/Mar/2022 16:14:29] "[35m[1mGET /display_image/3/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,060 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/5/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,121 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/5/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,125 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/4/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,139 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/4/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,238 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/1/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,334 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/1/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,423 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/2/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,447 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/2/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,500 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[35m[1mGET /display_image/3/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:14:30,571 Message: 192.168.20.12 - - [13/Mar/2022 16:14:30] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:03,679 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:15:04,128 Message:  * Restarting with stat
+Time: 2022-03-13 16:15:07,311 Message:  * Debugger is active!
+Time: 2022-03-13 16:15:07,313 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:15:11,626 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:15:11,977 Message:  * Restarting with stat
+Time: 2022-03-13 16:15:15,069 Message:  * Debugger is active!
+Time: 2022-03-13 16:15:15,071 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:15:15,185 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,243 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,285 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,297 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,298 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,306 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,316 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,687 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:15,691 Message: 192.168.20.12 - - [13/Mar/2022 16:15:15] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,206 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,214 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,420 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/5/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,425 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/5/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,430 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/4/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,435 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/3/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,449 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/4/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,551 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[35m[1mGET /display_image/1/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:16,706 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/2/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,722 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/2/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,726 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /display_image/3/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:16,777 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[35m[1mGET /display_image/1/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:16,870 Message: 192.168.20.12 - - [13/Mar/2022 16:15:16] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:48,343 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:15:48,688 Message:  * Restarting with stat
+Time: 2022-03-13 16:15:51,776 Message:  * Debugger is active!
+Time: 2022-03-13 16:15:51,778 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:15:51,898 Message: 192.168.20.12 - - [13/Mar/2022 16:15:51] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,013 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,071 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,082 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,087 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,185 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,189 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,286 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,288 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,626 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:52,633 Message: 192.168.20.12 - - [13/Mar/2022 16:15:52] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:15:53,114 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/2/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,127 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/3/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,171 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/1/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,181 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/2/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,196 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/4/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,211 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/1/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,383 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/5/True HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,454 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/3/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,483 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/4/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,518 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[35m[1mGET /display_image/5/False HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:15:53,556 Message: 192.168.20.12 - - [13/Mar/2022 16:15:53] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:16:29,684 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:16:30,172 Message:  * Restarting with stat
+Time: 2022-03-13 16:16:33,316 Message:  * Debugger is active!
+Time: 2022-03-13 16:16:33,318 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:17:01,089 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:17:01,456 Message:  * Restarting with stat
+Time: 2022-03-13 16:17:04,653 Message:  * Debugger is active!
+Time: 2022-03-13 16:17:04,655 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:17:45,357 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:17:45,704 Message:  * Restarting with stat
+Time: 2022-03-13 16:17:48,832 Message:  * Debugger is active!
+Time: 2022-03-13 16:17:48,834 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:17:48,953 Message: 192.168.20.12 - - [13/Mar/2022 16:17:48] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,036 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,057 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,074 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,075 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,076 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,085 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,210 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,275 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,757 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,766 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,936 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /display_image/4/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,944 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /display_image/4/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,948 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /display_image/5/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,952 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /display_image/5/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,962 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /display_image/1/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:49,970 Message: 192.168.20.12 - - [13/Mar/2022 16:17:49] "[37mGET /display_image/3/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:50,120 Message: 192.168.20.12 - - [13/Mar/2022 16:17:50] "[37mGET /display_image/2/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:50,129 Message: 192.168.20.12 - - [13/Mar/2022 16:17:50] "[37mGET /display_image/2/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:50,132 Message: 192.168.20.12 - - [13/Mar/2022 16:17:50] "[37mGET /display_image/3/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:17:50,180 Message: 192.168.20.12 - - [13/Mar/2022 16:17:50] "[35m[1mGET /display_image/1/false HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:17:50,233 Message: 192.168.20.12 - - [13/Mar/2022 16:17:50] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:18:58,677 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 16:18:58,683 Message:  * Restarting with stat
+Time: 2022-03-13 16:19:01,858 Message:  * Debugger is active!
+Time: 2022-03-13 16:19:01,860 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:19:01,981 Message: 192.168.20.12 - - [13/Mar/2022 16:19:01] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,040 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,069 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,079 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,087 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,095 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,099 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,434 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,439 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,800 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,818 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,955 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /display_image/5/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,974 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /display_image/5/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,979 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /display_image/3/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,984 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /display_image/4/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:02,989 Message: 192.168.20.12 - - [13/Mar/2022 16:19:02] "[37mGET /display_image/4/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:03,020 Message: 192.168.20.12 - - [13/Mar/2022 16:19:03] "[37mGET /display_image/1/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:03,168 Message: 192.168.20.12 - - [13/Mar/2022 16:19:03] "[37mGET /display_image/2/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:03,170 Message: 192.168.20.12 - - [13/Mar/2022 16:19:03] "[37mGET /display_image/2/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:03,175 Message: 192.168.20.12 - - [13/Mar/2022 16:19:03] "[37mGET /display_image/3/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:19:03,222 Message: 192.168.20.12 - - [13/Mar/2022 16:19:03] "[35m[1mGET /display_image/1/false HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:19:03,286 Message: 192.168.20.12 - - [13/Mar/2022 16:19:03] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:32,963 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:20:33,306 Message:  * Restarting with stat
+Time: 2022-03-13 16:20:36,498 Message:  * Debugger is active!
+Time: 2022-03-13 16:20:36,500 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:20:37,215 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,307 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,336 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,343 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,395 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,398 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,409 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,490 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,497 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,929 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:37,931 Message: 192.168.20.12 - - [13/Mar/2022 16:20:37] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:38,384 Message: 192.168.20.12 - - [13/Mar/2022 16:20:38] "[35m[1mGET /display_image/1/false HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:20:38,747 Message: 192.168.20.12 - - [13/Mar/2022 16:20:38] "[37mGET /display_image/1/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:38,750 Message: 192.168.20.12 - - [13/Mar/2022 16:20:38] "[37mGET /display_image/4/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:39,106 Message: 192.168.20.12 - - [13/Mar/2022 16:20:39] "[37mGET /display_image/5/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:39,109 Message: 192.168.20.12 - - [13/Mar/2022 16:20:39] "[37mGET /display_image/5/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:39,352 Message: 192.168.20.12 - - [13/Mar/2022 16:20:39] "[37mGET /display_image/4/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:39,356 Message: 192.168.20.12 - - [13/Mar/2022 16:20:39] "[37mGET /display_image/2/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:39,810 Message: 192.168.20.12 - - [13/Mar/2022 16:20:39] "[37mGET /display_image/3/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:39,813 Message: 192.168.20.12 - - [13/Mar/2022 16:20:39] "[37mGET /display_image/2/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:40,343 Message: 192.168.20.12 - - [13/Mar/2022 16:20:40] "[37mGET /display_image/3/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:20:40,577 Message: 192.168.20.12 - - [13/Mar/2022 16:20:40] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:14,923 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-13 16:21:15,304 Message:  * Restarting with stat
+Time: 2022-03-13 16:21:18,425 Message:  * Debugger is active!
+Time: 2022-03-13 16:21:18,427 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:21:18,552 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,636 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,666 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,683 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,692 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,693 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,695 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,866 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:18,869 Message: 192.168.20.12 - - [13/Mar/2022 16:21:18] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,239 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,254 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,307 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/5/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,395 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/5/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,416 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/4/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,423 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/4/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,435 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[35m[1mGET /display_image/1/false HTTP/1.1[0m" 500 -
+Time: 2022-03-13 16:21:19,590 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/2/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,592 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/2/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,594 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/1/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,596 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/3/true HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,600 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /display_image/3/false HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:21:19,751 Message: 192.168.20.12 - - [13/Mar/2022 16:21:19] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -

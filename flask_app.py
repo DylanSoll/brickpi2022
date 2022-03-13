@@ -586,9 +586,10 @@ def display_image(imageid, altered):
     if GLOBALS.DATABASE:
         image_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM images WHERE imageid = ?', (imageid,))
         if image_data:
-            if altered:
+            image = image_data[0]['image']
+            if altered == 'true':
                 image = image_data[0]['image']
-            if not altered:
+            elif altered == 'false':
                 image = image_data[0]['raw_image']
             return Response((b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + image + b'\r\n'),mimetype='multipart/x-mixed-replace; boundary=frame') 
@@ -656,12 +657,12 @@ def get_image_details():
                     if field == 'select':
                         row[field] = 'select'
                     elif field == 'image':
-                        row[field] = "/display_image/"+str(images['imageid'])+"/True"
+                        row[field] = "/display_image/"+str(images['imageid'])+"/true"
                     elif field == 'raw_image':
                         if images['raw_image'] != '':
-                            row[field] = "/display_image/"+str(images['imageid'])+"/False"
+                            row[field] = "/display_image/"+str(images['imageid'])+"/false"
                         else:
-                            row[field] = "/display_image/"+str(images['imageid'])+"/True"
+                            row[field] = "/display_image/"+str(images['imageid'])+"/true"
                     else:
                         row[field] = images[field]
                 datasets.append(row)
