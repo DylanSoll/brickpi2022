@@ -32,6 +32,50 @@
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="image_settings" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Image Settings</h5>
+          <button type="button" class="btn-close" onclick="resume_mission();" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h5 class= heading>Show</h5>
+            <div class = "row">
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="h_victims" checked>
+                <label class="form-check-label" for="h_victims">
+                  Harmed Victims
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="u_victims" checked>
+                <label class="form-check-label" for="u_victims">
+                  Unharmed Victims
+                </label>
+              </div>
+            </div>
+            
+            
+            <h5 class= heading>Colour Mask</h5>
+                <input type = "color" id = "upper_colour" value = "#ffffff" 
+                onchange = "jq_ajax('/update-colour-mask/upper', this.value)">
+                <label for="upper_colour">Upper Colour</label><br>
+                <input type = "color" id = "lower_colour" value = "#000000"
+                onchange = "jq_ajax('/update-colour-mask/lower', this.value)">
+                <label for="lower_colour">Lower Colour</label>
+            <button class = "btn btn-warning" onclick = "reset_image_settings()">Reset All</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" onclick="jq_ajax('/cancel-mission');location.replace('/missions'); stop_start_mission();resume_mission()" 
+          data-bs-dismiss="modal">Cancel Mission</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="jq_ajax('/save-mission', 
+          document.getElementById('mission_notes').value); stop_start_mission(); location.replace('/missions');resume_mission()">Save Mission</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <div class="page-header" id="banner">
         <div class="row">
             <h1>Robot Dashboard</h1>
@@ -53,6 +97,8 @@
             <button class="btn btn-success" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">
                 Start VC <i class="fa fa-microphone" aria-hidden="true"></i>
             </button>
+            <button id="image-settings-modal-button" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#image_settings"
+            onclick="suspend_mission()">Image Settings</button>
             
             <button id="take_photo" type="button" class="btn btn-primary" onclick="jq_ajax('/take-photo');"><i class="fa fa-camera" aria-hidden="true"></i></button>
         </div>

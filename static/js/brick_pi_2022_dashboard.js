@@ -34,6 +34,15 @@ function swap_vc(id){
         vc_button.setAttribute('class', 'btn btn-success')
     } 
 }
+
+function reset_image_settings(){
+    document.getElementById('upper_colour').value =  "#ffffff"
+    document.getElementById('lower_colour').value =  "#000000"
+    document.getElementById('h_victims').setAttribute('checked', '') 
+    document.getElementById('u_victims').setAttribute('checked', '') 
+}
+
+
 function tts(speech){
     //window.synth.cancel()
     var utterThis = new SpeechSynthesisUtterance(speech);

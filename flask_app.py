@@ -211,7 +211,7 @@ def robotload():
         sensordict = GLOBALS.ROBOT.get_all_sensors()
     else:
         sensordict = {}
-    return JSON.dumps(sensordict)
+    return dumps(sensordict)
 
 # ---------------------------------------------------------------------------------------
 # Dashboard
@@ -269,7 +269,7 @@ def missions():
     if request.method == 'POST':
         missions = GLOBALS.DATABASE.ViewQuery('''SELECT missionid, name, time_init, time_final, notes, (time_final-time_init) AS duration, name FROM missions
             INNER JOIN users ON missions.userid = users.userid WHERE time_final NOT NULL GROUP BY missions.missionid''')
-        return JSON.dumps(missions)
+        return dumps(missions)
     else:
         return render_template('mission_data.html')
 
@@ -321,7 +321,7 @@ def mission_data():
             INNER JOIN users ON missions.userid = users.userid WHERE missionid = ?''', (data,))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
                 'custom-graph': [{}], 'custom-table': [{}]}
-        return JSON.dumps(details)
+        return dumps(details)
     else:
         return redirect('/missions')
 
@@ -337,7 +337,7 @@ def sensor_graph_data():
     if request.method == 'POST':
         data = request.get_json()
         sensor_log = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
-        return JSON.dumps(sensor_log)
+        return dumps(sensor_log)
     else:
         return redirect('/missions')
 
@@ -355,7 +355,7 @@ def sensor_live_data():
             for key in keys:
                 datasets.append({'sensor':key, 'data':sensor_log[key]})
             return_val = {'datasets': datasets, 'fields': fields}
-            return JSON.dumps(return_val)
+            return dumps(return_val)
         else:
             return redirect('/dashboard')
     else:
@@ -644,8 +644,24 @@ def get_image_details():
         image_data = GLOBALS.DATABASE.ViewQuery('SELECT imageid, image, name, time FROM images INNER JOIN \
             users on image.userid = users.userid')
         data['datasets'] = image_data
-        return JSON.dumps(data)
+        return dumps(data)
     return
+
+@app.route('/update-colour-mask/<colour_target>', methods = ['GET', 'POST'])
+def update_colour_mask(colour_target):
+    if request.method == 'POST':
+        hex = request.get_json()
+        col = hex.lstrip('#')
+        col = tuple(int(col[i:i+2], 16) for i in (0, 2, 4))
+        if GLOBALS.CAMERA:
+            if colour_target == 'lower':
+                GLOBALS.CAMERA.lower_col = tuple(col[2], col[1], col[0])
+            elif colour_target == 'upper':
+                GLOBALS.CAMERA.upper_col = tuple(col[2], col[1], col[0])
+        return jsonify({})
+        
+    else:
+        return redirect('/dashboard')
 #---------------------------------------------------------------------------
 #main method called web server application
 if __name__ == '__main__':

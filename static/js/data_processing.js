@@ -3,6 +3,7 @@ function shorten_time(epoch_time){
     return time
 }
 
+
 function create_checkbox(id, text){
     var form_check = document.createElement('div');
     form_check.className = 'form-check';   

@@ -24,8 +24,8 @@ class CameraInterface(object):
         self.stopped = False
         self.h_cascade = cv2.CascadeClassifier("haarcascade_custom/h_cascade.xml")
         self.u_cascade = cv2.CascadeClassifier("haarcascade_custom/u_cascade.xml")
-        self.self_cascade = cv2.CascadeClassifier("haarcascade_custom/self_cascade.xml")
-        
+        self.upper_col = (255, 255, 255)
+        self.lower_col = (0, 0, 0)
         return
 
     def start(self):
@@ -45,6 +45,11 @@ class CameraInterface(object):
     def stop(self):
         self.stopped = True
         return
+
+
+
+
+
 
     def convert_to_CV2(self, frame):
         """Converts IOBytes stream to CV2 object
@@ -121,24 +126,20 @@ class CameraInterface(object):
         #Uses custom trained haar cascade to detect U position
         return self.u_cascade.detectMultiScale(frame, 1.3, 5)
 
-    def apply_colour_mask(self, frame1, frame2, colour_lower, colour_upper):
+    def apply_colour_mask(self, frame1, frame2):
         """Applies a colour mask to a CV2 object
 
         Args:
             frame1 (UMat): Frame to match
             frame2 (Umat): _description_
-            colour_lower (tuple): BGR value for lowest acceptable colour
-            colour_upper (tuple): BGR value for highest acceptable colour 
 
         Returns:
             UMAT: CV2 object with colour mask applied
         """        
         hsv = cv2.cvtColor(frame1, cv2.COLOR_BGR2HSV) #converts to HSV
-        lower_col = np.array(colour_lower)
-        upper_col = np.array(colour_upper)
-
+        lower_col = numpy.array(self.lower_col)
+        upper_col = numpy.array(self.upper_col)
         mask = cv2.inRange(hsv, lower_col, upper_col)
-
         result = cv2.bitwise_and(frame1, frame2, mask=mask)
         return result
 
@@ -162,10 +163,10 @@ class CameraInterface(object):
             break
         return frame
     def take_photo(self):
-        image = self.convert_to_bytes(self.data)
+        alt_image = self.convert_to_bytes(self.data)
         time_taken = time.time()
         #cv2.imwrite('robot_cam_photos/'+str(int(time.time()))+".jpg", self.data)
-        data = {'image': image, 'time_taken':time_taken}
+        data = {'image': alt_image, 'time_taken':time_taken}
         return data
 
     def collect_live_frame(self):
@@ -179,6 +180,7 @@ class CameraInterface(object):
             u = self.find_u(self.data)
             self.data = self.draw_box_label(h, self.data, (255,0,0), 'Harmed')
             self.data = self.draw_box_label(u, self.data, (0,255,0), 'Unharmed')
+            self.data = self.apply_colour_mask(self.data, self.data)
             return self.convert_to_bytes(self.data)
         except:
             self.log('Error with frame manipulation in collect_live_frame')
