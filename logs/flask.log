@@ -1,613 +1,121 @@
-
-Time: 2022-03-13 13:33:12,178 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 13:33:12,187 Message:  * Restarting with stat
-Time: 2022-03-13 13:33:15,356 Message:  * Debugger is active!
-Time: 2022-03-13 13:33:15,358 Message:  * Debugger PIN: 287-863-292
-Time: 2022-03-13 13:33:20,319 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-13 13:33:20,522 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,597 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,609 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,631 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,632 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,647 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,648 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,811 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,835 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,836 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,862 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:20,863 Message: 192.168.20.12 - - [13/Mar/2022 13:33:20] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:22,236 Message: 192.168.20.12 - - [13/Mar/2022 13:33:22] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:23,338 Message: LOADING CAMERA
-Time: 2022-03-13 13:33:23,895 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-13 13:33:23,896 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-13 13:33:26,371 Message: Cannot initialise IMU Sensor now trying to reconfig
-Time: 2022-03-13 13:33:26,399 Message: IMU RECONFIG HAS FAILED 'int' object has no attribute 'BNO055'
-Time: 2022-03-13 13:33:26,933 Message: 192.168.20.12 - - [13/Mar/2022 13:33:26] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:26,937 Message: 192.168.20.12 - - [13/Mar/2022 13:33:26] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:27,450 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-13 13:33:27,453 Message: IMU RECONFIG HAS FAILED 'int' object has no attribute 'BNO055'
-Time: 2022-03-13 13:33:27,455 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-13 13:33:29,224 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-13 13:33:29,238 Message: 192.168.20.12 - - [13/Mar/2022 13:33:29] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:29,298 Message: FLASK APP: READING CAMERA
-Time: 2022-03-13 13:33:29,437 Message: 192.168.20.12 - - [13/Mar/2022 13:33:29] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:33:36,291 Message: 192.168.20.12 - - [13/Mar/2022 13:33:36] "[35m[1mPOST /update-colour-mask/upper HTTP/1.1[0m" 500 -
-Time: 2022-03-13 13:34:34,256 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
-Time: 2022-03-13 13:34:35,106 Message:  * Restarting with stat
-Time: 2022-03-13 13:34:38,345 Message:  * Debugger is active!
-Time: 2022-03-13 13:34:38,347 Message:  * Debugger PIN: 287-863-292
-Time: 2022-03-13 13:34:57,189 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 13:34:57,195 Message:  * Restarting with stat
-Time: 2022-03-13 13:35:00,360 Message:  * Debugger is active!
-Time: 2022-03-13 13:35:00,362 Message:  * Debugger PIN: 287-863-292
-Time: 2022-03-13 13:35:04,675 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,719 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,751 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,755 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,865 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,868 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,874 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,920 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:04,921 Message: 192.168.20.12 - - [13/Mar/2022 13:35:04] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:05,031 Message: 192.168.20.12 - - [13/Mar/2022 13:35:05] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:05,049 Message: 192.168.20.12 - - [13/Mar/2022 13:35:05] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:05,053 Message: 192.168.20.12 - - [13/Mar/2022 13:35:05] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:05,225 Message: 192.168.20.12 - - [13/Mar/2022 13:35:05] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:05,363 Message: 192.168.20.12 - - [13/Mar/2022 13:35:05] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:06,251 Message: LOADING CAMERA
-Time: 2022-03-13 13:35:06,650 Message: CAMERA INTERFACE: Started Camera Thread
-Time: 2022-03-13 13:35:06,651 Message: FLASK APP: LOADING THE ROBOT
-Time: 2022-03-13 13:35:11,115 Message: BRICKPIINTERFACE: Starting thermal sensor thread
-Time: 2022-03-13 13:35:11,219 Message: FLASK APP: LOADING THE SOUND
-Time: 2022-03-13 13:35:12,926 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-13 13:35:13,023 Message: 192.168.20.12 - - [13/Mar/2022 13:35:13] "[37mPOST /robotload HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:13,053 Message: FLASK APP: READING CAMERA
-Time: 2022-03-13 13:35:13,120 Message: 192.168.20.12 - - [13/Mar/2022 13:35:13] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:17,910 Message: 192.168.20.12 - - [13/Mar/2022 13:35:17] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:22,782 Message: 192.168.20.12 - - [13/Mar/2022 13:35:22] "[37mPOST /update-colour-mask/lower HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:25,471 Message: 192.168.20.12 - - [13/Mar/2022 13:35:25] "[37mPOST /update-colour-mask/lower HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:27,740 Message: 192.168.20.12 - - [13/Mar/2022 13:35:27] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:29,655 Message: 192.168.20.12 - - [13/Mar/2022 13:35:29] "[37mPOST /update-colour-mask/lower HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:33,668 Message: 192.168.20.12 - - [13/Mar/2022 13:35:33] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:33,678 Message: 192.168.20.12 - - [13/Mar/2022 13:35:33] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:33,891 Message: 192.168.20.12 - - [13/Mar/2022 13:35:33] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:33,895 Message: 192.168.20.12 - - [13/Mar/2022 13:35:33] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:33,902 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-13 13:35:34,001 Message: 192.168.20.12 - - [13/Mar/2022 13:35:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:34,500 Message: 192.168.20.12 - - [13/Mar/2022 13:35:34] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:34,503 Message: 192.168.20.12 - - [13/Mar/2022 13:35:34] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:35,089 Message: 192.168.20.12 - - [13/Mar/2022 13:35:35] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:35,093 Message: 192.168.20.12 - - [13/Mar/2022 13:35:35] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:35,917 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-13 13:35:36,122 Message: IMU: 'int' object is not iterable
-Time: 2022-03-13 13:35:36,146 Message: 192.168.20.12 - - [13/Mar/2022 13:35:36] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:36,148 Message: 192.168.20.12 - - [13/Mar/2022 13:35:36] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:36,210 Message: 192.168.20.12 - - [13/Mar/2022 13:35:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:36,806 Message: 192.168.20.12 - - [13/Mar/2022 13:35:36] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:36,809 Message: 192.168.20.12 - - [13/Mar/2022 13:35:36] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:37,890 Message: ULTRASONIC: get_sensor error: Invalid sensor data
-Time: 2022-03-13 13:35:37,976 Message: 192.168.20.12 - - [13/Mar/2022 13:35:37] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:37,984 Message: 192.168.20.12 - - [13/Mar/2022 13:35:37] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:38,043 Message: 192.168.20.12 - - [13/Mar/2022 13:35:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:39,887 Message: 192.168.20.12 - - [13/Mar/2022 13:35:39] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:40,343 Message: 192.168.20.12 - - [13/Mar/2022 13:35:40] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:40,346 Message: 192.168.20.12 - - [13/Mar/2022 13:35:40] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:41,690 Message: 192.168.20.12 - - [13/Mar/2022 13:35:41] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:42,095 Message: 192.168.20.12 - - [13/Mar/2022 13:35:42] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:42,145 Message: 192.168.20.12 - - [13/Mar/2022 13:35:42] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:42,153 Message: 192.168.20.12 - - [13/Mar/2022 13:35:42] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:42,227 Message: 192.168.20.12 - - [13/Mar/2022 13:35:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:42,759 Message: 192.168.20.12 - - [13/Mar/2022 13:35:42] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:42,764 Message: 192.168.20.12 - - [13/Mar/2022 13:35:42] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:43,572 Message: 192.168.20.12 - - [13/Mar/2022 13:35:43] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:43,576 Message: 192.168.20.12 - - [13/Mar/2022 13:35:43] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:43,923 Message: 192.168.20.12 - - [13/Mar/2022 13:35:43] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:46,008 Message: 192.168.20.12 - - [13/Mar/2022 13:35:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:47,920 Message: 192.168.20.12 - - [13/Mar/2022 13:35:47] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:49,922 Message: 192.168.20.12 - - [13/Mar/2022 13:35:49] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:50,772 Message: 192.168.20.12 - - [13/Mar/2022 13:35:50] "[37mPOST /update-colour-mask/lower HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:52,001 Message: 192.168.20.12 - - [13/Mar/2022 13:35:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:53,155 Message: 192.168.20.12 - - [13/Mar/2022 13:35:53] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:53,901 Message: 192.168.20.12 - - [13/Mar/2022 13:35:53] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:55,908 Message: 192.168.20.12 - - [13/Mar/2022 13:35:55] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:57,902 Message: 192.168.20.12 - - [13/Mar/2022 13:35:57] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:35:59,920 Message: 192.168.20.12 - - [13/Mar/2022 13:35:59] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:00,214 Message: 192.168.20.12 - - [13/Mar/2022 13:36:00] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:01,912 Message: 192.168.20.12 - - [13/Mar/2022 13:36:01] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:02,517 Message: 192.168.20.12 - - [13/Mar/2022 13:36:02] "[37mPOST /update-colour-mask/lower HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:03,896 Message: 192.168.20.12 - - [13/Mar/2022 13:36:03] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:04,221 Message: 192.168.20.12 - - [13/Mar/2022 13:36:04] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:05,913 Message: 192.168.20.12 - - [13/Mar/2022 13:36:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:06,427 Message: 192.168.20.12 - - [13/Mar/2022 13:36:06] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:08,142 Message: 192.168.20.12 - - [13/Mar/2022 13:36:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:09,960 Message: 192.168.20.12 - - [13/Mar/2022 13:36:09] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:10,656 Message: 192.168.20.12 - - [13/Mar/2022 13:36:10] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:11,913 Message: 192.168.20.12 - - [13/Mar/2022 13:36:11] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:13,840 Message: IMU Acceleration: [Errno 5] Input/output error
-Time: 2022-03-13 13:36:13,890 Message: IMU Orientation: [Errno 5] Input/output error
-Time: 2022-03-13 13:36:13,894 Message: 192.168.20.12 - - [13/Mar/2022 13:36:13] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:15,041 Message: 192.168.20.12 - - [13/Mar/2022 13:36:15] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:15,912 Message: 192.168.20.12 - - [13/Mar/2022 13:36:15] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:18,020 Message: 192.168.20.12 - - [13/Mar/2022 13:36:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:19,150 Message: 192.168.20.12 - - [13/Mar/2022 13:36:19] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:19,946 Message: 192.168.20.12 - - [13/Mar/2022 13:36:19] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:21,920 Message: 192.168.20.12 - - [13/Mar/2022 13:36:21] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:23,926 Message: 192.168.20.12 - - [13/Mar/2022 13:36:23] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:24,900 Message: 192.168.20.12 - - [13/Mar/2022 13:36:24] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:24,903 Message: 192.168.20.12 - - [13/Mar/2022 13:36:24] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:25,941 Message: 192.168.20.12 - - [13/Mar/2022 13:36:25] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:26,519 Message: 192.168.20.12 - - [13/Mar/2022 13:36:26] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:26,526 Message: 192.168.20.12 - - [13/Mar/2022 13:36:26] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:26,551 Message: 192.168.20.12 - - [13/Mar/2022 13:36:26] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:27,801 Message: 192.168.20.12 - - [13/Mar/2022 13:36:27] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:27,805 Message: 192.168.20.12 - - [13/Mar/2022 13:36:27] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:27,937 Message: 192.168.20.12 - - [13/Mar/2022 13:36:27] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:28,402 Message: 192.168.20.12 - - [13/Mar/2022 13:36:28] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:29,219 Message: 192.168.20.12 - - [13/Mar/2022 13:36:29] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:29,222 Message: 192.168.20.12 - - [13/Mar/2022 13:36:29] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:29,935 Message: 192.168.20.12 - - [13/Mar/2022 13:36:29] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:30,434 Message: 192.168.20.12 - - [13/Mar/2022 13:36:30] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:30,438 Message: 192.168.20.12 - - [13/Mar/2022 13:36:30] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:30,538 Message: 192.168.20.12 - - [13/Mar/2022 13:36:30] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:31,280 Message: 192.168.20.12 - - [13/Mar/2022 13:36:31] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:31,283 Message: 192.168.20.12 - - [13/Mar/2022 13:36:31] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:31,568 Message: 192.168.20.12 - - [13/Mar/2022 13:36:31] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:31,572 Message: 192.168.20.12 - - [13/Mar/2022 13:36:31] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:32,006 Message: 192.168.20.12 - - [13/Mar/2022 13:36:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:32,425 Message: 192.168.20.12 - - [13/Mar/2022 13:36:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:33,940 Message: 192.168.20.12 - - [13/Mar/2022 13:36:33] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:34,450 Message: 192.168.20.12 - - [13/Mar/2022 13:36:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:36,112 Message: 192.168.20.12 - - [13/Mar/2022 13:36:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:36,432 Message: 192.168.20.12 - - [13/Mar/2022 13:36:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:37,939 Message: 192.168.20.12 - - [13/Mar/2022 13:36:37] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:38,501 Message: 192.168.20.12 - - [13/Mar/2022 13:36:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:38,856 Message: 192.168.20.12 - - [13/Mar/2022 13:36:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:40,039 Message: 192.168.20.12 - - [13/Mar/2022 13:36:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:40,474 Message: 192.168.20.12 - - [13/Mar/2022 13:36:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:40,846 Message: 192.168.20.12 - - [13/Mar/2022 13:36:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:41,901 Message: 192.168.20.12 - - [13/Mar/2022 13:36:41] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:42,406 Message: 192.168.20.12 - - [13/Mar/2022 13:36:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:42,858 Message: 192.168.20.12 - - [13/Mar/2022 13:36:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:43,891 Message: 192.168.20.12 - - [13/Mar/2022 13:36:43] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:44,437 Message: 192.168.20.12 - - [13/Mar/2022 13:36:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:44,878 Message: 192.168.20.12 - - [13/Mar/2022 13:36:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:45,936 Message: 192.168.20.12 - - [13/Mar/2022 13:36:45] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:46,461 Message: 192.168.20.12 - - [13/Mar/2022 13:36:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:46,856 Message: 192.168.20.12 - - [13/Mar/2022 13:36:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:47,915 Message: 192.168.20.12 - - [13/Mar/2022 13:36:47] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:48,416 Message: 192.168.20.12 - - [13/Mar/2022 13:36:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:48,836 Message: 192.168.20.12 - - [13/Mar/2022 13:36:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:49,898 Message: 192.168.20.12 - - [13/Mar/2022 13:36:49] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:50,803 Message: IMU Acceleration: [Errno 5] Input/output error
-Time: 2022-03-13 13:36:50,804 Message: IMU Acceleration: [Errno 5] Input/output error
-Time: 2022-03-13 13:36:50,816 Message: IMU: [Errno 5] Input/output error
-Time: 2022-03-13 13:36:50,817 Message: IMU: [Errno 5] Input/output error
-Time: 2022-03-13 13:36:50,820 Message: 192.168.20.12 - - [13/Mar/2022 13:36:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:50,824 Message: 192.168.20.12 - - [13/Mar/2022 13:36:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:52,810 Message: 192.168.20.12 - - [13/Mar/2022 13:36:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:52,814 Message: 192.168.20.12 - - [13/Mar/2022 13:36:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:52,817 Message: 192.168.20.12 - - [13/Mar/2022 13:36:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:54,820 Message: 192.168.20.12 - - [13/Mar/2022 13:36:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:54,894 Message: 192.168.20.12 - - [13/Mar/2022 13:36:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:54,898 Message: 192.168.20.12 - - [13/Mar/2022 13:36:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:56,866 Message: 192.168.20.12 - - [13/Mar/2022 13:36:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:56,870 Message: 192.168.20.12 - - [13/Mar/2022 13:36:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:56,872 Message: 192.168.20.12 - - [13/Mar/2022 13:36:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:58,824 Message: 192.168.20.12 - - [13/Mar/2022 13:36:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:58,840 Message: 192.168.20.12 - - [13/Mar/2022 13:36:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:36:58,853 Message: 192.168.20.12 - - [13/Mar/2022 13:36:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:00,866 Message: 192.168.20.12 - - [13/Mar/2022 13:37:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:00,870 Message: 192.168.20.12 - - [13/Mar/2022 13:37:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:00,874 Message: 192.168.20.12 - - [13/Mar/2022 13:37:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:02,783 Message: 192.168.20.12 - - [13/Mar/2022 13:37:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:02,801 Message: 192.168.20.12 - - [13/Mar/2022 13:37:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:02,804 Message: 192.168.20.12 - - [13/Mar/2022 13:37:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:04,791 Message: 192.168.20.12 - - [13/Mar/2022 13:37:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:04,794 Message: 192.168.20.12 - - [13/Mar/2022 13:37:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:04,797 Message: 192.168.20.12 - - [13/Mar/2022 13:37:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:06,800 Message: 192.168.20.12 - - [13/Mar/2022 13:37:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:06,808 Message: 192.168.20.12 - - [13/Mar/2022 13:37:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:06,814 Message: 192.168.20.12 - - [13/Mar/2022 13:37:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:08,784 Message: 192.168.20.12 - - [13/Mar/2022 13:37:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:08,788 Message: 192.168.20.12 - - [13/Mar/2022 13:37:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:08,792 Message: 192.168.20.12 - - [13/Mar/2022 13:37:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:10,784 Message: 192.168.20.12 - - [13/Mar/2022 13:37:10] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:10,787 Message: 192.168.20.12 - - [13/Mar/2022 13:37:10] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:10,790 Message: 192.168.20.12 - - [13/Mar/2022 13:37:10] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:12,802 Message: 192.168.20.12 - - [13/Mar/2022 13:37:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:12,810 Message: 192.168.20.12 - - [13/Mar/2022 13:37:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:12,816 Message: 192.168.20.12 - - [13/Mar/2022 13:37:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:14,941 Message: 192.168.20.12 - - [13/Mar/2022 13:37:14] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:14,945 Message: 192.168.20.12 - - [13/Mar/2022 13:37:14] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:14,950 Message: 192.168.20.12 - - [13/Mar/2022 13:37:14] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:16,790 Message: 192.168.20.12 - - [13/Mar/2022 13:37:16] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:16,797 Message: 192.168.20.12 - - [13/Mar/2022 13:37:16] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:16,800 Message: 192.168.20.12 - - [13/Mar/2022 13:37:16] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:18,780 Message: 192.168.20.12 - - [13/Mar/2022 13:37:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:18,783 Message: 192.168.20.12 - - [13/Mar/2022 13:37:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:18,797 Message: 192.168.20.12 - - [13/Mar/2022 13:37:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:20,813 Message: 192.168.20.12 - - [13/Mar/2022 13:37:20] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:20,828 Message: 192.168.20.12 - - [13/Mar/2022 13:37:20] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:20,831 Message: 192.168.20.12 - - [13/Mar/2022 13:37:20] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:22,803 Message: 192.168.20.12 - - [13/Mar/2022 13:37:22] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:22,807 Message: 192.168.20.12 - - [13/Mar/2022 13:37:22] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:22,816 Message: 192.168.20.12 - - [13/Mar/2022 13:37:22] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:24,914 Message: 192.168.20.12 - - [13/Mar/2022 13:37:24] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:24,919 Message: 192.168.20.12 - - [13/Mar/2022 13:37:24] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:24,923 Message: 192.168.20.12 - - [13/Mar/2022 13:37:24] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:26,838 Message: 192.168.20.12 - - [13/Mar/2022 13:37:26] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:26,841 Message: 192.168.20.12 - - [13/Mar/2022 13:37:26] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:26,843 Message: 192.168.20.12 - - [13/Mar/2022 13:37:26] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:28,889 Message: 192.168.20.12 - - [13/Mar/2022 13:37:28] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:28,892 Message: 192.168.20.12 - - [13/Mar/2022 13:37:28] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:28,896 Message: 192.168.20.12 - - [13/Mar/2022 13:37:28] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:30,844 Message: 192.168.20.12 - - [13/Mar/2022 13:37:30] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:30,848 Message: 192.168.20.12 - - [13/Mar/2022 13:37:30] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:30,851 Message: 192.168.20.12 - - [13/Mar/2022 13:37:30] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:32,807 Message: 192.168.20.12 - - [13/Mar/2022 13:37:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:32,830 Message: 192.168.20.12 - - [13/Mar/2022 13:37:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:32,833 Message: 192.168.20.12 - - [13/Mar/2022 13:37:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:34,827 Message: 192.168.20.12 - - [13/Mar/2022 13:37:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:34,831 Message: 192.168.20.12 - - [13/Mar/2022 13:37:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:34,834 Message: 192.168.20.12 - - [13/Mar/2022 13:37:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:36,827 Message: 192.168.20.12 - - [13/Mar/2022 13:37:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:36,833 Message: 192.168.20.12 - - [13/Mar/2022 13:37:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:36,836 Message: 192.168.20.12 - - [13/Mar/2022 13:37:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:38,857 Message: 192.168.20.12 - - [13/Mar/2022 13:37:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:38,860 Message: 192.168.20.12 - - [13/Mar/2022 13:37:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:38,867 Message: 192.168.20.12 - - [13/Mar/2022 13:37:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:40,808 Message: 192.168.20.12 - - [13/Mar/2022 13:37:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:40,811 Message: 192.168.20.12 - - [13/Mar/2022 13:37:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:40,815 Message: 192.168.20.12 - - [13/Mar/2022 13:37:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:42,812 Message: 192.168.20.12 - - [13/Mar/2022 13:37:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:42,817 Message: 192.168.20.12 - - [13/Mar/2022 13:37:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:42,833 Message: 192.168.20.12 - - [13/Mar/2022 13:37:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:44,917 Message: 192.168.20.12 - - [13/Mar/2022 13:37:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:44,920 Message: 192.168.20.12 - - [13/Mar/2022 13:37:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:44,924 Message: 192.168.20.12 - - [13/Mar/2022 13:37:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:46,785 Message: 192.168.20.12 - - [13/Mar/2022 13:37:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:46,790 Message: 192.168.20.12 - - [13/Mar/2022 13:37:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:46,793 Message: 192.168.20.12 - - [13/Mar/2022 13:37:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:48,789 Message: 192.168.20.12 - - [13/Mar/2022 13:37:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:48,798 Message: 192.168.20.12 - - [13/Mar/2022 13:37:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:48,802 Message: 192.168.20.12 - - [13/Mar/2022 13:37:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:50,792 Message: 192.168.20.12 - - [13/Mar/2022 13:37:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:50,797 Message: 192.168.20.12 - - [13/Mar/2022 13:37:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:50,807 Message: 192.168.20.12 - - [13/Mar/2022 13:37:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:52,802 Message: 192.168.20.12 - - [13/Mar/2022 13:37:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:52,818 Message: 192.168.20.12 - - [13/Mar/2022 13:37:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:52,821 Message: 192.168.20.12 - - [13/Mar/2022 13:37:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:54,016 Message: 192.168.20.12 - - [13/Mar/2022 13:37:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:54,340 Message: 192.168.20.12 - - [13/Mar/2022 13:37:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:55,417 Message: 192.168.20.12 - - [13/Mar/2022 13:37:55] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:55,889 Message: 192.168.20.12 - - [13/Mar/2022 13:37:55] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:56,328 Message: 192.168.20.12 - - [13/Mar/2022 13:37:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:56,753 Message: 192.168.20.12 - - [13/Mar/2022 13:37:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:57,820 Message: 192.168.20.12 - - [13/Mar/2022 13:37:57] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:58,329 Message: 192.168.20.12 - - [13/Mar/2022 13:37:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:58,743 Message: 192.168.20.12 - - [13/Mar/2022 13:37:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:37:59,823 Message: 192.168.20.12 - - [13/Mar/2022 13:37:59] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:00,327 Message: 192.168.20.12 - - [13/Mar/2022 13:38:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:00,766 Message: 192.168.20.12 - - [13/Mar/2022 13:38:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:01,292 Message: 192.168.20.12 - - [13/Mar/2022 13:38:01] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:01,830 Message: 192.168.20.12 - - [13/Mar/2022 13:38:01] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:02,368 Message: 192.168.20.12 - - [13/Mar/2022 13:38:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:02,812 Message: 192.168.20.12 - - [13/Mar/2022 13:38:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:03,279 Message: 192.168.20.12 - - [13/Mar/2022 13:38:03] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:03,845 Message: 192.168.20.12 - - [13/Mar/2022 13:38:03] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:04,385 Message: 192.168.20.12 - - [13/Mar/2022 13:38:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:04,805 Message: 192.168.20.12 - - [13/Mar/2022 13:38:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:05,387 Message: 192.168.20.12 - - [13/Mar/2022 13:38:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:05,884 Message: 192.168.20.12 - - [13/Mar/2022 13:38:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:06,360 Message: 192.168.20.12 - - [13/Mar/2022 13:38:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:06,766 Message: 192.168.20.12 - - [13/Mar/2022 13:38:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:07,305 Message: 192.168.20.12 - - [13/Mar/2022 13:38:07] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:07,867 Message: 192.168.20.12 - - [13/Mar/2022 13:38:07] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:08,413 Message: 192.168.20.12 - - [13/Mar/2022 13:38:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:08,799 Message: 192.168.20.12 - - [13/Mar/2022 13:38:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:09,352 Message: 192.168.20.12 - - [13/Mar/2022 13:38:09] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:09,824 Message: 192.168.20.12 - - [13/Mar/2022 13:38:09] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:10,373 Message: 192.168.20.12 - - [13/Mar/2022 13:38:10] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:10,791 Message: 192.168.20.12 - - [13/Mar/2022 13:38:10] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:11,312 Message: 192.168.20.12 - - [13/Mar/2022 13:38:11] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:11,867 Message: 192.168.20.12 - - [13/Mar/2022 13:38:11] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:12,369 Message: 192.168.20.12 - - [13/Mar/2022 13:38:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:12,817 Message: 192.168.20.12 - - [13/Mar/2022 13:38:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:13,348 Message: 192.168.20.12 - - [13/Mar/2022 13:38:13] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:13,926 Message: 192.168.20.12 - - [13/Mar/2022 13:38:13] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:14,364 Message: 192.168.20.12 - - [13/Mar/2022 13:38:14] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:14,831 Message: 192.168.20.12 - - [13/Mar/2022 13:38:14] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:15,359 Message: 192.168.20.12 - - [13/Mar/2022 13:38:15] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:15,891 Message: 192.168.20.12 - - [13/Mar/2022 13:38:15] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:16,346 Message: 192.168.20.12 - - [13/Mar/2022 13:38:16] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:16,771 Message: 192.168.20.12 - - [13/Mar/2022 13:38:16] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:17,311 Message: 192.168.20.12 - - [13/Mar/2022 13:38:17] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:17,865 Message: 192.168.20.12 - - [13/Mar/2022 13:38:17] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:18,360 Message: 192.168.20.12 - - [13/Mar/2022 13:38:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:18,786 Message: 192.168.20.12 - - [13/Mar/2022 13:38:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:19,356 Message: 192.168.20.12 - - [13/Mar/2022 13:38:19] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:19,898 Message: 192.168.20.12 - - [13/Mar/2022 13:38:19] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:20,373 Message: 192.168.20.12 - - [13/Mar/2022 13:38:20] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:20,772 Message: 192.168.20.12 - - [13/Mar/2022 13:38:20] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:21,370 Message: 192.168.20.12 - - [13/Mar/2022 13:38:21] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:21,866 Message: 192.168.20.12 - - [13/Mar/2022 13:38:21] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:22,344 Message: 192.168.20.12 - - [13/Mar/2022 13:38:22] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:22,790 Message: 192.168.20.12 - - [13/Mar/2022 13:38:22] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:23,350 Message: 192.168.20.12 - - [13/Mar/2022 13:38:23] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:23,856 Message: 192.168.20.12 - - [13/Mar/2022 13:38:23] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:24,396 Message: 192.168.20.12 - - [13/Mar/2022 13:38:24] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:24,833 Message: 192.168.20.12 - - [13/Mar/2022 13:38:24] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:25,317 Message: 192.168.20.12 - - [13/Mar/2022 13:38:25] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:25,876 Message: 192.168.20.12 - - [13/Mar/2022 13:38:25] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:26,379 Message: 192.168.20.12 - - [13/Mar/2022 13:38:26] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:26,802 Message: 192.168.20.12 - - [13/Mar/2022 13:38:26] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:27,278 Message: 192.168.20.12 - - [13/Mar/2022 13:38:27] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:27,850 Message: 192.168.20.12 - - [13/Mar/2022 13:38:27] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:28,368 Message: 192.168.20.12 - - [13/Mar/2022 13:38:28] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:28,773 Message: 192.168.20.12 - - [13/Mar/2022 13:38:28] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:29,309 Message: 192.168.20.12 - - [13/Mar/2022 13:38:29] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:29,862 Message: 192.168.20.12 - - [13/Mar/2022 13:38:29] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:30,350 Message: 192.168.20.12 - - [13/Mar/2022 13:38:30] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:30,760 Message: 192.168.20.12 - - [13/Mar/2022 13:38:30] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:31,303 Message: 192.168.20.12 - - [13/Mar/2022 13:38:31] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:31,863 Message: 192.168.20.12 - - [13/Mar/2022 13:38:31] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:32,409 Message: 192.168.20.12 - - [13/Mar/2022 13:38:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:32,986 Message: 192.168.20.12 - - [13/Mar/2022 13:38:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:33,520 Message: 192.168.20.12 - - [13/Mar/2022 13:38:33] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:33,886 Message: 192.168.20.12 - - [13/Mar/2022 13:38:33] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:34,353 Message: 192.168.20.12 - - [13/Mar/2022 13:38:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:34,780 Message: 192.168.20.12 - - [13/Mar/2022 13:38:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:35,478 Message: 192.168.20.12 - - [13/Mar/2022 13:38:35] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:36,024 Message: 192.168.20.12 - - [13/Mar/2022 13:38:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:36,348 Message: 192.168.20.12 - - [13/Mar/2022 13:38:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:36,788 Message: 192.168.20.12 - - [13/Mar/2022 13:38:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:37,320 Message: 192.168.20.12 - - [13/Mar/2022 13:38:37] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:37,879 Message: 192.168.20.12 - - [13/Mar/2022 13:38:37] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:38,330 Message: 192.168.20.12 - - [13/Mar/2022 13:38:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:38,747 Message: 192.168.20.12 - - [13/Mar/2022 13:38:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:39,280 Message: 192.168.20.12 - - [13/Mar/2022 13:38:39] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:39,837 Message: 192.168.20.12 - - [13/Mar/2022 13:38:39] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:40,353 Message: 192.168.20.12 - - [13/Mar/2022 13:38:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:40,836 Message: 192.168.20.12 - - [13/Mar/2022 13:38:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:41,362 Message: 192.168.20.12 - - [13/Mar/2022 13:38:41] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:41,911 Message: 192.168.20.12 - - [13/Mar/2022 13:38:41] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:42,373 Message: 192.168.20.12 - - [13/Mar/2022 13:38:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:42,801 Message: 192.168.20.12 - - [13/Mar/2022 13:38:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:43,357 Message: 192.168.20.12 - - [13/Mar/2022 13:38:43] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:43,850 Message: 192.168.20.12 - - [13/Mar/2022 13:38:43] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:44,379 Message: 192.168.20.12 - - [13/Mar/2022 13:38:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:44,824 Message: 192.168.20.12 - - [13/Mar/2022 13:38:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:45,297 Message: 192.168.20.12 - - [13/Mar/2022 13:38:45] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:45,852 Message: 192.168.20.12 - - [13/Mar/2022 13:38:45] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:46,336 Message: 192.168.20.12 - - [13/Mar/2022 13:38:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:46,778 Message: 192.168.20.12 - - [13/Mar/2022 13:38:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:47,284 Message: 192.168.20.12 - - [13/Mar/2022 13:38:47] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:47,871 Message: 192.168.20.12 - - [13/Mar/2022 13:38:47] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:48,478 Message: 192.168.20.12 - - [13/Mar/2022 13:38:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:48,806 Message: 192.168.20.12 - - [13/Mar/2022 13:38:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:49,327 Message: 192.168.20.12 - - [13/Mar/2022 13:38:49] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:49,997 Message: 192.168.20.12 - - [13/Mar/2022 13:38:49] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:50,345 Message: 192.168.20.12 - - [13/Mar/2022 13:38:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:50,770 Message: 192.168.20.12 - - [13/Mar/2022 13:38:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:51,318 Message: 192.168.20.12 - - [13/Mar/2022 13:38:51] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:51,867 Message: 192.168.20.12 - - [13/Mar/2022 13:38:51] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:52,366 Message: 192.168.20.12 - - [13/Mar/2022 13:38:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:52,833 Message: 192.168.20.12 - - [13/Mar/2022 13:38:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:53,307 Message: 192.168.20.12 - - [13/Mar/2022 13:38:53] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:53,872 Message: 192.168.20.12 - - [13/Mar/2022 13:38:53] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:54,373 Message: 192.168.20.12 - - [13/Mar/2022 13:38:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:54,790 Message: 192.168.20.12 - - [13/Mar/2022 13:38:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:55,340 Message: 192.168.20.12 - - [13/Mar/2022 13:38:55] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:55,849 Message: 192.168.20.12 - - [13/Mar/2022 13:38:55] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:56,381 Message: 192.168.20.12 - - [13/Mar/2022 13:38:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:56,808 Message: 192.168.20.12 - - [13/Mar/2022 13:38:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:57,285 Message: 192.168.20.12 - - [13/Mar/2022 13:38:57] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:57,826 Message: 192.168.20.12 - - [13/Mar/2022 13:38:57] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:58,358 Message: 192.168.20.12 - - [13/Mar/2022 13:38:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:58,763 Message: 192.168.20.12 - - [13/Mar/2022 13:38:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:59,297 Message: 192.168.20.12 - - [13/Mar/2022 13:38:59] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:38:59,857 Message: 192.168.20.12 - - [13/Mar/2022 13:38:59] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:00,337 Message: 192.168.20.12 - - [13/Mar/2022 13:39:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:00,805 Message: 192.168.20.12 - - [13/Mar/2022 13:39:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:01,297 Message: 192.168.20.12 - - [13/Mar/2022 13:39:01] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:01,858 Message: 192.168.20.12 - - [13/Mar/2022 13:39:01] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:02,336 Message: 192.168.20.12 - - [13/Mar/2022 13:39:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:02,838 Message: 192.168.20.12 - - [13/Mar/2022 13:39:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:03,382 Message: 192.168.20.12 - - [13/Mar/2022 13:39:03] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:04,626 Message: 192.168.20.12 - - [13/Mar/2022 13:39:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:04,628 Message: 192.168.20.12 - - [13/Mar/2022 13:39:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:04,840 Message: 192.168.20.12 - - [13/Mar/2022 13:39:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:05,324 Message: 192.168.20.12 - - [13/Mar/2022 13:39:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:05,870 Message: 192.168.20.12 - - [13/Mar/2022 13:39:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:06,333 Message: 192.168.20.12 - - [13/Mar/2022 13:39:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:06,769 Message: 192.168.20.12 - - [13/Mar/2022 13:39:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:07,289 Message: 192.168.20.12 - - [13/Mar/2022 13:39:07] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:07,868 Message: 192.168.20.12 - - [13/Mar/2022 13:39:07] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:08,344 Message: 192.168.20.12 - - [13/Mar/2022 13:39:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:08,782 Message: 192.168.20.12 - - [13/Mar/2022 13:39:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:09,280 Message: 192.168.20.12 - - [13/Mar/2022 13:39:09] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:09,956 Message: 192.168.20.12 - - [13/Mar/2022 13:39:09] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:10,344 Message: 192.168.20.12 - - [13/Mar/2022 13:39:10] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:10,818 Message: 192.168.20.12 - - [13/Mar/2022 13:39:10] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:11,302 Message: 192.168.20.12 - - [13/Mar/2022 13:39:11] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:11,853 Message: 192.168.20.12 - - [13/Mar/2022 13:39:11] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:12,359 Message: 192.168.20.12 - - [13/Mar/2022 13:39:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:12,791 Message: 192.168.20.12 - - [13/Mar/2022 13:39:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:13,323 Message: 192.168.20.12 - - [13/Mar/2022 13:39:13] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:13,845 Message: 192.168.20.12 - - [13/Mar/2022 13:39:13] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:14,356 Message: 192.168.20.12 - - [13/Mar/2022 13:39:14] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:14,810 Message: 192.168.20.12 - - [13/Mar/2022 13:39:14] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:15,306 Message: 192.168.20.12 - - [13/Mar/2022 13:39:15] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:15,841 Message: 192.168.20.12 - - [13/Mar/2022 13:39:15] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:16,490 Message: 192.168.20.12 - - [13/Mar/2022 13:39:16] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:16,778 Message: 192.168.20.12 - - [13/Mar/2022 13:39:16] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:17,327 Message: 192.168.20.12 - - [13/Mar/2022 13:39:17] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:17,833 Message: 192.168.20.12 - - [13/Mar/2022 13:39:17] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:18,329 Message: 192.168.20.12 - - [13/Mar/2022 13:39:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:18,827 Message: 192.168.20.12 - - [13/Mar/2022 13:39:18] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:19,284 Message: 192.168.20.12 - - [13/Mar/2022 13:39:19] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:19,861 Message: 192.168.20.12 - - [13/Mar/2022 13:39:19] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:19,961 Message: 192.168.20.12 - - [13/Mar/2022 13:39:19] "[37mGET /dashboard HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,043 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,077 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,089 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,131 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,141 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,150 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,251 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,264 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,311 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/js/dashboard.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,317 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,343 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/js/mapping.js HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,601 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,607 Message: FLASK APP: READING CAMERA
-Time: 2022-03-13 13:39:20,659 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /videofeed HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:20,884 Message: 192.168.20.12 - - [13/Mar/2022 13:39:20] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:23,625 Message: 192.168.20.12 - - [13/Mar/2022 13:39:23] "[37mPOST /update-colour-mask/lower HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:23,641 Message: 192.168.20.12 - - [13/Mar/2022 13:39:23] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:27,555 Message: 192.168.20.12 - - [13/Mar/2022 13:39:27] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:28,100 Message: 192.168.20.12 - - [13/Mar/2022 13:39:28] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:28,105 Message: 192.168.20.12 - - [13/Mar/2022 13:39:28] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:29,001 Message: 192.168.20.12 - - [13/Mar/2022 13:39:29] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:29,006 Message: 192.168.20.12 - - [13/Mar/2022 13:39:29] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:29,526 Message: 192.168.20.12 - - [13/Mar/2022 13:39:29] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:30,174 Message: 192.168.20.12 - - [13/Mar/2022 13:39:30] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:30,178 Message: 192.168.20.12 - - [13/Mar/2022 13:39:30] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:31,416 Message: 192.168.20.12 - - [13/Mar/2022 13:39:31] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:31,419 Message: 192.168.20.12 - - [13/Mar/2022 13:39:31] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:31,531 Message: 192.168.20.12 - - [13/Mar/2022 13:39:31] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:32,467 Message: 192.168.20.12 - - [13/Mar/2022 13:39:32] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:32,472 Message: 192.168.20.12 - - [13/Mar/2022 13:39:32] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:33,254 Message: 192.168.20.12 - - [13/Mar/2022 13:39:33] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:33,259 Message: 192.168.20.12 - - [13/Mar/2022 13:39:33] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:33,642 Message: 192.168.20.12 - - [13/Mar/2022 13:39:33] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:34,181 Message: 192.168.20.12 - - [13/Mar/2022 13:39:34] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:34,186 Message: 192.168.20.12 - - [13/Mar/2022 13:39:34] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:35,325 Message: 192.168.20.12 - - [13/Mar/2022 13:39:35] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:35,332 Message: 192.168.20.12 - - [13/Mar/2022 13:39:35] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:35,637 Message: 192.168.20.12 - - [13/Mar/2022 13:39:35] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:35,640 Message: 192.168.20.12 - - [13/Mar/2022 13:39:35] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:35,683 Message: 192.168.20.12 - - [13/Mar/2022 13:39:35] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:36,118 Message: 192.168.20.12 - - [13/Mar/2022 13:39:36] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:36,130 Message: 192.168.20.12 - - [13/Mar/2022 13:39:36] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:37,153 Message: 192.168.20.12 - - [13/Mar/2022 13:39:37] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:37,156 Message: 192.168.20.12 - - [13/Mar/2022 13:39:37] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:37,561 Message: 192.168.20.12 - - [13/Mar/2022 13:39:37] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:37,630 Message: 192.168.20.12 - - [13/Mar/2022 13:39:37] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:37,633 Message: 192.168.20.12 - - [13/Mar/2022 13:39:37] "[37mPOST /process_movement/30 HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:39,535 Message: 192.168.20.12 - - [13/Mar/2022 13:39:39] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:41,810 Message: 192.168.20.12 - - [13/Mar/2022 13:39:41] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:43,795 Message: 192.168.20.12 - - [13/Mar/2022 13:39:43] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:45,795 Message: 192.168.20.12 - - [13/Mar/2022 13:39:45] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:47,774 Message: 192.168.20.12 - - [13/Mar/2022 13:39:47] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:49,772 Message: 192.168.20.12 - - [13/Mar/2022 13:39:49] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:51,783 Message: 192.168.20.12 - - [13/Mar/2022 13:39:51] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:53,788 Message: 192.168.20.12 - - [13/Mar/2022 13:39:53] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:55,770 Message: 192.168.20.12 - - [13/Mar/2022 13:39:55] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:57,769 Message: 192.168.20.12 - - [13/Mar/2022 13:39:57] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:39:59,771 Message: 192.168.20.12 - - [13/Mar/2022 13:39:59] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:40:01,790 Message: 192.168.20.12 - - [13/Mar/2022 13:40:01] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:40:03,772 Message: 192.168.20.12 - - [13/Mar/2022 13:40:03] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 13:40:05,838 Message: 192.168.20.12 - - [13/Mar/2022 13:40:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
-Time: 2022-03-13 14:05:09,960 Message:  * Restarting with stat
-Time: 2022-03-13 14:05:10,269 Message:  * Debugger is active!
-Time: 2022-03-13 14:05:10,271 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:05:10,301 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:05:10,302 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:05:14,870 Message: 127.0.0.1 - - [13/Mar/2022 14:05:14] "[32mGET / HTTP/1.1[0m" 302 -
-Time: 2022-03-13 14:05:14,894 Message: 127.0.0.1 - - [13/Mar/2022 14:05:14] "GET /dashboard HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,418 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/ajax_function.js HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,419 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/data_processing.js HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,419 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/custom.css HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,420 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/soll_custom.css HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,422 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/brick_pi_2022_dashboard.js HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,426 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,428 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,429 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/custom.js HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,431 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/dashboard.js HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,432 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/mapping.js HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,434 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/dark_mode_css.css HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:15,721 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:19,569 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "GET /admin HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:19,595 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,597 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,599 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,600 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,602 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,605 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,605 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,606 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
-Time: 2022-03-13 14:05:19,644 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "POST /get-users HTTP/1.1" 200 -
-Time: 2022-03-13 14:05:40,219 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:05:40,246 Message:  * Restarting with stat
-Time: 2022-03-13 14:05:40,571 Message:  * Debugger is active!
-Time: 2022-03-13 14:05:40,573 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:05:40,607 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:05:40,608 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:06:40,289 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:06:40,315 Message:  * Restarting with stat
-Time: 2022-03-13 14:06:40,587 Message:  * Debugger is active!
-Time: 2022-03-13 14:06:40,590 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:06:40,621 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:06:40,622 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:06:49,916 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:06:49,959 Message:  * Restarting with stat
-Time: 2022-03-13 14:06:50,254 Message:  * Debugger is active!
-Time: 2022-03-13 14:06:50,256 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:06:50,288 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:06:50,289 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:10:27,923 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:10:27,955 Message:  * Restarting with stat
-Time: 2022-03-13 14:10:28,241 Message:  * Debugger is active!
-Time: 2022-03-13 14:10:28,244 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:10:28,272 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:10:28,273 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:11:52,524 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:11:52,550 Message:  * Restarting with stat
-Time: 2022-03-13 14:11:52,819 Message:  * Debugger is active!
-Time: 2022-03-13 14:11:52,821 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:11:52,848 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:11:52,848 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:12:09,310 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:12:09,334 Message:  * Restarting with stat
-Time: 2022-03-13 14:12:09,609 Message:  * Debugger is active!
-Time: 2022-03-13 14:12:09,612 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:12:09,641 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:12:09,642 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:12:24,006 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:12:24,034 Message:  * Restarting with stat
-Time: 2022-03-13 14:12:24,306 Message:  * Debugger is active!
-Time: 2022-03-13 14:12:24,309 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:12:24,337 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:12:24,337 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:12:29,517 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:12:29,541 Message:  * Restarting with stat
-Time: 2022-03-13 14:12:29,805 Message:  * Debugger is active!
-Time: 2022-03-13 14:12:29,807 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:12:29,837 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:12:29,837 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:13:11,155 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:13:11,183 Message:  * Restarting with stat
-Time: 2022-03-13 14:13:11,470 Message:  * Debugger is active!
-Time: 2022-03-13 14:13:11,473 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:13:11,504 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:13:11,505 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:14:08,101 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:14:08,130 Message:  * Restarting with stat
-Time: 2022-03-13 14:14:08,471 Message:  * Debugger is active!
-Time: 2022-03-13 14:14:08,473 Message:  * Debugger PIN: 102-195-331
-Time: 2022-03-13 14:14:08,506 Message:  * Running on all addresses.
-   WARNING: This is a development server. Do not use it in a production deployment.
-Time: 2022-03-13 14:14:08,507 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
-Time: 2022-03-13 14:14:27,049 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
-Time: 2022-03-13 14:14:27,076 Message:  * Restarting with stat
+Time: 2022-03-13 16:07:03,384 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-13 16:07:04,152 Message:  * Restarting with stat
+Time: 2022-03-13 16:07:07,380 Message:  * Debugger is active!
+Time: 2022-03-13 16:07:07,382 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:07:28,486 Message: 192.168.20.12 - - [13/Mar/2022 16:07:28] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:28,694 Message: 192.168.20.12 - - [13/Mar/2022 16:07:28] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:28,706 Message: 192.168.20.12 - - [13/Mar/2022 16:07:28] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:28,709 Message: 192.168.20.12 - - [13/Mar/2022 16:07:28] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:28,726 Message: 192.168.20.12 - - [13/Mar/2022 16:07:28] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:28,732 Message: 192.168.20.12 - - [13/Mar/2022 16:07:28] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:28,743 Message: 192.168.20.12 - - [13/Mar/2022 16:07:28] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,060 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,062 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,580 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,587 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,675 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /display_image/3/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,680 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /display_image/1/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,721 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /display_image/1/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,726 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /display_image/2/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,731 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /display_image/2/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,850 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /display_image/3/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:29,907 Message: 192.168.20.12 - - [13/Mar/2022 16:07:29] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:36,106 Message: 192.168.20.12 - - [13/Mar/2022 16:07:36] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:37,249 Message: LOADING CAMERA
+Time: 2022-03-13 16:07:37,645 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-13 16:07:37,646 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-13 16:07:41,449 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-13 16:07:41,554 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-13 16:07:43,279 Message: ULTRASONIC: get_sensor error: Invalid sensor data
+Time: 2022-03-13 16:07:43,366 Message: 192.168.20.12 - - [13/Mar/2022 16:07:43] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:43,388 Message: FLASK APP: READING CAMERA
+Time: 2022-03-13 16:07:43,444 Message: 192.168.20.12 - - [13/Mar/2022 16:07:43] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:46,825 Message: 192.168.20.12 - - [13/Mar/2022 16:07:46] "[37mPOST /update-colour-mask/lower HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:52,686 Message: ULTRASONIC: get_sensor error: Invalid sensor data
+Time: 2022-03-13 16:07:52,779 Message: 192.168.20.12 - - [13/Mar/2022 16:07:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:53,588 Message: 192.168.20.12 - - [13/Mar/2022 16:07:53] "[37mPOST /take-photo HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:55,326 Message: ULTRASONIC: get_sensor error: Invalid sensor data
+Time: 2022-03-13 16:07:55,418 Message: 192.168.20.12 - - [13/Mar/2022 16:07:55] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:56,560 Message: ULTRASONIC: get_sensor error: Invalid sensor data
+Time: 2022-03-13 16:07:56,656 Message: 192.168.20.12 - - [13/Mar/2022 16:07:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:07:58,622 Message: 192.168.20.12 - - [13/Mar/2022 16:07:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:00,657 Message: 192.168.20.12 - - [13/Mar/2022 16:08:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:02,627 Message: 192.168.20.12 - - [13/Mar/2022 16:08:02] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:05,010 Message: 192.168.20.12 - - [13/Mar/2022 16:08:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:06,751 Message: 192.168.20.12 - - [13/Mar/2022 16:08:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:08,880 Message: 192.168.20.12 - - [13/Mar/2022 16:08:08] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,062 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,070 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mPOST /process_movement/0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,271 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,328 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/4/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,353 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/1/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,355 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/4/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,357 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/1/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,365 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/2/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,369 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/2/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,463 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/3/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:08:10,471 Message: 192.168.20.12 - - [13/Mar/2022 16:08:10] "[37mGET /display_image/3/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:21,240 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/interfaces/camerainterface.py', reloading
+Time: 2022-03-13 16:09:21,955 Message:  * Restarting with stat
+Time: 2022-03-13 16:09:25,367 Message:  * Debugger is active!
+Time: 2022-03-13 16:09:25,369 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:09:25,487 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,551 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/css/custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,564 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,593 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/css/soll_custom.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,595 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,607 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/js/data_processing.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,610 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/js/ajax_function.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,637 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:25,840 Message: 192.168.20.12 - - [13/Mar/2022 16:09:25] "[37mGET /static/js/custom.js HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,266 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,272 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,430 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/4/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,434 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/1/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,441 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/3/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,445 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/4/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,452 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/1/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,584 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/2/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,594 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/3/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,598 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /display_image/2/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:26,684 Message: 192.168.20.12 - - [13/Mar/2022 16:09:26] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:30,731 Message: 192.168.20.12 - - [13/Mar/2022 16:09:30] "[37mGET /dashboard HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:31,820 Message: LOADING CAMERA
+Time: 2022-03-13 16:09:32,204 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-13 16:09:32,204 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-13 16:09:36,008 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-13 16:09:36,113 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-13 16:09:37,864 Message: ULTRASONIC: get_sensor error: Invalid sensor data
+Time: 2022-03-13 16:09:37,950 Message: 192.168.20.12 - - [13/Mar/2022 16:09:37] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:37,977 Message: FLASK APP: READING CAMERA
+Time: 2022-03-13 16:09:38,034 Message: 192.168.20.12 - - [13/Mar/2022 16:09:38] "[37mGET /videofeed HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:48,315 Message: 192.168.20.12 - - [13/Mar/2022 16:09:48] "[37mPOST /take-photo HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:53,181 Message: 192.168.20.12 - - [13/Mar/2022 16:09:53] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:53,758 Message: 192.168.20.12 - - [13/Mar/2022 16:09:53] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,129 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/1/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,387 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/5/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,391 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/4/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,394 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/5/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,396 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/1/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,405 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/4/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,558 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/2/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,680 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/2/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,695 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/3/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:09:54,709 Message: 192.168.20.12 - - [13/Mar/2022 16:09:54] "[37mGET /display_image/3/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:13,720 Message:  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 16:11:13,726 Message:  * Restarting with stat
+Time: 2022-03-13 16:11:16,835 Message:  * Debugger is active!
+Time: 2022-03-13 16:11:16,837 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-13 16:11:16,958 Message: 192.168.20.12 - - [13/Mar/2022 16:11:16] "[37mGET /images HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,213 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /static/favicon.ico HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,218 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mPOST /image-details HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,276 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/1/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,281 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/1/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,284 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/2/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,294 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/2/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,299 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/3/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,303 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/3/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,536 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/4/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,542 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/5/True HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,784 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/5/False HTTP/1.1[0m" 200 -
+Time: 2022-03-13 16:11:17,789 Message: 192.168.20.12 - - [13/Mar/2022 16:11:17] "[37mGET /display_image/4/True HTTP/1.1[0m" 200 -

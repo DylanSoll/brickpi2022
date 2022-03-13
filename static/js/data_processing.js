@@ -21,6 +21,18 @@ function create_checkbox(id, text){
     return form_check
 }
 
+function create_image_button(src){
+    var image = document.createElement('img');
+    image.src = src
+    image.style = "width:2vw"
+    image.setAttribute('data-bs-toggle','modal')
+    image.setAttribute('data-bs-target','#images_modal')
+    image.setAttribute('data-image-target', "<img src='"+src+"' style='width:100%'/>")
+    image.setAttribute('onclick', "document.getElementById('image_display_area').innerHTML = this.getAttribute('data-image-target')")
+    return image
+}
+
+
 function fill_basic_table(table_id, datasets, fields){
     table = document.getElementById(table_id)
     table.innerHTML = ""
@@ -32,8 +44,12 @@ function fill_basic_table(table_id, datasets, fields){
             var field = fields[field_num]
             if (field.includes('time')) {
                 data = shorten_time(row_obj[field])
-            }else if (field == 'select'){
+            }else if (field.includes('select')){
                 data = create_checkbox('select_all_'+table_id, '')
+            }else if (field == 'image'){
+                data = create_image_button(row_obj[field])
+            }else if (field.includes('raw_image')){
+                data = create_image_button(row_obj[field])
             }else if (field == 'time_init' || field == 'time_final') {
                 data = shorten_time(row_obj[field])
             }else if (field == 'duration'){
@@ -63,14 +79,16 @@ function fill_basic_table(table_id, datasets, fields){
 }
 
 function create_table_shell(parentid, columns, bodyid, datasets, fields){
+    console.log(columns)
+    console.log(datasets)
     parent = document.getElementById(parentid);
     var table = document.createElement('table');
     var thead = document.createElement('thead');
     var header_row = document.createElement('tr');
     var filter_row = document.createElement('tr');
     column_ids = Object.keys(columns);
-    for (var i = 0; i < column_ids.length; i++){
-        current_column = column_ids[i];
+    for (var i = 0; i < fields.length; i++){
+        current_column = fields[i];
         column_name = columns[current_column];
         var temp_th = document.createElement('th');
         temp_th.setAttribute('scope', 'col');

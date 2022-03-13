@@ -569,14 +569,15 @@ def take_photo():
     if GLOBALS.CAMERA and request.method=='POST':
         data = GLOBALS.CAMERA.take_photo()
         if GLOBALS.DATABASE:
+            #print(data['raw_image'])
             if GLOBALS.MISSIONID:
-                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time, missionid, raw_image, colour_lower, \
-                    colour_upper) VALUES (?,?,?,?,?,?,?)', (data['image'], session['userid'], \
-                        data['time_taken'], GLOBALS.MISSIONID, data['raw_image'], data['lower_col'], data['upper_col']))
+                GLOBALS.DATABASE.ModifyQuery('''INSERT INTO images (image, userid, time, missionid, raw_image, colour_lower,
+                    colour_upper) VALUES (?,?,?,?,?,?,?)''', (data['image'], session['userid'], \
+                        data['time_taken'], GLOBALS.MISSIONID, data['raw_image'], str(data['lower_col']), str(data['upper_col'])))
             else:
-                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time, raw_image, colour_lower, \
-                    colour_upper) VALUES (?,?,?,?,?,?)', (data['image'], session['userid'], \
-                        data['time_taken'], data['raw_image'], data['lower_col'], data['upper_col']))
+                GLOBALS.DATABASE.ModifyQuery('''INSERT INTO images (image, userid, time, raw_image, colour_lower, 
+                    colour_upper) VALUES (?,?,?,?,?,?)''', (data['image'], session['userid'], \
+                        data['time_taken'], data['raw_image'], str(data['lower_col']), str(data['upper_col'])))
         return jsonify({})
     else:
         return redirect('/dashboard')
@@ -585,7 +586,8 @@ def display_image(imageid, altered):
     if GLOBALS.DATABASE:
         image_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM images WHERE imageid = ?', (imageid,))
         if image_data:
-            image = image_data[0]['image']
+            if altered:
+                image = image_data[0]['image']
             if not altered:
                 image = image_data[0]['raw_image']
             return Response((b'--frame\r\n'
@@ -642,9 +644,10 @@ def uniqueEmail():
 def get_image_details():
     if request.method == 'POST':
         data = request.get_json()
-        fields= data['columns'].keys()
+        print(data['columns'])
+        fields = ['select', 'imageid', 'image', 'raw_image', 'time', 'name']
         image_data = GLOBALS.DATABASE.ViewQuery('SELECT imageid, image, name, time, raw_image FROM images INNER JOIN \
-            users on image.userid = users.userid')
+            users on images.userid = users.userid')
         if image_data:
             datasets = []
             for images in image_data:
@@ -653,15 +656,19 @@ def get_image_details():
                     if field == 'select':
                         row[field] = 'select'
                     elif field == 'image':
-                        row[field] = "<img src = '/display_image/"+images['imageid']+"/true'/>"
+                        row[field] = "/display_image/"+str(images['imageid'])+"/True"
                     elif field == 'raw_image':
-                        row[field] = "<img src = '/display_image/"+images['imageid']+"/false'/>"
+                        if images['raw_image'] != '':
+                            row[field] = "/display_image/"+str(images['imageid'])+"/False"
+                        else:
+                            row[field] = "/display_image/"+str(images['imageid'])+"/True"
                     else:
                         row[field] = images[field]
                 datasets.append(row)
-        data['datasets'] = datasets
-        data['fields'] = fields
-        return dumps(data)
+            data['datasets'] = datasets
+            data['fields'] = fields
+            return dumps(data)
+        return jsonify({})
     return
 
 @app.route('/update-colour-mask/<colour_target>', methods = ['GET', 'POST'])

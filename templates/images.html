@@ -3,7 +3,7 @@
 Images
 {%endblock%}
 {%block content%} 
-<div class="modal fade" id="end_mission_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="images_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -16,12 +16,11 @@ Images
       </div>
     </div>
   </div>
-  <button id="missions-modal-button" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#end_mission_modal"
-  data-image-target = "<img src='/display_image/1' style='width:100%'/>"
-  onclick="document.getElementById('image_display_area').innerHTML = this.getAttribute('data-image-target')" >Show Image</button>
+  <div id ="users_table"></div>
+
   <script>
-    information = {'id':'users_table', 
-    'columns': {'select': 'Select','imageid': 'Image ID','name': 'Name','time': 'Time', 'raw_image':'Unaltered'}, 
+    information = {'table_id':'users_table', 
+    'columns': {'select': 'Select','imageid': 'Image ID','name': 'Taken By','time': 'Time', 'image':'Image', 'raw_image':'Altered'}, 
     'body_id': 'user_table_body'}
     
     jq_ajax('/image-details', information, create_table)

@@ -10,6 +10,7 @@ function jq_ajax(input_url, obj = {}, responsehandler = return_results, method =
     dataType: 'json',
     success: function(result) {
         responsehandler(result);
+        console.log(data)
     },
     error: function(error){
         console.log(error);
