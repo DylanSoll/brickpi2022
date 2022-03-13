@@ -165,8 +165,11 @@ class CameraInterface(object):
     def take_photo(self):
         alt_image = self.convert_to_bytes(self.data)
         time_taken = time.time()
+        raw_image = self.frame
+        
         #cv2.imwrite('robot_cam_photos/'+str(int(time.time()))+".jpg", self.data)
-        data = {'image': alt_image, 'time_taken':time_taken}
+        data = {'image': alt_image, 'time_taken':time_taken, 'raw_image': raw_image,
+        'lower_col': self.lower_col, 'upper_col': upper_col}
         return data
 
     def collect_live_frame(self):

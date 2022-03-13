@@ -655,9 +655,9 @@ def update_colour_mask(colour_target):
         col = tuple(int(col[i:i+2], 16) for i in (0, 2, 4))
         if GLOBALS.CAMERA:
             if colour_target == 'lower':
-                GLOBALS.CAMERA.lower_col = tuple(col[2], col[1], col[0])
+                GLOBALS.CAMERA.lower_col = (col[2], col[1], col[0])
             elif colour_target == 'upper':
-                GLOBALS.CAMERA.upper_col = tuple(col[2], col[1], col[0])
+                GLOBALS.CAMERA.upper_col = (col[2], col[1], col[0])
         return jsonify({})
         
     else:

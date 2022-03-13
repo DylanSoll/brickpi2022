@@ -40,6 +40,8 @@ function reset_image_settings(){
     document.getElementById('lower_colour').value =  "#000000"
     document.getElementById('h_victims').setAttribute('checked', '') 
     document.getElementById('u_victims').setAttribute('checked', '') 
+    jq_ajax('/update-colour-mask/lower', document.getElementById('lower_colour').value)
+    jq_ajax('/update-colour-mask/upper', document.getElementById('upper_colour').value)
 }
 
 
