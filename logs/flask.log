@@ -509,3 +509,105 @@ Time: 2022-03-13 13:39:59,771 Message: 192.168.20.12 - - [13/Mar/2022 13:39:59] 
 Time: 2022-03-13 13:40:01,790 Message: 192.168.20.12 - - [13/Mar/2022 13:40:01] "[37mPOST /sensors HTTP/1.1[0m" 200 -
 Time: 2022-03-13 13:40:03,772 Message: 192.168.20.12 - - [13/Mar/2022 13:40:03] "[37mPOST /sensors HTTP/1.1[0m" 200 -
 Time: 2022-03-13 13:40:05,838 Message: 192.168.20.12 - - [13/Mar/2022 13:40:05] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-13 14:05:09,960 Message:  * Restarting with stat
+Time: 2022-03-13 14:05:10,269 Message:  * Debugger is active!
+Time: 2022-03-13 14:05:10,271 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:05:10,301 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:05:10,302 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:05:14,870 Message: 127.0.0.1 - - [13/Mar/2022 14:05:14] "[32mGET / HTTP/1.1[0m" 302 -
+Time: 2022-03-13 14:05:14,894 Message: 127.0.0.1 - - [13/Mar/2022 14:05:14] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,418 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/ajax_function.js HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,419 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/data_processing.js HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,419 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/custom.css HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,420 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/soll_custom.css HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,422 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/brick_pi_2022_dashboard.js HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,426 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,428 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,429 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/custom.js HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,431 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,432 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/js/mapping.js HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,434 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/dark_mode_css.css HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:15,721 Message: 127.0.0.1 - - [13/Mar/2022 14:05:15] "GET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:19,569 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:19,595 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,597 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,599 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,600 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,602 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,605 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,605 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,606 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-13 14:05:19,644 Message: 127.0.0.1 - - [13/Mar/2022 14:05:19] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-13 14:05:40,219 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:05:40,246 Message:  * Restarting with stat
+Time: 2022-03-13 14:05:40,571 Message:  * Debugger is active!
+Time: 2022-03-13 14:05:40,573 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:05:40,607 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:05:40,608 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:06:40,289 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:06:40,315 Message:  * Restarting with stat
+Time: 2022-03-13 14:06:40,587 Message:  * Debugger is active!
+Time: 2022-03-13 14:06:40,590 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:06:40,621 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:06:40,622 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:06:49,916 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:06:49,959 Message:  * Restarting with stat
+Time: 2022-03-13 14:06:50,254 Message:  * Debugger is active!
+Time: 2022-03-13 14:06:50,256 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:06:50,288 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:06:50,289 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:10:27,923 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:10:27,955 Message:  * Restarting with stat
+Time: 2022-03-13 14:10:28,241 Message:  * Debugger is active!
+Time: 2022-03-13 14:10:28,244 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:10:28,272 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:10:28,273 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:11:52,524 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:11:52,550 Message:  * Restarting with stat
+Time: 2022-03-13 14:11:52,819 Message:  * Debugger is active!
+Time: 2022-03-13 14:11:52,821 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:11:52,848 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:11:52,848 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:12:09,310 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:12:09,334 Message:  * Restarting with stat
+Time: 2022-03-13 14:12:09,609 Message:  * Debugger is active!
+Time: 2022-03-13 14:12:09,612 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:12:09,641 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:12:09,642 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:12:24,006 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:12:24,034 Message:  * Restarting with stat
+Time: 2022-03-13 14:12:24,306 Message:  * Debugger is active!
+Time: 2022-03-13 14:12:24,309 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:12:24,337 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:12:24,337 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:12:29,517 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:12:29,541 Message:  * Restarting with stat
+Time: 2022-03-13 14:12:29,805 Message:  * Debugger is active!
+Time: 2022-03-13 14:12:29,807 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:12:29,837 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:12:29,837 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:13:11,155 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:13:11,183 Message:  * Restarting with stat
+Time: 2022-03-13 14:13:11,470 Message:  * Debugger is active!
+Time: 2022-03-13 14:13:11,473 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:13:11,504 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:13:11,505 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:14:08,101 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:14:08,130 Message:  * Restarting with stat
+Time: 2022-03-13 14:14:08,471 Message:  * Debugger is active!
+Time: 2022-03-13 14:14:08,473 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-13 14:14:08,506 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-13 14:14:08,507 Message:  * Running on http://192.168.20.12:5000/ (Press CTRL+C to quit)
+Time: 2022-03-13 14:14:27,049 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\flask_app.py', reloading
+Time: 2022-03-13 14:14:27,076 Message:  * Restarting with stat

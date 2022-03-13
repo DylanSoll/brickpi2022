@@ -20,7 +20,9 @@ Images
   data-image-target = "<img src='/display_image/1' style='width:100%'/>"
   onclick="document.getElementById('image_display_area').innerHTML = this.getAttribute('data-image-target')" >Show Image</button>
   <script>
-    information = {'id':'users_table', 'columns': {'select': 'Select','imageid': 'Image ID','name': 'Name','time': 'Time'}, 'body_id': 'user_table_body'}
+    information = {'id':'users_table', 
+    'columns': {'select': 'Select','imageid': 'Image ID','name': 'Name','time': 'Time', 'raw_image':'Unaltered'}, 
+    'body_id': 'user_table_body'}
     
     jq_ajax('/image-details', information, create_table)
   </script>

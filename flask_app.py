@@ -150,9 +150,6 @@ def register():
 
 @app.route('/admin')
 def admin():
-    GLOBALS.DATABASE.ModifyQuery('DELETE FROM movement_log')
-    GLOBALS.DATABASE.ModifyQuery('DELETE FROM sensor_log')
-    GLOBALS.DATABASE.ModifyQuery('DELETE FROM missions')
     if session['permissions'] != 'admin':
         return redirect('/dashboad')
     return render_template('admin.html')
@@ -573,20 +570,24 @@ def take_photo():
         data = GLOBALS.CAMERA.take_photo()
         if GLOBALS.DATABASE:
             if GLOBALS.MISSIONID:
-                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time, missionid) VALUES (?,?,?,?)',\
-                    (data['image'], session['userid'], data['time_taken'], GLOBALS.MISSIONID))
+                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time, missionid, raw_image, colour_lower, \
+                    colour_upper) VALUES (?,?,?,?,?,?,?)', (data['image'], session['userid'], \
+                        data['time_taken'], GLOBALS.MISSIONID, data['raw_image'], data['lower_col'], data['upper_col']))
             else:
-                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time) VALUES (?,?,?)',\
-                    (data['image'], session['userid'], data['time_taken']))
+                GLOBALS.DATABASE.ModifyQuery('INSERT INTO images (image, userid, time, raw_image, colour_lower, \
+                    colour_upper) VALUES (?,?,?,?,?,?)', (data['image'], session['userid'], \
+                        data['time_taken'], data['raw_image'], data['lower_col'], data['upper_col']))
         return jsonify({})
     else:
         return redirect('/dashboard')
-@app.route('/display_image/<imageid>')
-def display_image(imageid):
+@app.route('/display_image/<imageid>/<altered>')
+def display_image(imageid, altered):
     if GLOBALS.DATABASE:
         image_data = GLOBALS.DATABASE.ViewQuery('SELECT * FROM images WHERE imageid = ?', (imageid,))
         if image_data:
             image = image_data[0]['image']
+            if not altered:
+                image = image_data[0]['raw_image']
             return Response((b'--frame\r\n'
                     b'Content-Type: image/jpeg\r\n\r\n' + image + b'\r\n'),mimetype='multipart/x-mixed-replace; boundary=frame') 
         else:
@@ -641,9 +642,25 @@ def uniqueEmail():
 def get_image_details():
     if request.method == 'POST':
         data = request.get_json()
-        image_data = GLOBALS.DATABASE.ViewQuery('SELECT imageid, image, name, time FROM images INNER JOIN \
+        fields= data['columns'].keys()
+        image_data = GLOBALS.DATABASE.ViewQuery('SELECT imageid, image, name, time, raw_image FROM images INNER JOIN \
             users on image.userid = users.userid')
-        data['datasets'] = image_data
+        if image_data:
+            datasets = []
+            for images in image_data:
+                row = {}
+                for field in fields:
+                    if field == 'select':
+                        row[field] = 'select'
+                    elif field == 'image':
+                        row[field] = "<img src = '/display_image/"+images['imageid']+"/true'/>"
+                    elif field == 'raw_image':
+                        row[field] = "<img src = '/display_image/"+images['imageid']+"/false'/>"
+                    else:
+                        row[field] = images[field]
+                datasets.append(row)
+        data['datasets'] = datasets
+        data['fields'] = fields
         return dumps(data)
     return
 

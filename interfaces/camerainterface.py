@@ -169,7 +169,7 @@ class CameraInterface(object):
         
         #cv2.imwrite('robot_cam_photos/'+str(int(time.time()))+".jpg", self.data)
         data = {'image': alt_image, 'time_taken':time_taken, 'raw_image': raw_image,
-        'lower_col': self.lower_col, 'upper_col': upper_col}
+        'lower_col': self.lower_col, 'upper_col': self.upper_col}
         return data
 
     def collect_live_frame(self):
