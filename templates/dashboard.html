@@ -11,7 +11,7 @@
 </script>
 
 
-<div class="modal fade" id="end_mission_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="end_mission_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" data-keyboard="false">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -77,11 +77,8 @@
       </div>
     </div>
   </div>
-    <div class="page-header" id="banner">
-        <div class="row">
-            <h1>Robot Dashboard</h1>
-        </div>
-    </div>
+    <h1 class="heading">Robot Dashboard</h1>
+    
     <div class="row" id="load">
         <button type="button" class="btn btn-success" onclick="load_robot();">Load Robot</button>
     </div>   
@@ -122,7 +119,7 @@
             <button id="stop" type="button" class="btn btn-danger" onclick="jq_ajax('/btn-mov/stop/0');"><i class="fa fa-stop-circle-o" aria-hidden="true"></i></button>
 
             <button id="left" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left/'+document.getElementById('power').value);"><i class="fa fa-undo" aria-hidden="true"></i></button>
-            <button id="shoot" type="button" class="btn btn-success" onclick="jq_ajax('/process_shooting');"><i class="fa fa-bullseye" aria-hidden="true"></i></button> 
+            <button id="shoot" type="button" class="btn btn-success" onclick="jq_ajax('/process_shooting');"><i class="fa fa-crosshairs" aria-hidden="true"></i></button> 
             <button id="right" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right/'+document.getElementById('power').value);"><i class="fa fa-repeat" aria-hidden="true"></i></button>
             
             <button id="take_photo" type="button" class="btn btn-warning" onclick="jq_ajax('/take-photo');"><i class="fa fa-camera" aria-hidden="true"></i></button>
@@ -143,7 +140,7 @@
             <div id="videobox" class="col">
                 <div id="videofeed"></div>
             </div>
-            <div id="map"><div id="box" class="jxgbox col"></div></div>
+            <div id="map" style="z-index: 0;"><div id="box" class="jxgbox col"></div></div>
             <div id="message"></div>
         </div>
     </div>
@@ -155,7 +152,7 @@
       }
     }
     if (allow_sensors){
-        interval = setInterval(function(){jq_ajax('/sensors', {}, allow_sensor)},2000)
+        //interval = setInterval(function(){jq_ajax('/sensors', {}, allow_sensor)},2000)
     }
     
         /*colour_banding = {'redFrom': '0', 'redTo': '20',
@@ -163,39 +160,84 @@
         'greenFrom': '60', 'greenTo': '100'}
         drawGuage('battery_graph', {'label': 'Battery', 'value': '80'}, colour_banding, {'width':400, 'height':120}, 5)*/
 </script>
+<div id = "terminal-counter" style="height: 45vh" hidden></div>
 {% endblock %}
 {%block right_side_bar%}
 <style>
-  .message-box{
-    position:absolute;
-    width: 15%;
-    background-color: white;
-    bottom:0;
-    border-radius: 5%;
-    border: 3px black solid;
+  .cs-sm{
+    width:15%;
   }
+  .cs-lg{
+    width:100%;
+  }
+  .message-box{
+    position:fixed;
+    background-color: black;
+    bottom:0;
+    border-radius: 5vh 5vh;
+    border: 3px black solid;
+    height:45vh;
+    resize: both;
+    z-index: 0;
+  }
+
   .message-header{
     height: auto;
-    color: black;
+    color: white;
     display: grid;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 10% 80% 10%;
     align-content: center;
-    margin-top: 2%;
+    margin: 1vh;
+    height:5vh;
+  }
+  .textbox-area-container{
+    position: relative;
+    width: 100%;
   }
   .textbox-area{
     display:grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 80% 20%;
+    position: fixed;
+    bottom: 0%;
+    margin-bottom: .5%;
+    height:6vh;
   }
   .sent-messages{
+    position: relative;
     border: 1px black solid;
-    overflow-y: auto;
+    overflow-y: scroll;
     width: 100%;
+    height: 30vh;
+    overflow-y:scroll;
+    overflow-x: clip; 
+  }
+  .sent-messages::-webkit-scrollbar{
+    background-color: black;
+  }
+  .sent-messages::-webkit-scrollbar-thumb{
+    border-radius: 20px 20px 20px 20px;
+    background-image: linear-gradient(to bottom, rgb(52, 235, 103), rgb(52, 113, 235));
   }
   .command-text-area{
     border-radius: 1vw;
+  }.command-response-text{
+    color: rgb(9, 173, 0);
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .show-chatbox-btn{
+    position: fixed; 
+    bottom:0; 
+    width:100%
+  }
+  .pointer:hover{
+    cursor: pointer;
   }
 </style>
 <script>
+  const commands_help = {'help':'Display commands', 'forward': 'Move forward x centimeters or seconds', 
+  'back': 'Move back x centimeters or seconds', 'left': 'Turn left x degrees or seconds', 'right': 'Turn right x degrees or seconds',
+  'fire': 'Deliver medical package', 'stop': 'Stops all movement'};
   function toggle_chatbox(buttonid, chatboxid){
     var button = document.getElementById(buttonid);
     var chatbox = document.getElementById(chatboxid);
@@ -208,23 +250,75 @@
     }
     return
   }
+  function add_response(response){
+    var target = document.getElementById('sent_messages')
+    var temp_div = document.createElement('div')
+    temp_div.innerHTML = response
+    temp_div.className = "command-response-text"
+    target.appendChild(temp_div)
+    return
+  }
+
+  function send_command(inputid){
+    var input_element = document.getElementById(inputid)
+    var message = input_element.value.toLowerCase()
+    console.log(message)
+    if (message.includes('help')){
+      commands_list = Object.keys(commands_help)
+      
+      for (var i = 0; i < commands_list.length; i++){
+        response = "<u data-toggle='tooltip' data-placement='top' title="+commands_list[i]+">" + commands_list[i] + "</u> : " +commands_help[commands_list[i]]
+        add_response(response)
+      }
+    }
+    input_element.value = ""
+  }
+  function enlarge_console(){
+    var console_el = document.getElementById('message_box');
+    var trigger = document.getElementById('resize_console');
+    var text_area = document.getElementById('textbox_area');
+    var terminal_counter = document.getElementById('terminal-counter');
+    trigger.setAttribute('onclick',"shrink_console()");
+    trigger.className = "fa fa-compress fa-2x pointer";
+    console_el.className = "message-box cs-lg";
+    text_area.className = "textbox-area cs-lg";
+    terminal_counter.removeAttribute('hidden');
+
+  }
+  function shrink_console(){
+    var console_el = document.getElementById('message_box');
+    var trigger = document.getElementById('resize_console');
+    var text_area = document.getElementById('textbox_area');
+    var terminal_counter = document.getElementById('terminal-counter');
+
+    trigger.setAttribute('onclick',"enlarge_console()");
+    trigger.className = "fa fa-expand fa-2x pointer";
+    console_el.className = "message-box cs-sm";
+    text_area.className = "textbox-area cs-sm";
+    terminal_counter.setAttribute('hidden', true);
+  }
 </script>
-<button type = "button" class = "btn btn-success" style = "position: absolute; bottom:0; width:100%"
+<button type = "button" class = "btn btn-success show-chatbox-btn"
 id = "show_chatbox_btn"onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')">Show Terminal</button>
-<div id="message_box" class = "message-box" hidden>
+<div id="message_box" class = "message-box cs-sm" hidden>
   <div class="message-header" id="message_header">
+      <i class="fa fa-expand fa-2x pointer" aria-hidden="true" id = "resize_console" onclick ="enlarge_console()" ></i>
       <h4 class = "heading align-self-center">Text Command</h4>
-      <i class="fa fa-times-circle-o fa-2x" aria-hidden="true" onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')"
+      <i class="fa fa-times-circle-o fa-2x pointer d-flex justify-content-end"" aria-hidden="true" onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')"
       class = "align-item: right; justify-content:center"></i>
   </div>
   <div class = "message-body" id = 'message_body'>
-      <textarea class="sent-messages" id = "sent_messages"name="" id="text" rows="7">
-  
-      </textarea>
-      <div class="textbox-area" id = "textbox_area">
-        <textarea name="command_text_area" id="command_text_area" class="command-text-area" placeholder="Command.." rows = 1></textarea>   
-        <button type="button" class = "btn btn-success"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+      <div class="sent-messages" id = "sent_messages">
+
       </div>
+      <div class="textbox-area-container">
+        <div class="textbox-area cs-sm" id = "textbox_area">
+          <textarea name="command_text_area" id="command_text_area" class="command-text-area" placeholder="Command.." rows = 1></textarea>   
+          <button type="button" class = "btn btn-success" onclick = "send_command('command_text_area')">
+            <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      
   </div>
 </div>
 {%endblock%}

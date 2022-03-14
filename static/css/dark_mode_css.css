@@ -71,7 +71,13 @@
 *::after {
   box-sizing: border-box;
 }
-
+::-webkit-scrollbar{
+  background-color: var(--bs-body-bg);
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 20px 20px 20px 20px;
+  background-image: linear-gradient(to bottom, rgb(52, 235, 103), rgb(52, 113, 235));
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;

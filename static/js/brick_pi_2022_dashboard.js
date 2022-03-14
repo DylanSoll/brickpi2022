@@ -171,7 +171,7 @@ current_keys = {'a': false,
             'stop': false};
 
 document.addEventListener('keydown', function(e){
-    if ((!e.repeat) && (allow_keypress)){
+    if ((!e.repeat) && (allow_keypress) && (robot_enabled)){
         time_pressed = time.getTime();
         message = "pressed at: " + time_pressed;
         valid_keys = ['w', 'a', 's', 'd', 'p'];
@@ -196,7 +196,7 @@ document.addEventListener('keydown', function(e){
     
  })
  document.addEventListener('keyup', function(e){
-    if ((!e.repeat) && (allow_keypress)){
+    if ((!e.repeat) && (allow_keypress)&& (robot_enabled)){
         time_released = time.getTime();
         message = "released at: " + time_released;
         valid_keys = ['w', 'a', 's', 'd', 'p'];

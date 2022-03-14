@@ -21,6 +21,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraphcore.js"></script>
     <script src='/static/js/ajax_function.js'></script>
     <style> html, body { height:100vh; } .container { padding-top:20px; } </style>
+    <script>$(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })</script>
 </head>
 <body style="font-size:16px;">
 
@@ -90,7 +93,7 @@
           </div>
         </div>
       </nav>
-      <br><br><br>
+      <br><br><br><br>
       <div style="justify-content:center; margin-left: 15%; margin-right: 15%;">
         {% block content %}
     
