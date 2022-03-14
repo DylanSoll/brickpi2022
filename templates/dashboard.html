@@ -10,6 +10,7 @@
 });
 </script>
 
+
 <div class="modal fade" id="end_mission_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -146,6 +147,7 @@
             <div id="message"></div>
         </div>
     </div>
+
 <script type="text/javascript">
     function allow_sensor(response){
       if (response == false){
@@ -162,6 +164,70 @@
         drawGuage('battery_graph', {'label': 'Battery', 'value': '80'}, colour_banding, {'width':400, 'height':120}, 5)*/
 </script>
 {% endblock %}
+{%block right_side_bar%}
+<style>
+  .message-box{
+    position:absolute;
+    width: 15%;
+    background-color: white;
+    bottom:0;
+    border-radius: 5%;
+    border: 3px black solid;
+  }
+  .message-header{
+    height: auto;
+    color: black;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    align-content: center;
+    margin-top: 2%;
+  }
+  .textbox-area{
+    display:grid;
+    grid-template-columns: auto auto;
+  }
+  .sent-messages{
+    border: 1px black solid;
+    overflow-y: auto;
+    width: 100%;
+  }
+  .command-text-area{
+    border-radius: 1vw;
+  }
+</style>
+<script>
+  function toggle_chatbox(buttonid, chatboxid){
+    var button = document.getElementById(buttonid);
+    var chatbox = document.getElementById(chatboxid);
+    if (button.hasAttribute('hidden')){
+      button.removeAttribute('hidden')
+      chatbox.setAttribute('hidden', true)
+    }else{
+      chatbox.removeAttribute('hidden')
+      button.setAttribute('hidden', true)
+    }
+    return
+  }
+</script>
+<button type = "button" class = "btn btn-success" style = "position: absolute; bottom:0; width:100%"
+id = "show_chatbox_btn"onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')">Show Terminal</button>
+<div id="message_box" class = "message-box" hidden>
+  <div class="message-header" id="message_header">
+      <h4 class = "heading align-self-center">Text Command</h4>
+      <i class="fa fa-times-circle-o fa-2x" aria-hidden="true" onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')"
+      class = "align-item: right; justify-content:center"></i>
+  </div>
+  <div class = "message-body" id = 'message_body'>
+      <textarea class="sent-messages" id = "sent_messages"name="" id="text" rows="7">
+  
+      </textarea>
+      <div class="textbox-area" id = "textbox_area">
+        <textarea name="command_text_area" id="command_text_area" class="command-text-area" placeholder="Command.." rows = 1></textarea>   
+        <button type="button" class = "btn btn-success"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+      </div>
+  </div>
+</div>
+{%endblock%}
 {% block scripts %}
     <script> robot_enabled = {{robot_enabled}}; </script>
     <script src="/static/js/dashboard.js"></script> 
