@@ -38,8 +38,14 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/dashboard" data-ol-has-click-handler="">Dashboard</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/missions" data-ol-has-click-handler="">Missions</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-ol-has-click-handler="">History</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/missions" data-ol-has-click-handler="">Missions</a>
+                      <a class="dropdown-item" href="/images" data-ol-has-click-handler="">Images</a>
+                      <a class="dropdown-item" href="#" data-ol-has-click-handler="">Coming Soon</a>
+                      <a class="dropdown-item" href="#" data-ol-has-click-handler="">Coming Soon</a>
+                    </div>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-ol-has-click-handler="">Help</a>
@@ -85,7 +91,7 @@
         </div>
       </nav>
       <br><br><br>
-      <div class="container" style="justify-content:center">
+      <div style="justify-content:center; margin-left: 15%; margin-right: 15%;">
         {% block content %}
     
         {% endblock %}

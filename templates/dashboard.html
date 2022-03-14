@@ -85,33 +85,53 @@
         <button type="button" class="btn btn-success" onclick="load_robot();">Load Robot</button>
     </div>   
     <div id="dashboard">
-        <div class="row">
-            <div id ="battery_graph"></div>
-            <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();">Shutdown Robot</button>
-            <button id="reconfig" type="button" class="btn btn-warning" onclick="jq_ajax('/reconfig_IMU');">Reconfigure IMU</button>
-            <button id="compass" type="button" class="btn btn-secondary" onclick="jq_ajax('/compass');">Set Compass</button>
-            <button id="sensors" type="button" class="btn btn-info" onclick="jq_ajax('/sensors');">Sensors</button>
+        <div class="d-flex justify-content-center">
+          <div>
             <button id="missions-button" type="button" class="btn btn-success" onclick="jq_ajax('/initiate-mission');stop_start_mission();allow_sensors = true;">Start Mission</button>
             <button id="missions-modal-button" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#end_mission_modal"
             onclick="jq_ajax('/initiate-mission'); suspend_mission()" hidden>End Mission</button>
-            <button class="btn btn-success" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">
-                Start VC <i class="fa fa-microphone" aria-hidden="true"></i>
-            </button>
-            <button id="image-settings-modal-button" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#image_settings"
-            onclick="suspend_mission()">Image Settings</button>
+          </div>
+          <div >
+            <button class="btn btn-secondary" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">
+              Start VC <i class="fa fa-microphone" aria-hidden="true"></i>
+            </button>          
+          </div>
+          <div >
+            <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Robot <i class="fa fa-cogs"></i></button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <button id="sensors" type="button" class="btn btn-info" onclick="jq_ajax('/sensors');"style="width:100%;">Sensors</button>
+                  <button id="compass" type="button" class="btn btn-secondary" onclick="jq_ajax('/compass');" style="width:100%;">Set Compass</button>
+                  <button id="reconfig" type="button" class="btn btn-warning" onclick="jq_ajax('/reconfig_IMU');" style="width:100%;">Reconfigure IMU</button>
+                  <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();" style="width:100%;">Shutdown Robot</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          
             
-            <button id="take_photo" type="button" class="btn btn-primary" onclick="jq_ajax('/take-photo');"><i class="fa fa-camera" aria-hidden="true"></i></button>
+          </div>
+        <div class="d-flex justify-content-center">
+          <div style = "display: grid; grid-template-columns: auto auto auto;">
+            <button id="reverse" type="button" class="btn btn-secondary" onclick="jq_ajax('/reverse-movement');"><i class="fa fa-home" aria-hidden="true"></i></button>
+            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value);"><i class="fa fa-angle-double-up"></i></button>
+            <button id="stop" type="button" class="btn btn-danger" onclick="jq_ajax('/btn-mov/stop/0');"><i class="fa fa-stop-circle-o" aria-hidden="true"></i></button>
+
+            <button id="left" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left/'+document.getElementById('power').value);"><i class="fa fa-undo" aria-hidden="true"></i></button>
+            <button id="shoot" type="button" class="btn btn-success" onclick="jq_ajax('/process_shooting');"><i class="fa fa-bullseye" aria-hidden="true"></i></button> 
+            <button id="right" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right/'+document.getElementById('power').value);"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+            
+            <button id="take_photo" type="button" class="btn btn-warning" onclick="jq_ajax('/take-photo');"><i class="fa fa-camera" aria-hidden="true"></i></button>
+            <button id="backward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/back/'+document.getElementById('power').value);"><i class="fa fa-angle-double-down"></i></button>
+            <button id="image-settings-modal-button" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#image_settings"
+            onclick="suspend_mission()"><i class="fa fa-sliders" aria-hidden="true"></i></button>
+
+          </div>
         </div>
-        <div class="row">
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value);">Forward</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/back/'+document.getElementById('power').value);">Backward</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left/'+document.getElementById('power').value);">Left</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right/'+document.getElementById('power').value);">Right</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/process_shooting');">Shoot</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/stop/0');">Stop</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/play/0');">Play</button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/reverse-movement');">Return</button>
-        </div>
+        
         <div class="row">
             <label for="customRange1" class="form-label heading">Robot Power: <span id = "power_range">30</span>%</label>
             <input type="range" class="form-range" id="power" min = "0" max = "100" step = "1" value =30
@@ -127,8 +147,13 @@
         </div>
     </div>
 <script type="text/javascript">
+    function allow_sensor(response){
+      if (response == false){
+        allow_sensors = false;
+      }
+    }
     if (allow_sensors){
-        interval = setInterval(function(){jq_ajax('/sensors', {}, defaulthandle)},2000)
+        interval = setInterval(function(){jq_ajax('/sensors', {}, allow_sensor)},2000)
     }
     
         /*colour_banding = {'redFrom': '0', 'redTo': '20',

@@ -237,7 +237,7 @@ def compass():
 
 @app.route('/sensors', methods=['GET','POST'])
 def sensors():
-    recent_sensor_data = {}
+    recent_sensor_data = False
     if GLOBALS.ROBOT:
         recent_sensor_data = GLOBALS.ROBOT.get_all_sensors()
         if GLOBALS.MISSIONID:
