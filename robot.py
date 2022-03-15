@@ -182,15 +182,35 @@ class Robot(BrickPiInterface):
                     
                     elif status == False:#must be no wall
                         if wall_to_search == None:
-                            wall_to_search = current_heading + 90
                             temp_wall = {'status':False, 'victim': False, 'explored': True}
+                            wall_to_search = {current_direction: current_heading}
                         else:
                             temp_wall = {'status':False, 'victim': False, 'explored': False}
-                            
+                    print(temp_wall)
                     walls[current_direction] = temp_wall
                 if wall_to_search != None:
-                    self.rotate_power_heading_IMU(15, wall_to_search)
-                    self.move_distance(30)
+                    #update sector
+                    direction = wall_to_search.keys()[0] #the first key in the dictionary is the direction
+                    target_heading = wall_to_search[direction] #use that to get the target direction
+                    old_x = current_sector['x']
+                    old_y = current_sector['y']
+                    if 'x' in direction:
+                        new_y = old_y
+                        if '-' in direction:
+                            new_x = int(old_x) -1
+                        elif '+' in direction:
+                            new_x = int(old_x) + 1
+                    elif 'y' in direction:
+                        new_x = old_x
+                        if '-' in direction:
+                            new_y = int(new_y) -1
+                        elif '+' in direction:
+                            new_y = int(new_y) + 1
+                    current_sector['x'] = new_x
+                    current_sector['y'] = new_y
+                    print(current_sector)
+                    self.rotate_power_heading_IMU(15, target_heading)
+                    self.move_distance(40)
                 sectors[current_sector_cp] = walls
             else:
                 walls = current_sector_vals
@@ -200,7 +220,7 @@ class Robot(BrickPiInterface):
                     explored = wall['explored']
                     if explored == False:
                         current_heading = coordinate_headings[wall_key]
-                        self.rotate_power_heading_IMU(15, self.clean_heading(current_heading -90))
+                        self.rotate_power_heading_IMU(15, self.clean_heading(current_heading))
                     sectors[current_sector_cp][wall_key]['explored'] = True
                     break
                 if explored == True and current_sector_cp == "(0, 0)":
