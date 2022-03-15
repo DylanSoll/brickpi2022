@@ -707,6 +707,18 @@ def update_colour_mask(colour_target):
         
     else:
         return redirect('/dashboard')
+@app.route('/say-phrase', methods = ['GET', 'POST'])
+def say_phrase():
+    if request.method == 'POST':
+        phrase = request.get_json()
+        if GLOBALS.SOUND:
+            GLOBALS.SOUND.say(phrase)
+            return jsonify('Said: ' + phrase)
+        else:
+            return jsonify('Sound not connected')
+        
+    else:
+        return redirect('/dashboard')
 #---------------------------------------------------------------------------
 #main method called web server application
 if __name__ == '__main__':

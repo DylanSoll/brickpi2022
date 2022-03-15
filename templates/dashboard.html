@@ -268,8 +268,18 @@
       
       for (var i = 0; i < commands_list.length; i++){
         response = "<u data-toggle='tooltip' data-placement='top' title="+commands_list[i]+">" + commands_list[i] + "</u> : " +commands_help[commands_list[i]]
-        add_response(response)
+        add_response(response);
       }
+    }else if (message.includes('say')){
+      phrase = message.splice('say').slice(1);
+      phrase = phrase.join(say);
+      jq_ajax('/say-phrase', phrase, add_response);
+    }else if (message.includes('shoot')){
+      jq_ajax('/process_shooting');
+      add_response('Firing')
+    }else if (message.includes('kill')){
+      jq_ajax('/robotshutdown');
+      add_response('Shut down everything')
     }
     input_element.value = ""
   }
