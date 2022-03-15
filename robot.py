@@ -71,12 +71,96 @@ class Robot(BrickPiInterface):
 
     #Create a function to search for victim
     
-
+    def clean_heading(heading):
+        if heading >= 360:
+            heading -= 360
+        return heading
     
     
     
     #Create a routine that will effective search the maze and keep track of where the robot has been.
+    def search_maze(self):
+        #Initialise robot search variables
+        sectors = {} # dictionary of all sectors of the maze
+        self.calibrate_imu() #calibrates IMU
+        heading = self.get_compass_IMU() #gets initial heading
+        coordinate_headings = {'+y':self.clean_heading(heading), '+x': self.clean_heading(heading)+90,
+        '-y':self.clean_heading(heading) + 180, '-x': self.clean_heading(heading)+270} #has specific bearings for each heading
+        current_sector = {'x':0, 'y':0} #robot starts at 0,0
+        search = True #var for while loop
+        #SEARCH CODE
+        while search:
+            current_sector_cp = '('+current_sector['x']+', '+current_sector['y']+')'
+            if current_sector_cp in sectors:
+                current_sector_vals = sectors[current_sector_cp]
+            else:
+                current_sector_vals = None
+            if not current_sector_vals:
+                walls = {} #creates a blank list for all the walls
+                wall_to_search = None #the wall that is to be searched first
+                for wall in range(4): #up to 4 walls per box
+                    ##for each wall
+                    self.reconfig_IMU()
+                    current_heading = self.get_compass_IMU()
+                    current_direction = None
+                    for direction in coordinate_headings.keys():
+                        current_direction = direction
+                        direct_val = coordinate_headings[direction]
+                        if direct_val - 5 < direct_val < direct_val + 5:
+                            current_heading = direct_val
+                            break
+                    
+                    self.rotate_power_heading_IMU(15, self.clean_heading(current_heading +90))
+                    status = False
+                    cumulative_distance = 0
+                    for distance_iterator in range(100): #averages out distance in case of false readings
+                        cumulative_distance += self.get_ultra_sensor() #adds distance to cumulative
+                    average_distance = (cumulative_distance/100) #averages out (picked because of null reading of 999)
+                    if average_distance < 20: #there is a wall
+                        status = True
+                    victim = False #predefines victim as false
+                    if status == True: #if wall
+                        if GLOBALS.CAMERA:
+                            h = GLOBALS.CAMERA.find_h(GLOBALS.CAMERA.data)
+                            if h:
+                                self.spin_medium_motor(1200)
+                                victim = 'H'
+                            else: #U can sometimes be detected in H, so if no H
+                                u = GLOBALS.CAMERA.find_u(GLOBALS.CAMERA.data)
+                                if u:
+                                    victim = 'U'
+                                    if GLOBALS.SOUND:
+                                        GLOBALS.SOUND.say('Medical professionals will be with you shortly')
+                        temp_wall = {'status':status, 'victim': victim, 'explored': False}
+                    
+                    elif status == False:#must be no wall
+                        if wall_to_search == None:
+                            wall_to_search = current_heading + 90
+                            temp_wall = {'status':False, 'victim': False, 'explored': True}
+                        else:
+                            temp_wall = {'status':False, 'victim': False, 'explored': False}
+                    walls[current_direction] = temp_wall
+                if wall_to_search != None:
+                    self.rotate_power_heading_IMU(15, wall_to_search)
+                    self.move_distance(30)
+                sectors[current_sector_cp] = walls
+            else:
+                walls = current_sector_vals
+                indiv_walls = walls.keys()
+                for wall_key in indiv_walls:
+                    wall = walls[wall_key]
+                    explored = wall['explored']
+                    if explored == False:
+                        current_heading = coordinate_headings[wall_key]
+                        self.rotate_power_heading_IMU(15, self.clean_heading(current_heading +90))
+                    sectors[current_sector_cp][wall_key]['explored'] = True
+        print(sectors)
 
+        ##ON TERMINATION
+        if GLOBALS.SOUND:
+            GLOBALS.SOUND.say('Search Complete')
+        ##LOG EVERYTHING TO DATABASE
+        return
 
 
 

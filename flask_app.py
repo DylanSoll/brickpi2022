@@ -1,3 +1,4 @@
+from collections import UserString
 from flask import Flask, render_template, session, request, redirect, jsonify, flash, url_for, Response, logging
 from json import dumps
 from interfaces import databaseinterface, movement, emailinterface
@@ -20,6 +21,13 @@ GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue
 def log(message): 
     app.logger.info(message)
     return
+
+def confirm_movement_perms(): 
+    if GLOBALS.ControllerID and 'userid' in session:
+        if GLOBALS.ControllerID == session['userid']:
+            return True
+    return False
+
 def log_movement(missionid, mov_type, time_init, power, movement_type, command_type, magnitude = False):
     if GLOBALS.DATABASE:
         GLOBALS.DATABASE.ModifyQuery('''INSERT INTO movement_log (missionid, type, time_init, magnitude, power,
@@ -112,7 +120,7 @@ def login():
     if request.method == 'POST':
         email = str(request.form.get('login_email'))
         password = str(request.form.get('login_password'))
-        userresults = GLOBALS.DATABASE.ViewQuery('SELECT * FROM users')
+        userresults = GLOBALS.DATABASE.ViewQuery('SELECT * FROM users WHERE email = ?', (email,))
         if userresults != False:
             userresults = userresults[0]
             if pm.check_password(userresults['password'], password):
@@ -120,6 +128,10 @@ def login():
                 session['name'] = userresults['name']
                 session['email'] = userresults['email']
                 session['permissions'] = userresults['permissions']
+                if userresults['userid'] == 1:
+                    GLOBALS.ControllerID = userresults['userid']
+                elif not GLOBALS.ControllerID:
+                    GLOBALS.ControllerID = userresults['userid']
                 return redirect('/dashboard')
     return render_template('login.html')
 
@@ -362,6 +374,8 @@ def sensor_live_data():
 @app.route('/process_movement/<power>', methods = ['GET', 'POST'])
 def process_movement(power):
     if request.method == 'POST':
+        if not confirm_movement_perms():
+            return redirect('/dashboard')
         power = int(power)
         current_keys = request.get_json()
         if GLOBALS.ROBOT:
@@ -411,6 +425,8 @@ def process_movement(power):
 @app.route('/process_voice_commands', methods = ['GET', 'POST'])
 def process_voice_commands():
     if request.method == 'POST':
+        if not confirm_movement_perms():
+            return redirect('/dashboard')
         instructions = request.get_json()
         if GLOBALS.ROBOT:
             vc_type = instructions[0]
@@ -441,6 +457,8 @@ def process_voice_commands():
 @app.route('/process_shooting', methods = ['GET', 'POST'])
 def process_shooting():
     if request.method == 'POST':
+        if not confirm_movement_perms():
+            return redirect('/dashboard')
         if GLOBALS.ROBOT:
             GLOBALS.ROBOT.spin_medium_motor(1700)
         return jsonify({})
@@ -450,6 +468,8 @@ def process_shooting():
 @app.route('/btn-mov/<mov_type>/<power>', methods = ['GET', 'POST'])
 def btn_movements(mov_type, power):
     if request.method == 'POST':
+        if not confirm_movement_perms():
+            return redirect('/dashboard')
         if GLOBALS.ROBOT: 
             if GLOBALS.MISSIONID != None:
                 end_time_movement()

@@ -7640,3 +7640,226 @@ Time: 2022-03-14 18:32:20,639 Message: FLASK APP: LOADING THE ROBOT
 Time: 2022-03-14 18:32:20,639 Message: FLASK APP: LOADING THE SOUND
 Time: 2022-03-14 18:32:20,640 Message: 127.0.0.1 - - [14/Mar/2022 18:32:20] "POST /robotload HTTP/1.1" 200 -
 Time: 2022-03-14 18:32:20,644 Message: 127.0.0.1 - - [14/Mar/2022 18:32:20] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-15 09:00:33,984 Message:  * Restarting with stat
+Time: 2022-03-15 09:00:34,696 Message:  * Debugger is active!
+Time: 2022-03-15 09:00:34,704 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-15 09:00:34,769 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-15 09:00:34,769 Message:  * Running on http://10.10.72.124:5000/ (Press CTRL+C to quit)
+Time: 2022-03-15 09:00:54,140 Message:  * Restarting with stat
+Time: 2022-03-15 09:00:54,772 Message:  * Debugger is active!
+Time: 2022-03-15 09:00:54,780 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-15 09:00:54,838 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-15 09:00:54,838 Message:  * Running on http://10.10.72.124:5000/ (Press CTRL+C to quit)
+Time: 2022-03-15 09:01:13,918 Message:  * Restarting with stat
+Time: 2022-03-15 09:01:14,511 Message:  * Debugger is active!
+Time: 2022-03-15 09:01:14,511 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-15 09:01:14,584 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-15 09:01:14,584 Message:  * Running on http://10.10.72.124:5000/ (Press CTRL+C to quit)
+Time: 2022-03-15 09:01:19,732 Message: 127.0.0.1 - - [15/Mar/2022 09:01:19] "[32mGET / HTTP/1.1[0m" 302 -
+Time: 2022-03-15 09:01:19,765 Message: 127.0.0.1 - - [15/Mar/2022 09:01:19] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-15 09:01:21,016 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,016 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,016 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,031 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,031 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,031 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,031 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,031 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,047 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,047 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,047 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:21,240 Message: 127.0.0.1 - - [15/Mar/2022 09:01:21] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:01:40,625 Message: LOADING CAMERA
+Time: 2022-03-15 09:01:40,625 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-15 09:01:40,625 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-15 09:01:40,625 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-15 09:01:40,633 Message: 127.0.0.1 - - [15/Mar/2022 09:01:40] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-15 09:01:40,649 Message: 127.0.0.1 - - [15/Mar/2022 09:01:40] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-15 09:02:12,273 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-15 09:02:12,329 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,337 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,337 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,345 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,345 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,353 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,361 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,361 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,361 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,361 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,369 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,457 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:12,505 Message: 127.0.0.1 - - [15/Mar/2022 09:02:12] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:14,213 Message: LOADING CAMERA
+Time: 2022-03-15 09:02:14,221 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-15 09:02:14,221 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-15 09:02:14,221 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-15 09:02:14,221 Message: 127.0.0.1 - - [15/Mar/2022 09:02:14] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-15 09:02:14,237 Message: 127.0.0.1 - - [15/Mar/2022 09:02:14] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-15 09:02:24,584 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-15 09:02:24,615 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,631 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,639 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,639 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,639 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,647 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,648 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,648 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,648 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,648 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,648 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,741 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:24,788 Message: 127.0.0.1 - - [15/Mar/2022 09:02:24] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:02:25,549 Message: LOADING CAMERA
+Time: 2022-03-15 09:02:25,549 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-15 09:02:25,549 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-15 09:02:25,549 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-15 09:02:25,549 Message: 127.0.0.1 - - [15/Mar/2022 09:02:25] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-15 09:02:25,564 Message: 127.0.0.1 - - [15/Mar/2022 09:02:25] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-15 09:03:18,713 Message: 127.0.0.1 - - [15/Mar/2022 09:03:18] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 09:03:20,701 Message: 127.0.0.1 - - [15/Mar/2022 09:03:20] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 09:03:22,696 Message: 127.0.0.1 - - [15/Mar/2022 09:03:22] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 09:03:24,690 Message: 127.0.0.1 - - [15/Mar/2022 09:03:24] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 09:03:26,699 Message: 127.0.0.1 - - [15/Mar/2022 09:03:26] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 09:03:28,423 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "GET /admin HTTP/1.1" 200 -
+Time: 2022-03-15 09:03:28,495 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,503 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,503 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,503 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,511 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,511 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,511 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,511 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 09:03:28,615 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "POST /get-users HTTP/1.1" 200 -
+Time: 2022-03-15 09:03:28,647 Message: 127.0.0.1 - - [15/Mar/2022 09:03:28] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:00,747 Message:  * Restarting with stat
+Time: 2022-03-15 13:43:01,405 Message:  * Debugger is active!
+Time: 2022-03-15 13:43:01,405 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-15 13:43:01,468 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-15 13:43:01,468 Message:  * Running on http://10.10.72.124:5000/ (Press CTRL+C to quit)
+Time: 2022-03-15 13:43:04,216 Message: 127.0.0.1 - - [15/Mar/2022 13:43:04] "[32mGET / HTTP/1.1[0m" 302 -
+Time: 2022-03-15 13:43:04,254 Message: 127.0.0.1 - - [15/Mar/2022 13:43:04] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-15 13:43:05,457 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,457 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,457 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,473 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,473 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,473 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,473 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,473 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,489 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,489 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,489 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:05,650 Message: 127.0.0.1 - - [15/Mar/2022 13:43:05] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-15 13:43:11,184 Message: LOADING CAMERA
+Time: 2022-03-15 13:43:11,184 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-15 13:43:11,184 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-15 13:43:11,184 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-15 13:43:11,184 Message: 127.0.0.1 - - [15/Mar/2022 13:43:11] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-15 13:43:11,200 Message: 127.0.0.1 - - [15/Mar/2022 13:43:11] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-15 13:43:55,292 Message: 127.0.0.1 - - [15/Mar/2022 13:43:55] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:43:57,258 Message: 127.0.0.1 - - [15/Mar/2022 13:43:57] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:43:59,261 Message: 127.0.0.1 - - [15/Mar/2022 13:43:59] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:01,267 Message: 127.0.0.1 - - [15/Mar/2022 13:44:01] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:03,258 Message: 127.0.0.1 - - [15/Mar/2022 13:44:03] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:05,253 Message: 127.0.0.1 - - [15/Mar/2022 13:44:05] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:07,259 Message: 127.0.0.1 - - [15/Mar/2022 13:44:07] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:09,264 Message: 127.0.0.1 - - [15/Mar/2022 13:44:09] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:11,270 Message: 127.0.0.1 - - [15/Mar/2022 13:44:11] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:13,167 Message: 127.0.0.1 - - [15/Mar/2022 13:44:13] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:13,267 Message: 127.0.0.1 - - [15/Mar/2022 13:44:13] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:15,166 Message: 127.0.0.1 - - [15/Mar/2022 13:44:15] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:15,262 Message: 127.0.0.1 - - [15/Mar/2022 13:44:15] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:17,164 Message: 127.0.0.1 - - [15/Mar/2022 13:44:17] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:17,267 Message: 127.0.0.1 - - [15/Mar/2022 13:44:17] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:19,165 Message: 127.0.0.1 - - [15/Mar/2022 13:44:19] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:19,270 Message: 127.0.0.1 - - [15/Mar/2022 13:44:19] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:21,171 Message: 127.0.0.1 - - [15/Mar/2022 13:44:21] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:21,258 Message: 127.0.0.1 - - [15/Mar/2022 13:44:21] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:23,164 Message: 127.0.0.1 - - [15/Mar/2022 13:44:23] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:23,258 Message: 127.0.0.1 - - [15/Mar/2022 13:44:23] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:25,168 Message: 127.0.0.1 - - [15/Mar/2022 13:44:25] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:25,253 Message: 127.0.0.1 - - [15/Mar/2022 13:44:25] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:27,168 Message: 127.0.0.1 - - [15/Mar/2022 13:44:27] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:27,260 Message: 127.0.0.1 - - [15/Mar/2022 13:44:27] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:29,169 Message: 127.0.0.1 - - [15/Mar/2022 13:44:29] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:29,258 Message: 127.0.0.1 - - [15/Mar/2022 13:44:29] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:31,581 Message: 127.0.0.1 - - [15/Mar/2022 13:44:31] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:31,581 Message: 127.0.0.1 - - [15/Mar/2022 13:44:31] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:33,571 Message: 127.0.0.1 - - [15/Mar/2022 13:44:33] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:33,571 Message: 127.0.0.1 - - [15/Mar/2022 13:44:33] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:35,572 Message: 127.0.0.1 - - [15/Mar/2022 13:44:35] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:35,572 Message: 127.0.0.1 - - [15/Mar/2022 13:44:35] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:37,563 Message: 127.0.0.1 - - [15/Mar/2022 13:44:37] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:37,563 Message: 127.0.0.1 - - [15/Mar/2022 13:44:37] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:39,580 Message: 127.0.0.1 - - [15/Mar/2022 13:44:39] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:39,580 Message: 127.0.0.1 - - [15/Mar/2022 13:44:39] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:41,582 Message: 127.0.0.1 - - [15/Mar/2022 13:44:41] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:41,582 Message: 127.0.0.1 - - [15/Mar/2022 13:44:41] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:43,574 Message: 127.0.0.1 - - [15/Mar/2022 13:44:43] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:43,574 Message: 127.0.0.1 - - [15/Mar/2022 13:44:43] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:45,572 Message: 127.0.0.1 - - [15/Mar/2022 13:44:45] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:45,572 Message: 127.0.0.1 - - [15/Mar/2022 13:44:45] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:47,625 Message: 127.0.0.1 - - [15/Mar/2022 13:44:47] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:47,625 Message: 127.0.0.1 - - [15/Mar/2022 13:44:47] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:49,563 Message: 127.0.0.1 - - [15/Mar/2022 13:44:49] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:49,563 Message: 127.0.0.1 - - [15/Mar/2022 13:44:49] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:51,579 Message: 127.0.0.1 - - [15/Mar/2022 13:44:51] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:51,579 Message: 127.0.0.1 - - [15/Mar/2022 13:44:51] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:53,558 Message: 127.0.0.1 - - [15/Mar/2022 13:44:53] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:53,574 Message: 127.0.0.1 - - [15/Mar/2022 13:44:53] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:55,570 Message: 127.0.0.1 - - [15/Mar/2022 13:44:55] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:55,570 Message: 127.0.0.1 - - [15/Mar/2022 13:44:55] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:57,559 Message: 127.0.0.1 - - [15/Mar/2022 13:44:57] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:57,567 Message: 127.0.0.1 - - [15/Mar/2022 13:44:57] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:59,572 Message: 127.0.0.1 - - [15/Mar/2022 13:44:59] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:44:59,572 Message: 127.0.0.1 - - [15/Mar/2022 13:44:59] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:01,589 Message: 127.0.0.1 - - [15/Mar/2022 13:45:01] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:01,589 Message: 127.0.0.1 - - [15/Mar/2022 13:45:01] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:03,288 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\robot.py', reloading
+Time: 2022-03-15 13:45:03,352 Message:  * Restarting with stat
+Time: 2022-03-15 13:45:03,981 Message:  * Debugger is active!
+Time: 2022-03-15 13:45:03,981 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-15 13:45:04,045 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-15 13:45:04,045 Message:  * Running on http://10.10.72.124:5000/ (Press CTRL+C to quit)
+Time: 2022-03-15 13:45:04,069 Message: 127.0.0.1 - - [15/Mar/2022 13:45:04] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:04,069 Message: 127.0.0.1 - - [15/Mar/2022 13:45:04] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:05,566 Message: 127.0.0.1 - - [15/Mar/2022 13:45:05] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:05,574 Message: 127.0.0.1 - - [15/Mar/2022 13:45:05] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:07,575 Message: 127.0.0.1 - - [15/Mar/2022 13:45:07] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:07,575 Message: 127.0.0.1 - - [15/Mar/2022 13:45:07] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:09,581 Message: 127.0.0.1 - - [15/Mar/2022 13:45:09] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:09,581 Message: 127.0.0.1 - - [15/Mar/2022 13:45:09] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:11,572 Message: 127.0.0.1 - - [15/Mar/2022 13:45:11] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:11,575 Message: 127.0.0.1 - - [15/Mar/2022 13:45:11] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:13,554 Message: 127.0.0.1 - - [15/Mar/2022 13:45:13] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:13,554 Message: 127.0.0.1 - - [15/Mar/2022 13:45:13] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:15,581 Message: 127.0.0.1 - - [15/Mar/2022 13:45:15] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:15,583 Message: 127.0.0.1 - - [15/Mar/2022 13:45:15] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:17,584 Message: 127.0.0.1 - - [15/Mar/2022 13:45:17] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:17,600 Message: 127.0.0.1 - - [15/Mar/2022 13:45:17] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:19,592 Message: 127.0.0.1 - - [15/Mar/2022 13:45:19] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:19,594 Message: 127.0.0.1 - - [15/Mar/2022 13:45:19] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:21,574 Message: 127.0.0.1 - - [15/Mar/2022 13:45:21] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:21,574 Message: 127.0.0.1 - - [15/Mar/2022 13:45:21] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:23,568 Message: 127.0.0.1 - - [15/Mar/2022 13:45:23] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:23,576 Message: 127.0.0.1 - - [15/Mar/2022 13:45:23] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:25,556 Message: 127.0.0.1 - - [15/Mar/2022 13:45:25] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:25,556 Message: 127.0.0.1 - - [15/Mar/2022 13:45:25] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:26,696 Message:  * Detected change in 'c:\\Users\\22dyl\\OneDrive\\Desktop\\brickpi2022\\robot.py', reloading
+Time: 2022-03-15 13:45:26,774 Message:  * Restarting with stat
+Time: 2022-03-15 13:45:27,446 Message:  * Debugger is active!
+Time: 2022-03-15 13:45:27,454 Message:  * Debugger PIN: 102-195-331
+Time: 2022-03-15 13:45:27,535 Message:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+Time: 2022-03-15 13:45:27,535 Message:  * Running on http://10.10.72.124:5000/ (Press CTRL+C to quit)
+Time: 2022-03-15 13:45:27,566 Message: 127.0.0.1 - - [15/Mar/2022 13:45:27] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:27,566 Message: 127.0.0.1 - - [15/Mar/2022 13:45:27] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:28,736 Message: 10.10.72.124 - - [15/Mar/2022 13:45:28] "[32mGET / HTTP/1.1[0m" 302 -
+Time: 2022-03-15 13:45:28,778 Message: 10.10.72.124 - - [15/Mar/2022 13:45:28] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:29,571 Message: 127.0.0.1 - - [15/Mar/2022 13:45:29] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 13:45:29,571 Message: 127.0.0.1 - - [15/Mar/2022 13:45:29] "POST /sensors HTTP/1.1" 200 -
