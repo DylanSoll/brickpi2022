@@ -7934,3 +7934,77 @@ Time: 2022-03-16 09:26:04,057 Message:  * Debugger PIN: 102-195-331
 Time: 2022-03-16 09:26:04,118 Message:  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 Time: 2022-03-16 09:26:04,118 Message:  * Running on http://10.10.72.124:5000/ (Press CTRL+C to quit)
+Time: 2022-03-16 09:35:52,675 Message: 127.0.0.1 - - [16/Mar/2022 09:35:52] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-16 09:35:53,909 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,909 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,925 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,925 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,925 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,925 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,925 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,940 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,940 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,940 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:53,940 Message: 127.0.0.1 - - [16/Mar/2022 09:35:53] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:54,065 Message: 127.0.0.1 - - [16/Mar/2022 09:35:54] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:54,159 Message: 127.0.0.1 - - [16/Mar/2022 09:35:54] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:35:55,550 Message: LOADING CAMERA
+Time: 2022-03-16 09:35:55,550 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-16 09:35:55,550 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-16 09:35:55,550 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-16 09:35:55,550 Message: 127.0.0.1 - - [16/Mar/2022 09:35:55] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-16 09:35:55,566 Message: 127.0.0.1 - - [16/Mar/2022 09:35:55] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-16 09:39:27,719 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:27,797 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,797 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,813 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,813 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,813 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,828 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,828 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,828 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,828 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,844 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:27,844 Message: 127.0.0.1 - - [16/Mar/2022 09:39:27] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:28,047 Message: 127.0.0.1 - - [16/Mar/2022 09:39:28] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:28,141 Message: 127.0.0.1 - - [16/Mar/2022 09:39:28] "[36mGET /static/favicon.ico HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:34,866 Message: LOADING CAMERA
+Time: 2022-03-16 09:39:34,866 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-16 09:39:34,866 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-16 09:39:34,866 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-16 09:39:34,866 Message: 127.0.0.1 - - [16/Mar/2022 09:39:34] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:34,882 Message: 127.0.0.1 - - [16/Mar/2022 09:39:34] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-16 09:39:46,353 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "GET /missions HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:46,353 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "POST /cancel-mission HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:46,409 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,409 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,409 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,417 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,417 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,425 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,425 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,425 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,537 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:46,561 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "POST /missions HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:46,561 Message: 127.0.0.1 - - [16/Mar/2022 09:39:46] "POST /sensor-graph-data HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:54,483 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "GET /dashboard HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:54,555 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/css/dark_mode_css.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,563 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/css/custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,571 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/css/soll_custom.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,579 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/css/font-awesome-4.7.0/css/font-awesome.min.css HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,579 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/js/data_processing.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,579 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/js/ajax_function.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,587 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/js/brick_pi_2022_dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,587 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/js/mr_nielsens_code_not_used/new_ajax_helper.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,595 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,595 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,595 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/js/mapping.js HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:54,699 Message: 127.0.0.1 - - [16/Mar/2022 09:39:54] "[36mGET /static/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1[0m" 304 -
+Time: 2022-03-16 09:39:55,619 Message: LOADING CAMERA
+Time: 2022-03-16 09:39:55,619 Message: FLASK APP: CAMERA NOT WORKING
+Time: 2022-03-16 09:39:55,619 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-16 09:39:55,619 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-16 09:39:55,619 Message: 127.0.0.1 - - [16/Mar/2022 09:39:55] "POST /robotload HTTP/1.1" 200 -
+Time: 2022-03-16 09:39:55,635 Message: 127.0.0.1 - - [16/Mar/2022 09:39:55] "[35m[1mGET /videofeed HTTP/1.1[0m" 204 -
+Time: 2022-03-16 09:45:35,094 Message: 127.0.0.1 - - [16/Mar/2022 09:45:35] "[32mPOST /process_shooting HTTP/1.1[0m" 302 -
+Time: 2022-03-16 09:45:35,102 Message: 127.0.0.1 - - [16/Mar/2022 09:45:35] "GET /dashboard HTTP/1.1" 200 -
