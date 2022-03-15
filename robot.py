@@ -63,6 +63,44 @@ class Robot(BrickPiInterface):
         return return_val #returns return val
 
 
+    def right_degrees(self, angle, power = 100, speed = 100):
+        degrees = angle*2 +5
+        BP = ROBOT.BP
+        try:
+            BP.offset_motor_encoder(BP.PORT_A, BP.get_motor_encoder(BP.PORT_A)) # reset encoder A
+            BP.offset_motor_encoder(BP.PORT_D, BP.get_motor_encoder(BP.PORT_D)) # reset encoder D
+            BP.set_motor_limits(BP.PORT_A, -1*power, speed)    # float motor D
+            BP.set_motor_limits(BP.PORT_D, power, speed)          # optionally set a power limit (in percent) and a speed limit (in Degrees Per Second)
+            while True:
+                BP.set_motor_position(BP.PORT_D, degrees+10)    # set motor A's target position to the current position of motor D
+                BP.set_motor_position(BP.PORT_A, -1*degrees-10)
+                time.sleep(0.02) 
+                if BP.get_motor_encoder(BP.PORT_D) >= degrees or BP.get_motor_encoder(BP.PORT_A) <= -1*degrees:
+                    break
+                #print("A:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_A)))
+                #print("D:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_D)))
+        except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
+            BP.reset_all()
+        return
+    
+    def left_degrees(self, angle, power = 100, speed = 100):
+        degrees = angle*2 + 5
+        BP = ROBOT.BP
+        try:
+            BP.offset_motor_encoder(BP.PORT_A, BP.get_motor_encoder(BP.PORT_A)) # reset encoder A
+            BP.offset_motor_encoder(BP.PORT_D, BP.get_motor_encoder(BP.PORT_D)) # reset encoder D
+            BP.set_motor_limits(BP.PORT_A, power, speed)    # float motor D
+            BP.set_motor_limits(BP.PORT_D, -1*power, speed)          # optionally set a power limit (in percent) and a speed limit (in Degrees Per Second)
+            while True:
+                BP.set_motor_position(BP.PORT_D, -1*degrees-10)    # set motor A's target position to the current position of motor D
+                BP.set_motor_position(BP.PORT_A, degrees+10)
+                time.sleep(0.02) 
+                if BP.get_motor_encoder(BP.PORT_A) >= degrees or BP.get_motor_encoder(BP.PORT_D) <= -1*degrees:
+                    break
+                #print("A:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_A)))
+                #print("D:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_D)))
+        except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
+            BP.reset_all()
 
     #Create a function to move time and power which will stop if colour is detected or wall has been found
     
@@ -71,18 +109,30 @@ class Robot(BrickPiInterface):
 
     #Create a function to search for victim
     
-    def clean_heading(heading):
+    def clean_heading(self,heading):
         if heading >= 360:
             heading -= 360
+        elif heading <= 360:
+            heading += 360
         return heading
     
-    
+    def face_heading(self, heading):
+        direction = self.get_compass_IMU()
+        print(direction)
+        print(heading)
+        if heading > direction:
+            self.left_degrees(direction-heading)
+
+        else:
+            self.right_degrees(direction-heading)
+
+        return 
     
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_maze(self):
+        print('Initialising Search')
         #Initialise robot search variables
         sectors = {} # dictionary of all sectors of the maze
-        self.calibrate_imu() #calibrates IMU
         heading = self.get_compass_IMU() #gets initial heading
         coordinate_headings = {'+y':self.clean_heading(heading), '+x': self.clean_heading(heading)+90,
         '-y':self.clean_heading(heading) + 180, '-x': self.clean_heading(heading)+270} #has specific bearings for each heading
@@ -90,7 +140,7 @@ class Robot(BrickPiInterface):
         search = True #var for while loop
         #SEARCH CODE
         while search:
-            current_sector_cp = '('+current_sector['x']+', '+current_sector['y']+')'
+            current_sector_cp = '('+str(current_sector['x'])+', '+str(current_sector['y'])+')'
             if current_sector_cp in sectors:
                 current_sector_vals = sectors[current_sector_cp]
             else:
@@ -102,6 +152,7 @@ class Robot(BrickPiInterface):
                     ##for each wall
                     self.reconfig_IMU()
                     current_heading = self.get_compass_IMU()
+                    print(current_heading)
                     current_direction = None
                     for direction in coordinate_headings.keys():
                         current_direction = direction
@@ -109,15 +160,11 @@ class Robot(BrickPiInterface):
                         if direct_val - 5 < direct_val < direct_val + 5:
                             current_heading = direct_val
                             break
-                    
-                    self.rotate_power_heading_IMU(15, self.clean_heading(current_heading +90))
+                    self.left_degrees(90)
                     status = False
-                    cumulative_distance = 0
-                    for distance_iterator in range(100): #averages out distance in case of false readings
-                        cumulative_distance += self.get_ultra_sensor() #adds distance to cumulative
-                    average_distance = (cumulative_distance/100) #averages out (picked because of null reading of 999)
-                    if average_distance < 20: #there is a wall
+                    if self.get_ultra_sensor() < 20: #there is a wall
                         status = True
+                        print('Wall:' + str(status))
                     victim = False #predefines victim as false
                     if status == True: #if wall
                         if GLOBALS.CAMERA:
@@ -139,6 +186,7 @@ class Robot(BrickPiInterface):
                             temp_wall = {'status':False, 'victim': False, 'explored': True}
                         else:
                             temp_wall = {'status':False, 'victim': False, 'explored': False}
+                            
                     walls[current_direction] = temp_wall
                 if wall_to_search != None:
                     self.rotate_power_heading_IMU(15, wall_to_search)
@@ -152,8 +200,12 @@ class Robot(BrickPiInterface):
                     explored = wall['explored']
                     if explored == False:
                         current_heading = coordinate_headings[wall_key]
-                        self.rotate_power_heading_IMU(15, self.clean_heading(current_heading +90))
+                        self.rotate_power_heading_IMU(15, self.clean_heading(current_heading -90))
                     sectors[current_sector_cp][wall_key]['explored'] = True
+                    break
+                if explored == True and current_sector_cp == "(0, 0)":
+                    print('break')
+                    search = False
         print(sectors)
 
         ##ON TERMINATION
@@ -172,12 +224,6 @@ if __name__ == '__main__':
     ROBOT = Robot(timelimit=10)  #10 second timelimit before
     ROBOT.configure_sensors() #This takes 4 seconds
     #ROBOT.rotate_power_degrees_IMU(20,-90)
-    start = time.time()
-    limit = start + 10
-    #print(ROBOT.get_linear_acceleration_IMU()[1])
-    ROBOT.move_distance(-30)
-    while (time.time() < limit):
-        compass = ROBOT.get_compass_IMU()
-        print(compass)
-    sensordict = ROBOT.get_all_sensors()
+    ROBOT.search_maze()
+
     ROBOT.safe_exit()

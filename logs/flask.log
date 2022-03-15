@@ -7863,3 +7863,41 @@ Time: 2022-03-15 13:45:28,736 Message: 10.10.72.124 - - [15/Mar/2022 13:45:28] "
 Time: 2022-03-15 13:45:28,778 Message: 10.10.72.124 - - [15/Mar/2022 13:45:28] "GET /dashboard HTTP/1.1" 200 -
 Time: 2022-03-15 13:45:29,571 Message: 127.0.0.1 - - [15/Mar/2022 13:45:29] "POST /sensors HTTP/1.1" 200 -
 Time: 2022-03-15 13:45:29,571 Message: 127.0.0.1 - - [15/Mar/2022 13:45:29] "POST /sensors HTTP/1.1" 200 -
+Time: 2022-03-15 15:53:44,727 Message:  * Debugger is active!
+Time: 2022-03-15 15:53:44,728 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-15 15:53:56,389 Message:  * Detected change in '/home/pi/Desktop/brickpi2022/flask_app.py', reloading
+Time: 2022-03-15 15:53:59,917 Message:  * Debugger is active!
+Time: 2022-03-15 15:53:59,919 Message:  * Debugger PIN: 287-863-292
+Time: 2022-03-15 15:54:24,876 Message: 10.10.41.89 - - [15/Mar/2022 15:54:24] "[37mPOST /update-colour-mask/upper HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:28,629 Message: 10.10.41.89 - - [15/Mar/2022 15:54:28] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:30,566 Message: 10.10.41.89 - - [15/Mar/2022 15:54:30] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:32,683 Message: 10.10.41.89 - - [15/Mar/2022 15:54:32] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:34,560 Message: 10.10.41.89 - - [15/Mar/2022 15:54:34] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:36,560 Message: 10.10.41.89 - - [15/Mar/2022 15:54:36] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:38,609 Message: 10.10.41.89 - - [15/Mar/2022 15:54:38] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:40,609 Message: 10.10.41.89 - - [15/Mar/2022 15:54:40] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:42,893 Message: 10.10.41.89 - - [15/Mar/2022 15:54:42] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:44,575 Message: 10.10.41.89 - - [15/Mar/2022 15:54:44] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:46,568 Message: 10.10.41.89 - - [15/Mar/2022 15:54:46] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:48,574 Message: 10.10.41.89 - - [15/Mar/2022 15:54:48] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:50,560 Message: 10.10.41.89 - - [15/Mar/2022 15:54:50] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:52,585 Message: 10.10.41.89 - - [15/Mar/2022 15:54:52] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:54,945 Message: 10.10.41.89 - - [15/Mar/2022 15:54:54] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:56,625 Message: 10.10.41.89 - - [15/Mar/2022 15:54:56] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:58,549 Message: FLASK APP: SHUTDOWN EVERYTHING
+Time: 2022-03-15 15:54:58,554 Message: 10.10.41.89 - - [15/Mar/2022 15:54:58] "[37mPOST /robotshutdown HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:54:58,576 Message: 10.10.41.89 - - [15/Mar/2022 15:54:58] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:00,478 Message: LOADING CAMERA
+Time: 2022-03-15 15:55:00,579 Message: 10.10.41.89 - - [15/Mar/2022 15:55:00] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:00,881 Message: CAMERA INTERFACE: Started Camera Thread
+Time: 2022-03-15 15:55:00,882 Message: FLASK APP: LOADING THE ROBOT
+Time: 2022-03-15 15:55:02,706 Message: 10.10.41.89 - - [15/Mar/2022 15:55:02] "[35m[1mPOST /sensors HTTP/1.1[0m" 500 -
+Time: 2022-03-15 15:55:04,684 Message: BRICKPIINTERFACE: Starting thermal sensor thread
+Time: 2022-03-15 15:55:04,788 Message: FLASK APP: LOADING THE SOUND
+Time: 2022-03-15 15:55:04,968 Message: 10.10.41.89 - - [15/Mar/2022 15:55:04] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:06,821 Message: 10.10.41.89 - - [15/Mar/2022 15:55:06] "[37mPOST /robotload HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:06,993 Message: 10.10.41.89 - - [15/Mar/2022 15:55:06] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:09,111 Message: 10.10.41.89 - - [15/Mar/2022 15:55:09] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:11,193 Message: 10.10.41.89 - - [15/Mar/2022 15:55:11] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:12,993 Message: 10.10.41.89 - - [15/Mar/2022 15:55:12] "[37mPOST /sensors HTTP/1.1[0m" 200 -
+Time: 2022-03-15 15:55:15,011 Message: 10.10.41.89 - - [15/Mar/2022 15:55:15] "[37mPOST /sensors HTTP/1.1[0m" 200 -
