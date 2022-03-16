@@ -145,7 +145,7 @@ class Robot(BrickPiInterface):
         current_sector = {'x':0, 'y':0} #robot starts at 0,0
         search = True #var for while loop
         #SEARCH CODE
-        current_direction = "+y"
+        self.current_direction = "+y"
         while search:
             print(sectors)
             current_sector_cp = '('+str(current_sector['x'])+', '+str(current_sector['y'])+')'
@@ -162,7 +162,7 @@ class Robot(BrickPiInterface):
                     self.reconfig_IMU()
                     
                     self.left_degrees(90)
-                    current_direction = self.return_new_direction(current_direction)
+                    self.current_direction = self.return_new_direction(self.current_direction)
                     status = False
                     if self.get_ultra_sensor() < 20 and self.get_ultra_sensor() != 0: #there is a wall
                         status = True
@@ -184,30 +184,31 @@ class Robot(BrickPiInterface):
                         temp_wall = {'status':status, 'victim': victim, 'explored': False}
                     
                     elif status == False:#must be no wall
-                        if wall_to_search == None:
+                        if wall_to_search == None and wall != 2:
                             temp_wall = {'status':False, 'victim': False, 'explored': True}
-                            wall_to_search = {current_direction: temp_wall}
+                            wall_to_search = {self.current_direction: temp_wall}
                             
                     print(temp_wall)
-                    walls[current_direction] = temp_wall
+                    walls[self.current_direction] = temp_wall
+                    if wall == 2:
+                        sectors[current_sector_cp]['entered'] = wall
                 if wall_to_search != None:
                     #update sector
-                    direction = self.face_direction_coord(wall_to_search, current_direction)
-                    print(direction)
+                    self.current_direction = self.face_direction_coord(wall_to_search, self.current_direction)
                     old_x = current_sector['x']
                     old_y = current_sector['y']
-                    print(old_x, old_y, direction)
-                    if 'x' in direction:
+                    print(old_x, old_y, self.current_direction)
+                    if 'x' in self.current_direction:
                         new_y = old_y
-                        if '-' in direction:
+                        if '-' in self.current_direction:
                             new_x = int(old_x) -1
-                        elif '+' in direction:
+                        elif '+' in self.current_direction:
                             new_x = int(old_x) + 1
-                    elif 'y' in direction:
+                    elif 'y' in self.current_direction:
                         new_x = old_x
-                        if '-' in direction:
+                        if '-' in self.current_direction:
                             new_y = int(old_y) -1
-                        elif '+' in direction:
+                        elif '+' in self.current_direction:
                             new_y = int(old_y) + 1
                     current_sector['x'] = new_x
                     current_sector['y'] = new_y
@@ -215,13 +216,16 @@ class Robot(BrickPiInterface):
                     self.move_distance(40)
                 print(walls)
                 sectors[current_sector_cp] = walls
+                
             else:
+                sector_complete = True
                 walls = current_sector_vals
                 indiv_walls = walls.keys()
                 for wall_key in indiv_walls:
                     wall = walls[wall_key]
                     explored = wall['explored']
                     if explored == False:
+                        sector_complete = False
                         direction = wall_to_search.keys() #the first key in the dictionary is the direction
                         for key in direction:
                             direction = key
@@ -233,8 +237,13 @@ class Robot(BrickPiInterface):
                             target_heading = self.return_new_direction(target_heading)
                     sectors[current_sector_cp][wall_key]['explored'] = True
                     break
-                if explored == True and current_sector_cp == "(0, 0)":
-                    print('break')
+                if sector_complete and not current_sector_cp == "(0, 0)":
+                    sectors[current_sector_cp]['complete'] = True
+                    entered_by = sectors[current_sector_cp]['entered']
+                    self.face_direction_coord(entered_by, self.current_direction)
+                    self.move_distance(40)
+                elif sector_complete == True and current_sector_cp == "(0, 0)":
+                    print('Search Complete')
                     search = False
         print(sectors)
 
