@@ -142,7 +142,6 @@ class BrickPiInterface():
         self.imu_status = 0
         elapsed = 0; start = time.time()
         timelimit = start + timelimit #maximum of 20 seconds to calibrate compass sensor
-
         while self.imu_status != 3 and time.time() < timelimit:
             newtime = time.time()
             newelapsed = int(newtime - start)

@@ -64,8 +64,8 @@ class Robot(BrickPiInterface):
 
 
     def right_degrees(self, angle, power = 100, speed = 100):
-        degrees = angle*2 +5
-        BP = ROBOT.BP
+        degrees = angle*2 -5
+        BP = self.BP
         try:
             BP.offset_motor_encoder(BP.PORT_A, BP.get_motor_encoder(BP.PORT_A)) # reset encoder A
             BP.offset_motor_encoder(BP.PORT_D, BP.get_motor_encoder(BP.PORT_D)) # reset encoder D
@@ -75,7 +75,7 @@ class Robot(BrickPiInterface):
                 BP.set_motor_position(BP.PORT_D, degrees+10)    # set motor A's target position to the current position of motor D
                 BP.set_motor_position(BP.PORT_A, -1*degrees-10)
                 time.sleep(0.02) 
-                if BP.get_motor_encoder(BP.PORT_D) >= degrees or BP.get_motor_encoder(BP.PORT_A) <= -1*degrees:
+                if -1* BP.get_motor_encoder(BP.PORT_A) <= degrees or BP.get_motor_encoder(BP.PORT_D) >= degrees:
                     break
                 #print("A:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_A)))
                 #print("D:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_D)))
@@ -85,7 +85,7 @@ class Robot(BrickPiInterface):
     
     def left_degrees(self, angle, power = 100, speed = 100):
         degrees = angle*2 + 5
-        BP = ROBOT.BP
+        BP = self.BP
         try:
             BP.offset_motor_encoder(BP.PORT_A, BP.get_motor_encoder(BP.PORT_A)) # reset encoder A
             BP.offset_motor_encoder(BP.PORT_D, BP.get_motor_encoder(BP.PORT_D)) # reset encoder D
@@ -116,30 +116,30 @@ class Robot(BrickPiInterface):
             heading += 360
         return heading
     
-    def face_heading(self, heading):
-        direction = self.get_compass_IMU()
-        print(direction)
-        print(heading)
-        if heading > direction:
-            self.left_degrees(direction-heading)
-
-        else:
-            self.right_degrees(direction-heading)
-
-        return 
-    
+    def return_new_direction(self, old_direction):
+        if old_direction == '+y':
+            new_direction = '+x'
+        elif old_direction == '+x':
+            new_direction = '-y'
+        elif old_direction == '-y':
+            new_direction = '-x'
+        elif old_direction == '-x':
+            new_direction = '+y'
+        return new_direction
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_maze(self):
         print('Initialising Search')
         #Initialise robot search variables
         sectors = {} # dictionary of all sectors of the maze
         heading = self.get_compass_IMU() #gets initial heading
-        coordinate_headings = {'+y':self.clean_heading(heading), '+x': self.clean_heading(heading)+90,
-        '-y':self.clean_heading(heading) + 180, '-x': self.clean_heading(heading)+270} #has specific bearings for each heading
+        coordinate_headings = {'+y':self.clean_heading(heading), '+x': self.clean_heading(heading+90),
+        '-y':self.clean_heading(heading + 180), '-x': self.clean_heading(heading+270)} #has specific bearings for each heading
         current_sector = {'x':0, 'y':0} #robot starts at 0,0
         search = True #var for while loop
         #SEARCH CODE
+        current_direction = "+y"
         while search:
+            print(sectors)
             current_sector_cp = '('+str(current_sector['x'])+', '+str(current_sector['y'])+')'
             if current_sector_cp in sectors:
                 current_sector_vals = sectors[current_sector_cp]
@@ -148,24 +148,21 @@ class Robot(BrickPiInterface):
             if not current_sector_vals:
                 walls = {} #creates a blank list for all the walls
                 wall_to_search = None #the wall that is to be searched first
+                
                 for wall in range(4): #up to 4 walls per box
                     ##for each wall
                     self.reconfig_IMU()
                     current_heading = self.get_compass_IMU()
                     print(current_heading)
-                    current_direction = None
-                    for direction in coordinate_headings.keys():
-                        current_direction = direction
-                        direct_val = coordinate_headings[direction]
-                        if direct_val - 5 < direct_val < direct_val + 5:
-                            current_heading = direct_val
-                            break
+                    
                     self.left_degrees(90)
+                    current_direction = self.return_new_direction(current_direction)
                     status = False
-                    if self.get_ultra_sensor() < 20: #there is a wall
+                    if self.get_ultra_sensor() < 20 and self.get_ultra_sensor() != 0: #there is a wall
                         status = True
                         print('Wall:' + str(status))
                     victim = False #predefines victim as false
+                    temp_wall = {'status':False, 'victim': False, 'explored': False}
                     if status == True: #if wall
                         if GLOBALS.CAMERA:
                             h = GLOBALS.CAMERA.find_h(GLOBALS.CAMERA.data)
@@ -184,16 +181,21 @@ class Robot(BrickPiInterface):
                         if wall_to_search == None:
                             temp_wall = {'status':False, 'victim': False, 'explored': True}
                             wall_to_search = {current_direction: current_heading}
-                        else:
-                            temp_wall = {'status':False, 'victim': False, 'explored': False}
+                            
                     print(temp_wall)
                     walls[current_direction] = temp_wall
                 if wall_to_search != None:
                     #update sector
-                    direction = wall_to_search.keys()[0] #the first key in the dictionary is the direction
+                    direction = wall_to_search.keys() #the first key in the dictionary is the direction
+                    for key in direction:
+                        direction = key
+                        break
                     target_heading = wall_to_search[direction] #use that to get the target direction
+                    print(direction)
+                    print(target_heading)
                     old_x = current_sector['x']
                     old_y = current_sector['y']
+                    print(old_x, old_y, direction)
                     if 'x' in direction:
                         new_y = old_y
                         if '-' in direction:
@@ -203,14 +205,15 @@ class Robot(BrickPiInterface):
                     elif 'y' in direction:
                         new_x = old_x
                         if '-' in direction:
-                            new_y = int(new_y) -1
+                            new_y = int(old_y) -1
                         elif '+' in direction:
-                            new_y = int(new_y) + 1
+                            new_y = int(old_y) + 1
                     current_sector['x'] = new_x
                     current_sector['y'] = new_y
                     print(current_sector)
-                    self.rotate_power_heading_IMU(15, target_heading)
+                    self.rotate_power_heading_IMU(15, target_heading, 35)
                     self.move_distance(40)
+                print(walls)
                 sectors[current_sector_cp] = walls
             else:
                 walls = current_sector_vals
@@ -220,7 +223,7 @@ class Robot(BrickPiInterface):
                     explored = wall['explored']
                     if explored == False:
                         current_heading = coordinate_headings[wall_key]
-                        self.rotate_power_heading_IMU(15, self.clean_heading(current_heading))
+                        self.rotate_power_heading_IMU(15, target_heading, 35)
                     sectors[current_sector_cp][wall_key]['explored'] = True
                     break
                 if explored == True and current_sector_cp == "(0, 0)":
@@ -243,7 +246,7 @@ if __name__ == '__main__':
     logging.basicConfig(filename='logs/robot.log', level=logging.INFO)
     ROBOT = Robot(timelimit=10)  #10 second timelimit before
     ROBOT.configure_sensors() #This takes 4 seconds
-    #ROBOT.rotate_power_degrees_IMU(20,-90)
     ROBOT.search_maze()
-
+    #ROBOT.right_degrees(90)
+    #ROBOT.rotate_power_heading_IMU(15, 0, 35)
     ROBOT.safe_exit()
