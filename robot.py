@@ -108,15 +108,10 @@ class Robot(BrickPiInterface):
     
 
     #Create a function to search for victim
-    
-    def clean_heading(self,heading):
-        if heading >= 360:
-            heading -= 360
-        elif heading <= 360:
-            heading += 360
-        return heading
+
     
     def return_new_direction(self, old_direction):
+        print(old_direction)
         if old_direction == '+y':
             new_direction = '+x'
         elif old_direction == '+x':
@@ -125,15 +120,28 @@ class Robot(BrickPiInterface):
             new_direction = '-x'
         elif old_direction == '-x':
             new_direction = '+y'
+        print(new_direction)
         return new_direction
+
+    def face_direction_coord(self, wall_to_search, current_direction):
+        direction = wall_to_search.keys() #the first key in the dictionary is the direction
+        for key in direction:
+            direction = key
+            break
+        print(direction)
+        target_heading = direction #use that to get the target direction
+        while current_direction != target_heading:
+            self.left_degrees(90)
+            target_heading = self.return_new_direction(target_heading)
+            print(target_heading)
+        return target_heading
+
+
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_maze(self):
         print('Initialising Search')
         #Initialise robot search variables
         sectors = {} # dictionary of all sectors of the maze
-        heading = self.get_compass_IMU() #gets initial heading
-        coordinate_headings = {'+y':self.clean_heading(heading), '+x': self.clean_heading(heading+90),
-        '-y':self.clean_heading(heading + 180), '-x': self.clean_heading(heading+270)} #has specific bearings for each heading
         current_sector = {'x':0, 'y':0} #robot starts at 0,0
         search = True #var for while loop
         #SEARCH CODE
@@ -152,8 +160,6 @@ class Robot(BrickPiInterface):
                 for wall in range(4): #up to 4 walls per box
                     ##for each wall
                     self.reconfig_IMU()
-                    current_heading = self.get_compass_IMU()
-                    print(current_heading)
                     
                     self.left_degrees(90)
                     current_direction = self.return_new_direction(current_direction)
@@ -180,19 +186,14 @@ class Robot(BrickPiInterface):
                     elif status == False:#must be no wall
                         if wall_to_search == None:
                             temp_wall = {'status':False, 'victim': False, 'explored': True}
-                            wall_to_search = {current_direction: current_heading}
+                            wall_to_search = {current_direction: temp_wall}
                             
                     print(temp_wall)
                     walls[current_direction] = temp_wall
                 if wall_to_search != None:
                     #update sector
-                    direction = wall_to_search.keys() #the first key in the dictionary is the direction
-                    for key in direction:
-                        direction = key
-                        break
-                    target_heading = wall_to_search[direction] #use that to get the target direction
+                    direction = self.face_direction_coord(wall_to_search, current_direction)
                     print(direction)
-                    print(target_heading)
                     old_x = current_sector['x']
                     old_y = current_sector['y']
                     print(old_x, old_y, direction)
@@ -211,7 +212,6 @@ class Robot(BrickPiInterface):
                     current_sector['x'] = new_x
                     current_sector['y'] = new_y
                     print(current_sector)
-                    self.rotate_power_heading_IMU(15, target_heading, 35)
                     self.move_distance(40)
                 print(walls)
                 sectors[current_sector_cp] = walls
@@ -222,8 +222,15 @@ class Robot(BrickPiInterface):
                     wall = walls[wall_key]
                     explored = wall['explored']
                     if explored == False:
-                        current_heading = coordinate_headings[wall_key]
-                        self.rotate_power_heading_IMU(15, target_heading, 35)
+                        direction = wall_to_search.keys() #the first key in the dictionary is the direction
+                        for key in direction:
+                            direction = key
+                            break
+                        
+                        target_heading = direction #use that to get the target direction
+                        while direction != target_heading:
+                            self.left_degrees(90)
+                            target_heading = self.return_new_direction(target_heading)
                     sectors[current_sector_cp][wall_key]['explored'] = True
                     break
                 if explored == True and current_sector_cp == "(0, 0)":
