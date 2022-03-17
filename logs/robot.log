@@ -11264,3 +11264,68 @@ INFO:root:Starting Heading: 252 with Power: 15
 INFO:root:Rotating while heading <= 241
 INFO:root:Starting Heading: 250 with Power: 15
 INFO:root:Rotating while heading <= 236
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Exiting the Thermal Sensor Thread
+INFO:root:Exiting
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:BRICKPIINTERFACE: Starting thermal sensor thread
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
+INFO:root:ULTRASONIC: get_sensor error: Invalid sensor data
