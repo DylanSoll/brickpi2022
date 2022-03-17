@@ -25,12 +25,12 @@ function swap_vc(id){
     if (current == 'start'){
         vc_button.setAttribute('data-current', 'stop')
         vc_button.setAttribute('onclick', 'recognition.stop(); swap_vc(this.id)')
-        vc_button.innerHTML = 'Stop VC <i class="fa fa-microphone-slash"></i>'
+        vc_button.innerHTML = 'Disable VC <i class="fa fa-microphone-slash"></i>'
         vc_button.setAttribute('class', 'btn btn-warning')
     }else if (current == 'stop'){
         vc_button.setAttribute('data-current', 'start')
         vc_button.setAttribute('onclick', 'recognition.start();swap_vc(this.id)')
-        vc_button.innerHTML = 'Start VC <i class="fa fa-microphone"></i>'
+        vc_button.innerHTML = 'Enable VC <i class="fa fa-microphone"></i>'
         vc_button.setAttribute('class', 'btn btn-success')
     } 
 }
@@ -261,3 +261,81 @@ function resume_mission(){
     allow_sensors = true;
     return interval
 }
+
+
+
+
+
+
+const commands_help = {'help':'Display commands', 'forward': 'Move forward x centimeters or seconds', 
+  'back': 'Move back x centimeters or seconds', 'left': 'Turn left x degrees or seconds', 'right': 'Turn right x degrees or seconds',
+  'fire': 'Deliver medical package', 'stop': 'Stops all movement'};
+function toggle_chatbox(buttonid, chatboxid){
+    var button = document.getElementById(buttonid);
+    var chatbox = document.getElementById(chatboxid);
+    if (button.hasAttribute('hidden')){
+      button.removeAttribute('hidden')
+      chatbox.setAttribute('hidden', true)
+    }else{
+      chatbox.removeAttribute('hidden')
+      button.setAttribute('hidden', true)
+    }
+    return
+  }
+  function add_response(response){
+    var target = document.getElementById('sent_messages')
+    var temp_div = document.createElement('div')
+    temp_div.innerHTML = response
+    temp_div.className = "command-response-text"
+    target.appendChild(temp_div)
+    return
+  }
+
+  function send_command(inputid){
+    var input_element = document.getElementById(inputid)
+    var message = input_element.value.toLowerCase()
+    console.log(message)
+    if (message.includes('help')){
+      commands_list = Object.keys(commands_help)
+      
+      for (var i = 0; i < commands_list.length; i++){
+        response = "<u data-toggle='tooltip' data-placement='top' title="+commands_list[i]+">" + commands_list[i] + "</u> : " +commands_help[commands_list[i]]
+        add_response(response);
+      }
+    }else if (message.includes('say')){
+      phrase = message.splice('say').slice(1);
+      phrase = phrase.join(say);
+      jq_ajax('/say-phrase', phrase, add_response);
+    }else if (message.includes('shoot')){
+      jq_ajax('/process_shooting');
+      add_response('Firing')
+    }else if (message.includes('kill')){
+      jq_ajax('/robotshutdown');
+      add_response('Shut down everything')
+    }
+    input_element.value = ""
+  }
+  function enlarge_console(){
+    var console_el = document.getElementById('message_box');
+    var trigger = document.getElementById('resize_console');
+    var text_area = document.getElementById('textbox_area');
+    var terminal_counter = document.getElementById('terminal-counter');
+    trigger.setAttribute('onclick',"shrink_console()");
+    trigger.className = "fa fa-compress fa-2x pointer";
+    console_el.className = "message-box cs-lg";
+    text_area.className = "textbox-area cs-lg";
+    terminal_counter.removeAttribute('hidden');
+
+  }
+  function shrink_console(){
+    var console_el = document.getElementById('message_box');
+    var trigger = document.getElementById('resize_console');
+    var text_area = document.getElementById('textbox_area');
+    var terminal_counter = document.getElementById('terminal-counter');
+
+    trigger.setAttribute('onclick',"enlarge_console()");
+    trigger.className = "fa fa-expand fa-2x pointer";
+    console_el.className = "message-box cs-sm";
+    text_area.className = "textbox-area cs-sm";
+    terminal_counter.setAttribute('hidden', true);
+  }

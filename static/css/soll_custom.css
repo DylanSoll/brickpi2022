@@ -8,3 +8,79 @@
     position: relative;
 }
 
+
+
+/*terminal css*/
+  .cs-sm{
+    width:15%;
+  }
+  .cs-lg{
+    width:85%;
+  }
+  .message-box{
+    position:fixed;
+    background-color: black;
+    bottom:0;
+    border-radius: 5vh 5vh;
+    border: 3px black solid;
+    height:45vh;
+    resize: both;
+    z-index: 0;
+  }
+
+  .message-header{
+    height: auto;
+    color: white;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    align-content: center;
+    margin: 1vh;
+    height:5vh;
+  }
+  .textbox-area-container{
+    position: relative;
+    width: 100%;
+  }
+  .textbox-area{
+    display:grid;
+    grid-template-columns: 80% 20%;
+    position: fixed;
+    bottom: 0%;
+    margin-bottom: .5%;
+    height:6vh;
+  }
+  .sent-messages{
+    position: relative;
+    border: 1px black solid;
+    overflow-y: scroll;
+    width: 100%;
+    height: 30vh;
+    overflow-y:scroll;
+    overflow-x: clip; 
+  }
+  .sent-messages::-webkit-scrollbar{
+    background-color: black;
+  }
+  ::-webkit-scrollbar-thumb:vertical{
+    border-radius: 20px 20px 20px 20px;
+    background-image: linear-gradient(to bottom, rgb(52, 235, 103), rgb(52, 113, 235));
+  }
+  ::-webkit-scrollbar-thumb:horizontal{
+    border-radius: 20px 20px 20px 20px;
+    background-image: linear-gradient(to right, rgb(52, 235, 103), rgb(52, 113, 235));
+  }
+  .command-text-area{
+    border-radius: 1vw;
+  }.command-response-text{
+    color: rgb(9, 173, 0);
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .show-chatbox-btn{
+    position: fixed; 
+    bottom:0; 
+    width:100%
+  }
+  .pointer:hover{
+    cursor: pointer;
+  }

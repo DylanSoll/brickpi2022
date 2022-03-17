@@ -719,6 +719,20 @@ def say_phrase():
         
     else:
         return redirect('/dashboard')
+
+@app.route('/get-battery', methods = ['GET', 'POST'])
+def get_battery():
+    if request.method == 'POST':
+        if GLOBALS.ROBOT:
+            battery = (GLOBALS.ROBOT.get_battery()*100)/12
+            return jsonify(battery)
+        else:
+            battery = 0
+            return jsonify(battery)
+        
+    else:
+        return redirect('/dashboard')
+#----------------------------------------
 #---------------------------------------------------------------------------
 #main method called web server application
 if __name__ == '__main__':

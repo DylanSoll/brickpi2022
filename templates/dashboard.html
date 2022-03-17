@@ -8,6 +8,42 @@
     jQuery(document).ready(function () {
   jQuery('[data-toggle="tooltip"]').tooltip();
 });
+
+
+function drawGuage(label, value, size, markings, target){
+  google.charts.load('current', {'packages':['gauge']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Label', 'Value'],
+      [label, value],
+    ]);
+
+    var options = {
+      width: size['width'], height: size['height'],
+      redFrom: markings['redFrom'], redTo: markings['redTo'],
+      yellowFrom:markings['yellowFrom'], yellowTo: markings['yellowTo'],
+      greenFrom:markings['greenFrom'], greenTo: markings['greenTo'],
+      minorTicks: markings['minorTicks']
+    };
+
+    var chart = new google.visualization.Gauge(document.getElementById(target));
+
+    chart.draw(data, options);
+  }
+}
+
+  markings = {'redFrom':0,'redTo':30,'yellowFrom':30,'yellowTo':70,'greenFrom':70,'greenTo':100,'minorTicks':5}
+  size = {'width':400, 'height':120}
+  drawGuage('Battery', 80, size, markings, 'battery_graph')
+  function draw_power_guage(value){
+    size = {'width':400, 'height':120}
+    markings = {'redFrom':75,'redTo':100,'yellowFrom':0,'yellowTo':15,'greenFrom':15,'greenTo':75,'minorTicks':5}
+    drawGuage('Power', value, size, markings, 'power_graph')
+  }
+  draw_power_guage(30)
 </script>
 
 
@@ -77,7 +113,7 @@
       </div>
     </div>
   </div>
-    <h1 class="heading">Robot Dashboard</h1>
+    <h1 class="heading">Robot Dashboard <i id = "battery_symbol" class = "fa fa-battery-full" style="color:green;"></i></h1>
     
     <div class="row" id="load">
         <button type="button" class="btn btn-success" onclick="load_robot();">Load Robot</button>
@@ -90,19 +126,25 @@
             onclick="jq_ajax('/initiate-mission'); suspend_mission()" hidden>End Mission</button>
           </div>
           <div >
-            <button class="btn btn-secondary" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls">
-              Start VC <i class="fa fa-microphone" aria-hidden="true"></i>
+            <button class="btn btn-secondary" onclick="recognition.start(); swap_vc(this.id)" data-current = "start" id = "vc_controls"
+            data-toggle='tooltip' data-placement='top' title="Voice Commands">
+              Enable VC <i class="fa fa-microphone" aria-hidden="true"></i>
             </button>          
           </div>
           <div >
             <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
               <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Robot <i class="fa fa-cogs"></i></button>
+                <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" 
+                aria-haspopup="true" aria-expanded="false">Robot <i class="fa fa-cogs"></i></button>
                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                  <button id="sensors" type="button" class="btn btn-info" onclick="jq_ajax('/sensors');"style="width:100%;">Sensors</button>
-                  <button id="compass" type="button" class="btn btn-secondary" onclick="jq_ajax('/compass');" style="width:100%;">Set Compass</button>
-                  <button id="reconfig" type="button" class="btn btn-warning" onclick="jq_ajax('/reconfig_IMU');" style="width:100%;">Reconfigure IMU</button>
-                  <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();" style="width:100%;">Shutdown Robot</button>
+                  <button id="sensors" type="button" class="btn btn-info" href = "/sensor-view"style="width:100%;"
+                  data-toggle="tooltip" data-bs-placement="right" title="Sensors"><i class="fa-solid fa-temperature-half"></i></button>
+                  <button id="compass" type="button" class="btn btn-secondary" onclick="jq_ajax('/compass');" style="width:100%;"
+                  data-toggle="tooltip" data-bs-placement="right" title="Set Compass"><i class="fa-regular fa-compass"></i></button>
+                  <button id="reconfig" type="button" class="btn btn-warning" onclick="jq_ajax('/reconfig_IMU');" style="width:100%;" 
+                  data-toggle="tooltip" data-bs-placement="right" title="Reconfigure IMU"><i class="fa-solid fa-location-arrow"></i></button>
+                  <button id="shutdown" type="button" class="btn btn-danger" onclick="shutdown_robot();" style="width:100%;"
+                  data-toggle="tooltip" data-bs-placement="right" title="Shutdown Robot"><i class="fa-solid fa-power-off"></i></button>
                 </div>
               </div>
             </div>
@@ -119,14 +161,14 @@
             <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value);"
             data-toggle='tooltip' data-placement='top' title="Move Forward"><i class="fa fa-angle-double-up"></i></button>
             <button id="stop" type="button" class="btn btn-danger" onclick="jq_ajax('/btn-mov/stop/0');"
-            data-toggle='tooltip' data-placement='top' title="Stop Robot"><i class="fa fa-stop-circle-o" aria-hidden="true"></i></button>
+            data-toggle='tooltip' data-placement='top' title="Stop Robot"><i class="fa-regular fa-circle-stop"></i></button>
 
             <button id="left" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left/'+document.getElementById('power').value);"
-            data-toggle='tooltip' data-placement='top' title="Turn Left"><i class="fa fa-undo" aria-hidden="true"></i></button>
+            data-toggle='tooltip' data-placement='top' title="Turn Left"><i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i></button>
             <button id="shoot" type="button" class="btn btn-success" onclick="jq_ajax('/process_shooting');"
             data-toggle='tooltip' data-placement='top' title="Deliver Supplies"><i class="fa fa-crosshairs" aria-hidden="true"></i></button> 
             <button id="right" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right/'+document.getElementById('power').value);"
-            data-toggle='tooltip' data-placement='top' title="Turn Right"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+            data-toggle='tooltip' data-placement='top' title="Turn Right"><i class="fa-solid fa-arrow-rotate-right"></i></button>
             
             <button id="take_photo" type="button" class="btn btn-warning" onclick="jq_ajax('/take-photo');"
             data-toggle='tooltip' data-placement='top' title="Take Photo"><i class="fa fa-camera" aria-hidden="true"></i></button>
@@ -141,7 +183,7 @@
         <div class="row">
             <label for="customRange1" class="form-label heading">Robot Power: <span id = "power_range">30</span>%</label>
             <input type="range" class="form-range" id="power" min = "0" max = "100" step = "1" value =30
-            oninput="document.getElementById('power_range').innerHTML = this.value">
+            oninput="document.getElementById('power_range').innerHTML = this.value; draw_power_guage(parseInt(this.value))">
 
         </div>
         <div class="row">
@@ -170,160 +212,94 @@
 </script>
 <div id = "terminal-counter" style="height: 45vh" hidden></div>
 {% endblock %}
-{%block right_side_bar%}
+{%block left_side_bar%}
 <style>
-  .cs-sm{
-    width:15%;
+  .data-graphics-box{
+  position:fixed;
+  background-color: black;
+  bottom:0;
+  border-radius: 5vh 5vh;
+  border: 3px black solid;
+  height:80vh;
+  resize: both;
+  z-index: 0;
   }
-  .cs-lg{
-    width:100%;
-  }
-  .message-box{
-    position:fixed;
-    background-color: black;
-    bottom:0;
-    border-radius: 5vh 5vh;
-    border: 3px black solid;
-    height:45vh;
-    resize: both;
-    z-index: 0;
-  }
-
-  .message-header{
+  .data-graphics-header{
     height: auto;
     color: white;
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 90% 10%;
     align-content: center;
     margin: 1vh;
     height:5vh;
   }
-  .textbox-area-container{
-    position: relative;
-    width: 100%;
-  }
-  .textbox-area{
-    display:grid;
-    grid-template-columns: 80% 20%;
-    position: fixed;
-    bottom: 0%;
-    margin-bottom: .5%;
-    height:6vh;
-  }
-  .sent-messages{
-    position: relative;
-    border: 1px black solid;
-    overflow-y: scroll;
-    width: 100%;
-    height: 30vh;
-    overflow-y:scroll;
-    overflow-x: clip; 
-  }
-  .sent-messages::-webkit-scrollbar{
-    background-color: black;
-  }
-  .sent-messages::-webkit-scrollbar-thumb{
-    border-radius: 20px 20px 20px 20px;
-    background-image: linear-gradient(to bottom, rgb(52, 235, 103), rgb(52, 113, 235));
-  }
-  .command-text-area{
-    border-radius: 1vw;
-  }.command-response-text{
-    color: rgb(9, 173, 0);
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  .show-chatbox-btn{
-    position: fixed; 
-    bottom:0; 
-    width:100%
-  }
-  .pointer:hover{
-    cursor: pointer;
+  .vert-centered{
+    display: inline-block; align-self: center;
   }
 </style>
-<script>
-  const commands_help = {'help':'Display commands', 'forward': 'Move forward x centimeters or seconds', 
-  'back': 'Move back x centimeters or seconds', 'left': 'Turn left x degrees or seconds', 'right': 'Turn right x degrees or seconds',
-  'fire': 'Deliver medical package', 'stop': 'Stops all movement'};
-  function toggle_chatbox(buttonid, chatboxid){
-    var button = document.getElementById(buttonid);
-    var chatbox = document.getElementById(chatboxid);
-    if (button.hasAttribute('hidden')){
-      button.removeAttribute('hidden')
-      chatbox.setAttribute('hidden', true)
-    }else{
-      chatbox.removeAttribute('hidden')
-      button.setAttribute('hidden', true)
-    }
-    return
-  }
-  function add_response(response){
-    var target = document.getElementById('sent_messages')
-    var temp_div = document.createElement('div')
-    temp_div.innerHTML = response
-    temp_div.className = "command-response-text"
-    target.appendChild(temp_div)
-    return
-  }
 
-  function send_command(inputid){
-    var input_element = document.getElementById(inputid)
-    var message = input_element.value.toLowerCase()
-    console.log(message)
-    if (message.includes('help')){
-      commands_list = Object.keys(commands_help)
-      
-      for (var i = 0; i < commands_list.length; i++){
-        response = "<u data-toggle='tooltip' data-placement='top' title="+commands_list[i]+">" + commands_list[i] + "</u> : " +commands_help[commands_list[i]]
-        add_response(response);
+<button type = "button" class = "btn btn-success show-chatbox-btn" data-toggle='tooltip' data-placement='top' title="Open Data Graphics"
+id = "show_data_graphics_btn"onclick = "toggle_chatbox('show_data_graphics_btn', 'data_graphics_box')">Data Graphics</button>
+<div id="data_graphics_box" class = "data-graphics-box cs-sm" hidden>
+  <div class="data-graphics-header" id="data_graphics_header">
+      <h4 class = "heading align-self-center vert-centered">Data Graphics</h4>
+      <i class="fa-solid fa-xmark fa-lg pointer d-flex justify-content-end align-content-end vert-centered" aria-hidden="true" 
+      onclick = "toggle_chatbox('show_data_graphics_btn', 'data_graphics_box')"></i>
+  </div>
+  <div id = "data_graphics_body" class = "data-graphics-body ">
+    <div id="battery_graph" class="d-flex justify-content-center"></div>
+    <div id="power_graph" class="d-flex justify-content-center"></div>
+    <script>
+      function draw_battery_graph(value){
+        markings = {'redFrom':0,'redTo':30,'yellowFrom':30,'yellowTo':70,'greenFrom':70,'greenTo':100,'minorTicks':5}
+        size = {'width':400, 'height':120}
+        drawGuage('Battery', value, size, markings, 'battery_graph')
+        
+        
       }
-    }else if (message.includes('say')){
-      phrase = message.splice('say').slice(1);
-      phrase = phrase.join(say);
-      jq_ajax('/say-phrase', phrase, add_response);
-    }else if (message.includes('shoot')){
-      jq_ajax('/process_shooting');
-      add_response('Firing')
-    }else if (message.includes('kill')){
-      jq_ajax('/robotshutdown');
-      add_response('Shut down everything')
-    }
-    input_element.value = ""
-  }
-  function enlarge_console(){
-    var console_el = document.getElementById('message_box');
-    var trigger = document.getElementById('resize_console');
-    var text_area = document.getElementById('textbox_area');
-    var terminal_counter = document.getElementById('terminal-counter');
-    trigger.setAttribute('onclick',"shrink_console()");
-    trigger.className = "fa fa-compress fa-2x pointer";
-    console_el.className = "message-box cs-lg";
-    text_area.className = "textbox-area cs-lg";
-    terminal_counter.removeAttribute('hidden');
+      function update_battery(value){
+        target = document.getElementById('battery_symbol');
+        if (value < 25){
+          target.className = "fa fa-battery-quarter"
+          target.style = "color:red;"
+        }else if (value < 50){
+          target.className = "fa fa-battery-half"
+          target.style = "color:orange;"
+        }else if (value < 75){
+          target.className = "fa fa-battery-three-quarters"
+          target.style = "color:green;"
+        }else{
+          target.className = "fa fa-battery-full"
+          target.style = "color:green;"
+        }
+      }
+      function jq_for_draw_battery_graph(){
+          jq_ajax('/get-battery', {}, draw_battery_graph)
+          jq_ajax('/get-battery', {}, update_battery)
+        }
+      jq_for_draw_battery_graph()
+      setInterval(jq_for_draw_battery_graph, 1000)
+    </script>
+  </div>
+</div>
+{%endblock%}
 
-  }
-  function shrink_console(){
-    var console_el = document.getElementById('message_box');
-    var trigger = document.getElementById('resize_console');
-    var text_area = document.getElementById('textbox_area');
-    var terminal_counter = document.getElementById('terminal-counter');
 
-    trigger.setAttribute('onclick',"enlarge_console()");
-    trigger.className = "fa fa-expand fa-2x pointer";
-    console_el.className = "message-box cs-sm";
-    text_area.className = "textbox-area cs-sm";
-    terminal_counter.setAttribute('hidden', true);
-  }
-</script>
+
+
+
+
+
+
+
+{%block right_side_bar%}
 <button type = "button" class = "btn btn-success show-chatbox-btn" data-toggle='tooltip' data-placement='top' title="Open Terminal"
 id = "show_chatbox_btn"onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')">Show Terminal</button>
 <div id="message_box" class = "message-box cs-sm" hidden>
   <div class="message-header" id="message_header">
-      <i class="fa fa-expand fa-2x pointer" aria-hidden="true" id = "resize_console" onclick ="enlarge_console()" ></i>
-      <h4 class = "heading align-self-center">Text Command</h4>
-      <i class="fa fa-times-circle-o fa-2x pointer d-flex justify-content-end"" aria-hidden="true" onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')"
-      class = "align-item: right; justify-content:center"></i>
+      <i class="fa fa-expand fa-lg pointer vert-centered vert-centered" aria-hidden="true" id = "resize_console" onclick ="enlarge_console()" ></i>
+      <h4 class = "heading vert-centered">Text Command</h4>
+      <i class="fa-solid fa-xmark fa-lg pointer d-flex justify-content-end vert-centered" aria-hidden="true" onclick = "toggle_chatbox('show_chatbox_btn', 'message_box')"></i>
   </div>
   <div class = "message-body" id = 'message_body'>
       <div class="sent-messages" id = "sent_messages">
@@ -333,7 +309,7 @@ id = "show_chatbox_btn"onclick = "toggle_chatbox('show_chatbox_btn', 'message_bo
         <div class="textbox-area cs-sm" id = "textbox_area">
           <textarea name="command_text_area" id="command_text_area" class="command-text-area" placeholder="Command.." rows = 1></textarea>   
           <button type="button" class = "btn btn-success" onclick = "send_command('command_text_area')">
-            <i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+            <i class="fa-solid fa-paper-plane" aria-hidden = "true"></i></button>
         </div>
       </div>
       
