@@ -732,6 +732,34 @@ def get_battery():
         
     else:
         return redirect('/dashboard')
+
+
+@app.route('/move-distance', methods = ['GET', 'POST'])
+def move_distance():
+    if request.method == 'POST':
+        value = request.get_json()
+        if GLOBALS.ROBOT:
+            GLOBALS.ROBOT.move_distance(value)
+        else:
+            return redirect('Failed')
+        
+    else:
+        return redirect('/dashboard')
+
+@app.route('/turn_degrees/<direction>', methods = ['GET', 'POST'])
+def turn_degrees(direction):
+    if request.method == 'POST':
+        value = request.get_json()
+        if GLOBALS.ROBOT:
+            if direction == 'right':
+                GLOBALS.ROBOT.right_degrees(value)
+            elif direction == 'left':
+                GLOBALS.ROBOT.left_degrees(value)
+        else:
+            return redirect('Failed')
+        
+    else:
+        return redirect('/dashboard')
 #----------------------------------------
 #---------------------------------------------------------------------------
 #main method called web server application

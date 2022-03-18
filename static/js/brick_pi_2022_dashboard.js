@@ -295,24 +295,96 @@ function toggle_chatbox(buttonid, chatboxid){
     var input_element = document.getElementById(inputid)
     var message = input_element.value.toLowerCase()
     console.log(message)
-    if (message.includes('help')){
+    aspects = message.split(' ')
+    command = aspects[0]
+    if (command=='help'){
       commands_list = Object.keys(commands_help)
       
       for (var i = 0; i < commands_list.length; i++){
         response = "<u data-toggle='tooltip' data-placement='top' title="+commands_list[i]+">" + commands_list[i] + "</u> : " +commands_help[commands_list[i]]
         add_response(response);
       }
-    }else if (message.includes('say')){
+    }else if (command=='say'){
       phrase = message.splice('say').slice(1);
       phrase = phrase.join(say);
       jq_ajax('/say-phrase', phrase, add_response);
-    }else if (message.includes('shoot')){
+    }else if (command=='shoot'){
       jq_ajax('/process_shooting');
       add_response('Firing')
-    }else if (message.includes('kill')){
+    }else if (command=='kill'){
       jq_ajax('/robotshutdown');
       add_response('Shut down everything')
-    }
+    }else if (command=='forward'){
+        numeric = parseInt(aspects[1])
+        type = aspects[2]
+        if (numeric == NaN){
+            response = 'PLease give a proper number'
+        }else if (type == 's'){
+            //move forward power time
+            response = "forward " +numeric + " s"
+        }else if (type == 'cm'){
+            //move forward distance
+            response = "forward " +numeric + " cm"
+        }else if (type == 'm'){
+            //move forward distance * 100
+            response = "forward " +numeric *100 + " cm"
+        }else{
+            response = "Invalid command"
+        }
+        add_response(response)
+      }else if (command=='backward'){
+        numeric = parseInt(aspects[1])
+        type = aspects[2]
+        if (numeric == NaN){
+            response = 'PLease give a proper number'
+        }else if (type == 's'){
+            //move forward power time
+            response = "backward "+ parseInt(-1*numeric) + " s"
+        }else if (type == 'cm'){
+            //move forward distance
+            response = "backward " +parseInt(-1*numeric) + " cm"
+        }else if (type == 'm'){
+            //move forward distance * 100
+            response = "backward " +parseInt(-100*numeric) + " cm"
+        }else{
+            response = "Invalid command"
+        }
+        add_response(response)
+      }else if (command=='left'){
+        numeric = parseInt(aspects[1])
+        type = aspects[2]
+        if (numeric == NaN){
+            response = 'PLease give a proper number'
+        }else if (type == 'degrees'){
+            //move forward power time
+            response = "Turning left "+ parseInt(numeric) + " degrees"
+        }else if (type == 's'){
+            //move forward distance
+            response = "Turning left " +parseInt(numeric) + " s"
+        }else{
+            response = "Invalid command"
+        }
+        add_response(response)
+      }else if (command=='right'){
+        numeric = parseInt(aspects[1])
+        type = aspects[2]
+        if (numeric == NaN){
+            response = 'PLease give a proper number'
+        }else if (type == 'degrees'){
+            //move forward power time
+            response = "Turning right "+ parseInt(numeric) + " degrees"
+        }else if (type == 's'){
+            //move forward distance
+            response = "Turning right " +parseInt(numeric) + " s"
+        }else{
+            response = "Invalid command"
+        }
+        add_response(response)
+      }
+      else if (message.includes('kill')){
+        jq_ajax('/robotshutdown');
+        add_response('Shut down everything')
+      }
     input_element.value = ""
   }
   function enlarge_console(){
