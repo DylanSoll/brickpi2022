@@ -145,6 +145,26 @@ class Robot(BrickPiInterface):
             print(target_heading)
         return target_heading
 
+    def update_sector_cp(self):
+        old_x = self.current_sector['x']
+        old_y = self.current_sector['y']
+        print(old_x, old_y, self.current_direction)
+        if 'x' in self.current_direction:
+            new_y = old_y
+            if '-' in self.current_direction:
+                new_x = int(old_x) -1
+            elif '+' in self.current_direction:
+                new_x = int(old_x) + 1
+        elif 'y' in self.current_direction:
+            new_x = old_x
+            if '-' in self.current_direction:
+                new_y = int(old_y) -1
+            elif '+' in self.current_direction:
+                new_y = int(old_y) + 1
+        self.current_sector['x'] = new_x
+        self.current_sector['y'] = new_y
+        print(self.current_sector)
+        return
 
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_new_sector(self, current_sector_cp):
@@ -191,27 +211,11 @@ class Robot(BrickPiInterface):
         if wall_to_search != None:
             #update sector
             self.current_direction = self.face_direction_coord(wall_to_search, self.current_direction)
-            old_x = self.current_sector['x']
-            old_y = self.current_sector['y']
-            print(old_x, old_y, self.current_direction)
-            if 'x' in self.current_direction:
-                new_y = old_y
-                if '-' in self.current_direction:
-                    new_x = int(old_x) -1
-                elif '+' in self.current_direction:
-                    new_x = int(old_x) + 1
-            elif 'y' in self.current_direction:
-                new_x = old_x
-                if '-' in self.current_direction:
-                    new_y = int(old_y) -1
-                elif '+' in self.current_direction:
-                    new_y = int(old_y) + 1
-            self.current_sector['x'] = new_x
-            self.current_sector['y'] = new_y
+            self.update_sector_cp()
             print(self.current_sector)
             self.move_distance(40)
         print(walls)
-        self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}}
+        self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False}
 
         self.sectors[current_sector_cp]['walls'] = walls
         if current_sector_cp == "(0, 0)":
@@ -221,8 +225,30 @@ class Robot(BrickPiInterface):
         print(self.sectors)
         return
 
-    def search_old_sector():
-        return
+    def search_old_sector(self, current_sector_cp):
+        cont_search = True
+        walls = self.sectors[current_sector_cp]['walls']
+        entered_from = self.sectors[current_sector_cp]['entered']
+        wall_keys = walls.keys()
+        possible_movement = None
+        for key in wall_keys:
+            wall = walls[key]
+            if wall['status'] == False and wall['explored'] == False:
+                possible_movement = key
+                self.sectors[current_sector_cp]['walls'][key]['explored'] = True
+                self.current_direction = self.face_direction_coord(wall, self.current_direction)
+                self.move_distance(40)
+                self.update_sector_cp()
+                break
+        if possible_movement == None and current_sector_cp == '(0, 0)':
+            cont_search = False
+            self.sectors[current_sector_cp]['complete'] = True
+        elif possible_movement == None:
+            self.current_direction = self.face_direction_coord(entered_from, self.current_direction)
+            self.move_distance(40)
+            self.update_sector_cp()
+            self.sectors[current_sector_cp]['complete'] = True
+        return cont_search
 
     def search_maze(self):
         print('Initialising Search')
@@ -241,37 +267,11 @@ class Robot(BrickPiInterface):
             else:
                 current_sector_vals = None
             if not current_sector_vals:
-                self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}}
+                self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False}
                 self.search_new_sector(current_sector_cp)
                 
             else:
-                sector_complete = True
-                walls = current_sector_vals['walls']
-                indiv_walls = walls.keys()
-                for wall_key in indiv_walls:
-                    wall = walls[wall_key]
-                    explored = wall['explored']
-                    if explored == False:
-                        sector_complete = False
-                        direction = wall_to_search.keys() #the first key in the dictionary is the direction
-                        for key in direction:
-                            direction = key
-                            break
-                        
-                        target_heading = direction #use that to get the target direction
-                        while direction != target_heading:
-                            self.left_degrees(90)
-                            target_heading = self.return_new_direction(target_heading)
-                    self.sectors[current_sector_cp]['walls'][wall_key]['explored'] = True
-                    break
-                if sector_complete and not current_sector_cp == "(0, 0)":
-                    self.sectors[current_sector_cp]['complete'] = True
-                    entered_by = self.sectors[current_sector_cp]['entered']
-                    self.face_direction_coord(entered_by, self.current_direction)
-                    self.move_distance(40)
-                elif sector_complete == True and current_sector_cp == "(0, 0)":
-                    print('Search Complete')
-                    search = False
+                search = search_old_sector()
         print(self.sectors)
 
         ##ON TERMINATION
@@ -291,10 +291,16 @@ if __name__ == '__main__':
     ROBOT.configure_sensors() #This takes 4 seconds
     #ROBOT.left_degrees(90)
     #time.sleep(1)
-    ROBOT.search_maze()
+    #ROBOT.search_maze()
     #ROBOT.sectors = {}
     #ROBOT.current_direction = "+y"
     #ROBOT.search_new_sector({'x':0, 'y':0})
     #ROBOT.right_degrees(90)
     #ROBOT.rotate_power_heading_IMU(15, 0, 35)
+    ROBOT.current_sector = {'x': 0, 'y':0}
+    ROBOT.current_direction = '-x'
+    ROBOT.update_sector_cp()
+    ROBOT.update_sector_cp()
+    ROBOT.current_direction = '-y'
+    ROBOT.update_sector_cp()
     ROBOT.safe_exit()

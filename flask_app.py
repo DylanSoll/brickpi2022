@@ -374,8 +374,6 @@ def sensor_live_data():
 @app.route('/process_movement/<power>', methods = ['GET', 'POST'])
 def process_movement(power):
     if request.method == 'POST':
-        if not confirm_movement_perms():
-            return redirect('/dashboard')
         power = int(power)
         current_keys = request.get_json()
         if GLOBALS.ROBOT:
@@ -425,8 +423,6 @@ def process_movement(power):
 @app.route('/process_voice_commands', methods = ['GET', 'POST'])
 def process_voice_commands():
     if request.method == 'POST':
-        if not confirm_movement_perms():
-            return redirect('/dashboard')
         instructions = request.get_json()
         if GLOBALS.ROBOT:
             vc_type = instructions[0]
@@ -457,8 +453,6 @@ def process_voice_commands():
 @app.route('/process_shooting', methods = ['GET', 'POST'])
 def process_shooting():
     if request.method == 'POST':
-        if not confirm_movement_perms():
-            return redirect('/dashboard')
         if GLOBALS.ROBOT:
             GLOBALS.ROBOT.spin_medium_motor(1700)
         return jsonify({})
@@ -468,8 +462,6 @@ def process_shooting():
 @app.route('/btn-mov/<mov_type>/<power>', methods = ['GET', 'POST'])
 def btn_movements(mov_type, power):
     if request.method == 'POST':
-        if not confirm_movement_perms():
-            return redirect('/dashboard')
         if GLOBALS.ROBOT: 
             if GLOBALS.MISSIONID != None:
                 end_time_movement()
