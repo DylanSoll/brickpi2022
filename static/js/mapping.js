@@ -27,6 +27,33 @@ function drawmap() {
        setTimeout(drawmap, 20); 
    }
 }
-
+function draw_square(size, pen_colour =false, fill_colour = false){
+   if (pen_colour){
+      turtle.setPenColor(pen_colour)
+   }if (fill_colour){    
+      turtle.setHighlightPenColor(fill_colour)
+   }for (var i = 0; i < 4; i++){
+      turtle.forward(size)
+      turtle.right(90)
+   }
+    return
+}
+function go_to(x,y,heading = 0){
+   turtle.penUp()
+   turtle.setPos(x,y)
+   turtle.penDown()
+   turtle.lookTo(heading)
+   return
+}
+function draw_victim(victim_type, x, y){
+   turtle.setPenSize(1)
+   if (victim_type.toLowerCase() == 'harmed'){
+      go_to(x, y)
+      draw_square(15, (255,90,90), (255,90,90))
+      go_to(x +2, y - 20)
+      turtle.setPenColor((0,0,0))
+      turtle.write('H', font=('Calibri', 15, 'italic'))
+   }
+}
 load_map();
-drawmap();
+draw_victim('harmed', 0, 0);

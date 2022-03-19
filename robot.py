@@ -5,6 +5,8 @@ import global_vars as GLOBALS
 import logging
 import numpy as np
 
+
+
 class Robot(BrickPiInterface):
     
     def __init__(self, timelimit=10, logger=logging.getLogger()):
@@ -145,26 +147,42 @@ class Robot(BrickPiInterface):
             print(target_heading)
         return target_heading
 
-    def update_sector_cp(self):
+    def get_new_xy(self, direction, coordinate):
+        old_x, old_y = coordinate[1,-1].split(', ')
+        if 'x' in direction:
+            new_y = old_y
+            if '-' in direction:
+                new_x = int(old_x) -1
+            elif '+' in direction:
+                new_x = int(old_x) + 1
+        elif 'y' in direction:
+            new_x = old_x
+            if '-' in direction:
+                new_y = int(old_y) -1
+            elif '+' in direction:
+                new_y = int(old_y) + 1
+        return new_x, new_y
+
+    def update_sector_cp(self, direction):
         old_x = self.current_sector['x']
         old_y = self.current_sector['y']
-        print(old_x, old_y, self.current_direction)
-        if 'x' in self.current_direction:
+        print(old_x, old_y, direction)
+        if 'x' in direction:
             new_y = old_y
-            if '-' in self.current_direction:
+            if '-' in direction:
                 new_x = int(old_x) -1
-            elif '+' in self.current_direction:
+            elif '+' in direction:
                 new_x = int(old_x) + 1
-        elif 'y' in self.current_direction:
+        elif 'y' in direction:
             new_x = old_x
-            if '-' in self.current_direction:
+            if '-' in direction:
                 new_y = int(old_y) -1
-            elif '+' in self.current_direction:
+            elif '+' in direction:
                 new_y = int(old_y) + 1
         self.current_sector['x'] = new_x
         self.current_sector['y'] = new_y
         print(self.current_sector)
-        return
+        return direction
 
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_new_sector(self, current_sector_cp):
@@ -211,7 +229,7 @@ class Robot(BrickPiInterface):
         if wall_to_search != None:
             #update sector
             self.current_direction = self.face_direction_coord(wall_to_search, self.current_direction)
-            self.update_sector_cp()
+            self.current_direction = self.update_sector_cp(self.current_direction)
             print(self.current_sector)
             self.move_distance(40)
         print(walls)
@@ -238,7 +256,7 @@ class Robot(BrickPiInterface):
                 self.sectors[current_sector_cp]['walls'][key]['explored'] = True
                 self.current_direction = self.face_direction_coord(wall, self.current_direction)
                 self.move_distance(40)
-                self.update_sector_cp()
+                self.current_direction = self.update_sector_cp(self.current_direction)
                 break
         if possible_movement == None and current_sector_cp == '(0, 0)':
             cont_search = False
@@ -246,9 +264,34 @@ class Robot(BrickPiInterface):
         elif possible_movement == None:
             self.current_direction = self.face_direction_coord(entered_from, self.current_direction)
             self.move_distance(40)
-            self.update_sector_cp()
+            self.current_direction = self.update_sector_cp(self.current_direction)
             self.sectors[current_sector_cp]['complete'] = True
         return cont_search
+
+    def scan_maze_logs(self):
+        directions = []
+        sector_coords = self.sectors.keys()
+        for coord in sector_coords:
+            sector = self.sectors[coord]
+            if sector['complete']:
+                break
+            else:
+                
+                for wall in sector['walls'].keys():
+                    wall_dict = sector['walls'][wall]
+                    if wall_dict['status'] and not wall_dict['explored']:
+                        new_coord = coord
+                        while True:
+                            for sect in sector['entered'].keys():
+                                directions.append(sect)
+                            new_coord = self.get_new_xy(sect, new_coord)
+                            if new_coord == "(0, 0)":
+                                break
+                        directions =directions.reverse()
+                if len(directions) != 0:
+                    break
+                            
+        return directions
 
     def search_maze(self):
         print('Initialising Search')
@@ -271,7 +314,7 @@ class Robot(BrickPiInterface):
                 self.search_new_sector(current_sector_cp)
                 
             else:
-                search = search_old_sector()
+                search = self.search_old_sector()
         print(self.sectors)
 
         ##ON TERMINATION
