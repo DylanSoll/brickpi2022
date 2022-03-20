@@ -79,8 +79,6 @@ class Robot(BrickPiInterface):
                 time.sleep(0.02) 
                 if BP.get_motor_encoder(BP.PORT_A) <= -1*degrees or BP.get_motor_encoder(BP.PORT_D) >= degrees:
                     break
-                #print("A:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_A)))
-                #print("D:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_D)))
         except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
             BP.reset_all()
     
@@ -98,8 +96,6 @@ class Robot(BrickPiInterface):
                 time.sleep(0.02) 
                 if BP.get_motor_encoder(BP.PORT_A) >= degrees or BP.get_motor_encoder(BP.PORT_D) <= -1*degrees:
                     break
-                #print("A:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_A)))
-                #print("D:  " + str(distance+10) + "   " + str(BP.get_motor_encoder(BP.PORT_D)))
         except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
             BP.reset_all()
 
@@ -112,7 +108,7 @@ class Robot(BrickPiInterface):
 
     
     def return_new_direction(self, old_direction, turning = 'left'):
-        print(old_direction)
+
         if turning == 'left':
             if old_direction == '+y':
                 new_direction = '+x'
@@ -131,7 +127,6 @@ class Robot(BrickPiInterface):
                 new_direction = '+x'
             elif old_direction == '+x':
                 new_direction = '+y'
-        print(new_direction)
         return new_direction
 
     def face_direction_coord(self, wall_to_search, current_direction):
@@ -139,12 +134,10 @@ class Robot(BrickPiInterface):
         for key in direction:
             direction = key
             break
-        print(direction)
         target_heading = direction #use that to get the target direction
         while current_direction != target_heading:
             self.left_degrees(90)
             target_heading = self.return_new_direction(target_heading)
-            print(target_heading)
         return target_heading
 
     def get_new_xy(self, direction, coordinate):
@@ -166,7 +159,6 @@ class Robot(BrickPiInterface):
     def update_sector_cp(self, direction):
         old_x = self.current_sector['x']
         old_y = self.current_sector['y']
-        print(old_x, old_y, direction)
         if 'x' in direction:
             new_y = old_y
             if '-' in direction:
@@ -181,11 +173,11 @@ class Robot(BrickPiInterface):
                 new_y = int(old_y) + 1
         self.current_sector['x'] = new_x
         self.current_sector['y'] = new_y
-        print(self.current_sector)
         return direction
 
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_new_sector(self, current_sector_cp):
+        print(current_sector_cp)
         walls = {} #creates a blank list for all the walls
         wall_to_search = None #the wall that is to be searched first
         for wall in range(4): #up to 4 walls per box
@@ -193,16 +185,22 @@ class Robot(BrickPiInterface):
             self.left_degrees(90)
             self.current_direction = self.return_new_direction(self.current_direction)
             status = False
+            tries = 0
             while True:
-                print(self.get_ultra_sensor())
-                if self.get_ultra_sensor() < 25 and self.get_ultra_sensor() != 0: #there is a wall
+                if self.get_ultra_sensor() < 25 and self.get_ultra_sensor() not in [0,999]: #there is a wall
                     status = True
                     print('Wall:' + str(status))
                     break
-                elif self.get_ultra_sensor() != 0:
+                elif self.get_ultra_sensor() not in [0,999]:
                     break
+                tries +=1
+                if tries == 5:
+                    status = True
+                    break
+                print('test')
             victim = False #predefines victim as false
             temp_wall = {'status':False, 'victim': False, 'explored': False}
+            print('Trial')
             if status == True: #if wall
                 if GLOBALS.CAMERA:
                     h = GLOBALS.CAMERA.find_h(GLOBALS.CAMERA.data)
@@ -217,22 +215,19 @@ class Robot(BrickPiInterface):
                                 GLOBALS.SOUND.say('Medical professionals will be with you shortly')
                 temp_wall = {'status':status, 'victim': victim, 'explored': False}
             elif status == False:#must be no wall
-                print(status)
-                if wall_to_search == None and (wall != 2 or current_sector_cp == '(0, 0)'):
+                if wall_to_search == None and not (wall == 2 or current_sector_cp == '(0, 0)'):
                     temp_wall = {'status':False, 'victim': False, 'explored': True}
                     wall_to_search = {self.current_direction: temp_wall}
-                    
-            print(temp_wall)
+            
             walls[self.current_direction] = temp_wall
             if wall == 2 and current_sector_cp != "(0, 0)":
                 entered = temp_wall
+            print(temp_wall)
         if wall_to_search != None:
             #update sector
             self.current_direction = self.face_direction_coord(wall_to_search, self.current_direction)
             self.current_direction = self.update_sector_cp(self.current_direction)
-            print(self.current_sector)
             self.move_distance(40)
-        print(walls)
         self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False}
 
         self.sectors[current_sector_cp]['walls'] = walls
@@ -240,7 +235,6 @@ class Robot(BrickPiInterface):
             self.sectors[current_sector_cp]['entered'] = False
         else:
             self.sectors[current_sector_cp]['entered'] = entered
-        print(self.sectors)
         return
 
     def search_old_sector(self, current_sector_cp):
@@ -254,7 +248,7 @@ class Robot(BrickPiInterface):
             if wall['status'] == False and wall['explored'] == False:
                 possible_movement = key
                 self.sectors[current_sector_cp]['walls'][key]['explored'] = True
-                self.current_direction = self.face_direction_coord(wall, self.current_direction)
+                self.current_direction = self.face_direction_coord({key:wall}, self.current_direction)
                 self.move_distance(40)
                 self.current_direction = self.update_sector_cp(self.current_direction)
                 break
@@ -293,33 +287,42 @@ class Robot(BrickPiInterface):
                             
         return directions
 
-    def search_maze(self):
+
+    def init_maze(self):
         print('Initialising Search')
         #Initialise robot search variables
         self.sectors = {} # dictionary of all sectors of the maze
         self.current_sector = {'x':0, 'y':0} #robot starts at 0,0
-        search = True #var for while loop
         #SEARCH CODE
         self.current_direction = "+y"
+        return True
+
+
+    def search_maze(self):
+        search = self.init_maze()
         while search:
             current_sector_cp = '('+str(self.current_sector['x'])+', '+str(self.current_sector['y'])+')'
-
-            print(self.sectors)
+            print(current_sector_cp)
             if current_sector_cp in self.sectors:
+                print('No previous sector')
                 current_sector_vals = self.sectors[current_sector_cp]
             else:
                 current_sector_vals = None
+                print('Seen before')
             if not current_sector_vals:
                 self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False}
+                print('Searching')
                 self.search_new_sector(current_sector_cp)
-                
+                print('Findished')
             else:
-                search = self.search_old_sector()
+                print('Reviewing')
+                search = self.search_old_sector(current_sector_cp)
         print(self.sectors)
-
+        print('Terminated')
         ##ON TERMINATION
         if GLOBALS.SOUND:
             GLOBALS.SOUND.say('Search Complete')
+            
         ##LOG EVERYTHING TO DATABASE
         return
 
@@ -332,18 +335,5 @@ if __name__ == '__main__':
     logging.basicConfig(filename='logs/robot.log', level=logging.INFO)
     ROBOT = Robot(timelimit=10)  #10 second timelimit before
     ROBOT.configure_sensors() #This takes 4 seconds
-    #ROBOT.left_degrees(90)
-    #time.sleep(1)
-    #ROBOT.search_maze()
-    #ROBOT.sectors = {}
-    #ROBOT.current_direction = "+y"
-    #ROBOT.search_new_sector({'x':0, 'y':0})
-    #ROBOT.right_degrees(90)
-    #ROBOT.rotate_power_heading_IMU(15, 0, 35)
-    ROBOT.current_sector = {'x': 0, 'y':0}
-    ROBOT.current_direction = '-x'
-    ROBOT.update_sector_cp()
-    ROBOT.update_sector_cp()
-    ROBOT.current_direction = '-y'
-    ROBOT.update_sector_cp()
+    ROBOT.search_maze()
     ROBOT.safe_exit()
