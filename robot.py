@@ -4,20 +4,22 @@ from interfaces.brickpiinterface import *
 import global_vars as GLOBALS
 import logging
 import numpy as np
+from interfaces.jsonhelper import JSONHelper
+from interfaces import databaseinterface
+GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue_Database-V1.db')
 
-def upload_to_db(maze):
+def upload_to_db(maze, missionid):
     if GLOBALS.DATABASE:
         sector_keys = maze.keys()
         last_mazeid = int(GLOBALS.DATABASE.ViewQuery('''SELECT mazeid FROM missions WHERE mazeid 
-        IS NOT NULL ORDER BY mazeid DESC LIMIT 1''')[0])
+        IS NOT NULL ORDER BY mazeid DESC LIMIT 1''')[0]['mazeid'])
         current_maze_id = last_mazeid + 1
-        GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (mazeid) VALUES (?) WHERE missionid = ?', (current_maze_id, GLOBALS.MISSIONID))
+        GLOBALS.DATABASE.ModifyQuery('UPDATE missions SET mazeid = ? WHERE missionid = ?;', (current_maze_id, missionid))
         for key in sector_keys:
-            print(key)
-            complete = maze[key]
+            complete = maze[key]['complete']
             GLOBALS.DATABASE.ModifyQuery('INSERT INTO sectors (mazeid, coordinate, complete) VALUES (?, ?, ?)',\
                 (current_maze_id, key, complete))
-            sectorid = GLOBALS.DATABASE.ViewQuery('SELECT sectorid FROM sectors ORDER BY sectorid DESC LIMIT 1')[0]
+            sectorid = GLOBALS.DATABASE.ViewQuery('SELECT sectorid FROM sectors ORDER BY sectorid DESC LIMIT 1')[0]['sectorid']
             for wall_key in maze[key]['walls'].keys():
                 wall = maze[key]['walls'][wall_key]
                 status = wall['status']
@@ -83,7 +85,7 @@ class Robot(BrickPiInterface):
             BP.reset_all() #reset robot motors
         return return_val #returns return val
 
-    def left_degrees(self,angle,speed=100,power=100):   #power percent, degrees/second, degrees
+    def right_degrees(self,angle,speed=100,power=100):   #power percent, degrees/second, degrees
         BP = self.BP
         degrees = angle*2 -2
         try:
@@ -99,27 +101,8 @@ class Robot(BrickPiInterface):
                     break
         except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
             BP.reset_all()
-
         return
     
-    def right_degrees(self, angle, power = 100, speed = 100):
-        degrees = angle*2 
-        BP = self.BP
-        try:
-            BP.offset_motor_encoder(BP.PORT_A, BP.get_motor_encoder(BP.PORT_A)) # reset encoder A
-            BP.offset_motor_encoder(BP.PORT_D, BP.get_motor_encoder(BP.PORT_D)) # reset encoder D
-            BP.set_motor_limits(BP.PORT_A, power, speed)    # float motor D
-            BP.set_motor_limits(BP.PORT_D, -1*power, speed)          # optionally set a power limit (in percent) and a speed limit (in Degrees Per Second)
-            while True:
-                BP.set_motor_position(BP.PORT_D, -1*degrees-1)    # set motor A's target position to the current position of motor D
-                BP.set_motor_position(BP.PORT_A, degrees+1)
-                time.sleep(0.02) 
-                if BP.get_motor_encoder(BP.PORT_A) >= degrees or BP.get_motor_encoder(BP.PORT_D) <= -1*degrees:
-                    break
-        except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
-            BP.reset_all()
-
-    #Create a function to move time and power which will stop if colour is detected or wall has been found
     
     
     
@@ -128,78 +111,74 @@ class Robot(BrickPiInterface):
 
     
     def return_new_direction(self, old_direction):
-        old_direction = old_direction.lower()
-        print("Old direction"+str(old_direction))
-        if old_direction == '+y':
-            new_direction = '+x'
-        elif old_direction == '+x':
-            new_direction = '-y'
-        elif old_direction == '-y':
-            new_direction = '-x'
-        elif old_direction == '-x':
-            new_direction = '+y'
-        print(new_direction)
-        return new_direction
+        """Converts the old relative direction to new direction
+
+        Args:
+            old_direction (str): Current direction it faces
+
+        Returns:
+            str: new direction
+        """        
+        old_direction = old_direction.lower() #converts to lowercase
+        mapping_direction = {'+y': '+x', '+x': 'y-', 'y-':'-x', '-x':'+y'} 
+        #creates a dictionary for each direction and its next directions
+        new_direction = mapping_direction[old_direction] #converts to new direction
+        return new_direction #returns the value
 
     def face_direction_coord(self, wall_to_search, current_direction):
-        direction = wall_to_search.keys() #the first key in the dictionary is the direction
-        for key in direction:
-            direction = key
-            break
-        print("Facing:"+str(direction))
-        print("Needs to face"+str(current_direction))
-        target_heading = direction #use that to get the target direction
-        if current_direction == target_heading:
-            pass
-        else:
-            while current_direction != target_heading:
-                current_direction = self.return_new_direction(current_direction)
-                self.left_degrees(90)
-        return current_direction 
+        """Rotates the robot to face the correct direction
 
-    def get_new_xy(self, direction, coordinate):
-        old_x, old_y = coordinate[1,-1].split(', ')
-        if 'x' in direction:
-            new_y = old_y
-            if '-' in direction:
-                new_x = int(old_x) -1
-            elif '+' in direction:
-                new_x = int(old_x) + 1
-        elif 'y' in direction:
-            new_x = old_x
-            if '-' in direction:
-                new_y = int(old_y) -1
-            elif '+' in direction:
-                new_y = int(old_y) + 1
-        return new_x, new_y
+        Args:
+            wall_to_search (dict): Wall to search dict
+            current_direction (str): Current facing of the robot
+
+        Returns:
+            str: Current direction robot is facing
+        """        
+        direction = wall_to_search.keys() #the first key in the dictionary is the direction
+        for key in direction: #dict_keys() obj is quirky
+            direction = key #loops through all keys, and the first one is the direction
+            break #ends for loop
+        target_heading = direction #use that to get the target direction
+        while current_direction != target_heading: #while current direction
+            current_direction = self.return_new_direction(current_direction) #updates direction
+            self.right_degrees(90) #turns right 90 degrees
+        return current_direction #returns current direction
+
 
     def update_sector_cp(self, direction):
-        old_x = self.current_sector['x']
-        old_y = self.current_sector['y']
-        if 'x' in direction:
-            new_y = old_y
-            if '-' in direction:
-                new_x = int(old_x) -1
-            elif '+' in direction:
-                new_x = int(old_x) + 1
-        elif 'y' in direction:
-            new_x = old_x
-            if '-' in direction:
-                new_y = int(old_y) -1
-            elif '+' in direction:
-                new_y = int(old_y) + 1
-        self.current_sector['x'] = new_x
+        """Updates the robots coordinates
+
+        Args:
+            direction (str): Direction the robot is facing in
+
+        Returns:
+            str: direction the robot is facing in
+        """        
+        old_x = self.current_sector['x'] #retrieves x coordinate
+        old_y = self.current_sector['y'] #retrieves y coordinate
+        if 'x' in direction: #if robot moving in x direction
+            new_y = old_y #y is unchanged
+            if '-' in direction: #if direction is negative
+                new_x = int(old_x) -1 #reduce x coord by 1
+            elif '+' in direction: #if positive
+                new_x = int(old_x) + 1 #increase x coord by 1
+        elif 'y' in direction: #if robot moving in x direction
+            new_x = old_x #x is unchanged
+            if '-' in direction: #if direction is negative
+                new_y = int(old_y) -1 #reduce y coord by 1
+            elif '+' in direction: #if positive
+                new_y = int(old_y) + 1 #increase y coord by 1
+        self.current_sector['x'] = new_x #updates self.sector with new values
         self.current_sector['y'] = new_y
-        return direction
+        return direction 
 
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_new_sector(self, current_sector_cp):
-        print(current_sector_cp)
         walls = {} #creates a blank list for all the walls
         wall_to_search = None #the wall that is to be searched first
         for wall in range(4): #up to 4 walls per box
             ##for each wall
-            
             status = False
             tries = 0
             while True:
@@ -222,6 +201,8 @@ class Robot(BrickPiInterface):
                     for vic in h:
                         self.spin_medium_motor(1200)
                         victim = 'H'
+                    if victim == 'H':
+                        pass
                     else: #U can sometimes be detected in H, so if no H
                         u = GLOBALS.CAMERA.find_u(GLOBALS.CAMERA.data)
                         for vic in u:
@@ -229,6 +210,8 @@ class Robot(BrickPiInterface):
                             victim = 'U'
                             if GLOBALS.SOUND:
                                 GLOBALS.SOUND.say('Medical professionals will be with you shortly')
+                else:
+                    victim = "N/A"
                 temp_wall = {'status':status, 'victim': victim, 'explored': False}
             elif status == False:#must be no wall
                 if wall_to_search == None:
@@ -237,27 +220,19 @@ class Robot(BrickPiInterface):
                     else:
                         temp_wall = {'status':False, 'victim': False, 'explored': True}
                         wall_to_search = {self.current_direction: temp_wall}
-                        print('Wall to search'+str(wall_to_search))
             if wall == 2 and current_sector_cp != "(0, 0)":
                 entered = {self.current_direction: temp_wall}
             elif current_sector_cp == "(0, 0)":
                 entered = False
             walls[self.current_direction] = temp_wall
-            
-            print(temp_wall)
-            self.left_degrees(90)
-            print(self.current_direction)
+            self.right_degrees(90)
             self.current_direction = self.return_new_direction(self.current_direction)
-            print(self.current_direction)
         complete_status = False
         if wall_to_search != None:
-            #update sector
-            print('Found wall to search')
             self.current_direction = self.face_direction_coord(wall_to_search, self.current_direction)
             self.current_direction = self.update_sector_cp(self.current_direction)
             self.move_distance(40)
         else:
-            print('No wall to search')
             complete_status = True
             self.current_direction = self.face_direction_coord(entered, self.current_direction)
             self.current_direction = self.update_sector_cp(self.current_direction)
@@ -297,11 +272,12 @@ class Robot(BrickPiInterface):
             self.sectors[current_sector_cp]['complete'] = True
         return cont_search
 
-    def scan_maze_logs(self):
+    def scan_maze_logs(self, sectors):
         directions = []
-        sector_coords = self.sectors.keys()
+        
+        sector_coords = sectors.keys()
         for coord in sector_coords:
-            sector = self.sectors[coord]
+            sector = sectors[coord]
             if sector['complete']:
                 break
             else:
@@ -319,8 +295,8 @@ class Robot(BrickPiInterface):
                         directions =directions.reverse()
                 if len(directions) != 0:
                     break
-                            
         return directions
+                            
 
 
 
@@ -355,7 +331,8 @@ class Robot(BrickPiInterface):
         ##ON TERMINATION
         if GLOBALS.SOUND:
             GLOBALS.SOUND.say('Search Complete')
-        upload_to_db(self.sectors)    
+        if GLOBALS.DATABASE and GLOBALS.MISSIONID:
+            upload_to_db(self.sectors, GLOBALS.MISSIONID)    
         ##LOG EVERYTHING TO DATABASE
         return
 
@@ -365,8 +342,4 @@ class Robot(BrickPiInterface):
 
 # Only execute if this is the main file, good for testing code
 if __name__ == '__main__':
-    logging.basicConfig(filename='logs/robot.log', level=logging.INFO)
-    ROBOT = Robot(timelimit=10)  #10 second timelimit before
-    ROBOT.configure_sensors() #This takes 4 seconds
-    ROBOT.search_maze()
-    ROBOT.safe_exit()
+    pass
