@@ -5,7 +5,26 @@ import global_vars as GLOBALS
 import logging
 import numpy as np
 
-
+def upload_to_db(maze):
+    if GLOBALS.DATABASE:
+        sector_keys = maze.keys()
+        last_mazeid = int(GLOBALS.DATABASE.ViewQuery('''SELECT mazeid FROM missions WHERE mazeid 
+        IS NOT NULL ORDER BY mazeid DESC LIMIT 1''')[0])
+        current_maze_id = last_mazeid + 1
+        GLOBALS.DATABASE.ModifyQuery('INSERT INTO missions (mazeid) VALUES (?) WHERE missionid = ?', (current_maze_id, GLOBALS.MISSIONID))
+        for key in sector_keys:
+            print(key)
+            complete = maze[key]
+            GLOBALS.DATABASE.ModifyQuery('INSERT INTO sectors (mazeid, coordinate, complete) VALUES (?, ?, ?)',\
+                (current_maze_id, key, complete))
+            sectorid = GLOBALS.DATABASE.ViewQuery('SELECT sectorid FROM sectors ORDER BY sectorid DESC LIMIT 1')[0]
+            for wall_key in maze[key]['walls'].keys():
+                wall = maze[key]['walls'][wall_key]
+                status = wall['status']
+                victim = wall['victim']
+                GLOBALS.DATABASE.ModifyQuery('''INSERT INTO walls (sectorid, direction, status, victim) VALUES (?, ?, ?, ?)''',\
+                    (sectorid, wall_key, status, victim))
+    return
 
 class Robot(BrickPiInterface):
     
@@ -204,6 +223,7 @@ class Robot(BrickPiInterface):
                         self.spin_medium_motor(1200)
                         victim = 'H'
                     else: #U can sometimes be detected in H, so if no H
+                        u = GLOBALS.CAMERA.find_u(GLOBALS.CAMERA.data)
                         for vic in u:
                             self.spin_medium_motor(1200)
                             victim = 'U'
@@ -335,7 +355,7 @@ class Robot(BrickPiInterface):
         ##ON TERMINATION
         if GLOBALS.SOUND:
             GLOBALS.SOUND.say('Search Complete')
-            
+        upload_to_db(self.sectors)    
         ##LOG EVERYTHING TO DATABASE
         return
 
