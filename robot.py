@@ -116,7 +116,7 @@ class Robot(BrickPiInterface):
         if old_direction == '+y':
             new_direction = '+x'
         elif old_direction == '+x':
-            new_direction =='-y'
+            new_direction = '-y'
         elif old_direction == '-y':
             new_direction = '-x'
         elif old_direction == '-x':
@@ -182,7 +182,7 @@ class Robot(BrickPiInterface):
             status = False
             tries = 0
             while True:
-                print('while 1')
+                print(self.get_ultra_sensor())
                 if self.get_ultra_sensor() < 25 and self.get_ultra_sensor() not in [0,999]: #there is a wall
                     status = True
                     print('Wall:' + str(status))
@@ -193,7 +193,6 @@ class Robot(BrickPiInterface):
                 if tries == 5:
                     status = True
                     break
-                print('test')
             victim = False #predefines victim as false
             temp_wall = {'status':True, 'victim': False, 'explored': False}
             print('Trial')
@@ -213,7 +212,9 @@ class Robot(BrickPiInterface):
             elif status == False:#must be no wall
                 print(self.current_direction, temp_wall)
                 if wall_to_search == None:
-                    if (wall != 2 or current_sector_cp == '(0, 0)'):
+                    if wall == 2 and current_sector_cp != 0:
+                        pass
+                    else:
                         temp_wall = {'status':False, 'victim': False, 'explored': True}
                         wall_to_search = {self.current_direction: temp_wall}
                         print('Wall to search'+str(wall_to_search))
