@@ -78,8 +78,6 @@ class Robot(BrickPiInterface):
                 time.sleep(0.02)
                 if BP.get_motor_encoder(BP.PORT_D) >= degrees or BP.get_motor_encoder(BP.PORT_A) <= -1*degrees:
                     break
-                #print("A:  " + str(-1*degrees+10) + "   " + str(BP.get_motor_encoder(BP.PORT_A)))
-                #print("D:  " + str(degrees-10) + "   " + str(BP.get_motor_encoder(BP.PORT_D)))
         except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
             BP.reset_all()
 
@@ -130,11 +128,15 @@ class Robot(BrickPiInterface):
             direction = key
             break
         print("Facing:"+str(direction))
+        print("Needs to face"+str(current_direction))
         target_heading = direction #use that to get the target direction
-        while current_direction != target_heading:
-            target_heading = self.return_new_direction(target_heading)
-            self.left_degrees(90)
-        return target_heading
+        if current_direction == target_heading:
+            pass
+        else:
+            while current_direction != target_heading:
+                current_direction = self.return_new_direction(current_direction)
+                self.left_degrees(90)
+        return current_direction 
 
     def get_new_xy(self, direction, coordinate):
         old_x, old_y = coordinate[1,-1].split(', ')
@@ -195,7 +197,6 @@ class Robot(BrickPiInterface):
                     break
             victim = False #predefines victim as false
             temp_wall = {'status':True, 'victim': False, 'explored': False}
-            print('Trial')
             if status == True: #if wall
                 if GLOBALS.CAMERA:
                     h = GLOBALS.CAMERA.find_h(GLOBALS.CAMERA.data)
@@ -210,30 +211,38 @@ class Robot(BrickPiInterface):
                                 GLOBALS.SOUND.say('Medical professionals will be with you shortly')
                 temp_wall = {'status':status, 'victim': victim, 'explored': False}
             elif status == False:#must be no wall
-                print(self.current_direction, temp_wall)
                 if wall_to_search == None:
-                    if wall == 2 and current_sector_cp != 0:
+                    if wall == 2 and current_sector_cp != "(0, 0)":
                         pass
                     else:
                         temp_wall = {'status':False, 'victim': False, 'explored': True}
                         wall_to_search = {self.current_direction: temp_wall}
                         print('Wall to search'+str(wall_to_search))
-            
-            walls[self.current_direction] = temp_wall
             if wall == 2 and current_sector_cp != "(0, 0)":
-                entered = temp_wall
+                entered = {self.current_direction: temp_wall}
+            elif current_sector_cp == "(0, 0)":
+                entered = False
+            walls[self.current_direction] = temp_wall
+            
             print(temp_wall)
             self.left_degrees(90)
             print(self.current_direction)
             self.current_direction = self.return_new_direction(self.current_direction)
             print(self.current_direction)
+        complete_status = False
         if wall_to_search != None:
             #update sector
             print('Found wall to search')
             self.current_direction = self.face_direction_coord(wall_to_search, self.current_direction)
             self.current_direction = self.update_sector_cp(self.current_direction)
             self.move_distance(40)
-        self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False}
+        else:
+            print('No wall to search')
+            complete_status = True
+            self.current_direction = self.face_direction_coord(entered, self.current_direction)
+            self.current_direction = self.update_sector_cp(self.current_direction)
+            self.move_distance(40)
+        self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': complete_status}
 
         self.sectors[current_sector_cp]['walls'] = walls
         if current_sector_cp == "(0, 0)":
@@ -310,11 +319,9 @@ class Robot(BrickPiInterface):
             current_sector_cp = '('+str(self.current_sector['x'])+', '+str(self.current_sector['y'])+')'
             print(current_sector_cp)
             if current_sector_cp in self.sectors:
-                print('Previous sector')
                 current_sector_vals = self.sectors[current_sector_cp]
             else:
                 current_sector_vals = None
-                print('Not Seen before')
             if current_sector_vals == None:
                 self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False}
                 print('Searching')
