@@ -752,6 +752,11 @@ def turn_degrees(direction):
         
     else:
         return redirect('/dashboard')
+@app.route('/autosearch', methods = ['GET', 'POST'])
+def autosearch():
+    if GLOBALS.ROBOT:
+        GLOBALS.ROBOT.search_maze()
+    return
 #----------------------------------------
 #---------------------------------------------------------------------------
 #main method called web server application

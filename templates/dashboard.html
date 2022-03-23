@@ -176,7 +176,8 @@ function drawGuage(label, value, size, markings, target){
             data-toggle='tooltip' data-placement='top' title="Go Backwards"><i class="fa fa-angle-double-down"></i></button>
             <button id="image-settings-modal-button" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#image_settings"
             onclick="suspend_mission()" data-toggle='tooltip' data-placement='top' title="Camera Settings"><i class="fa fa-sliders" aria-hidden="true"></i></button>
-
+            <button id="autosearch" type="button" class="btn btn-primary" onclick="jq_ajax('/autosearch')"
+            data-toggle='tooltip' data-placement='top' title="Automatic Search">Automatic</button>
           </div>
         </div>
         
