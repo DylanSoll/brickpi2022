@@ -11,9 +11,13 @@ GLOBALS.DATABASE = databaseinterface.DatabaseInterface('databases/U3_SIA2_Rescue
 def upload_to_db(maze, missionid):
     if GLOBALS.DATABASE:
         sector_keys = maze.keys()
-        last_mazeid = int(GLOBALS.DATABASE.ViewQuery('''SELECT mazeid FROM missions WHERE mazeid 
-        IS NOT NULL ORDER BY mazeid DESC LIMIT 1''')[0]['mazeid'])
-        current_maze_id = last_mazeid + 1
+        mazeid_data =GLOBALS.DATABASE.ViewQuery('''SELECT mazeid FROM missions WHERE mazeid 
+        IS NOT NULL ORDER BY mazeid DESC LIMIT 1''')
+        if mazeid_data:
+            mazeid_data = int(mazeid_data[0]['mazeid'])
+            current_maze_id = last_mazeid + 1
+        else:
+            current_maze_id = 1 
         GLOBALS.DATABASE.ModifyQuery('UPDATE missions SET mazeid = ? WHERE missionid = ?;', (current_maze_id, missionid))
         for key in sector_keys:
             complete = maze[key]['complete']
@@ -348,7 +352,7 @@ class Robot(BrickPiInterface):
         except:
             pass
         ##LOG EVERYTHING TO DATABASE
-        return
+        return 
 
 
 

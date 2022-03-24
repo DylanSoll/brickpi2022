@@ -756,7 +756,7 @@ def turn_degrees(direction):
 def autosearch():
     if GLOBALS.ROBOT:
         GLOBALS.ROBOT.search_maze()
-    return
+    return jsonify({})
 #----------------------------------------
 #---------------------------------------------------------------------------
 #main method called web server application
