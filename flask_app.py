@@ -757,6 +757,17 @@ def autosearch():
     if GLOBALS.ROBOT:
         GLOBALS.ROBOT.search_maze()
     return jsonify({})
+@app.route('/get-victims', methods = ['GET', 'POST'])
+def get_victims():
+    if GLOBALS.DATABASE:
+        victims = GLOBALS.DATABASE.ViewQuery("""
+        SELECT missionid, count(*) As victims, victim as vic_type FROM missions
+        INNER JOIN sectors on missions.mazeid = sectors.mazeid
+        INNER JOIN walls on sectors.sectorid = walls.sectorid
+        WHERE victim NOT LIKE 0
+        GROUP BY missionid, victim""")
+    return jsonify(victims)
+    
 #----------------------------------------
 #---------------------------------------------------------------------------
 #main method called web server application
