@@ -216,10 +216,12 @@ class Robot(BrickPiInterface):
             elif status == False:#must be no wall
                 if wall_to_search == None:
                     if wall == 2 and current_sector_cp != "(0, 0)":
-                        pass
+                        temp_wall = {'status':True, 'victim': False, 'explored': False}
                     else:
                         temp_wall = {'status':False, 'victim': False, 'explored': True}
                         wall_to_search = {self.current_direction: temp_wall}
+                else:
+                    temp_wall = {'status':False, 'victim': False, 'explored': False}
             if wall == 2 and current_sector_cp != "(0, 0)":
                 entered = {self.current_direction: temp_wall}
             elif current_sector_cp == "(0, 0)":
@@ -251,11 +253,20 @@ class Robot(BrickPiInterface):
         cont_search = True
         walls = self.sectors[current_sector_cp]['walls']
         entered_from = self.sectors[current_sector_cp]['entered']
+        if entered_from:
+            entered_direction_dict_keys = entered_from.keys()
+            for key in entered_direction_dict_keys:
+                entered_direction = key
+                break
+        else:
+            entered_direction = False
         wall_keys = walls.keys()
         possible_movement = None
         for key in wall_keys:
+            print("ED"+str(entered_direction), key)
             wall = walls[key]
-            if wall['status'] == False and wall['explored'] == False:
+            print(wall['status'], wall['explored'], "ED"+str(entered_direction), key)
+            if wall['status'] == False and wall['explored'] == False and key != entered_direction:
                 possible_movement = key
                 self.sectors[current_sector_cp]['walls'][key]['explored'] = True
                 self.current_direction = self.face_direction_coord({key:wall}, self.current_direction)
@@ -331,8 +342,11 @@ class Robot(BrickPiInterface):
         ##ON TERMINATION
         if GLOBALS.SOUND:
             GLOBALS.SOUND.say('Search Complete')
-        if GLOBALS.DATABASE and GLOBALS.MISSIONID:
-            upload_to_db(self.sectors, GLOBALS.MISSIONID)    
+        try:
+            if GLOBALS.DATABASE and GLOBALS.MISSIONID:
+                upload_to_db(self.sectors, GLOBALS.MISSIONID)    
+        except:
+            pass
         ##LOG EVERYTHING TO DATABASE
         return
 
@@ -342,4 +356,4 @@ class Robot(BrickPiInterface):
 
 # Only execute if this is the main file, good for testing code
 if __name__ == '__main__':
-    pass
+    ROBOT = Robot()
