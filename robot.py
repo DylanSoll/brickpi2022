@@ -15,7 +15,7 @@ def upload_to_db(maze, missionid):
         IS NOT NULL ORDER BY mazeid DESC LIMIT 1''')
         if mazeid_data:
             mazeid_data = int(mazeid_data[0]['mazeid'])
-            current_maze_id = last_mazeid + 1
+            current_maze_id = mazeid_data + 1
         else:
             current_maze_id = 1 
         GLOBALS.DATABASE.ModifyQuery('UPDATE missions SET mazeid = ? WHERE missionid = ?;', (current_maze_id, missionid))
@@ -347,11 +347,10 @@ class Robot(BrickPiInterface):
         ##ON TERMINATION
         if GLOBALS.SOUND:
             GLOBALS.SOUND.say('Search Complete')
-        try:
-            if GLOBALS.DATABASE and GLOBALS.MISSIONID:
-                upload_to_db(self.sectors, GLOBALS.MISSIONID)    
-        except:
-            pass
+        
+        if GLOBALS.DATABASE and GLOBALS.MISSIONID:
+            upload_to_db(self.sectors, GLOBALS.MISSIONID)    
+              
         ##LOG EVERYTHING TO DATABASE
         return 
 
