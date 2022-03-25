@@ -19,6 +19,7 @@ def upload_to_db(maze, missionid):
         else:
             current_maze_id = 1 
         GLOBALS.DATABASE.ModifyQuery('UPDATE missions SET mazeid = ? WHERE missionid = ?;', (current_maze_id, missionid))
+        print(GLOBALS.DATABASE.ViewQuery('SELECT * FROM missions WHERE missionid = ?', (missionid,)))
         for key in sector_keys:
             complete = maze[key]['complete']
             GLOBALS.DATABASE.ModifyQuery('INSERT INTO sectors (mazeid, coordinate, complete) VALUES (?, ?, ?)',\
