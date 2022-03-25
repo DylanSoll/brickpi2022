@@ -240,9 +240,10 @@ class Robot(BrickPiInterface):
             self.move_distance(40)
         else:
             complete_status = True
-            self.current_direction = self.face_direction_coord(entered, self.current_direction)
-            self.current_direction = self.update_sector_cp(self.current_direction)
-            self.move_distance(40)
+            if entered != False:
+                self.current_direction = self.face_direction_coord(entered, self.current_direction)
+                self.current_direction = self.update_sector_cp(self.current_direction)
+                self.move_distance(40)
         self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': complete_status}
 
         self.sectors[current_sector_cp]['walls'] = walls
