@@ -311,7 +311,8 @@ id = "show_chatbox_btn"onclick = "toggle_chatbox('show_chatbox_btn', 'message_bo
       </div>
       <div class="textbox-area-container">
         <div class="textbox-area cs-sm" id = "textbox_area">
-          <textarea name="command_text_area" id="command_text_area" class="command-text-area" placeholder="Command.." rows = 1></textarea>   
+          <textarea name="command_text_area" id="command_text_area" class="command-text-area" placeholder="Command.." rows = "1"
+          onfocus="allow_keypress = false"onblur="allow_keypress = true"></textarea>   
           <button type="button" class = "btn btn-success" onclick = "send_command('command_text_area')">
             <i class="fa-solid fa-paper-plane" aria-hidden = "true"></i></button>
         </div>
