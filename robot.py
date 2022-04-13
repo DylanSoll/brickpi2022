@@ -68,6 +68,7 @@ class Robot(BrickPiInterface):
             BP.set_motor_limits(BP.PORT_A, power, speed)  # sets power (%) and speed limit (degrees/s)
             BP.set_motor_limits(BP.PORT_D, power, speed)  # sets power (%) and speed limit (degrees/s)
             run = True #defines run as true
+            reverseDist = None
             while run: #while true
                 if distanceCm > 0: #if distance is positive, increase motor position
                     BP.set_motor_position(BP.PORT_D, distance+10)
@@ -82,14 +83,33 @@ class Robot(BrickPiInterface):
                     run = False #allows for self.interrupt_previous_command
                 elif (self.timelimit + time_init) >= time.time() and canTimeOut:
                     run = False #allows for time_limit
+                if self.get_colour_sensor() != "White":
+                    run = False
+                    print(((BP.get_motor_encoder(BP.PORT_A))* np.pi * 5.6)/360)
+                    print(((BP.get_motor_encoder(BP.PORT_D))* np.pi * 5.6)/360)
+                    reverseDist = (((BP.get_motor_encoder(BP.PORT_A) + BP.get_motor_encoder(BP.PORT_B)))* np.pi * 5.6)/360
+                if (self.get_ultra_sensor() < 20) and (self.get_ultra_sensor() not in [0,999]):
+                    run = False
+                    #reverseDist = (((BP.get_motor_encoder(BP.PORT_A) + BP.get_motor_encoder(BP.PORT_B))/2 )* np.pi * 5.6)/360
+                
             time_final = time.time() #saves time final and duration
+            print((((BP.get_motor_encoder(BP.PORT_A) + BP.get_motor_encoder(BP.PORT_B))/2 )* np.pi * 5.6)/360)
+
             duration = time_final - time_init
-            return_val = {'distance':distanceCm, 'time_init': time_init, 'time_final': time_final, 'duration': duration}
+            return_val = {'distance':distanceCm, 'time_init': time_init, 'time_final': time_final, 'duration': duration, "reverseDist": reverseDist}
             #redefines return_Val as an array of distance, start and finish time, and duration
         except KeyboardInterrupt: # except the program gets interrupted by Ctrl+C on the keyboard.
             BP.reset_all() #reset robot motors
         return return_val #returns return val
 
+
+    def move_and_correct_move_dist(self, distanceCm, power = 30, speed=100, canTimeOut = False):
+        vals = self.move_distance(distanceCm, power, speed, canTimeOut)
+        if vals['reverseDist']:
+            self.move_distance(-1*vals['reverseDist'])
+            return True
+        else:
+            return False
     def right_degrees(self,angle,speed=100,power=100):   #power percent, degrees/second, degrees
         BP = self.BP
         degrees = angle*2 -2
