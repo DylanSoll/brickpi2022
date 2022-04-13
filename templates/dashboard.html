@@ -35,15 +35,15 @@ function drawGuage(label, value, size, markings, target){
   }
 }
 
-  markings = {'redFrom':0,'redTo':30,'yellowFrom':30,'yellowTo':70,'greenFrom':70,'greenTo':100,'minorTicks':5}
-  size = {'width':400, 'height':120}
-  drawGuage('Battery', 80, size, markings, 'battery_graph')
+  markings = {'redFrom':0,'redTo':30,'yellowFrom':30,'yellowTo':70,'greenFrom':70,'greenTo':100,'minorTicks':5};
+  size = {'width':400, 'height':120};
+  drawGuage('Battery', 80, size, markings, 'battery_graph');
   function draw_power_guage(value){
     size = {'width':400, 'height':120}
     markings = {'redFrom':75,'redTo':100,'yellowFrom':0,'yellowTo':15,'greenFrom':15,'greenTo':75,'minorTicks':5}
     drawGuage('Power', value, size, markings, 'power_graph')
-  }
-  draw_power_guage(30)
+  };
+  draw_power_guage(30);
 </script>
 
 
@@ -264,37 +264,29 @@ id = "show_data_graphics_btn"onclick = "toggle_chatbox('show_data_graphics_btn',
       function update_battery(value){
         target = document.getElementById('battery_symbol');
         if (value < 25){
-          target.className = "fa fa-battery-quarter"
+          target.className = "fa fa-battery-quarter";
           target.style = "color:red;"
         }else if (value < 50){
-          target.className = "fa fa-battery-half"
-          target.style = "color:orange;"
+          target.className = "fa fa-battery-half";
+          target.style = "color:orange;";
         }else if (value < 75){
           target.className = "fa fa-battery-three-quarters"
-          target.style = "color:green;"
+          target.style = "color:green;";
         }else{
           target.className = "fa fa-battery-full"
           target.style = "color:green;"
         }
       }
       function jq_for_draw_battery_graph(){
-          jq_ajax('/get-battery', {}, draw_battery_graph)
-          jq_ajax('/get-battery', {}, update_battery)
-        }
-      jq_for_draw_battery_graph()
-      setInterval(jq_for_draw_battery_graph, 1000)
+          jq_ajax('/get-battery', {}, draw_battery_graph);
+          jq_ajax('/get-battery', {}, update_battery);
+        };
+      jq_for_draw_battery_graph();
+      setInterval(jq_for_draw_battery_graph, 1000);
     </script>
   </div>
 </div>
 {%endblock%}
-
-
-
-
-
-
-
-
 
 {%block right_side_bar%}
 <button type = "button" class = "btn btn-success show-chatbox-btn" data-toggle='tooltip' data-placement='top' title="Open Terminal"

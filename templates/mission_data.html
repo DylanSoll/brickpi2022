@@ -37,7 +37,7 @@
 
 <div id="mission_history" hidden>
     <h3 id = 'mission_number' class = "heading"></h3>
-    <button onclick="return_to_missions()"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</button>
+    <button onclick="return_to_missions()" class = "btn btn-info"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</button>
     <ul class="nav nav-tabs">
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" href="#breakdown">Breakdown</a>
@@ -115,7 +115,6 @@
         </div>
     </div>
     <div id="image_display"></div>
-    <button onclick = "document.getElementById('image_display').innerHTML = '<img src=/display_image/1 />'">Display</button>
     
 </div>
 <script>jq_ajax('/missions', {}, populate_main_table)

@@ -332,6 +332,7 @@ function toggle_chatbox(buttonid, chatboxid){
             response = "Invalid command"
         }
         add_response(response)
+        jq_ajax('/move-distance', numeric);
       }else if (command=='backward'){
         numeric = parseInt(aspects[1])
         type = aspects[2]
