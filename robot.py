@@ -198,115 +198,140 @@ class Robot(BrickPiInterface):
         self.current_sector['y'] = new_y
         return direction 
 
+
     #Create a routine that will effective search the maze and keep track of where the robot has been.
     def search_new_sector(self, current_sector_cp):
         walls = {} #creates a blank list for all the walls
         wall_to_search = None #the wall that is to be searched first
+        entered = False
         for wall in range(4): #up to 4 walls per box
             ##for each wall
-            status = False
-            tries = 0
-            while True:
+
+            ####Wall definitions
+            status = False #predefines status as False
+            victim = False #predefines victim as false
+            explored = False #predefines explored as false
+
+            for _ in range(5): #runs through 5 times too account for void values
                 print(self.get_ultra_sensor())
                 if self.get_ultra_sensor() < 25 and self.get_ultra_sensor() not in [0,999]: #there is a wall
-                    status = True
+                    status = True #there is a wall
                     print('Wall:' + str(status))
-                    break
+                    break #exits for loop
                 elif self.get_ultra_sensor() not in [0,999]:
-                    break
-                tries +=1
-                if tries == 5:
-                    status = True
-                    break
-            victim = False #predefines victim as false
-            temp_wall = {'status':True, 'victim': False, 'explored': False}
+                    break #exits for loop if valid 
+
+
+            
+            #if there is a wall, and how to check for victims
             if status == True: #if wall
-                if GLOBALS.CAMERA:
-                    h = GLOBALS.CAMERA.find_h(GLOBALS.CAMERA.data)
-                    for vic in h:
-                        self.spin_medium_motor(1200)
+                if GLOBALS.CAMERA: #make sure the camera is working
+                    h = GLOBALS.CAMERA.find_h(GLOBALS.CAMERA.data) #call find_h code
+                    for _ in h: #runs through all the victims
+                        self.spin_medium_motor(1000) #fires the package 
                         victim = 'H'
-                    if victim == 'H':
-                        pass
-                    else: #U can sometimes be detected in H, so if no H
-                        u = GLOBALS.CAMERA.find_u(GLOBALS.CAMERA.data)
-                        for vic in u:
-                            self.spin_medium_motor(1200)
+                    else: #U can sometimes be detected in H, so if no H, check for 'U'
+                        u = GLOBALS.CAMERA.find_u(GLOBALS.CAMERA.data) #checks for a 'U'
+                        for _ in u: #runs through all unharmed victims
                             victim = 'U'
-                            if GLOBALS.SOUND:
+                            if GLOBALS.SOUND: #checks for a speaker, and reassures victim
                                 GLOBALS.SOUND.say('Medical professionals will be with you shortly')
-                else:
-                    victim = "N/A"
-                temp_wall = {'status':status, 'victim': victim, 'explored': False}
+
+
             elif status == False:#must be no wall
-                if wall_to_search == None:
-                    if wall == 2 and current_sector_cp != "(0, 0)":
-                        temp_wall = {'status':True, 'victim': False, 'explored': False}
+                if wall_to_search == None: #checks to see if a first move has been planned
+                    if wall == 2 and current_sector_cp != "(0, 0)": 
+                        #if this has an ID of 2, it must be the entry point
+                        #however if the sector is 0,0, it has no entry
+                        explored = False #the wall is not to be explored
                     else:
-                        temp_wall = {'status':False, 'victim': False, 'explored': True}
-                        wall_to_search = {self.current_direction: temp_wall}
-                else:
-                    temp_wall = {'status':False, 'victim': False, 'explored': False}
-            if wall == 2 and current_sector_cp != "(0, 0)":
-                entered = {self.current_direction: temp_wall}
+                        explored = True #this is the wall to explore
+                        
+
+            temp_wall = {'status':status, 'victim': victim, 'explored': explored}
+            #creates a dict of all the relevant details
+
+
+            if explored: #checks to see if the wall can be explored
+                wall_to_search = {self.current_direction: temp_wall} #defines wall to search as this wall
+            if wall == 2 and current_sector_cp != "(0, 0)": 
+                entered = {self.current_direction: temp_wall} #saves the details 
             elif current_sector_cp == "(0, 0)":
-                entered = False
-            walls[self.current_direction] = temp_wall
-            self.right_degrees(90)
-            self.current_direction = self.return_new_direction(self.current_direction)
+                entered = False #if it is the origin, it wouldn't have entered
+
+            walls[self.current_direction] = temp_wall #adds to dictionary of walls
+            self.right_degrees(90) #turns right 90 degrees
+            self.current_direction = self.return_new_direction(self.current_direction) 
+            #updates direction the robot is facing
+        
         complete_status = False
-        if wall_to_search != None:
+        if wall_to_search != None: #if there is a wall to search
             self.current_direction = self.face_direction_coord(wall_to_search, self.current_direction)
-            self.current_direction = self.update_sector_cp(self.current_direction)
+            #change direction to face the required direction
+            self.current_direction = self.update_sector_cp(self.current_direction) #updates the sector
             self.move_distance(40)
+            #####UPDATE CODE TO DEAL WITH NO FLOOR
         else:
-            complete_status = True
-            if entered != False:
+            complete_status = True #the sector must be done with, can ignore
+            if entered != False: # find the entrance, and leave
                 self.current_direction = self.face_direction_coord(entered, self.current_direction)
+                #same as move to new sector
                 self.current_direction = self.update_sector_cp(self.current_direction)
                 self.move_distance(40)
-        self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': complete_status}
 
-        self.sectors[current_sector_cp]['walls'] = walls
-        if current_sector_cp == "(0, 0)":
-            self.sectors[current_sector_cp]['entered'] = False
-        else:
-            self.sectors[current_sector_cp]['entered'] = entered
-        
+        self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': complete_status}
+        #creates a default value to avoid key errors
+        #while python collections modules could be used (defualt dictionary) but is not necessary
+        self.sectors[current_sector_cp]['walls'] = walls #inserts walls into major sectors dictionary
+        self.sectors[current_sector_cp]['entered'] = entered
+        #saves the wall entered from
         return
 
     def search_old_sector(self, current_sector_cp):
-        cont_search = True
+        #definitions of variables
+        cont_search = True 
+        possible_movement = None
+
+        #retrieves details from sectors dictionary
         walls = self.sectors[current_sector_cp]['walls']
         entered_from = self.sectors[current_sector_cp]['entered']
+        
+        #processes entered from direction
         if entered_from:
             entered_direction_dict_keys = entered_from.keys()
-            for key in entered_direction_dict_keys:
-                entered_direction = key
+            for key in entered_direction_dict_keys: #creates a dict_keys, and retrieves data
+                entered_direction = key #saves the key and exits
                 break
         else:
-            entered_direction = False
-        wall_keys = walls.keys()
-        possible_movement = None
-        for key in wall_keys:
-            print("ED"+str(entered_direction), key)
-            wall = walls[key]
+            entered_direction = False #otherwise there is no entrance
+
+        
+        wall_keys = walls.keys() #retrieves all the walls
+        for key in wall_keys: #for each wall
+            wall = walls[key] #retrieves the wall details
             print(wall['status'], wall['explored'], "ED"+str(entered_direction), key)
+            #if there is no wall, it is unexplored, and not the entrance direction
             if wall['status'] == False and wall['explored'] == False and key != entered_direction:
-                possible_movement = key
+                possible_movement = key #labels it as the next movement
                 self.sectors[current_sector_cp]['walls'][key]['explored'] = True
+                #updates as explored
+
+                #####UPDATE MOVEMENT CODE
                 self.current_direction = self.face_direction_coord({key:wall}, self.current_direction)
                 self.move_distance(40)
                 self.current_direction = self.update_sector_cp(self.current_direction)
                 break
-        if possible_movement == None and current_sector_cp == '(0, 0)':
-            cont_search = False
-            self.sectors[current_sector_cp]['complete'] = True
-        elif possible_movement == None:
-            self.current_direction = self.face_direction_coord(entered_from, self.current_direction)
-            self.move_distance(40)
-            self.current_direction = self.update_sector_cp(self.current_direction)
-            self.sectors[current_sector_cp]['complete'] = True
+
+        #If no possible movement    
+        if possible_movement == None:
+            self.sectors[current_sector_cp]['complete'] = True #update sector status
+            if current_sector_cp == '(0, 0)':
+                cont_search = False #stop searching
+            else:
+                #head to next square and update sector
+                self.current_direction = self.face_direction_coord(entered_from, self.current_direction)
+                self.move_distance(40)
+                self.current_direction = self.update_sector_cp(self.current_direction)
         return cont_search
 
     def scan_maze_logs(self, sectors):
@@ -347,22 +372,19 @@ class Robot(BrickPiInterface):
         self.current_sector = {'x':0, 'y':0} #robot starts at 0,0
         #SEARCH CODE
         self.current_direction = "+y"
-        search = True
-        while search:
+        search = True #start searching
+        while search: 
             current_sector_cp = '('+str(self.current_sector['x'])+', '+str(self.current_sector['y'])+')'
+            #convert dict values to coordinate string format
             print(current_sector_cp)
-            if current_sector_cp in self.sectors:
-                current_sector_vals = self.sectors[current_sector_cp]
+            if current_sector_cp in self.sectors: #if the square has been reached before
+                current_sector_vals = self.sectors[current_sector_cp] #potentially obselete
+                print('Reviewing sector:', current_sector_cp)
+                search = self.search_old_sector(current_sector_cp) #search the old sector
             else:
-                current_sector_vals = None
-            if current_sector_vals == None:
-                self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False}
-                print('Searching')
-                self.search_new_sector(current_sector_cp)
-                print('Finished')
-            else:
-                print('Reviewing')
-                search = self.search_old_sector(current_sector_cp)
+                self.sectors[current_sector_cp] = {'walls': {}, 'entered':{}, 'complete': False} #created to avoid keyerrors
+                print('Searching new sector:', current_sector_cp) 
+                self.search_new_sector(current_sector_cp)#search the new sector discovered
         print(self.sectors)
         print('Terminated')
         ##ON TERMINATION
@@ -370,7 +392,7 @@ class Robot(BrickPiInterface):
             GLOBALS.SOUND.say('Search Complete')
         
         if GLOBALS.DATABASE and GLOBALS.MISSIONID:
-            upload_to_db(self.sectors, GLOBALS.MISSIONID)    
+            upload_to_db(self.sectors, GLOBALS.MISSIONID) #saves to database   
               
         ##LOG EVERYTHING TO DATABASE
         return 
