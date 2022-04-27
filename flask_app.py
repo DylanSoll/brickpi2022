@@ -558,7 +558,7 @@ def videostream():
         if GLOBALS.CAMERA:
             frame = GLOBALS.CAMERA.collect_live_frame()#get_frame()#
             if frame:
-                print(camerainterface.check_for_colours(frame))
+                #print(camerainterface.check_for_colours(frame))
                 yield (b'--frame\r\n'
                         b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n') 
             else:

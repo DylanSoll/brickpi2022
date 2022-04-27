@@ -210,11 +210,14 @@ class CameraInterface(object):
             return "red"
         return "no colour"
 
+    def invert_colour(self):
+
+        return
+
 def check_colour(frame, low, high):
     thresh = cv2.inRange(frame, low, high)
     count = numpy.sum(numpy.nonzero(thresh))
-    if count > 300: #more than 300 pixels are between the low and high color
-        print(count)
+    if count > 1000: #more than 300 pixels are between the low and high color
         return True
     else:
         return False
