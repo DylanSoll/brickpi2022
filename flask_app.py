@@ -326,8 +326,13 @@ def mission_data():
         data = request.get_json()
         sensor_log = GLOBALS.DATABASE.ViewQuery('SELECT * FROM sensor_log WHERE missionid = ?', (data,))
         movement_log = GLOBALS.DATABASE.ViewQuery('SELECT *, time_final-time_init AS duration FROM movement_log WHERE missionid = ?', (data,))
-        breakdown = GLOBALS.DATABASE.ViewQuery('''SELECT missionid, name, time_init, time_final, notes, (time_final-time_init) AS duration, name FROM missions
-            INNER JOIN users ON missions.userid = users.userid WHERE missionid = ?''', (data,))
+        breakdown = GLOBALS.DATABASE.ViewQuery('''SELECT missionid, name, time_init, time_final, notes, (time_final-time_init) AS duration, 
+(SELECT count(*) as victims FROM sectors 
+INNER JOIN walls ON sectors.sectorid = walls.sectorid
+INNER JOIN missions ON missions.mazeid = sectors.mazeid
+WHERE victim != 0 AND missionid = ?
+GROUP BY sectors.mazeid) AS victims, name FROM missions
+INNER JOIN users ON missions.userid = users.userid WHERE missionid = ?''', (data,data))
         details = {'sensor_data': sensor_log, 'movement_data': movement_log, 'breakdown': breakdown,
                 'custom-graph': [{}], 'custom-table': [{}]}
         return dumps(details)
@@ -762,11 +767,9 @@ def autosearch():
 def get_victims():
     if GLOBALS.DATABASE:
         victims = GLOBALS.DATABASE.ViewQuery("""
-        SELECT missionid, count(*) As victims, victim as vic_type FROM missions
-        INNER JOIN sectors on missions.mazeid = sectors.mazeid
-        INNER JOIN walls on sectors.sectorid = walls.sectorid
-        WHERE victim NOT LIKE 0
-        GROUP BY missionid, victim""")
+        SELECT mazeid, count(*) as victims FROM sectors 
+        INNER JOIN walls ON sectors.sectorid = walls.sectorid WHERE victim != 0 and mazeid = ?
+        GROUP BY mazeid""", (2,))
     return jsonify(victims)
     
 #----------------------------------------
