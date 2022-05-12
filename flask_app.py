@@ -472,17 +472,18 @@ def btn_movements(mov_type, power):
                 end_time_movement()
             power = int(power)
             log_move = True
+            time_moved =0 
             if mov_type == 'stop':
                 GLOBALS.ROBOT.stop_all()
             elif mov_type == 'left':
-                GLOBALS.ROBOT.rotate_power(-1*int(power/2))
+                time_moved = GLOBALS.ROBOT.rotate_power(-1*int(power/2))
             elif mov_type == 'right':
-                GLOBALS.ROBOT.rotate_power(int(power/2))
+                time_moved = GLOBALS.ROBOT.rotate_power(int(power/2))
             elif mov_type == 'forward':
-                GLOBALS.ROBOT.move_power(power)
+                time_moved = GLOBALS.ROBOT.move_power(power)
             elif mov_type == 'back':
                 reverse_sound(True)
-                GLOBALS.ROBOT.move_power(-1*power)
+                time_moved = GLOBALS.ROBOT.move_power(-1*power)
                 reverse_sound(False)
             elif mov_type == 'play':
                 log_move = False
@@ -491,7 +492,7 @@ def btn_movements(mov_type, power):
                 log_move = False
             if log_move and (GLOBALS.MISSIONID != None):
                 log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'button', False)
-        return jsonify(mov_type)
+        return jsonify({'in_type':mov_type, 'number': time_moved})
     else:
         return redirect('/')
 

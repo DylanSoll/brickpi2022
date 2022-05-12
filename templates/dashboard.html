@@ -158,7 +158,8 @@ function drawGuage(label, value, size, markings, target){
           <div style = "display: grid; grid-template-columns: auto auto auto;">
             <button id="reverse" type="button" class="btn btn-secondary" onclick="jq_ajax('/reverse-movement');" 
             data-toggle='tooltip' data-placement='top' title="Return To Start"><i class="fa fa-home" aria-hidden="true"></i></button>
-            <button id="forward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value);"
+            <button id="forward" type="button" class="btn btn-primary" 
+            onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value, responsehandler=draw_move);"
             data-toggle='tooltip' data-placement='top' title="Move Forward"><i class="fa fa-angle-double-up"></i></button>
             <button id="stop" type="button" class="btn btn-danger" onclick="jq_ajax('/btn-mov/stop/0');"
             data-toggle='tooltip' data-placement='top' title="Stop Robot"><i class="fa-regular fa-circle-stop"></i></button>

@@ -55,5 +55,27 @@ function draw_victim(victim_type, x, y){
       turtle.write('H', font=('Calibri', 15, 'italic'))
    }
 }
+
+function draw_move(movement){
+   in_type = movement.in_type;
+   number = movement.number;
+   if (in_type == "left"){
+      turtle.left(number*30);
+      return
+   }
+   if (in_type == "right"){
+      turtle.right(number*30);
+      return
+   }
+   if (in_type == "forward"){
+      turtle.forward(number*30);
+      return
+   }
+   if (in_type == "back"){
+      turtle.back(number*-30);
+      return
+   }
+   return
+}
 load_map();
 draw_victim('harmed', 0, 0);
