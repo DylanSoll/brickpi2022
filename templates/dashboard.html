@@ -159,21 +159,22 @@ function drawGuage(label, value, size, markings, target){
             <button id="reverse" type="button" class="btn btn-secondary" onclick="jq_ajax('/reverse-movement');" 
             data-toggle='tooltip' data-placement='top' title="Return To Start"><i class="fa fa-home" aria-hidden="true"></i></button>
             <button id="forward" type="button" class="btn btn-primary" 
-            onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value, responsehandler=draw_move);"
+            onclick="jq_ajax('/btn-mov/forward/'+document.getElementById('power').value, {}, draw_move);"
             data-toggle='tooltip' data-placement='top' title="Move Forward"><i class="fa fa-angle-double-up"></i></button>
             <button id="stop" type="button" class="btn btn-danger" onclick="jq_ajax('/btn-mov/stop/0');"
             data-toggle='tooltip' data-placement='top' title="Stop Robot"><i class="fa-regular fa-circle-stop"></i></button>
 
-            <button id="left" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left/'+document.getElementById('power').value);"
+            <button id="left" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/left/'+document.getElementById('power').value, {}, draw_move);"
             data-toggle='tooltip' data-placement='top' title="Turn Left"><i class="fa-solid fa-arrow-rotate-left" aria-hidden="true"></i></button>
             <button id="shoot" type="button" class="btn btn-success" onclick="jq_ajax('/process_shooting');"
             data-toggle='tooltip' data-placement='top' title="Deliver Supplies"><i class="fa fa-crosshairs" aria-hidden="true"></i></button> 
-            <button id="right" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right/'+document.getElementById('power').value);"
+            <button id="right" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/right/'+document.getElementById('power').value, {}, draw_move);"
             data-toggle='tooltip' data-placement='top' title="Turn Right"><i class="fa-solid fa-arrow-rotate-right"></i></button>
             
             <button id="take_photo" type="button" class="btn btn-warning" onclick="jq_ajax('/take-photo');"
             data-toggle='tooltip' data-placement='top' title="Take Photo"><i class="fa fa-camera" aria-hidden="true"></i></button>
-            <button id="backward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/back/'+document.getElementById('power').value);"
+            <button id="backward" type="button" class="btn btn-primary" onclick="jq_ajax('/btn-mov/back/'+document.getElementById('power').value, {}, draw_move);"
+            
             data-toggle='tooltip' data-placement='top' title="Go Backwards"><i class="fa fa-angle-double-down"></i></button>
             <button id="image-settings-modal-button" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#image_settings"
             onclick="suspend_mission()" data-toggle='tooltip' data-placement='top' title="Camera Settings"><i class="fa fa-sliders" aria-hidden="true"></i></button>

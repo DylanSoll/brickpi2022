@@ -472,7 +472,7 @@ def btn_movements(mov_type, power):
                 end_time_movement()
             power = int(power)
             log_move = True
-            time_moved =0 
+            time_moved = 0 
             if mov_type == 'stop':
                 GLOBALS.ROBOT.stop_all()
             elif mov_type == 'left':

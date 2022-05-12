@@ -59,6 +59,7 @@ function draw_victim(victim_type, x, y){
 function draw_move(movement){
    in_type = movement.in_type;
    number = movement.number;
+   console.table(movement)
    if (in_type == "left"){
       turtle.left(number*30);
       return
@@ -78,4 +79,3 @@ function draw_move(movement){
    return
 }
 load_map();
-draw_victim('harmed', 0, 0);
