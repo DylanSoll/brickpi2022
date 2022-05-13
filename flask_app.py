@@ -492,7 +492,7 @@ def btn_movements(mov_type, power):
                 log_move = False
             if log_move and (GLOBALS.MISSIONID != None):
                 log_movement(GLOBALS.MISSIONID, mov_type, time.time(), power, 'power', 'button', False)
-        return jsonify({'in_type':mov_type, 'number': time_moved})
+        return jsonify({'in_type':mov_type, 'number': time_moved, 'power':power})
     else:
         return redirect('/')
 

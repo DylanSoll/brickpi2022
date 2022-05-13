@@ -59,21 +59,22 @@ function draw_victim(victim_type, x, y){
 function draw_move(movement){
    in_type = movement.in_type;
    number = movement.number;
+   power = movement.power;
    console.table(movement)
    if (in_type == "left"){
-      turtle.left(number*30);
+      turtle.left(number*power);
       return
    }
    if (in_type == "right"){
-      turtle.right(number*30);
+      turtle.right(number*power);
       return
    }
    if (in_type == "forward"){
-      turtle.forward(number*30);
+      turtle.forward(number*power);
       return
    }
    if (in_type == "back"){
-      turtle.back(number*-30);
+      turtle.back(number*-1*power);
       return
    }
    return
